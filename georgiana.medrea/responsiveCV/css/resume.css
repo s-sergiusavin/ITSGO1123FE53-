@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f6eeee;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    justify-content: center;
+    text-align: center;
+    color: blue;
+    padding-top: 40px;
+    font-size: xx-large;
+}
+
+nav.menu ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 20px 50px;
+    font-variant: small-caps;
+    list-style: none;
+}
+
+ul li a:link {
+    color: black;
+}
+
+ul li a:visited {
+    color: blue;
+}
+
+h3 {
+    justify-content: center;
+    text-align: center;
+    color: blue;
+    font-size: x-large;
+}
+
+.responsiveContainer {
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: left;
+    border: 2px solid lightpink;
+    width: 40%;
+    padding: 0 15px 25px;
+    background-color: #ee6e6e40;
+    margin-top: 1%;
+    position: relative;
+    left: 30%;
+    color: blue;
+    border-radius: 0.5rem;
+}
+
+.experience {
+    padding: 10px;
+}
+
+.myList {
+    padding: 10px;
+}
+
+footer {
+    color: blue;
+    padding: 50px 10px;
+    text-align: left;
+    font-size: small;
+}
+
+/* Responsive content */
+
+@media only screen and (max-width: 1300px) {
+    .responsiveContainer {
+        width: 70%;
+        left: 15%;
+    }
+}
