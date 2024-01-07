@@ -1,15 +1,15 @@
-console.log('sergiu');
+console.log('liviu');
 
 // Aceasta este o linie cu cod comentat
 
 /**
  * Multi line comment
  * care nu va fi luat in considerare
- * 
+ *
  * dsaf
  * dafs
  * asdf
- * 
+ *
  * dsafsadfadsf
  */
 
@@ -54,7 +54,7 @@ console.log(total);
  * (siruri de caractere)
  */
 
-const fullName = 'Sergiu\' Savin';
+const fullName = 'Liviu\' Liviu';
 const adress = "Brasov\", Romania";
 const zip = '500500';
 
@@ -117,7 +117,7 @@ console.log(daysOfWeek);
  */
 
 const person = {
-    fullName: 'Sergiu Savin',
+    fullName: 'Liviu Vinturache',
     age: 30,
     lovesWinter: false,
     address: {
@@ -143,7 +143,7 @@ console.log(person.fullName)
 // }
 
 // let person = {
-//     fullName: 'Sergiu' // !!! Error, pt redeclarare
+//     fullName: 'Liviu' // !!! Error, pt redeclarare
 // }
 
 const actor = {
