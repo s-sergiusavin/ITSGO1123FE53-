@@ -1,3 +1,4 @@
+// @ts-nocheck
 console.log('liviu');
 
 // Aceasta este o linie cu cod comentat
