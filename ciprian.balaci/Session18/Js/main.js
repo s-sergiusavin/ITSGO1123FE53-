@@ -98,3 +98,51 @@ rateMovie('Undisputed') // log 8
 rateMovie('Fury') // log 7
 rateMovie('Fury') // Te rugam sa introduci numele filmului
 
+// Objects with functions as a property
+
+const complexObject = {
+   name: 'Ciprian',
+   adress: {
+      city: 'Bucharest',
+      zip: 500550
+   },
+   favouriteMovies: ['Top Gun', 'Home Alone', 'Harry Potter'],
+   hasPassport: true,
+   hobbies: ['travel','eat', 'drink'],
+   watchMovie: function(movie) {
+      console.log('uita-te la ' + movie);
+
+   },
+   sleep: () => {
+      console.log('du-te la culcare')
+   },
+   work() {
+      console.log('Mergi la munca')
+   },
+   age: 25
+}
+
+console.log(complexObject.name)
+console.log(complexObject.favouriteMovies[2]);
+console.log(complexObject.adress.zip)
+complexObject.sleep();
+complexObject.watchMovie(complexObject.favouriteMovies[1])
+console.log(console);
+
+//flip a coin
+
+let valoriMoneda = ['cap', 'stema'];
+
+console.log(valoriMoneda[0]);
+console.log(valoriMoneda[1]);
+console.log(Math.random())
+console.log(Math.random())
+console.log(Math.round(Math.random()))
+
+if(valoriMoneda[Math.round(Math.random())] === 'cap') {
+console.log('A iesit cap');
+} else {
+   console.log('A iesit stema');
+}
+
+
