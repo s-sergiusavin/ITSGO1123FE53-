@@ -82,3 +82,19 @@ console.log(fiveEur)
 console.log(changeEur(10))
 
 
+let number5 = 5;
+let string5 ='5';
+
+const rateMovie = (movie) => {
+   if(movie === 'Fast & Furious') {
+      console.log('Filmul e de nota 10');
+   } else if(movie === 'The Shinning') 
+console.log('Filmul e de nota 10')
+}
+
+rateMovie('Fast & Furious') // log 10
+rateMovie('The shinning') // log 9
+rateMovie('Undisputed') // log 8
+rateMovie('Fury') // log 7
+rateMovie('Fury') // Te rugam sa introduci numele filmului
+
