@@ -18,12 +18,14 @@ result = myNumber % secondNumber;
 /**
  * String
  * siruri de caractere
+
  */
 
 let myString = "Acesta este un mesaj";
 myString = "O'heary";
 // Template literals
 // In template literals cu sintaxa ${} executam in interiorul parantezelor cod de javascript
+// Back-ticks `le utilizam atunci cand folosim ${} in template literals`
 myString = `Rezultatul este ${result}`;
 myString = `Rezultatul 2 + 2 = ${2 + 3 + result}`;
 
@@ -41,7 +43,7 @@ let lightsOn = false;
  * (vectori)
  */
 
-const myArray = [5, '4', true, null, [5.3, 1], { name: 'Sergiu' }];
+const myArray = [5, '4', true, null, [5.3, 1], { name: 'Liviu' }];
 console.log(myArray[0]);
 console.log(myArray[4][0]);
 console.log(myArray[5].name);
@@ -64,16 +66,12 @@ const myObj = {
 console.log(myObj.juice);
 console.log(myObj["french-fries"]);
 
-/**
- * Loops (bucle)
- * Structuri iterative
- */
 
 let marksOf10lei = 0;
 // Expresiile de mai jos fac acelasi lucru
-// marksOf10lei = marksOf10lei + 1;
-// marksOf10lei += 1;
-// marksOf10lei++;
+// marksOf10lei (valoarea noua) = marksOf10lei (valoarea veche) + 1;
+// marksOf10lei += 1; +=  la valoarea precedenta se aplica + si se aplica noua valoare adica 1
+// marksOf10lei++; valoarea precedenta +1 - exceptie
 // marksOf10lei += 3;
 // console.log(marksOf10lei);
 
@@ -84,7 +82,14 @@ marksOf10lei = marksOf10lei + 1;
 // ....
 marksOf10lei = marksOf10lei + 1; // de 10 ori ca sa ajung la totalul asta
 
+/**
+ * debugger - opreste executia codului si putem parcurge linia codului - linie cu linie sa vedem ce se intampla
+ * Loops (bucle)
+ * Structuri iterative
+ */
+
 // While loop
+// while + (conditie) {cod}
 
 while (marksOf10lei < total) {
     marksOf10lei += 1;
@@ -106,19 +111,19 @@ while (roomTemperature > desiredTemprature) {
 }
 isAcOn = false;
 
+// Alta structura iterativa e DO WHILE, sintaxa e mai jos.
 // do {
 //     // action
 // } while ()
 
 // For loop
-
-let marksOf5Lei = 0;
-let total5Lei = 5;
-
 // for (initializare ; conditie ; operatiune la finalul operatiei)
 // codul din interiorul parantezelor acolade va fi denumit bloc de executie
 
+let marksOf5Lei = 0;
+let total5Lei = 5;
 let index = 7;
+
 console.log(index, 'index');
 
 for (index = 0; index < total5Lei; index++) {
@@ -148,9 +153,10 @@ for (let index = countries.length - 1; index >= 0; index--) {
 }
 
 // If/else -- conditional structures - blocks
-
+// = asociem o valoare
 // == verifica egalitatea a doua valori
 // === verifica egalitatea si tipul variabilelor
+// !== diferit de ce urmeaza
 
 let val1 = 5;
 let val2 = '5';
@@ -175,7 +181,6 @@ if (' ') {
 } else {
     console.log(`Valoarea din conditie este falsa`)
 }
-
 
 let temperature = 53;
 let optimalTemperature = 25;
@@ -212,6 +217,7 @@ if (pizzaPrice <= 35 || (hasGorgonozola && pizzaPrice <= 40)) {
 
 // Ternary operator - sunt 3 parti
 // conditie ? valoare de adevar : valoare in caz de fals
+// ? conditional - called ternary operator
 
 val1 = 5;
 val2 = '5';
@@ -228,6 +234,9 @@ if (val1 === val2) {
 
 /**
  * Functions
+ * blocuri de cod care le executam cand vrem noi, conteaza cand o apelam functia respective: denumirea functiei()
+ * sunt facute din 2 motive: ori aman o bucata de cod ori o execut ori de cate ori vreau unde vreau acolo o scrie
+ * ne folosim de functii atunci cand vrem sa utilizam codul de mai multe ori sau de cate ori vrem
  */
 
 // Function declaration: function keyword urmat de numele functiei, paranteze rotunde, paranteze acolade
@@ -239,6 +248,7 @@ logSomething();
 logSomething();
 
 // Function expresion : const denumirea functiei = function keyword () {}
+// insistam asupra primei variante
 
 const doSomething = function() {
     console.log('Do something');
@@ -246,7 +256,7 @@ const doSomething = function() {
 
 doSomething();
 
-// Arrow function
+// Arrow function - o varianta de functie pupulara si cel mai des folosita
 
 const doArrowFunction = () => {
     console.log('Do arrow function');
@@ -258,13 +268,13 @@ doArrowFunction();
 
 let number = 800; // variabila number nu se va confunda cu parametrul functiei de mai jos
 
-function addToFive(number) {
+function addToFive(number) { // parametri
     let result = 5 + number;
     console.log(`Rezultatul este ${result}`)
 }
 
-addToFive(3);
-addToFive(10);
+addToFive(3); // argumente
+addToFive(10); // argumente
 
 const substractFrom100 = (number) => {
     console.log(`Rezultatul este ${100 - number}`);
