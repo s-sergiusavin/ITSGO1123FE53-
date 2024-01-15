@@ -218,3 +218,4 @@ const checkPalindrome = (array) => {
 
 console.log(checkPalindrome(palindrome));
 
+//final
