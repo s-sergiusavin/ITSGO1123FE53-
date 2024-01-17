@@ -14,10 +14,12 @@ addToSum(3);
 logStuff(addToSum(10));
 
 // sum = 13
+debugger
 let totalSum = addToSum(10);
 addToSum(5);
 logStuff(totalSum);
 logStuff(sum);
+
 
 // const sumNumbers = function(number1, number2) {
 //     return number1 + number2;
@@ -287,7 +289,7 @@ const smoke = () => {
 //         return "Geamurile au fost inchise!";
 //       }
 //     }
-  
+
 //     if (!curtainsValue) {
 //       curtainsValue = !curtainsValue;
 //       if (curtainsValue) {
@@ -296,7 +298,7 @@ const smoke = () => {
 //         return "Draperiile au fost inchise!";
 //       }
 //     }
-  
+
 //     if (acValue) {
 //       acValue = !acValue;
 //       if (acValue) {
@@ -305,9 +307,9 @@ const smoke = () => {
 //         return "Ac-ul a fost oprit!";
 //       }
 //     }
-  
+
 //     console.log("Smoking...");
-  
+
 //     if ("Winter") {
 //       if (!windowsValue) {
 //         windowsValue = !windowsValue;
