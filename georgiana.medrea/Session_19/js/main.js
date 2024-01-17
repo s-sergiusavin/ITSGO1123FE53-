@@ -323,3 +323,53 @@ const smoke = () => {
 console.log(toggleLights());
 smoke();
 
+// Tema
+
+let TvValue = false;
+let DoorValue = false;
+let WaterValue = false;
+
+const toggleTv = () => {
+    TvValue = !TvValue;
+    if(TvValue) {
+        return 'Tv-ul este aprins';
+    } else {
+        return 'Tv-ul este stins';
+    }
+}
+
+const toggleDoor = () => {
+    DoorValue = !DoorValue;
+    if(DoorValue) {
+        return 'Usa este descuiata';
+    } else {
+        return 'Usa este incuiata';
+    }
+}
+
+const toggleWater = () => {
+    WaterValue = !WaterValue;
+    if(WaterValue) {
+        return 'Apa este deschisa';
+    } else {
+        return 'Apa este inchisa';
+    }
+}
+
+const ReadyToGoToSleep = () => {
+    if(!TvValue) {
+        toggleTv();
+    }
+
+    if(!DoorValue) {
+        toggleDoor()
+    }
+
+    if(!WaterValue) {
+        toggleWater();
+    }
+
+    console.log('Ready to go to sleep')
+}
+
+ReadyToGoToSleep()
