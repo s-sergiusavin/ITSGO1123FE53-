@@ -45,68 +45,68 @@ function checkNumbers(val1, val2) {
     console.log("Inegale");
   }
 }
-checkNumbers(2,2);
+checkNumbers(2, 2);
 
 // 2. Function expressions
-const functionExpression = function() {
-  console.log('Do something');
-}
+const functionExpression = function () {
+  console.log("Do something");
+};
 functionExpression();
 
-const addNumbers = function(val1) {
+const addNumbers = function (val1) {
   let total = val1 + 10;
-  console.log(`Totalul este ${total}`)
-}
+  console.log(`Totalul este ${total}`);
+};
 
-addNumbers(2)
+addNumbers(2);
 
 const multiplyNumbers = function (val1, val2, val3) {
   let total = val1 * val2 * val3;
-  console.log(`Totalul inmultirii este...${total}`)
-}
-multiplyNumbers(2,4,6)
+  console.log(`Totalul inmultirii este...${total}`);
+};
+multiplyNumbers(2, 4, 6);
 
-const compareNumbers = function(param1, param2) {
-  if(param1 === param2){
-    console.log('Egale')
-  }else {
-    console.log('Inegale')
+const compareNumbers = function (param1, param2) {
+  if (param1 === param2) {
+    console.log("Egale");
+  } else {
+    console.log("Inegale");
   }
-}
-compareNumbers(2,2)
+};
+compareNumbers(2, 2);
 
 // arrow function
 const arrowFunction = () => {
-  console.log('Do arrow function');
-}
+  console.log("Do arrow function");
+};
 
 arrowFunction();
 
 const nameCity = (val1) => {
   let favCity = val1;
-  console.log(`Favorite city is.. ${favCity}`)
-}
+  console.log(`Favorite city is.. ${favCity}`);
+};
 
-nameCity('Timisoara')
+nameCity("Timisoara");
 
 // Functions with params
 
 let number = 100;
 
-const addNumber = function(number) {
+const addNumber = function (number) {
   let result = 10 + number;
-  console.log (`Totalul sumei este ${result}`)
-
-}
-addNumber(300)
+  console.log(`Totalul sumei este ${result}`);
+};
+addNumber(300);
 
 function addToNumber(number) {
-  console.log(`Show number ${number}`)
+  console.log(`Show number ${number}`);
 }
 addToNumber(100);
 
 const substractFrom100 = (number) => {
   console.log(`Rezultatul este ${100 - number}`);
-}
+};
 
-substractFrom100(20);
+substractFrom100(100);
+substractFrom100(10);
