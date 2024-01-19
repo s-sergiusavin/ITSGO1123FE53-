@@ -307,4 +307,76 @@ vw.wheels = 100;
 console.log(vw)
 console.log(porsche)
 
+// Exercitii
 
+const array1 = [1, 2, 3, 4]
+array1.push(5)
+console.log(array1)
+
+array1.unshift(1)
+console.log(array1)
+
+console.log(array1.pop())
+
+console.log(array1.shift())
+
+array1.forEach((element) => {
+    console.log(element);
+})
+
+const array2 = [2, 3, 4, 5]
+
+const array3 = array2.map((element) => {
+    return element + 1;
+})
+
+console.log(array3)
+
+const array3Slice = array3.slice(1, 3);
+console.log(array3Slice)
+
+const array3Splice = array3.splice(2, 2);
+const array3Splice2 = array3.splice(1);
+console.log(array3Splice);
+console.log(array3Splice2);
+
+array4 = [0, 1, 3, 5, 7, 8, 9]
+
+const array4Filter = array4.filter((element) => {
+    return element > 4;
+})
+
+console.log(array4Filter)
+
+console.log(array4.reverse())
+
+console.log(array4.toReversed())
+
+array5 = [1, 2, 6, 7];
+array6 = [2, 3, 8, 9, 10];
+array7 = array5.concat(array6);
+console.log(array7)
+
+// Reduce transforma un array intr-o valoare, dupa ce face operatiile indicate cu elementele array-ului
+
+const array5Reduced = array5.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+})
+
+console.log(array5Reduced)
+
+array8 = [123, 90, 8, 22, 0, -12, -99, 4, 77]
+
+array8Sort = array8.sort()
+console.log(array8Sort)
+
+array8SortNumeric = array8.sort((a, b) => {
+    return a - b;
+})
+console.log(array8SortNumeric)
+
+array8SortNumericDescrescator = array8.sort((a, b) => {
+    return b - a;
+})
+
+console.log(array8SortNumericDescrescator)
