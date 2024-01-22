@@ -155,4 +155,93 @@ for (let l = 0, r = arr.length - 1; l < r; l++, r--) {
   console.log(arr[l], arr[r]);
 }
 
+function A() {
+    console.log("called A");
+    return false;
+  }
+  function B() {
+    console.log("called B");
+    return true;
+  }
+  
+  console.log(A() && B());
+  // Logs "called A" to the console due to the call for function A,
+  // && evaluates to false (function A returns false), then false is logged to the console;
+  // the AND operator short-circuits here and ignores function B
+
+  function A() {
+    console.log("called A");
+    return false;
+  }
+  function B() {
+    console.log("called B");
+    return true;
+  }
+  
+  console.log(B() || A());
+  // Logs "called B" due to the function call,
+  // then logs true (which is the resulting value of the operator)
+
+  function map(f, a) {
+    const result = new Array(a.length);
+    for (let i = 0; i < a.length; i++) {
+      result[i] = f(a[i]);
+    }
+    return result;
+  }
+  
+  const cube = function (x) {
+    return x * x * x;
+  };
+  
+  const numbers = [0, 1, 2, 5, 10];
+  console.log(map(cube, numbers)); // [0, 1, 8, 125, 1000]
+
+  
+  function factorial(n) {
+    if (n === 0 || n === 1) {
+      return 1;
+    } else {
+      return n * factorial(n - 1);
+    }
+  }
+  
+console.log(factorial(1)); // 1
+console.log(factorial(2)); // 2
+console.log(factorial(3)); // 6
+console.log(factorial(4)); // 24
+console.log(factorial(5)); // 120
+
+function foo3(i) {
+    if (i < 0) {
+      return;
+    }
+    console.log(`begin: ${i}`);
+    foo3(i - 1);
+    console.log(`end: ${i}`);
+  }
+
+  foo3(3);
+
+// Logs:
+// begin: 3
+// begin: 2
+// begin: 1
+// begin: 0
+// end: 0
+// end: 1
+// end: 2
+// end: 3
+  
+  function addSquares(a, b) {
+    function square(x) {
+      return x * x;
+    }
+    return square(a) + square(b);
+  }
+  
+  console.log(addSquares(2, 3)); // 13
+  console.log(addSquares(3, 4)); // 25
+  console.log(addSquares(4, 5)); // 41
+
   
