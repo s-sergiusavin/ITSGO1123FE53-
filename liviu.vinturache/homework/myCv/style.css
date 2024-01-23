@@ -1,0 +1,762 @@
+/* defining the body section */
+
+body {
+  background-color: rgb(196, 210, 246);
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  position: relative;
+  margin: 30px;
+}
+
+/* container section */
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  height: 2750px;
+  max-width: 1300px;
+  position: relative;
+  flex-direction: row;
+  align-self: center;
+  background-color: rgb(223, 232, 232);
+  border: 1px solid rgb(88, 195, 230);
+}
+
+/* header section | photo | name | title */
+.header {
+  display: flex;
+  height: 180px;
+  top: 1px;
+  background: hsl(211, 59%, 25%);
+  border-left: 2px solid #b3b3b3;
+  border-right: 2px solid #b3b3b3;
+  border-top: 2px solid #b3b3b3;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 10px;
+  position: relative;
+}
+
+.photo {
+  display: flex;
+  width: 160px;
+  height: 160px;
+  border-radius: 500px;
+  border: 10px solid transparent;
+  align-items: left;
+  justify-content: center;
+  position: relative;
+  flex-direction: row;
+  left: 30px;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  top: 30px;
+  height: 30px;
+  font-weight: 40px;
+  border: 20px;
+  margin: 30px;
+  position: relative;
+  left: 100px;
+  color: #afafaffa;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.name:hover {
+  color: lightgrey;
+}
+
+.function {
+  display: flex;
+  position: relative;
+  top: 90px;
+  right: 400px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 17px;
+  justify-content: space-around;
+  font-weight: lighter;
+  flex-direction: row;
+  color: #aaaaaaf0;
+}
+.function:hover {
+  color: lightgrey;
+}
+.container > * {
+  padding: 10px;
+  margin: 10px;
+  flex: 1 100%;
+}
+
+/* left side section | contact details | education | skills */
+.leftSide {
+  background: hsl(211, 59%, 25%);
+  height: 2000px;
+  bottom: 19px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 2px solid #b3b3b3;
+  border-right: 2px solid #b3b3b3;
+  border-top: 2px solid #b3b3b3;
+  box-shadow: 2px 2px 2px 1px #b3b3b3;
+}
+
+.contactInfo {
+  position: relative;
+  align-content: space-around;
+  height: 190px;
+  top: 2px;
+  display: inline-block;
+}
+
+.title {
+  color: #aaaaaaf0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  bottom: 2px;
+}
+.title:hover {
+  color: rgb(206, 206, 204);
+}
+
+.contactInfo ul {
+  position: relative;
+  justify-content: flex-start;
+  top: 15px;
+  border-bottom: 1px solid #b3b3b3;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.contactInfo ul li {
+  position: relative;
+  list-style: none;
+  margin: 10px;
+  cursor: pointer;
+  right: 20px;
+  display: flex;
+}
+
+.contactInfo ul li .icon {
+  display: inline-block;
+  width: 40px;
+  font-size: 20px;
+  color: #00adfd;
+  position: relative;
+  bottom: 4px;
+}
+
+.text:hover {
+  color: lightblue;
+}
+.contactInfo ul li span {
+  color: #aaaaaaf0;
+  font-weight: 300;
+}
+
+/* education */
+.education {
+  font-size: 15px;
+  top: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 0.4;
+  color: lightgoldenrodyellow;
+}
+#degree:hover,
+#school:hover {
+  color: rgb(204, 208, 205);
+}
+
+.contactInfo.education li {
+  margin-bottom: 15px;
+  display: inline-block;
+  font-weight: 300;
+  position: relative;
+  line-height: 1;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.contactInfo.education h5 {
+  color: #aaaaaaf0;
+  font-weight: 500;
+  line-height: 0.2;
+  display: inline;
+}
+
+.contactInfo.education h4:nth-child(2) {
+  color: #aaaaaaf0;
+  font-weight: 600;
+  line-height: 1;
+}
+.contactInfo.education h4 {
+  color: #aaaaaaf0;
+  font-weight: 300;
+}
+
+/* Languages */
+.language {
+  top: 460px;
+  align-items: stretch;
+  flex-direction: column;
+  display: flex;
+  width: 100%;
+  line-height: 0.9;
+  border-bottom: 1px solid #b3b3b3;
+  text-transform: uppercase;
+}
+
+.progress {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: rgb(50, 174, 232);
+  border-radius: 12px;
+}
+
+.progressBar-ro {
+  width: 100%;
+  height: 0.8rem;
+  background-color: rgb(212, 207, 241);
+  display: flex;
+  bottom: 25px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.progressBar-en {
+  width: 79%;
+  height: 0.8rem;
+  background-color: rgb(212, 207, 241);
+  display: flex;
+  bottom: 25px;
+  border-radius: 15px;
+  position: relative;
+  bottom: 70px;
+  left: 8px;
+}
+
+.textLang1 {
+  color: #aaaaaaf0;
+  position: relative;
+  bottom: 60px;
+  line-height: 0.1;
+  font-weight: 500;
+  max-height: 40px;
+}
+.textLang2 {
+  color: #aaaaaaf0;
+  position: relative;
+  bottom: 100px;
+  line-height: 0.1;
+  font-weight: 500;
+  max-height: 40px;
+}
+.textLang1:hover,
+.textLang2:hover {
+  color: rgb(248, 232, 217);
+}
+
+.ro-progress {
+  width: 100%;
+  line-height: 0.1;
+}
+
+.en-progress {
+  width: 90%;
+  bottom: 40px;
+  left: 0px;
+  top: 0px;
+}
+
+/* Skills */
+.container-skills {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  background: hsl(211, 59%, 25%);
+  margin: 0 15px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  top: 500px;
+  height: 250px;
+  border: 4px solid rgb(62, 62, 248);
+}
+.title-skills {
+  position: relative;
+  bottom: 60px;
+  display: flex;
+  color: #aaaaaaf0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  left: 25px;
+  cursor: pointer;
+}
+
+.title-main {
+  position: relative;
+  display: flex;
+  color: #aaaaaaf0;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+  bottom: 50px;
+}
+
+.skill-box {
+  width: 100%;
+  cursor: pointer;
+}
+
+.skill-box .title-main {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #aaaaaaf0;
+  display: flex;
+  justify-self: flex-start;
+  cursor: pointer;
+}
+
+.skill-box .skill-bar {
+  width: 100%;
+  background: rgb(212, 207, 241);
+  border-radius: 6px;
+  height: 8px;
+  margin-bottom: 6px;
+  display: flex;
+  position: relative;
+  bottom: 50px;
+}
+
+.skill-bar .skill-per {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 90%;
+  border-radius: 6px;
+  background-color: rgb(50, 174, 232);
+  bottom: 0px;
+  animation: progress 0.4s ease-in-out forwards;
+  opacity: 0;
+  cursor: pointer;
+  top: 0;
+}
+
+/*  Skills per web development */
+.skill-per.html {
+  width: 70%;
+}
+
+.skill-per.css {
+  width: 60%;
+}
+.skill-per.js {
+  width: 33%;
+}
+.skill-per.react {
+  width: 20%;
+}
+.skill-per.node {
+  width: 18%;
+}
+.skill-per.bootstrp {
+  width: 32%;
+}
+
+.skill-per.git {
+  width: 90%;
+}
+.skill-per.github {
+  width: 90%;
+}
+
+/* Skills per UI-UX */
+.skill-per.visual {
+  width: 80%;
+}
+
+.skill-per.research {
+  width: 70%;
+}
+.skill-per.arhitecture {
+  width: 80%;
+}
+.skill-per.wireframe {
+  width: 70%;
+}
+.skill-per.prototype {
+  width: 80%;
+}
+.skill-per.figma {
+  width: 90%;
+}
+
+.skill-per.git {
+  width: 90%;
+}
+.skill-per.github {
+  width: 90%;
+}
+
+/* Skills per SAP-EDI */
+.skill-per.suite {
+  width: 70%;
+}
+
+.skill-per.premise {
+  width: 60%;
+}
+.skill-per.neo {
+  width: 50%;
+}
+.skill-per.factors {
+  width: 50%;
+}
+.skill-per.sap-edi {
+  width: 92%;
+}
+.skill-per.sd {
+  width: 83%;
+}
+
+.skill-per.mm {
+  width: 83%;
+}
+.skill-per.protocols {
+  width: 92%;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 3;
+  }
+}
+.skill-per .tooltip {
+  position: absolute;
+  right: -14px;
+  background: rgb(50, 174, 232);
+  top: -28px;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: white;
+  z-index: 1;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  height: 10px;
+  width: 10px;
+  background-color: rgb(50, 174, 232);
+  transform: translateX(-50%) rotate(45deg);
+  left: 50%;
+  z-index: -1;
+}
+
+.title-skills-ui {
+  position: relative;
+  bottom: 60px;
+  display: flex;
+  color: #aaaaaaf0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  left: 80px;
+  cursor: pointer;
+}
+
+.container-skills-ui {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  background: hsl(211, 59%, 25%);
+  margin: 0 15px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  top: 10px;
+  height: 200px;
+  border: 4px solid rgb(62, 62, 248);
+  right: 40px;
+}
+
+.title-skills-sap {
+  position: relative;
+  bottom: 60px;
+  display: flex;
+  color: #aaaaaaf0;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  left: 80px;
+  cursor: pointer;
+}
+
+.container-skills-sap {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  background: hsl(211, 59%, 25%);
+  margin: 0 15px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  top: 20px;
+  height: 240px;
+  border: 4px solid rgb(62, 62, 248);
+  right: 40px;
+}
+
+.title-skills:hover,
+.title-main:hover,
+.title-skills-ui:hover,
+.title-skills-sap:hover {
+  color: rgb(216, 218, 221);
+}
+
+.certifications {
+  box-sizing: border-box;
+  height: 20rem;
+  width: 25rem;
+  background-color: rgb(240, 240, 240);
+  position: relative;
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  right: 3rem;
+  top: 5rem;
+  border-radius: 10%;
+}
+.certifications h3{
+  color: rgb(37, 37, 91);
+  display: flex;
+  position: relative;
+  left: 8rem;
+  top: -1.2rem;
+
+}
+.certifications .btp {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  top: 3rem;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  display: flex;
+  background-color: red;
+
+}
+/* main section | work experience */
+
+.mainPage {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  height: 2500px;
+  margin-left: -9px;
+  margin-right: 10px;
+  border-right: 2px solid #b3b3b3;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  bottom: 30px;
+}
+
+.profileDescription {
+  text-align: left;
+  display: flex;
+  position: relative;
+  font-weight: 100px;
+  font-size: 18px;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+  color: rgb(37, 37, 91);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 2px;
+  line-height: 1.2;
+}
+
+.profile {
+  display: flex;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgb(60, 78, 161)
+  );
+  width: 300px;
+  height: 22px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  border-radius: 20px;
+  box-shadow: 8px solid rgb(3, 3, 3);
+  padding: 1px;
+}
+
+.profile:hover,
+.profile:active {
+  font-size: 105%;
+}
+
+.border-space {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  height: 1.5px;
+  opacity: 0.5;
+  box-shadow: 1px solid blue;
+  border-radius: 300px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgb(60, 78, 161)
+  );
+}
+
+/* Experience */
+.titleWork {
+  display: flex;
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgb(60, 78, 161)
+  );
+  width: 300px;
+  height: 22px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  border-radius: 20px;
+  box-shadow: 8px solid rgb(3, 3, 3);
+  padding: 1px;
+  color: rgb(37, 37, 91);
+}
+.titleWork:hover,
+.profile:active {
+  font-size: 120%;
+}
+
+.experience ul li {
+  list-style: none;
+  position: relative;
+  display: inline;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: left;
+  font-weight: 100;
+  font-size: 18px;
+}
+
+#date,
+#workFunction,
+#workPlace {
+  align-items: flex-start;
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  justify-content: left;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0),
+    rgb(60, 78, 161)
+  );
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  border-radius: 20px;
+  width: 50%;
+}
+#date {
+  font-size: 14px;
+  color: rgb(37, 37, 91);
+  font-weight: 500;
+}
+#workFunction,
+#workPlace {
+  font-size: 16px;
+  color: rgb(37, 37, 91);
+  font-weight: 600;
+}
+
+.jobDescription {
+  text-align: left;
+  display: flex;
+  position: relative;
+  font-weight: 100px;
+  font-size: 18px;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+  color: rgb(37, 37, 91);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 2px;
+  line-height: 1.2;
+}
+
+.jobOverview p {
+  text-align: left;
+  display: flex;
+  position: relative;
+  color: rgb(37, 37, 91);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+  line-height: 0.5;
+  font-weight: bold;
+}
+
+.jobOverview ul li {
+  display: flex;
+  position: relative;
+  list-style-type: circle;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: rgb(56, 56, 118);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  align-self: left;
+  font-size: 15px;
+  width: 100%;
+}
+
+/* Media */
+@media all and (min-width: 800px) {
+  .mainPage {
+    flex: 3;
+  }
+
+  .leftSide {
+    order: 1;
+  }
+
+  .mainPage {
+    order: 2;
+  }
+  .footer {
+    order: 3;
+  }
+}
+@media all and (min-width: 200px) {
+  .leftSide {
+    flex: 1;
+  }
+}
