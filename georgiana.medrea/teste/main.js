@@ -245,3 +245,12 @@ function foo3(i) {
   console.log(addSquares(4, 5)); // 41
 
   
+// DOM
+
+// Cum scriem in tag in JS
+// html => <div class="dropdown dropdown-menu" />
+
+const divTagInJS = {
+  name: "DIV",
+  classList: ["dropdown", "dropdown-menu"]
+}
