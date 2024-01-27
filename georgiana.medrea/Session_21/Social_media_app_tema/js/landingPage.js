@@ -20,3 +20,7 @@ function onKeyDown() {
 function onKeyUp() {
     document.getElementsByTagName('input')[0].style.backgroundColor = 'teal';
 }
+
+const onClickBookNow = () => {
+    document.getElementsById('callToActionButton').value = 'Reservation done!';
+}

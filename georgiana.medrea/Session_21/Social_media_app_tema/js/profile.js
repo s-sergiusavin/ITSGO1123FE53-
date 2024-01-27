@@ -18,5 +18,7 @@ function mouseLeaveEdit() {
     editProfile[0].style.backgroundColor = 'lightblue';
 }
 
-
+const onClickAddTo = () => {
+    addToStory.style.backgroundColor = 'turquoise';
+}
 
