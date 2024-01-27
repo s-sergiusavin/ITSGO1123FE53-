@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+.profileCoverInfo {
+    position: absolute;
+    padding: 75px;
+    left: 25%;
+}
+
+.profileCoverInfo .coverImage {
+    max-width: 100%;
+}
+
+.profileCoverInfo .profileUserInfo {
+    position: relative;
+    cursor: pointer;
+}
+
+.profileCoverInfo .profileUserInfo .profileImage {
+    position: relative;
+    width: 10%;
+    left: 2%;
+    top: -4rem;
+    border: 2px solid white;
+}
+
+.profileCoverInfo .profileUserInfo .profileName .name {
+    position: relative;
+    left: 14%;
+    top: -8.5rem;
+    font-size: x-large;
+}
+
+.profileCoverInfo .profileUserInfo .profileName .friendsNumber {
+    position: relative;
+    left: 14%;
+    top: -8.5rem;
+    font-size: medium;
+}
+
+.profileCoverInfo .addToStory {
+    position: relative;
+    width: 30%;
+    left: 49%;
+    top: -12rem;
+    border: 2px solid darkblue;
+    background-color: lightblue;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+.profileCoverInfo .editProfile {
+    position: relative;
+    width: 30%;
+    left: 48.7%;
+    top: -12rem;
+    border: 2px solid darkblue;
+    background-color: lightblue;
+    margin-left: 5px;
+    padding: 5px;
+    border-radius: 10%;
+}
