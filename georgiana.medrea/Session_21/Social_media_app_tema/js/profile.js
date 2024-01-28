@@ -5,7 +5,7 @@ function mouseEnterAddTo() {
 }
 
 function mouseLeaveAddTo() {
-    addToStory.style.backgroundColor = 'lightblue';
+    addToStory.style.backgroundColor = 'lightBlue';
 }
 
 const editProfile = document.getElementsByClassName('editProfile');
@@ -15,7 +15,7 @@ function mouseEnterEdit() {
 }
 
 function mouseLeaveEdit() {
-    editProfile[0].style.backgroundColor = 'lightblue';
+    editProfile[0].style.backgroundColor = 'lightBlue';
 }
 
 const onClickAddTo = () => {

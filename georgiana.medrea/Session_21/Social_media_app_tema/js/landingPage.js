@@ -21,6 +21,12 @@ function onKeyUp() {
     document.getElementsByTagName('input')[0].style.backgroundColor = 'teal';
 }
 
+// Eventul de mai jos nu functioneaza!!!
+
+const bookNow = document.getElementById('callToActionButton');
+console.dir(bookNow)
+
 const onClickBookNow = () => {
-    document.getElementsById('callToActionButton').value = 'Reservation done!';
+    bookNow.style.backgroundColor = 'teal';
+    bookNow.value = 'Reserved!';
 }
