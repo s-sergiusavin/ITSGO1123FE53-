@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Session 22 | DOM</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <h1>Form validations</h1>
 
+    <div id="testBox">Acesta este un div demo</div>
+    <img src="https://img.freepik.com/premium-photo/cute-puppy-walking-snow_970354-98.jpg" alt="puppy in snow"
+        width="200" id="demoImage">
+    <img src="" alt="new image" width="250" id="newImage">  
+    
+    <ul>
+        <li>Elem 1</li>
+        <li>Elem 2</li>
+        <li>Elem 3</li>
+        <li>Elem 4</li>
+        <li>Elem 5</li>
+    </ul>
 
+    <div id="clickMe">Click ME !!!</div>
+    <input type="text" id="demoInput">
 
-    <script src="main.js"></script>
+    <div class="toDoList">
+        <div>
+            <label for="toDoInput">Add item</label>
+            <input type="text" id="toDoInput" placeholder="Enter your value">
+        </div>
+        <button class="addButton">Add</button>
+    </div>
+
+    <ul class="toDoListItems"></ul>
+
+    <form action="" id="myForm">
+        <label>
+            <span>Email</span>
+            <input type="email" placeholder="Enter your email" name="emailInput">
+        </label>
+        <input type="submit" value="Check Email">
+    </form>
+
+    <script src="js/main.js"></script>
 </body>
+
+
 </html>
