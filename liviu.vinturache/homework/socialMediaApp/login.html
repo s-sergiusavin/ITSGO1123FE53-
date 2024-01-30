@@ -31,17 +31,17 @@
                 <label for="rememberUser">Click here to remember me</label>
             </div>
 
-            <input type="submit" value="Log in" class="loginButton">
+            <input type="submit" value="Log in" class="loginButton" id="btn" onfocus="focusInput()" onblur="blurInput()">
             <a href="#"><strong>Forgot password?</strong></a>
         </form>
 
         <hr>
-        <button class="registerButton">Create an account</button>
+        <button class="registerButton" id="registerButtonStyle" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()">Create an account</button>
 
         <a href="feed.html">Catre contul meu</a>
     </section>
 
-
+    <script src="js/login.js"></script>
 </body>
 
 </html>
