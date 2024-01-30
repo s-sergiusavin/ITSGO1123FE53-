@@ -6,6 +6,7 @@
     <title>Teste</title>
     <link rel="stylesheet" href="style.css">
 <body>
+    <br>
     <table>
         <tr>
             <th>Name</th>
@@ -24,6 +25,49 @@
         </tr>
     </table>
 
+    <br>
+
+    <form action="">
+        <label for="fname">First name</label>
+        <input type="text" id="fname" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+
+    <form action="">
+        <label for="cars">Choose a car: </label>
+        <select name="cars" id="cars" size="2" multiple>
+            <option value="volvo">Volvo</option>
+            <option value="dacia" selected>Dacia</option>
+            <option value="renault">Renault</option>
+        </select>
+        <input type="submit">
+    </form>
+
+    <br>
+
+    <form action="">
+        <textarea name="message" id="" cols="30" rows="10">Pe cainele meu il cheama Ares.</textarea>
+        <br><br>
+        <input type="submit">
+    </form>
+
+    <br>
+
+    <form action="">
+        <button type="button" onclick="alert('Hello World!')">Click</button>
+    </form>
+
+    <br>
+
+    <form action="">
+        <label for="favcolor">Choose your favourite color: </label>
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+        <input type="submit">
+    </form>
+
+    <br>
 
     <script src="main.js"></script>
 </body>
