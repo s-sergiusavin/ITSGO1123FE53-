@@ -29,7 +29,7 @@ newImageElement.setAttribute('src', 'https://pics.craiyon.com/2023-05-24/c45114b
 
 let listItemsElements = document.querySelectorAll('li')
 console.dir(listItemsElements)
-listItemsElements.forEach( listItem => {
+listItemsElements.forEach(listItem => {
     // listItem.addEventListener('mouseover', function() {
     //     this.classList.add('red')
     //     console.dir(this)
@@ -60,7 +60,7 @@ clickMeElement.style.cursor = 'pointer'
 
 const demoInputElement = document.getElementById('demoInput')
 
-demoInputElement.addEventListener('keypress', function(event) {
+demoInputElement.addEventListener('keypress', function (event) {
     console.log(event)
     if (event.key === 'Enter' && demoInputElement.value.length > 3) {
         demoInputElement.style.background = 'lightgreen';
@@ -69,7 +69,7 @@ demoInputElement.addEventListener('keypress', function(event) {
 
 const ulElement = document.getElementsByTagName('ul')[0];
 
-clickMeElement.addEventListener('click', function() {
+clickMeElement.addEventListener('click', function () {
     const newLiElement = document.createElement('li')
     ulElement.appendChild(newLiElement)
     listItemsElements = document.getElementsByTagName('li')
@@ -91,7 +91,7 @@ function addItemsInTheList() {
         if (toDoInputElement.value !== '') {
             const newListItemElement = document.createElement('li')
             newListItemElement.className = 'newListItems'
-    
+
             toDoListElement.appendChild(newListItemElement)
             newListItemElement.innerHTML = toDoInputElement.value;
             toDoInputElement.value = '';
@@ -109,8 +109,8 @@ function addItemsInTheList() {
 }
 
 addButtonElement.addEventListener('click', addItemsInTheList)
-toDoInputElement.addEventListener('keypress', function(event) {
-    if(event.key === 'Enter') {
+toDoInputElement.addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
         addItemsInTheList()
     }
 })

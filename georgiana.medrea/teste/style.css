@@ -6,3 +6,11 @@ table, th, td {
 table {
     width:50%;
 }
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
