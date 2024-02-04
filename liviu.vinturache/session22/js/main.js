@@ -1,3 +1,4 @@
+// @ts-nocheck
 const demoBoxElement = document.getElementById('testBox')
 console.dir(demoBoxElement)
 
@@ -18,6 +19,7 @@ demoBoxElement.classList.remove('blue')
 demoBoxElement.classList.toggle('blue')
 demoBoxElement.classList.toggle('blue')
 demoBoxElement.classList.toggle('blue')
+
 
 /**
  * get or set attributes
@@ -165,6 +167,8 @@ function checkPlan() {
 
 let string = 'abcdefdce'
 let pattern = /dce/
+
+
 
 // prima metoda exec
 console.log(pattern.exec(string))
