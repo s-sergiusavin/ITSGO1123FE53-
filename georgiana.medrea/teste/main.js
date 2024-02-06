@@ -335,3 +335,121 @@ toDoInputElement.addEventListener('keypress', function (event) {
   }
 })
 
+// RegExp
+
+// let string = 'adgfdedd'
+// let pattern = /ded/
+
+// console.log(string.match(pattern)) // returneaza un obiect
+// console.log(pattern.exec(string))  // returneaza un obiect
+// console.log(pattern.test(string)) // returneza true sau false
+
+// const emailField = document.getElementById('email')
+// const passwordField = document.getElementById('password')
+// const loginBtn = document.getElementById('login')
+// const errorMsg = document.getElementById('error')
+
+// function showError(message) {
+//   errorMsg.style.display = 'block';
+//   errorMsg.innerText = message;
+//   errorMsg.style.color = 'red';
+// }
+
+// const validateEmail = (email, regex) => {
+//   console.log(regex.test(email))
+//   return regex.test(email);
+// }
+
+// const validatePassword = (value) => {
+//   return value === 'password';
+// }
+
+// const clearInputs = () => {
+//   emailField.value = ''
+//   passwordField.value = ''
+// }
+
+// loginBtn.addEventListener('click', function (event) {
+//   event.preventDefault();
+//   console.log(event);
+
+//   const emailValue = emailField.value;
+//   const passwordValue = passwordField.value;
+//   const regexEmailPattern = /\D{4,}\@\D{4,}\.\D{2,}/g;
+
+//   if (emailValue === '' || passwordValue === '') {
+//     showError('Toate campurile sunt obligatorii!!!')
+//   } else {
+//     if (errorMsg.style.display === 'block') {
+//       errorMsg.style.display = 'none'
+//     }
+//     if (validateEmail(emailValue, regexEmailPattern) && validatePassword(passwordValue)) {
+//       alert('Logged in')
+//       clearInputs()
+//     } else {
+//       alert('Try again')
+//       showError('Incorrect email or password')
+//       clearInputs()
+//     }
+//   }
+// })
+
+const loginBtn = document.getElementById('login');
+const emailField = document.getElementById('email');
+const passwordField = document.getElementById('password');
+const error = document.getElementById('error');
+
+const showError = (message) => {
+  error.style.display = 'block';
+  error.innerText = message;
+  error.style.color = 'red';
+}
+
+const validateEmail = (email, regex) => {
+  console.log(regex.test(email));
+  return regex.test(email);
+}
+
+const validatePassword = (value) => {
+  return value === 'password';
+}
+
+const clearInputs = () => {
+  emailField.value = '';
+  passwordField.value = '';
+}
+
+loginBtn.addEventListener('click', function (event) {
+  event.preventDefault();
+  console.log(event);
+
+  const emailValue = emailField.value;
+  const passwordValue = passwordField.value;
+  const regexEmailPattern = /\D{4,}\@\D{4,}\.\D{2,}/g;
+
+  if (emailValue === '' || passwordValue === '') {
+    showError('All fields are mandatory!')
+  } else {
+    if (error.style.display === 'block') {
+      error.style.display = 'none'
+    }
+    if (validateEmail(emailValue, regexEmailPattern) && validatePassword(passwordValue)) {
+      alert('Logged in')
+      clearInputs()
+    } else {
+      alert('Try again')
+      showError('Incorrect email or password')
+      clearInputs()
+    }
+  }
+})
+
+// let start = 1;
+// const intervalulMeu = setInterval( () => {
+//   console.log(start);
+//   start = start + 1;
+// }, 1000)
+
+
+
+
