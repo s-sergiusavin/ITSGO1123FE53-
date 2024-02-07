@@ -140,6 +140,8 @@ function setTwo() {
 }
 console.log(3)
 setTwo()
+// o sa vedem in consola 1,3,2
+
 
 /**
  * setInterval

@@ -204,3 +204,16 @@ console.log(-3)
 console.log(!!-3)
 console.log(-3)
 console.log(!-3)
+
+
+const n = 4;
+const sir = 'alibaba'; // are index de 6
+count = 0; // acesta este un counter care se initializeaza cu 0
+
+for (i=0; i<=n; i++){ // pentru index cand e 0, si mai mic sau egal ca 4, creste-mi index-ul cu +1
+  if(sir[i] === 'a') // daca sir-ul string 'alibaba' contine valoarea a
+  count++; // creste-mi counter-ul cu +1
+          // asta inseamna ca i merge pana pe pozitia 4 adica aliba, si il gaseste de 2 ori pe "a" atunci counter-ul creste de maxim 2 ori, iar valoarea returnata de counter este 2
+
+}
+console.log(`Valoarea returnata de cod pentru counter este ... ${count}`)
