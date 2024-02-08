@@ -450,6 +450,134 @@ loginBtn.addEventListener('click', function (event) {
 //   start = start + 1;
 // }, 1000)
 
+// HTTPS requests
+
+// REST services
+// Create -> POST
+// Read -> GET
+// Update -> PUT sau PATCH (update partial)
+// Delete -> DELETE
+
+// Get requests
+
+const singleUserUrl = "https://reqres.in/api/users/2"
+
+// fetch(singleUserUrl).then((response) => {
+//   console.log(response)
+//   response.json().then(data => {
+//     console.log(data)
+//   })
+// })
+
+const userListUrl = "https://reqres.in/api/users?page=2"
+const singleUserNotFoundUrl = "https://reqres.in/api/users/23"
+
+const allUserList = new Promise( (resolve, reject) => {
+  fetch(singleUserNotFoundUrl).then( response => {
+    console.log(response)
+    if (response.status !== 200) {
+      throw "Ai o eroare"
+    }
+    return response.json()
+  })
+  .then( data => {
+    resolve(data)
+  })
+  .catch( error => {
+    reject(error)
+  })
+})
+
+allUserList.then( 
+  value => {
+    console.log(value)
+  },
+  error => {
+    console.log(error)
+  }
+)
+
+const createUserUrl = 'https://reqres.in/api/users'
+const user = {
+    "name": "morpheus",
+    "job": "leader"
+}
+
+const createUser = new Promise( (resolve, reject) => {
+  fetch(createUserUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(user)
+  }).then( response => {
+    console.log(response)
+    if (response.status !== 201) {
+      throw "Userul nu a fost creat"
+    }
+    return response.json()
+  })
+  .then( data => {
+    resolve(data)
+  })
+  .catch( error => {
+    reject(error)
+  })
+})
+
+createUserUrl.then(
+  value => {
+    console.log(value)
+  },
+  error => {
+    console.log(error)
+  }
+)
+
+// PUT method
+
+const updateUserUrl = "https://reqres.in/api/users/2"
+const userUpdate = {
+  "name": "morpheus",
+  "job": "leader"
+}
+
+const updateUserUrlConfig = {
+  method: 'PUT',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(userUpdate)
+}
+
+const updateUser = new Promise( (resolve, reject) => {
+  fetch(updateUserUrl, updateUserUrlConfig).then( response => {
+    return response.json()
+  })
+  .then( data => {
+    resolve(data)
+  })
+  .catch( error => {
+    reject(error)
+  })
+})
+
+updateUser.then(
+  value => console.log(value),
+  error => console.error(error)
+)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
