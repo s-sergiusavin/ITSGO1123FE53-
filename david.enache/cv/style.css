@@ -65,7 +65,7 @@ box-shadow: 3px 3px 20px rgba(0, 0, 0, 5);
 
  .left-area{
     width: 30%;
-    background-color: rgb(236, 236, 236);
+    background-color: rgb(217, 213, 213);
     text-align: center;
 
 }
@@ -95,13 +95,22 @@ box-shadow: 3px 3px 20px rgba(0, 0, 0, 5);
 }
 
 .skills{
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .skills h1{
     font-size: 30px;
     font-weight: normal;
 }
+.high-skills{
+    margin-top: 30px;
+}
+/* .high-skills h1{
+    font-size: 30px;
+    font-weight: normal;
+} */
+/* .bar{
 
+} */
 .bars{
     margin-top: 30px;
     display: grid;
@@ -139,7 +148,7 @@ border-radius: 10px;
 }
 
 .follow h1{
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 30px;
     font-weight: normal;
 }
@@ -186,7 +195,7 @@ border-radius: 10px;
     margin-top: 10px;
 }
 .work-group{
-    margin: 20px 0;
+    margin: 10px 0;
 }
  .work .work-group{
  position: relative;
@@ -199,7 +208,7 @@ border-radius: 10px;
 
 .work-group span{
     position: absolute;
-    top: 10px;
+    top: -14px;
     right: 0;
     color: black;
     font-weight: bold;
@@ -211,10 +220,83 @@ border-radius: 10px;
 }
 .edu-group{
     position: relative;
-    margin: 30px 0;
+    margin: 10px 0;
 }
 .edu-group h4{
     padding-left: 80px;
     font-size: 20px;
     font-weight: normal;
 }
+.edu-group span{
+    position: absolute;
+    top: -20px;
+    right: -4px;
+    font-size: 15px;
+    font-weight: bold;
+}
+/* #icon{
+    position: absolute;
+    left: 20px;
+} */
+.course-group{
+    position: relative;
+    margin: 10px 0;
+}
+.course-group h4{
+    padding-left: 80px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.course-group span{
+    position: absolute;
+    top: -20px;
+    right: -4px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.information{
+    padding: 10px;
+    position: relative;
+    left: 67px;
+    word-spacing: 3px;  
+}
+.course-group p{
+    padding-left: 75px;
+}
+button{
+    font-size: 25px;
+    padding: 10px 20px;
+    margin: 50px 0 5px 140px;
+    background-color: rgba(83, 83, 83);
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    cursor: pointer;    
+    transition: .5s;
+}
+button:hover{
+    background-color: black;
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+}
+@media print {
+    body *{ 
+        visibility: hidden;
+    }
+    print-area * {
+        visibility: visible;
+    } 
+}
+/* @media only screen and (max-width: 600px) {
+    /* Adaugă aici stilurile specifice pentru ecranele cu lățime maximă de 600px */
+    /* De exemplu, modifică lățimea și marginile elementelor pentru a se potrivi ecranului mai mic */
+    /* .header-text h1 {
+      font-size: 24px;
+    }
+    .header-text p {
+      font-size: 14px;
+    } */
+    /* Alte modificări specifice */
+  } */
