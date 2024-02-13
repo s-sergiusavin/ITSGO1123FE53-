@@ -1,0 +1,8 @@
+.flexContainer {
+    border: 3px solid black;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
