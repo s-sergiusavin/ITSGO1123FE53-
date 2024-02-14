@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media App | Feed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/feed.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="mainSearch">
+            <a href="#"><i class="bi bi-facebook logo"></i></a>
+            <input type="search" class="searchInput" placeholder="Search on social media">
+        </div>
+
+        <nav class="mainNavigation">
+            <ul class="navigation">
+                <li>
+                    <a href="feed.html"><i class="bi bi-house navIcons"></i></a>
+                </li>
+                <li>
+                    <a href="../profile.html" title="My Profile">
+                        <i class="bi bi-person navIcons"></i>
+                    </a>
+                </li>
+                <li><a href="#"><i class="bi bi-messenger navIcons"></i></a></li>
+                <li><a href="#"><i class="bi bi-camera-reels navIcons"></i></a></li>
+            </ul>
+        </nav>
+
+        <ul class="links">
+            <li><a href="landingPage.html" title="To Landing page"><i class="bi bi-plus-circle navIcons"></i></a></li>
+            <li><a href="#" class="bellIcon"><i class="bi bi-bell navIcons"></i> <span>12</span></a></li>
+            <li><a href="../login.html" title="Logout"><i class="bi bi-gear navIcons"></i></a></li>
+            <li>
+                <div class="accountSettings">
+                    <button id="accountSettingsButton"><i class="bi bi-gear navIcons"></i></button>
+                    <button class="accountSettingsMenu"></button>
+                    <button id="logoutButton"></button>
+                </div>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <aside class="leftContent">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo a iste possimus eius. Vel quibusdam ipsam quas
+            possimus ducimus animi adipisci aut aliquid eius, quae id quia omnis molestias! Saepe, ducimus animi
+            accusamus quod ea facilis nostrum cupiditate soluta. A repudiandae animi quaerat reiciendis. Doloremque
+            ratione nisi, aliquid expedita odio deleniti non odit, delectus dignissimos minus, eveniet doloribus qui
+            perspiciatis accusamus voluptatem pariatur debitis. Blanditiis, reiciendis. Consequatur voluptate, beatae
+            illum ad explicabo recusandae pariatur aperiam magni quo fuga expedita officiis, maxime, commodi eum alias
+            voluptatum porro cupiditate. Ratione quis cupiditate, eos distinctio error odit voluptas aperiam recusandae
+            facere dolorum sapiente est vel magnam molestias voluptate quod suscipit dolorem expedita. Tempora minus
+            iusto reprehenderit est numquam hic doloribus quod laboriosam nemo minima accusamus, quia enim dolore quos
+            animi, error reiciendis sequi deserunt tenetur. Dolorem repudiandae nemo commodi pariatur laborum nihil
+            officiis molestias at. Omnis possimus exercitationem aperiam culpa dicta tempore molestias voluptates sint
+            hic voluptatem laudantium earum sed fugit magnam totam unde, doloremque temporibus, aliquid aut soluta
+            alias! Ipsum commodi facilis doloribus sed provident saepe aperiam reiciendis sunt libero, rem expedita quo
+            deleniti voluptatum quibusdam at tempore sequi asperiores facere quas repudiandae accusamus omnis delectus
+            quae laudantium! Eos quo culpa exercitationem.
+        </aside>
+
+        <section class="mainContent">
+
+            <div class="post">
+                <div class="postHeader">
+                    <div class="profileUserInfo">
+                        <a href=""><img src="assests/profile.jpg" alt="user profile" class="profileImage"></a>
+                        <div class="profileName">
+                            <span>Dumbrava Eduard</span>
+                            <span>06 Dec 2023</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="profileOptions"><i class="bi bi-three-dots"></i></a>
+                </div>
+
+                <div class="content">
+                    <div class="imgWrapper">
+                        <img src="assests/post.jpg" alt="travel post" class="imgContent">
+                        <i class="bi bi-info-circle infoIcon"></i>
+                    </div>
+
+
+                    <strong class="postTitle">Titlul postarii</strong>
+
+                    <p class="postDescription">
+                        Aceasta este prima mea postare facuta pe resteaua de socializare creata de mine in timpul
+                        cursului de Front End Development
+                    </p>
+                    <a href="landingPage.html"><strong>Read more..</strong></a>
+                </div>
+
+                <div class="reacts">
+                    <div class="likesInfo">
+                        <i class="bi bi-hand-thumbs-up reactsIcons"></i>
+                        <span>10 likes</span>
+                    </div>
+
+                    <div class="commentsInfo">
+                        <span>15 comments</span>
+                        <i class="bi bi-chat-dots reactsIcons"></i>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="reactsActions">
+                    <ul class="actions">
+                        <li class="reaction">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                            <span>Like</span>
+                        </li>
+                        <li class="reaction">
+                            <i class="bi bi-chat-dots"></i>
+                            <span>Comments</span>
+                        </li>
+                        <li class="reaction">
+                            <i class="bi bi-share"></i>
+                            <span>Share</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="commentSection">
+                    <a href=""><img src="assests/profile.jpg" alt="user profile" class="profileImage"></a>
+                    <input type="text" placeholder="Adauga un comentariu" class="newCommentField">
+                    <button class="insertCommentButton"><i class="bi bi-send"></i></button>
+                </div>
+
+                <div class="userComments">
+
+                    <div class="commentContent">
+                        <div class="profileUserComment">
+                            <a href=""><img src="assests/profile.jpg" alt="user profile" class="profileImage"></a>
+                            <span>User name</span>
+                        </div>
+
+                        <div class="userCommentText">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, a accusamus. Accusantium
+                            recusandae placeat cupiditate a possimus ipsam doloremque sit.
+                            <div class="emojiReaction">🥳</div>
+                        </div>
+
+                        <div class="commentReaction">
+                            <strong class="commentReactionButton">Like</strong>
+                            <strong class="commentReactionButton">Comment</strong>
+                        </div>
+                    </div>
+
+                    <div class="commentContent">
+                        <div class="profileUserComment">
+                            <a href=""><img src="assests/profile.jpg" alt="user profile" class="profileImage"></a>
+                            <span>User name</span>
+                        </div>
+
+                        <div class="userCommentText">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, a accusamus. Accusantium
+                            recusandae placeat cupiditate a possimus ipsam doloremque sit.
+                            <div class="emojiReaction">🥳</div>
+                        </div>
+
+                        <div class="commentReaction">
+                            <strong class="commentReactionButton">Like</strong>
+                            <strong class="commentReactionButton">Comment</strong>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="postHeader">
+                    <div class="profileUserInfo">
+                        <a href=""><img src="assests/profile.jpg" alt="user profile" class="profileImage"></a>
+                        <div class="profileName">
+                            <span>Sergiu Savin</span>
+                            <span>06 Dec 2023</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="profileOptions"><i class="bi bi-three-dots"></i></a>
+                </div>
+
+                <div class="content">
+                    <div class="imgWrapper">
+                        <img src="assests/post.jpg" alt="travel post" class="imgContent">
+                        <i class="bi bi-info-circle infoIcon"></i>
+                    </div>
+
+
+                    <strong class="postTitle">Titlul postarii</strong>
+
+                    <p class="postDescription">
+                        Aceasta este prima mea postare facuta pe resteaua de socializare creata de mine in timpul
+                        cursului de Front End Development
+                    </p>
+                    <a href="landingPage.html"><strong>Read more..</strong></a>
+                </div>
+
+                <div class="reacts">
+                    <div class="likesInfo">
+                        <i class="bi bi-hand-thumbs-up reactsIcons"></i>
+                        <span>10 likes</span>
+                    </div>
+
+                    <div class="commentsInfo">
+                        <span>15 comments</span>
+                        <i class="bi bi-chat-dots reactsIcons"></i>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="reactsActions">
+                    <ul class="actions">
+                        <li class="reaction">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                            <span>Like</span>
+                        </li>
+                        <li class="reaction">
+                            <i class="bi bi-chat-dots"></i>
+                            <span>Comments</span>
+                        </li>
+                        <li class="reaction">
+                            <i class="bi bi-share"></i>
+                            <span>Share</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <hr>
+
+                <div class="commentSection">
+                    <a href=""><img src="assests/profile.jpg" alt="user profile" class="profileImage"></a>
+                    <input type="text" placeholder="Adauga un comentariu" class="newCommentField">
+                    <button class="insertCommentButton"><i class="bi bi-send"></i></button>
+                </div>
+
+                <div class="userComments">
+
+                    <div class="commentContent">
+                        <div class="profileUserComment">
+                            <a href=""><img src="assests/profile.jpg" alt="user profile" class="profileImage"></a>
+                            <span>User name</span>
+                        </div>
+
+                        <div class="userCommentText">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, a accusamus. Accusantium
+                            recusandae placeat cupiditate a possimus ipsam doloremque sit.
+                            <div class="emojiReaction">🥳</div>
+                        </div>
+
+                        <div class="commentReaction">
+                            <strong class="commentReactionButton">Like</strong>
+                            <strong class="commentReactionButton">Comment</strong>
+                        </div>
+                    </div>
+
+                    <div class="commentContent">
+                        <div class="profileUserComment">
+                            <a href=""><img src="assests/profile.jpg" alt="user profile" class="profileImage"></a>
+                            <span>User name</span>
+                        </div>
+
+                        <div class="userCommentText">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, a accusamus. Accusantium
+                            recusandae placeat cupiditate a possimus ipsam doloremque sit.
+                            <div class="emojiReaction">🥳</div>
+                        </div>
+
+                        <div class="commentReaction">
+                            <strong class="commentReactionButton">Like</strong>
+                            <strong class="commentReactionButton">Comment</strong>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <aside class="rightContent">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium, iusto enim. Ut id tempore delectus
+            quidem iure modi nam perferendis velit inventore architecto dolores repellendus, perspiciatis dignissimos
+            quo quia reiciendis impedit magnam placeat a esse maxime eum molestias at. Nemo sequi atque reprehenderit et
+            vitae eius, excepturi sit. Quam dicta quibusdam accusantium soluta laudantium at ipsam repudiandae autem,
+            quia saepe ab fugiat. Excepturi quod maiores, qui nulla aliquid voluptatibus nesciunt a beatae provident
+            cupiditate minima nihil, nemo pariatur est sed, fugit placeat? Beatae dolorem minus corporis nostrum
+            laboriosam ut enim, tempora iusto! Laboriosam in, nihil vero aliquid eum repudiandae rerum quod. Esse alias
+            eius beatae perspiciatis illum corporis possimus maxime necessitatibus sapiente reiciendis earum numquam, ex
+            nostrum odio, expedita laborum placeat doloribus nemo perferendis et architecto. Possimus suscipit numquam
+            aperiam corporis porro, beatae fugit aliquam tempora accusamus nesciunt delectus, enim hic amet quas eius ex
+            molestiae cupiditate voluptas magnam esse ullam, quia quos consequatur mollitia. Nesciunt minus qui, harum
+            illo expedita tempore cum aut recusandae architecto, possimus asperiores odio ea accusantium sunt quod?
+            Autem itaque aliquam voluptas tenetur provident temporibus dicta doloribus et placeat assumenda debitis
+            eveniet maiores dolor repellendus ratione nulla, veritatis deleniti accusamus quasi? Numquam ea aut
+            temporibus.
+        </aside>
+    </main>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+    <span>test</span>
+    <span>alt test</span>
+
+
+        <script src="../js/feed.js"></script>
+</body>
+
+</html>
