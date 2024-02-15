@@ -1,8 +1,107 @@
 * {
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: lightblue;
+}
+
+.mainSearch {
+    display: flex;
+    align-items: center;
+}
+
+.mainSearch .logo {
+    padding: 1rem;
+    font-size: 3rem;
+    color: royalblue;
+}
+
+.mainSearch .logo:hover {
+    color: darkblue;
+}
+
+.mainSearch .searchInput {
+    height: 3rem;
+    border-radius: 1.5rem;
+    padding: 0 1rem;
+    border-color: beige;
+}
+
+.mainSearch .searchInput:focus {
+    border: 0.35rem solid teal;
+}
+
+.navigation,
+.links {
+    display: flex;
+}
+
+.navigation>li>a {
+    border-radius: 50%;
+    background-color: aquamarine;
+    margin: 0 0.35rem;
+    display: flex;
+}
+
+.navigation>li>a:hover {
+    background-color: teal;
+    border: 1px solid royalblue;
+}
+
+.navIcons {
+    font-size: 3rem;
+    color: royalblue;
+    margin: 0 0.5rem;
+}
+
+.navIcons:hover {
+    color: darkblue;
+}
+
+.bellIcon {
+    position: relative;
+    display: block;
+}
+
+.bellIcon span {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    color: white;
+    font-weight: bold;
 }
 
 .profileCoverInfo {
+    display: block;
     position: absolute;
     padding: 75px;
     left: 25%;
@@ -17,33 +116,30 @@
     cursor: pointer;
 }
 
-.profileCoverInfo .profileUserInfo .profileImage {
+.profileUserInfo .profileImage {
     position: relative;
     width: 10%;
     left: 2%;
-    top: -4rem;
+    margin-top: -3%;
     border: 2px solid white;
 }
 
-.profileCoverInfo .profileUserInfo .profileName .name {
+.profileUserInfo .profileName .name {
     position: relative;
-    left: 14%;
-    top: -8.5rem;
     font-size: x-large;
 }
 
-.profileCoverInfo .profileUserInfo .profileName .friendsNumber {
+.profileUserInfo .profileName .friendsNumber {
     position: relative;
-    left: 14%;
-    top: -8.5rem;
     font-size: medium;
 }
 
 .profileCoverInfo .addToStory {
     position: relative;
-    width: 30%;
-    left: 49%;
-    top: -12rem;
+    width: 11%;
+    height: 2%;
+    left: 57%;
+    top: -15vh;
     border: 2px solid darkblue;
     background-color: lightblue;
     padding: 5px;
@@ -52,9 +148,10 @@
 
 .profileCoverInfo .editProfile {
     position: relative;
-    width: 30%;
-    left: 48.7%;
-    top: -12rem;
+    width: 11%;
+    height: 2%;
+    left: 68%;
+    top: -19vh;
     border: 2px solid darkblue;
     background-color: lightblue;
     margin-left: 5px;
