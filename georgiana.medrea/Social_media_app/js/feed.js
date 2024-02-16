@@ -3,7 +3,7 @@ const accountSettingsList = document.getElementsByClassName('accountSettingsMenu
 
 const logoutButton = document.getElementById('logoutButton')
 
-accountSettingsButton.addEventListener('click', function() {
+accountSettingsButton.addEventListener('click', function () {
     if (accountSettingsList.style.display === 'flex') {
         accountSettingsList.style.display = 'none'
     } else {
@@ -39,7 +39,7 @@ function getData() {
 
 getData()
 
-likeButton.addEventListener('click', function() {
+likeButton.addEventListener('click', function () {
     isLiked = !isLiked
     console.dir(noOfLikesElem)
 
@@ -49,18 +49,43 @@ likeButton.addEventListener('click', function() {
     //     noOfLikesElem.innerText = Number(noOfLikesElem.innerText) - 1
     // }
 
-    noOfLikesElem.innerText = isLiked 
-    ? noOfLikesElem.innerText = Number(noOfLikesElem.innerText) + 1
-    : noOfLikesElem.innerText = Number(noOfLikesElem.innerText) - 1
+    noOfLikesElem.innerText = isLiked
+        ? noOfLikesElem.innerText = Number(noOfLikesElem.innerText) + 1
+        : noOfLikesElem.innerText = Number(noOfLikesElem.innerText) - 1
 
     this.classList.toggle('touched')
 })
 
-shareButton.addEventListener('click', function() {
+shareButton.addEventListener('click', function () {
     isShared = !isShared
     noOfSharesElem.innerText = isShared
-    ? Number(noOfSharesElem.innerText) + 1
-    : Number(noOfSharesElem.innerText) - 1
+        ? Number(noOfSharesElem.innerText) + 1
+        : Number(noOfSharesElem.innerText) - 1
 
     this.classList.toggle('touched')
 })
+
+const onlineUserElements = document.querySelectorAll('#onlineUser')
+// console.dir(onlineUserElements)
+
+onlineUserElements.forEach(element => {
+    element.addEventListener('click', function (event) {
+        if (event) {
+            element.style.background = 'aquamarine'
+            prompt('Insert your message for the user below: ')
+        }
+    })
+})
+
+const onlineGroupElements = document.querySelectorAll('#onlineGroup')
+
+onlineGroupElements.forEach(element => {
+    element.addEventListener('click', function (event) {
+        if (event) {
+            element.style.background = 'aquamarine'
+            prompt('Insert your message for the group below: ')
+        }
+    })
+})
+
+

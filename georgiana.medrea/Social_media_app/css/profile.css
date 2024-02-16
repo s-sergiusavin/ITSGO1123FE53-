@@ -100,15 +100,16 @@ header {
     font-weight: bold;
 }
 
-.profile {
+/* .profile {
     display: flex;
-    flex-direction: column;
-}
+} */
 
 .profile .profileCoverInfo {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    padding: 75px;
-    left: 25%;
+    left: 27%;
+    top: 8%;
 }
 
 .profile .profileCoverInfo .coverImage {
@@ -117,27 +118,26 @@ header {
 
 .profile .profileCoverInfo .profileUserInfo {
     display: flex;
-    position: relative;
-    cursor: pointer;
+    align-items: flex-start;
 }
 
 .profile .profileCoverInfo .profileUserInfo .profileImage {
     position: relative;
     width: 12%;
-    top: -25%;
+    margin-top: -3%;
     border: 2px solid white;
     border-radius: 50%;
 }
 
 .profile .profileCoverInfo .profileUserInfo .profileName .name {
     position: relative;
-    left: -1010%;
+    margin-left: -1050%;
     font-size: x-large;
 }
 
 .profile .profileCoverInfo .profileUserInfo .profileName .friendsNumber {
     position: relative;
-    left: -1010%;
+    margin-left: -1050%;
     font-size: medium;
 }
 
@@ -145,7 +145,8 @@ header {
     position: relative;
     width: 18%;
     height: 38px;
-    left: -32%;
+    left: -37%;
+    text-align: center;
     border: 2px solid darkblue;
     background-color: lightblue;
     padding: 5px;
@@ -158,7 +159,7 @@ header {
     width: 18%;
     height: 38px;
     text-align: center;
-    left: -32%;
+    left: -37%;
     border: 2px solid darkblue;
     background-color: lightblue;
     margin-left: 5px;
@@ -169,13 +170,14 @@ header {
 
 .mainContent {
     width: 40%;
+    padding-top: 25px;
 }
 
 .mainContent .post {
     display: flex;
     flex-direction: column;
     box-shadow: 5px 5px 5px 5px #888;
-    margin: 75% 0 0 80%;
+    margin: 70% 0 0 75%;
     padding: 1rem;
     width: 100%;
 }
