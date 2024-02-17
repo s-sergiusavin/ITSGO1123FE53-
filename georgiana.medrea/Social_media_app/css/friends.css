@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+
+.backImage {
+    width: 3rem;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 50px 300px 200px 370px;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    width: 90px;
+    height: 30px;
+    border-radius: 10%;
+}
+
+
+.userName {
+    margin-left: 10%;
+}
+
+#confirm {
+    cursor: pointer;
+    margin-left: 18%;
+    background-color: rgb(59, 112, 247);
+    color: white;
+}
+
+#remove {
+    cursor: pointer;
+    margin-left: 18%;
+}
+
+h2 {
+    margin-left: 370px;
+    border: 2px solid whitesmoke;
+    width: 130px;
+    padding: 2px;
+}
+
+h3 {
+    margin-left: 370px;
+}

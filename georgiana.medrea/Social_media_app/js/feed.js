@@ -65,14 +65,18 @@ shareButton.addEventListener('click', function () {
     this.classList.toggle('touched')
 })
 
+// Send message to user/group using promp and alert
+
 const onlineUserElements = document.querySelectorAll('#onlineUser')
-// console.dir(onlineUserElements)
+console.dir(onlineUserElements)
 
 onlineUserElements.forEach(element => {
     element.addEventListener('click', function (event) {
         if (event) {
             element.style.background = 'aquamarine'
-            prompt('Insert your message for the user below: ')
+            let message = prompt('Insert your message for user below: ')
+            alert('Your message for user was: ' + message)
+            console.log(message)
         }
     })
 })
@@ -83,9 +87,13 @@ onlineGroupElements.forEach(element => {
     element.addEventListener('click', function (event) {
         if (event) {
             element.style.background = 'aquamarine'
-            prompt('Insert your message for the group below: ')
+            let message = prompt('Insert your message for the group below: ')
+            alert('Your message for group was: ' + message)
+            console.log(message)
         }
     })
 })
+
+
 
 
