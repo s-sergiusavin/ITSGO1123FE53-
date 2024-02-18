@@ -4,107 +4,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friends</title>
+    <title>Friends | Left navigation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../css/friends.css">
 </head>
 
 <body>
     <a href="feed.html"><img src="../assests/back.png" class="backImage" alt="back icon"></a>
     <br>
-    <h2><span id="friendsNumber">447</span> Friends</h2>
-    <br><br><br>
+
+    <aside class="leftContent">
+        <h2><span id="friendsNumber">447</span> Friends</h2>
+     
+        <ul class="friendList">
+            <li><a href="#"><img src="../assests/Andrei Ilascu.jpg" alt="user profile" class="profileImage" width="100">
+                </a>
+                <span class="profileName"><strong> Andrei Ilascu</strong></span>
+            </li>
+            <br>
+            <li><a href="#"><img src="../assests/Ana Ana.jpg" alt="user profile" class="profileImage" width="100">
+                </a>
+                <span class="profileName"><strong> Ana Ana</strong></span>
+            </li>
+            <br>
+            <li><a href="#"><img src="../assests/Cristi Virag.jpg" alt="user profile" class="profileImage" width="100">
+                </a>
+                <span class="profileName"><strong> Cristi Virag</strong></span>
+            </li>
+            <br>
+            <li><a href="#"><img src="../assests/Ioana Adam.jpeg" alt="user profile" class="profileImage" width="100">
+                </a>
+                <span class="profileName"><strong> Ioana Adam</strong></span>
+            </li>
+            <br>
+            <li><a href="#"><img src="../assests/Xia Pung.jpeg" alt="user profile" class="profileImage" width="100">
+                </a>
+                <span class="profileName"><strong> Xia Pung</strong></span>
+            </li>
+            <br>
+            <li><a href="#"><img src="../assests/Roxana Morun.jpg" alt="user profile" class="profileImage" width="100">
+                </a>
+                <span class="profileName"><strong> Roxana Morun</strong></span>
+            </li>
+            <br>
+            <li><a href="#"><img src="../assests/Alin Andi.jpg" alt="user profile" class="profileImage" width="100">
+                </a>
+                <span class="profileName"><strong> Alin Andi</strong></span>
+            </li>
+            <br>
+            <li><a href="#"><img src="../assests/Victor Dobrin.jpg" alt="user profile" class="profileImage" width="100">
+                </a>
+                <span class="profileName"><strong> Victor Dobrin</strong></span>
+            </li>
+            <br>
+            <li><a href="#"><img src="../assests/Ingrid Tirziu.jpg" alt="user profile" class="profileImage" width="100">
+                </a>
+                <span class="profileName"><strong> Ingrid Tirziu</strong></span>
+            </li>
+            <br>
+            <li><a href="#"><img src="../assests/Mia Dobrin.jpg" alt="user profile" class="profileImage" width="100">
+                </a>
+                <span class="profileName" id="onlineUser"><strong> Mia Dobrin</strong></span>
+            </li>
+            <br>
+            <li><a href="#"><img src="../assests/Alex Alexandru.jpg" alt="user profile" class="profileImage"
+                        width="100">
+                </a>
+                <span class="profileName"><strong> Alex Alexandru</strong></span>
+            </li>
+            <br>
+            <li><a href="#"><img src="../assests/John Doe.jpg" alt="user profile" class="profileImage" width="100">
+                </a>
+                <span class="profileName"><strong> John Doe</strong></span>
+            </li>
+            <br>
+        </ul>
+    </aside>
+
     <h3>Friend Requests</h3>
-    <ul>
-        <li id="friendRequest">
-            <a href="#"><img
-                    src="https://images.unsplash.com/photo-1423479185712-25d4a4fe1006?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="userProfile" width="150">
-            </a>
-            <span class="userName"><strong>Alexandru Cazar</strong></span>
-            <button id="confirm">Confirm</button>
-            <button id="remove">Remove</button>
-        </li>
-        <br>
-        <li id="friendRequest">
-            <a href="#"><img
-                    src="https://plus.unsplash.com/premium_photo-1667667720425-6972aff75f6b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="userProfile" width="150">
-            </a>
-            <span class="userName"><strong>Alina Laurentiu</strong></span>
-            <button id="confirm">Confirm</button>
-            <button id="remove">Remove</button>
-        </li>
-        <br>
-        <li id="friendRequest">
-            <a href="#"><img
-                    src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="userProfile" width="150">
-            </a>
-            <span class="userName"><strong>Alina & Cristian</strong></span>
-            <button id="confirm">Confirm</button>
-            <button id="remove">Remove</button>
-        </li>
-        <br>
-        <li id="friendRequest">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1466112928291-0903b80a9466?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="userProfile" width="150">
-            </a>
-            <span class="userName"><strong>Andrei Ioan Crai</strong></span>
-            <button id="confirm">Confirm</button>
-            <button id="remove">Remove</button>
-        </li>
-        <br>
-        <li id="friendRequest">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1423479185712-25d4a4fe1006?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="userProfile" width="150">
-            </a>
-            <span class="userName"><strong>Nick Steilmann</strong></span>
-            <button id="confirm">Confirm</button>
-            <button id="remove">Remove</button>
-        </li>
-        <br>
-        <li id="friendRequest">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="userProfile" width="150">
-            </a>
-            <span class="userName"><strong>Andra Andreescu</strong></span>
-            <button id="confirm">Confirm</button>
-            <button id="remove">Remove</button>
-        </li>
-        <br>
-        <li id="friendRequest">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1526800544336-d04f0cbfd700?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="userProfile" width="150">
-            </a>
-            <span class="userName"><strong>Adamovici Adam</strong></span>
-            <button id="confirm">Confirm</button>
-            <button id="remove">Remove</button>
-        </li>
-        <br>
-        <li id="friendRequest">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1526800544336-d04f0cbfd700?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="userProfile" width="150">
-            </a>
-            <span class="userName"><strong>Bungau Valentin</strong></span>
-            <button id="confirm">Confirm</button>
-            <button id="remove">Remove</button>
-        </li>
-        <br>
-        <li id="friendRequest">
-            <a href="#">
-                <img src="https://images.unsplash.com/photo-1526800544336-d04f0cbfd700?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="userProfile" width="150">
-            </a>
-            <span class="userName"><strong>Vali I. Valentina</strong></span>
-            <button id="confirm">Confirm</button>
-            <button id="remove">Remove</button>
-        </li>
-    </ul>
+    <section class="mainContent">
+        <ul>
+            <li id="friendRequest">
+                <a href="#"><img
+                        src="https://images.unsplash.com/photo-1423479185712-25d4a4fe1006?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="userProfile" width="150">
+                </a>
+                <span class="userName"><strong>Alexandru Cazar</strong></span>
+                <button id="confirm">Confirm</button>
+                <button id="remove">Remove</button>
+            </li>
+            <br>
+            <li id="friendRequest">
+                <a href="#"><img
+                        src="https://plus.unsplash.com/premium_photo-1667667720425-6972aff75f6b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="userProfile" width="150">
+                </a>
+                <span class="userName"><strong>Alina Laurentiu</strong></span>
+                <button id="confirm">Confirm</button>
+                <button id="remove">Remove</button>
+            </li>
+            <br>
+            <li id="friendRequest">
+                <a href="#"><img
+                        src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="userProfile" width="150">
+                </a>
+                <span class="userName"><strong>Alina & Cristian</strong></span>
+                <button id="confirm">Confirm</button>
+                <button id="remove">Remove</button>
+            </li>
+            <br>
+            <li id="friendRequest">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1466112928291-0903b80a9466?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="userProfile" width="150">
+                </a>
+                <span class="userName"><strong>Andrei Ioan Crai</strong></span>
+                <button id="confirm">Confirm</button>
+                <button id="remove">Remove</button>
+            </li>
+            <br>
+            <li id="friendRequest">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1423479185712-25d4a4fe1006?q=80&w=2076&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="userProfile" width="150">
+                </a>
+                <span class="userName"><strong>Nick Steilmann</strong></span>
+                <button id="confirm">Confirm</button>
+                <button id="remove">Remove</button>
+            </li>
+            <br>
+            <li id="friendRequest">
+                <a href="#">
+                    <img src="https://plus.unsplash.com/premium_photo-1667667720425-6972aff75f6b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="userProfile" width="150">
+                </a>
+                <span class="userName"><strong>Andra Andreescu</strong></span>
+                <button id="confirm">Confirm</button>
+                <button id="remove">Remove</button>
+            </li>
+            <br>
+            <li id="friendRequest">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1466112928291-0903b80a9466?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="userProfile" width="150">
+                </a>
+                <span class="userName"><strong>Adamovici Adam</strong></span>
+                <button id="confirm">Confirm</button>
+                <button id="remove">Remove</button>
+            </li>
+            <br>
+            <li id="friendRequest">
+                <a href="#">
+                    <img src="https://images.unsplash.com/photo-1466112928291-0903b80a9466?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="userProfile" width="150">
+                </a>
+                <span class="userName"><strong>Bungau Valentin</strong></span>
+                <button id="confirm">Confirm</button>
+                <button id="remove">Remove</button>
+            </li>
+            <br>
+            <li id="friendRequest">
+                <a href="#">
+                    <img src="https://plus.unsplash.com/premium_photo-1667667720425-6972aff75f6b?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="userProfile" width="150">
+                </a>
+                <span class="userName"><strong>Vali I. Valentina</strong></span>
+                <button id="confirm">Confirm</button>
+                <button id="remove">Remove</button>
+            </li>
+        </ul>
+    </section>
 
     <script src="../js/friends.js"></script>
 

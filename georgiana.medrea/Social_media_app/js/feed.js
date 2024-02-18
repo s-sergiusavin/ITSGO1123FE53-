@@ -65,7 +65,7 @@ shareButton.addEventListener('click', function () {
     this.classList.toggle('touched')
 })
 
-// Send message to user/group using promp and alert
+// Send message to user/group
 
 const onlineUserElements = document.querySelectorAll('#onlineUser')
 console.dir(onlineUserElements)

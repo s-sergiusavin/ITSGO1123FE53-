@@ -1,60 +1,94 @@
 * {
     box-sizing: border-box;
-    background-color: aliceblue;
 }
 
 .backImage {
-    width: 3rem;
+    width: 2rem;
     position: fixed;
     top: 1rem;
     left: 1rem;
 }
 
-ul {
+.mainContent ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: flex-start;
-    padding: 50px 300px 200px 370px;
+    padding: 50px 300px 200px 470px;
 }
 
-li {
+.mainContent ul li {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    border: 2px solid grey;
+    width: 170px;
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
 }
 
-button {
+.mainContent button {
     width: 90px;
     height: 30px;
+    margin: 1%;
     border-radius: 10%;
 }
 
 
-.userName {
+.mainContent .userName {
     margin-left: 10%;
 }
 
-#confirm {
+.mainContent #confirm {
     cursor: pointer;
     margin-left: 18%;
     background-color: rgb(59, 112, 247);
     color: white;
 }
 
-#remove {
+.mainContent #remove {
     cursor: pointer;
     margin-left: 18%;
 }
 
 h2 {
-    margin-left: 370px;
     border: 2px solid whitesmoke;
+    background-color: lightblue;
     width: 130px;
     padding: 2px;
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-top: 30px;
+    position: fixed;
 }
 
 h3 {
     margin-left: 370px;
+}
+
+.leftContent .friendList {
+    list-style-type: none;
+    position: fixed;
+    width: 250px;
+    height: 900px;
+    border: 1px solid whitesmoke;
+    overflow: auto;
+    margin-top: 70px;
+}
+
+.leftContent .friendList li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.leftContent img {
+    border-radius: 50%;
+}
+
+.leftContent .friendList .profileName {
+    text-align: center;
 }
