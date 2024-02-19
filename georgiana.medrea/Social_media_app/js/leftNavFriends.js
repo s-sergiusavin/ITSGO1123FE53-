@@ -18,8 +18,7 @@ confirmBtnElements.forEach(element => {
 
         if (isFriend) {
             noOfFriendsElement.innerText = Number(noOfFriendsElement.innerText) + 1
-        }
-        else {
+        } else {
             noOfFriendsElement.innerText = Number(noOfFriendsElement.innerText)
         }
     })

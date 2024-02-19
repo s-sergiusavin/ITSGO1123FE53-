@@ -75,8 +75,12 @@ onlineUserElements.forEach(element => {
         if (event) {
             element.style.background = 'aquamarine'
             let message = prompt('Insert your message for user below: ')
-            alert('Your message for user was: ' + message)
-            console.log(message)
+            if (message !== null && message !== '') {
+                alert('Your message for user was: ' + message)
+                console.log(message)
+            } else {
+                alert('Insert your message first!')
+            }
         }
     })
 })
@@ -88,12 +92,67 @@ onlineGroupElements.forEach(element => {
         if (event) {
             element.style.background = 'aquamarine'
             let message = prompt('Insert your message for the group below: ')
-            alert('Your message for group was: ' + message)
-            console.log(message)
+            if (message !== null && message !== '') {
+                alert('Your message for user was: ' + message)
+                console.log(message)
+            } else {
+                alert('Insert your message first!')
+            }
         }
     })
 })
 
+const bloodDonationElement = document.getElementById('bloodDonation')
+const climateCenterElement = document.getElementById('climateCenter')
+const playGamesElement = document.getElementById('playGames')
+const videoGamesElement = document.getElementById('videoGames')
+const marketplaceElement = document.getElementById('marketplace')
+const adActivityElement = document.getElementById('adActivity')
+const adsManagerElement = document.getElementById('adsManager')
+const ordersPaymentsElement = document.getElementById('ordersPayments')
+const fundraisersElement = document.getElementById('fundraisers')
+
+bloodDonationElement.addEventListener('click', function() {
+    alert('There are not scheduled nearby any blood donation events!')
+})
+
+climateCenterElement.addEventListener('click', function() {
+    alert('Facts about climate change: 97% of climate scientists agree that humans are causing global warming!')
+})
+
+playGamesElement.addEventListener('click', function() {
+    alert('You did not play any games lately!')
+})
+
+videoGamesElement.addEventListener('click', function() {
+    alert('You did not play any video games lately!')
+})
+
+marketplaceElement.addEventListener('click', function() {
+    let message = prompt('If you want to use Marketplace, you need first to agree to use your profile info! Enter AGREE or OK or YES below:')
+    if (message === 'AGREE' || message === 'agree' || message === 'Agree' || message === 'OK' || message === 'ok' || message === 'Ok' || message === 'YES' || message === 'yes' || message === 'Yes') {
+        alert('Your marketplace account is created!')
+        console.log(message)
+    } else {
+        alert('You need first to agree to use your profile info, before using Marketplace!')
+    }
+})
+
+adActivity.addEventListener('click', function() {
+    alert('You do not have any ads running!')
+})
+
+adsManager.addEventListener('click', function() {
+    alert('Ads manager account is available only for business accounts!')
+})
+
+ordersPayments.addEventListener('click', function() {
+    alert('No payment history!')
+})
+
+fundraisers.addEventListener('click', function() {
+    alert('You have not raised money for any cause!')
+})
 
 
 
