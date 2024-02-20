@@ -54,7 +54,7 @@
     <main>
         <aside class="leftContent">
             <div class="profileUserInfo">
-                <a href=""><img src="../assests/profile.jpg" alt="user profile" class="profileImage"><span
+                <a href="profile.html"><img src="../assests/profile.jpg" alt="user profile" class="profileImage"><span
                         class="profileName"><strong> Sergiu
                             Savin</strong></span></a>
             </div>
@@ -62,55 +62,67 @@
                 <li><a href="leftNavFriends.html"><i class="bi bi-people-fill navIcons"></i><strong> Friends</strong></a></li>
                 <hr style="border: 0">
                 <hr style="border: 0">
+                <hr style="border: 0">
                 <li><a href="leftNavFeeds.html"><i class="bi bi-card-image navIcons"></i><strong> Feeds</strong></a></li>
                 <hr style="border: 0">
                 <hr style="border: 0">
-                <li><a href="#"><i class="bi bi-person-circle navIcons"></i><strong> Groups</strong></a></li>
+                <hr style="border: 0">
+                <li><a href="leftNavGroups.html"><i class="bi bi-person-circle navIcons"></i><strong> Groups</strong></a></li>
                 <hr style="border: 0">
                 <hr style="border: 0">
-                <li><a href="#"><i class="bi bi-play-btn navIcons"></i><strong> Video</strong></a></li>
+                <hr style="border: 0">
+                <li><a href="leftNavVideo.html"><i class="bi bi-play-btn navIcons"></i><strong> Video</strong></a></li>
                 <hr style="border: 0">
                 <hr style="border: 0">
-                <li><a href="#"><i class="bi bi-clock navIcons"></i><strong> Memories</strong></a></li>
+                <hr style="border: 0">
+                <li><a href="leftNavMemories.html"><i class="bi bi-clock navIcons"></i><strong> Memories</strong></a></li>
                 <hr style="border: 0">
                 <hr style="border: 0">
-                <li><a href="#"><i class="bi bi-bookmark navIcons"></i><strong> Saved</strong></a></li>
+                <hr style="border: 0">
+                <li id="savedItems"><a href="#"><i class="bi bi-bookmark navIcons"></i><strong> Saved</strong></a></li>
                 <hr style="border: 0">
                 <hr style="border: 0">
-                <li><a href="#"><i class="bi bi-file-earmark navIcons"></i><strong> Pages</strong></a></li>
+                <hr style="border: 0">
+                <li><a href="leftNavPages.html"><i class="bi bi-file-earmark navIcons"></i><strong> Pages</strong></a></li>
+                <hr style="border: 0">
                 <hr style="border: 0">
                 <hr style="border: 0">
                 <li><a href="#"><i class="bi bi-calendar2-event navIcons"></i><strong> Events</strong></a></li>
                 <hr style="border: 0">
                 <hr style="border: 0">
-                <li><a href="#"><i class="bi bi-messenger navIcons"></i><strong> Messenger</strong></a></li>
                 <hr style="border: 0">
+                <!-- <li><a href="#"><i class="bi bi-messenger navIcons"></i><strong> Messenger</strong></a></li>
                 <hr style="border: 0">
+                <hr style="border: 0"> -->
                 <li id="bloodDonation"><a href="#"><i class="bi bi-droplet navIcons"></i><strong> Blood Donations</strong></a></li>
                 <hr style="border: 0">
                 <hr style="border: 0">
-                <li id="climateCenter"><a href="#"><i class="bi bi-tree navIcons"></i><strong> Climate Science Center</strong></a></li>
                 <hr style="border: 0">
+                <!-- <li id="climateCenter"><a href="#"><i class="bi bi-tree navIcons"></i><strong> Climate Science Center</strong></a></li>
                 <hr style="border: 0">
-                <li id="playGames"><a href="#"><i class="bi bi-joystick navIcons"></i><strong> Play games</strong></a></li>
+                <hr style="border: 0"> -->
+                <!-- <li id="playGames"><a href="#"><i class="bi bi-joystick navIcons"></i><strong> Play games</strong></a></li>
                 <hr style="border: 0">
+                <hr style="border: 0"> -->
+                <!-- <li id="videoGames"><a href="#"><i class="bi bi-controller navIcons"></i><strong> Gaming Video</strong></a></li>
                 <hr style="border: 0">
-                <li id="videoGames"><a href="#"><i class="bi bi-controller navIcons"></i><strong> Gaming Video</strong></a></li>
-                <hr style="border: 0">
-                <hr style="border: 0">
+                <hr style="border: 0"> -->
                 <li id="marketplace"><a href="#"><i class="bi bi-shop-window navIcons"></i><strong> Marketplace</strong></a></li>
+                <hr style="border: 0">
                 <hr style="border: 0">
                 <hr style="border: 0">
                 <li id="adActivity"><a href="#"><i class="bi bi-activity navIcons"></i><strong> Recent ad activity</strong></a></li>
                 <hr style="border: 0">
                 <hr style="border: 0">
-                <li id="adsManager"><a href="#"><i class="bi bi-badge-ad navIcons"></i><strong> Ads Manager</strong></a></li>
                 <hr style="border: 0">
+                <!-- <li id="adsManager"><a href="#"><i class="bi bi-badge-ad navIcons"></i><strong> Ads Manager</strong></a></li>
                 <hr style="border: 0">
-                <li id="ordersPayments"><a href="#"><i class="bi bi-credit-card navIcons"></i><strong> Orders and payments</strong></a></li>
+                <hr style="border: 0"> -->
+                <!-- <li id="ordersPayments"><a href="#"><i class="bi bi-credit-card navIcons"></i><strong> Orders and payments</strong></a></li>
                 <hr style="border: 0">
-                <hr style="border: 0">
+                <hr style="border: 0"> -->
                 <li id="fundraisers"><a href="#"><i class="bi bi-heart navIcons"></i><strong> Fundraisers</strong></a></li>
+                <hr style="border: 0">
                 <hr style="border: 0">
             </ul>
         </aside>>
@@ -127,13 +139,24 @@
                         </div>
                     </div>
 
-                    <a href="#" class="profileOptions"><i class="bi bi-three-dots"></i></a>
+                    <div class="profileOptionsWrapper">
+                        <button class="profileOptions"><i class="bi bi-three-dots"></i></button>
+                        <div class="profileOptionsDropdown">
+                            <button>Edit this post</button>
+                            <button>Remove this post</button>
+                        </div>
+                    </div>  
                 </div>
 
                 <div class="content">
                     <div class="imgWrapper">
                         <img src="../assests/post.jpg" alt="travel post" class="imgContent">
-                        <i class="bi bi-info-circle infoIcon"></i>
+                        <div class="infoIconWrapper">
+                            <i class="bi bi-info-circle infoIcon" tabindex="1"></i>
+                            <p class="infoMessage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quasi vero dolores esse
+                                deleniti quod tenetur totam et. Laborum dolores provident, suscipit blanditiis eaque quis.
+                            </p>
+                        </div>
                     </div>
 
 
@@ -166,7 +189,7 @@
                             <i class="bi bi-hand-thumbs-up"></i>
                             <span>Like</span>
                         </li>
-                        <li class="reaction">
+                        <li class="reaction" id="commentButton">
                             <i class="bi bi-chat-dots"></i>
                             <span>Comments</span>
                         </li>
@@ -181,8 +204,8 @@
 
                 <div class="commentSection">
                     <a href=""><img src="../assests/profile.jpg" alt="user profile" class="profileImage"></a>
-                    <input type="text" placeholder="Adauga un comentariu" class="newCommentField">
-                    <button class="insertCommentButton"><i class="bi bi-send"></i></button>
+                    <input type="text" placeholder="Adauga un comentariu" class="newCommentField" id="commentInput">
+                    <button class="insertCommentButton" id="commentInputButton"><i class="bi bi-send"></i></button>
                 </div>
 
                 <div class="userComments">
@@ -190,31 +213,16 @@
                     <div class="commentContent">
                         <div class="profileUserComment">
                             <a href=""><img src="../assests/profile.jpg" alt="user profile" class="profileImage"></a>
-                            <span>User name</span>
+                            <span>Username</span>
                         </div>
 
                         <div class="userCommentText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, a accusamus. Accusantium
-                            recusandae placeat cupiditate a possimus ipsam doloremque sit.
+                            <span id="commentMessage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+                                a accusamus.
+                                Accusantium
+                                recusandae placeat cupiditate a possimus ipsam doloremque sit.</span>
                             <div class="emojiReaction">🥳</div>
-                        </div>
-
-                        <div class="commentReaction">
-                            <strong class="commentReactionButton">Like</strong>
-                            <strong class="commentReactionButton">Comment</strong>
-                        </div>
-                    </div>
-
-                    <div class="commentContent">
-                        <div class="profileUserComment">
-                            <a href=""><img src="../assests/profile.jpg" alt="user profile" class="profileImage"></a>
-                            <span>User name</span>
-                        </div>
-
-                        <div class="userCommentText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, a accusamus. Accusantium
-                            recusandae placeat cupiditate a possimus ipsam doloremque sit.
-                            <div class="emojiReaction">🥳</div>
+                            <span id="removeCommentButton">Remove this comment</span>
                         </div>
 
                         <div class="commentReaction">
@@ -232,64 +240,64 @@
             <h4>Contacts</h4>
             <div class="onlineUserInfo">
                 <ul class="rightNavigation">
-                    <li><a href="#"><img src="../assests/Ana Ana.jpg" alt="user profile" class="profileImage"><i
+                    <li><a href="#"><img src="../assests/Username 1.jpg" alt="user profile" class="profileImage"><i
                                 class="bi bi-dot bs-success"></i>
-                            <span class="profileName" id="onlineUser"><strong> Ana Ana</strong></span>
+                            <span class="onlineUser"><strong> Username 1</strong></span>
                         </a>
                     </li>
-                    <li><a href="#"><img src="../assests/Andrei Ilascu.jpg" alt="user profile" class="profileImage"><i
+                    <!-- <li><a href="#"><img src="../assests/Username 2.jpg" alt="user profile" class="profileImage"><i
                                 class="bi bi-dot bs-success"></i>
-                            <span class="profileName" id="onlineUser"><strong> Andrei Ilascu</strong></span>
+                            <span class="onlineUser"><strong> Username 2</strong></span>
+                        </a>
+                    </li> -->
+                    <li><a href="#"><img src="../assests/Username 3.jpg" alt="user profile" class="profileImage"><i
+                                class="bi bi-dot bs-success"></i>
+                            <span class="onlineUser"><strong> Username 3</strong></span>
                         </a>
                     </li>
-                    <li><a href="#"><img src="../assests/Cristi Virag.jpg" alt="user profile" class="profileImage"><i
+                    <li><a href="#"><img src="../assests/Username 4.jpeg" alt="user profile" class="profileImage"><i
                                 class="bi bi-dot bs-success"></i>
-                            <span class="profileName" id="onlineUser"><strong> Cristi Virag</strong></span>
+                            <span class="onlineUser"><strong> Username 4</strong></span>
                         </a>
                     </li>
-                    <li><a href="#"><img src="../assests/Ioana Adam.jpeg" alt="user profile" class="profileImage"><i
+                    <li><a href="#"><img src="../assests/Username 5.jpeg" alt="user profile" class="profileImage"><i
                                 class="bi bi-dot bs-success"></i>
-                            <span class="profileName" id="onlineUser"><strong> Ioana Adam</strong></span>
+                            <span class="onlineUser"><strong> Username 5</strong></span>
                         </a>
                     </li>
-                    <li><a href="#"><img src="../assests/Xia Pung.jpeg" alt="user profile" class="profileImage"><i
+                    <li><a href="#"><img src="../assests/Username 6.jpg" alt="user profile" class="profileImage"><i
                                 class="bi bi-dot bs-success"></i>
-                            <span class="profileName" id="onlineUser"><strong> Xia Pung</strong></span>
+                            <span class="onlineUser"><strong> Username 6</strong></span>
                         </a>
                     </li>
-                    <li><a href="#"><img src="../assests/Roxana Morun.jpg" alt="user profile" class="profileImage"><i
+                    <li><a href="#"><img src="../assests/Username 7.jpg" alt="user profile" class="profileImage"><i
                                 class="bi bi-dot bs-success"></i>
-                            <span class="profileName" id="onlineUser"><strong> Roxana Morun</strong></span>
+                            <span class="onlineUser"><strong> Username 7</strong></span>
                         </a>
                     </li>
-                    <li><a href="#"><img src="../assests/Alin Andi.jpg" alt="user profile" class="profileImage"><i
+                    <li><a href="#"><img src="../assests/Username 8.jpg" alt="user profile" class="profileImage"><i
                                 class="bi bi-dot bs-success"></i>
-                            <span class="profileName" id="onlineUser"><strong> Alin Andi</strong></span>
+                            <span class="onlineUser"><strong> Username 8</strong></span>
                         </a>
                     </li>
-                    <li><a href="#"><img src="../assests/Victor Dobrin.jpg" alt="user profile" class="profileImage"><i
+                    <li><a href="#"><img src="../assests/Username 9.jpg" alt="user profile" class="profileImage"><i
                                 class="bi bi-dot bs-success"></i>
-                            <span class="profileName" id="onlineUser"><strong> Victor Dobrin</strong></span>
+                            <span class="onlineUser"><strong> Username 9</strong></span>
                         </a>
                     </li>
-                    <li><a href="#"><img src="../assests/Ingrid Tirziu.jpg" alt="user profile" class="profileImage"><i
+                    <li><a href="#"><img src="../assests/Username 10.jpg" alt="user profile" class="profileImage"><i
                                 class="bi bi-dot bs-success"></i>
-                            <span class="profileName" id="onlineUser"><strong> Ingrid Tirziu</strong></span>
+                            <span class="onlineUser"><strong> Username 10</strong></span>
                         </a>
                     </li>
-                    <li><a href="#"><img src="../assests/Mia Dobrin.jpg" alt="user profile" class="profileImage"><i
+                    <li><a href="#"><img src="../assests/Username 11.jpg" alt="user profile" class="profileImage"><i
                                 class="bi bi-dot bs-success"></i>
-                            <span class="profileName" id="onlineUser"><strong> Mia Dobrin</strong></span>
+                            <span class="onlineUser"><strong> Username 11</strong></span>
                         </a>
                     </li>
-                    <li><a href="#"><img src="../assests/Alex Alexandru.jpg" alt="user profile" class="profileImage"><i
+                    <li><a href="#"><img src="../assests/Username 12.jpg" alt="user profile" class="profileImage"><i
                                 class="bi bi-dot bs-success"></i>
-                            <span class="profileName" id="onlineUser"><strong> Alex Alexandru</strong></span>
-                        </a>
-                    </li>
-                    <li><a href="#"><img src="../assests/John Doe.jpg" alt="user profile" class="profileImage"><i
-                                class="bi bi-dot bs-success"></i>
-                            <span class="profileName" id="onlineUser"><strong> John Doe</strong></span>
+                            <span class="onlineUser"><strong> Username 12</strong></span>
                         </a>
                     </li>
                     <hr>
@@ -299,11 +307,11 @@
             <div class="onlineGroupInfo">
                 <ul class="rightNavigation">
                     <li><a href="#"><i class="bi bi-people navIcons"></i><i class="bi bi-dot bs-success"></i>
-                            <span class="groupName" id="onlineGroup"><strong> Ana, Delia and 2 others </strong></span>
+                            <span class="onlineGroup"><strong> Messenger Group 1</strong></span>
                         </a>
                     </li>
                     <li><a href="#"><i class="bi bi-people navIcons"></i><i class="bi bi-dot bs-success"></i>
-                            <span class="groupName" id="onlineGroup"><strong> CD Loga - Promotia 2006</strong></span>
+                            <span class="onlineGroup"><strong> Messenger Group 2</strong></span>
                         </a>
                     </li>
                 </ul>

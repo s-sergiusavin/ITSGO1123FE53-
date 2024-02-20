@@ -95,10 +95,6 @@ profileOptionsButton.addEventListener('click', function () {
     }
 })
 
-// profileOptionsButton.addEventListener('blur', function() {
-//     profileOptionsDropdown.style.display = 'none'
-// })
-
 const hidePostButton = document.getElementById('hidePost')
 const reportPostButton = document.getElementById('reportPost')
 const postElement = document.getElementsByClassName('post')[0]

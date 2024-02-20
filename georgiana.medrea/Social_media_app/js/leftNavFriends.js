@@ -1,7 +1,7 @@
 const noOfFriendsElement = document.getElementById('friendsNumber')
-const confirmBtnElements = document.querySelectorAll('#confirm')
-const removeBtnElements = document.querySelectorAll('#remove')
-const friendRequestElements = document.querySelectorAll('#friendRequest')
+const confirmBtnElements = document.querySelectorAll('.confirm')
+const removeBtnElements = document.querySelectorAll('.remove')
+const friendRequestElements = document.querySelectorAll('.friendRequest')
 
 
 let isFriend = false
@@ -29,3 +29,4 @@ friendRequestElements.forEach(element => {
         element.style.display = "none"
     })
 })
+
