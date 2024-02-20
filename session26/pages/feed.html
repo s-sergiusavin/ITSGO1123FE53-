@@ -81,13 +81,24 @@
                         </div>
                     </div>
 
-                    <a href="#" class="profileOptions"><i class="bi bi-three-dots"></i></a>
+                    <div class="profileOptionsWrapper">
+                        <button class="profileOptions"><i class="bi bi-three-dots"></i></button>
+                        <div class="profileOptionsDropdown">
+                            <button>Edit this post</button>
+                            <button>Remove this post</button>
+                        </div>
+                    </div>  
                 </div>
 
                 <div class="content">
                     <div class="imgWrapper">
                         <img src="../assests/post.jpg" alt="travel post" class="imgContent">
-                        <i class="bi bi-info-circle infoIcon"></i>
+                        <div class="infoIconWrapper">
+                            <i class="bi bi-info-circle infoIcon" tabindex="1"></i>
+                            <p class="infoMessage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit quasi vero dolores esse
+                                deleniti quod tenetur totam et. Laborum dolores provident, suscipit blanditiis eaque quis.
+                            </p>
+                        </div>
                     </div>
 
 
@@ -120,7 +131,7 @@
                             <i class="bi bi-hand-thumbs-up"></i>
                             <span>Like</span>
                         </li>
-                        <li class="reaction">
+                        <li class="reaction" id="commentButton">
                             <i class="bi bi-chat-dots"></i>
                             <span>Comments</span>
                         </li>
@@ -135,8 +146,8 @@
 
                 <div class="commentSection">
                     <a href=""><img src="../assests/profile.jpg" alt="user profile" class="profileImage"></a>
-                    <input type="text" placeholder="Adauga un comentariu" class="newCommentField">
-                    <button class="insertCommentButton"><i class="bi bi-send"></i></button>
+                    <input type="text" placeholder="Adauga un comentariu" class="newCommentField" id="commentInput">
+                    <button class="insertCommentButton" id="commentInputButton"><i class="bi bi-send"></i></button>
                 </div>
 
                 <div class="userComments">
@@ -148,27 +159,12 @@
                         </div>
 
                         <div class="userCommentText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, a accusamus. Accusantium
-                            recusandae placeat cupiditate a possimus ipsam doloremque sit.
+                            <span id="commentMessage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+                                a accusamus.
+                                Accusantium
+                                recusandae placeat cupiditate a possimus ipsam doloremque sit.</span>
                             <div class="emojiReaction">🥳</div>
-                        </div>
-
-                        <div class="commentReaction">
-                            <strong class="commentReactionButton">Like</strong>
-                            <strong class="commentReactionButton">Comment</strong>
-                        </div>
-                    </div>
-
-                    <div class="commentContent">
-                        <div class="profileUserComment">
-                            <a href=""><img src="../assests/profile.jpg" alt="user profile" class="profileImage"></a>
-                            <span>User name</span>
-                        </div>
-
-                        <div class="userCommentText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, a accusamus. Accusantium
-                            recusandae placeat cupiditate a possimus ipsam doloremque sit.
-                            <div class="emojiReaction">🥳</div>
+                            <span id="removeCommentButton">Remove this comment</span>
                         </div>
 
                         <div class="commentReaction">
