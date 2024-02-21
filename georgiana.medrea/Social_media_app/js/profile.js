@@ -221,3 +221,20 @@ async function filterData(searchTerm) {
 
     return response.json()
 }
+
+const myProfileButton = document.getElementsByClassName('myProfile')[0]
+const profileDropdown = document.getElementsByClassName('profileDropdown')[0]
+
+myProfileButton.addEventListener('click', function () {
+    if (profileDropdown.style.display === 'none'
+        || profileDropdown.style.display === '') {
+            profileDropdown.style.display = 'flex'
+    } else {
+        profileDropdown.style.display = 'none'
+    }
+
+})
+
+myProfileButton.addEventListener('blur', function () {
+    profileDropdown.style.display = 'none'
+})

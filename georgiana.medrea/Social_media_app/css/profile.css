@@ -291,29 +291,20 @@ hr {
     font-size: medium;
 }
 
-.profile .profileCoverInfo .addToStory {
-    position: relative;
-    width: 16%;
-    height: 38px;
-    left: -39%;
-    text-align: center;
-    border: 2px solid darkblue;
-    background-color: lightblue;
-    padding: 5px;
-    border-radius: 10%;
-    cursor: pointer;
+.profile .profileCoverInfo .profileUserInfo .profileWrapper .profileDropdown {
+    position: absolute;
+    z-index: 1;
+    left: 60%;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
 }
 
-.profile .profileCoverInfo .editProfile {
+.profile .profileCoverInfo .profileUserInfo .profileWrapper .myProfile {
     position: relative;
-    width: 16%;
-    height: 38px;
-    text-align: center;
-    left: -39%;
-    border: 2px solid darkblue;
-    background-color: lightblue;
-    margin-left: 5px;
-    padding: 5px;
+    left: -430%;
     border-radius: 10%;
     cursor: pointer;
 }
