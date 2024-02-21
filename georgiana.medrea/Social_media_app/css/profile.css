@@ -307,6 +307,9 @@ hr {
     left: -430%;
     border-radius: 10%;
     cursor: pointer;
+    width: 120px; 
+    height: 30px; 
+    background-color: lightblue;
 }
 
 .mainContent {
@@ -440,6 +443,7 @@ hr {
     color: royalblue;
     border-radius: 1rem;
 }
+
 .post .actions .reaction:hover {
     color: teal;
     background-color: lightblue;
