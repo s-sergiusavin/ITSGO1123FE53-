@@ -192,11 +192,16 @@ const value2 = arrayToFind.find((element) => {
 console.log(value2);
 
 arrayToFind = [
+<<<<<<< HEAD
     { name: 'Eduard', city: 'Hong Kong' },
+=======
+    { name: 'Sergiu', city: 'Hong Kong' },
+>>>>>>> main
     { name: 'Liviu', city: 'Singapore' },
     { name: 'Cipri', city: 'Lisabona' },
     { name: 'Alina', city: 'Polul Nord' },
     { name: 'Abdul', city: 'Dubai' },
+<<<<<<< HEAD
     { name: 'Eduard', city: 'Bangkok' },
 ]
 
@@ -205,6 +210,16 @@ const foundElem = arrayToFind.find(element => {
 })
 
 const foundElement = arrayToFind.find(element => element.name === 'Eduard')
+=======
+    { name: 'Sergiu', city: 'Bangkok' },
+]
+
+const foundElem = arrayToFind.find(element => {
+    return element.name === 'Sergiu';
+})
+
+const foundElement = arrayToFind.find(element => element.name === 'Sergiu')
+>>>>>>> main
 
 console.log(foundElem)
 
@@ -233,21 +248,36 @@ const createPerson = (name, age, gender) => {
     }
 }
 
+<<<<<<< HEAD
 const eduard = createPerson('eduard', 19, 'male')
 const maria = createPerson('maria', 23, 'female')
 
 console.log(eduard)
+=======
+const sergiu = createPerson('sergiu', 23, 'male')
+const dragos = createPerson('dragos', 21, 'female')
+
+console.log(sergiu)
+>>>>>>> main
 
 /**
  * Create objects using OBJECT LITERAL method
  */
 
 const person = {
+<<<<<<< HEAD
     name: 'Eduard',
     lastName: 'Dumbrava',
     age: 19,
     address: {
         city: 'Constanta',
+=======
+    name: 'Sergiu',
+    lastName: 'Savin',
+    age: 55,
+    address: {
+        city: 'Brasov',
+>>>>>>> main
         zip: 500
     },
     sayHi: function () {
@@ -268,7 +298,11 @@ person.sayHi()
  */
 
 const otherPerson = new Object(person)
+<<<<<<< HEAD
 otherPerson.name = 'Eduard D';
+=======
+otherPerson.name = 'Sergiu S';
+>>>>>>> main
 
 console.log(person)
 console.log(otherPerson)
