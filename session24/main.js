@@ -7,7 +7,7 @@
  * Representation state of transfer
  * CRUD
  * Create
- * Read 
+ * Read
  * Update
  * Delete
  */
@@ -32,7 +32,7 @@
 //         console.log('fullfield ' + value)
 //     },
 //     (error) => {
-//         console.log('rejected ' + error) 
+//         console.log('rejected ' + error)
 //     }
 // )
 

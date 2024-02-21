@@ -11,7 +11,7 @@ const getNews = async (query) => {
 
         const response = await res.json()
         console.log(response)
-        
+
         return response.articles
     } catch (error) {
         updateNewsList(`<p>${error}</p>`)
