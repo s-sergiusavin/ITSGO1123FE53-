@@ -29,7 +29,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 1;
   background-color: #ffffff;
   box-shadow: 20px 0.3px 0.4px #888;
   width: 100%;
@@ -38,10 +38,12 @@ header {
 .mainSearch {
   display: flex;
   align-items: center;
+
 }
 
 input[placeholder] {
   text-align: right;
+
 }
 input:focus {
   text-align: left;
@@ -64,10 +66,11 @@ input:focus {
   border: none;
   width: 16rem;
   background-color: #eff0f0;
+  display: flex;
 }
 
-.mainSearch .landSearch {
-  right: 14.8rem;
+.mainSearch .searchIcon {
+  left: 20px;
   position: relative;
   color: #0b0b0b;
   display: flex;
@@ -76,13 +79,13 @@ input:focus {
   opacity: 0.5;
 }
 
-.mainSearch:hover .landSearch,
-.mainSearch:focus .landSearch {
+.mainSearch:hover .searchIcon,
+.mainSearch:focus .searchIcon {
   color: rgba(0, 0, 0, 0);
   background-color: rgba(0, 0, 0, 0);
 }
 
-.mainSearch .searchInput:focus {
+.mainSearch .searchIcon:focus {
   border: 0.2rem solid #7b81ee;
   opacity: 1;
 }
@@ -90,6 +93,35 @@ input:focus {
 .navigation,
 .links {
   display: flex;
+}
+
+.accountSettings {
+  position: relative;
+}
+
+.accountSettings button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+}
+
+.accountSettingsMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  width: 180px;
+  background-color: grey;
+}
+
+.accountSettingsMenu button {
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.accountSettingsMenu button:hover {
+  background-color: #add8e6;
 }
 
 .navigation > li > a {
@@ -117,12 +149,12 @@ input:focus {
 }
 
 /* Bell customization */
-.bell {
+.bellIcon {
   position: relative;
   display: block;
 }
 
-.bell span {
+.bellIcon span {
   width: 1.3rem;
   height: 1.3rem;
   background-color: red;
@@ -138,24 +170,8 @@ input:focus {
   font-weight: bold;
 }
 
-.wrapper .links:hover .bell {
+.links:hover .bellIcon {
   animation: shake 1s forwards;
-}
-
-/* Gear customization */
-.wrapper .links .gear-rotate {
-  display: inline-block;
-  position: relative;
-  color: rgb(128, 128, 211);
-}
-
-.wrapper .links .gear-rotate:hover {
-  color: darkblue;
-}
-
-.wrapper .links:hover .gear-rotate {
-  animation: 1.5s linear infinite spinner;
-  position: relative;
 }
 
 /* Bell shake key frame */
@@ -1275,6 +1291,7 @@ main {
 /* Main content customization */
 .mainContent {
   width: 40%;
+
 }
 
 .mainContent .post {
@@ -1294,6 +1311,7 @@ main {
   align-items: center;
 }
 
+
 /* .mainContent .post .postHeader .profileUserInfo .profileImage {
     width: 3rem;
     border-radius: 50%;
@@ -1302,6 +1320,7 @@ main {
 .mainContent .post .postHeader .profileUserInfo .profileName {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .mainContent .post .postHeader .profileOptions {
@@ -1312,10 +1331,26 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .mainContent .post .postHeader .profileOptions:hover {
   background-color: lightgray;
+}
+
+.profileOptionsWrapper {
+  position: relative;
+}
+
+.profileOptionsDropdown {
+  position: absolute;
+  z-index: 1;
+  right: 10px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
 }
 
 .content .imgWrapper {
@@ -1323,7 +1358,7 @@ main {
 }
 
 .content .imgWrapper .imgContent {
-  max-width: 100%;
+  width: 100%;
 }
 
 .content .imgWrapper .infoIcon {
