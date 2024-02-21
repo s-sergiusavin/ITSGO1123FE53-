@@ -57,6 +57,36 @@ header {
     display: flex;
 }
 
+.accountSettings {
+    position: relative;
+}
+
+.accountSettings button {
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+}
+
+.accountSettingsMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 75px;
+    right: 0;
+    width: 180px;
+    background-color: grey;
+}
+
+.accountSettingsMenu button {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.accountSettingsMenu button:hover {
+    background-color: #add8e6;
+}
+
+
 .navigation>li>a {
     border-radius: 50%;
     background-color: aquamarine;
@@ -98,6 +128,126 @@ header {
     font-size: 0.9rem;
     color: white;
     font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.leftContent,
+.rightContent {
+    width: 17%;
+    border: 5px solid whitesmoke;
+    overflow: auto;
+    height: 90vh;
+    position: fixed;
+}
+
+.leftContent {
+    left: 0;
+}
+
+.rightContent {
+    right: 0;
+}
+
+.leftNavigation .navIcons {
+    font-size: 1.5rem;
+    color: royalblue;
+}
+
+.leftNavigation>li>a:hover {
+    color: lightgrey;
+}
+
+.leftNavigation .bi:hover {
+    color: lightgrey;
+}
+
+.leftContent .profileUserInfo:hover {
+    color: lightgrey;
+}
+
+.leftContent .profileUserInfo .profileName {
+    margin-left: 0.7rem;
+    position: relative;
+    bottom: 15px;
+}
+
+.leftContent .profileImage {
+    margin-top: 5%;
+}
+
+.onlineGroupInfo .navIcons {
+    font-size: 1.5rem;
+    color: royalblue;
+}
+
+.rightContent .profileImage {
+    position: absolute;
+}
+
+.onlineUserInfo .bi {
+    font-size: 3rem;
+    color: green;
+    position: relative;
+    left: 1.7rem;
+    top: 0.5rem;
+    z-index: 1;
+}
+
+.onlineGroupInfo .bi-dot {
+    font-size: 3rem;
+    color: green;
+    position: relative;
+    left: -1.2rem;
+    top: 0.5rem;
+    z-index: 1;
+}
+
+.rightContent .onlineUserInfo .onlineUser:hover {
+    color: lightgrey;
+}
+
+.rightContent .onlineGroupInfo .onlineGroup:hover {
+    color: lightgrey;
+}
+
+h4 {
+    opacity: 0.5;
+    margin-left: 2%;
+    margin-top: 5%;
+}
+
+.profileImage {
+    margin-left: 2%;
+}
+
+.rightContent .onlineUserInfo .onlineUser {
+    margin-left: 0.8rem;
+    position: relative;
+    bottom: 15px;
+}
+
+.rightContent .onlineGroupInfo .onlineGroup {
+    margin-left: -2rem;
+    position: relative;
+    bottom: 5px;
+}
+
+hr {
+    opacity: 0.6;
+}
+
+.onlineGroupInfo {
+    margin-top: -10%;
+    line-height: 1;
+}
+
+.onlineUserInfo {
+    line-height: 1.3;
 }
 
 /* .profile {
@@ -143,9 +293,9 @@ header {
 
 .profile .profileCoverInfo .addToStory {
     position: relative;
-    width: 18%;
+    width: 16%;
     height: 38px;
-    left: -37%;
+    left: -39%;
     text-align: center;
     border: 2px solid darkblue;
     background-color: lightblue;
@@ -156,10 +306,10 @@ header {
 
 .profile .profileCoverInfo .editProfile {
     position: relative;
-    width: 18%;
+    width: 16%;
     height: 38px;
     text-align: center;
-    left: -37%;
+    left: -39%;
     border: 2px solid darkblue;
     background-color: lightblue;
     margin-left: 5px;
@@ -193,10 +343,10 @@ header {
     align-items: center;
 }
 
-.mainContent .post .postHeader .profileUserInfo .profileImage {
+/* .mainContent .post .postHeader .profileUserInfo .profileImage {
     width: 3rem;
     border-radius: 50%;
-}
+} */
 
 .mainContent .post .postHeader .profileUserInfo .profileName {
     display: flex;
@@ -207,10 +357,10 @@ header {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .mainContent .post .postHeader .profileOptions:hover {
@@ -225,6 +375,22 @@ header {
     max-width: 100%;
 }
 
+.profileOptionsDropdown {
+    position: absolute;
+    z-index: 1;
+    /* right: 10px; */
+    margin-left: -128px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+}
+
+.content .imgWrapper {
+    position: relative;
+}
+
 .content .imgWrapper .infoIcon {
     position: absolute;
     right: 1rem;
@@ -237,6 +403,20 @@ header {
     display: flex;
     cursor: pointer;
     color: white;
+}
+
+.infoIconWrapper {
+    position: relative;
+}
+
+.infoMessage {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 3px solid lightgrey;
+    border-radius: 10px;
+    top: -10px;
+    padding: 10px;
 }
 
 .content .postTitle {
@@ -292,10 +472,10 @@ header {
     gap: 0.5rem;
 }
 
-.commentSection .profileImage {
+/* .commentSection .profileImage {
     width: 3rem;
     border-radius: 50%;
-}
+} */
 
 .commentSection .newCommentField {
     width: 80%;
@@ -335,15 +515,15 @@ header {
 
 .userComments .profileUserComment {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin-left: 1rem;
     gap: 0.5rem;
 }
 
-.userComments .profileUserComment .profileImage {
+/*.userComments .profileUserComment .profileImage {
     width: 3rem;
     border-radius: 50%;
-}
+} */
 
 .profileImage {
     width: 3rem;

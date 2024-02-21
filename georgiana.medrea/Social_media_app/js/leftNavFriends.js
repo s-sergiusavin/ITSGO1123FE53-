@@ -1,7 +1,11 @@
 const noOfFriendsElement = document.getElementById('friendsNumber')
-const confirmBtnElements = document.querySelectorAll('.confirm')
-const removeBtnElements = document.querySelectorAll('.remove')
-const friendRequestElements = document.querySelectorAll('.friendRequest')
+const confirmBtn = document.getElementById('confirm')
+const removeBtn = document.getElementById('remove')
+const friendRequestElement = document.getElementById('friendRequest')
+const ulElement = document.getElementById('friendList')
+const suggestedFriendElement = document.querySelector('#suggestedFriend')
+const addFriendBtn = document.querySelector('#addFriend')
+const removeRequestBtn = document.querySelector('#removeRequest')
 
 
 let isFriend = false
@@ -12,21 +16,32 @@ function getNumberOfFriends() {
 
 getNumberOfFriends()
 
-confirmBtnElements.forEach(element => {
-    element.addEventListener('click', function() {
-        isFriend = !isFriend
+confirmBtn.addEventListener('click', function () {
+    isFriend = !isFriend
 
-        if (isFriend) {
-            noOfFriendsElement.innerText = Number(noOfFriendsElement.innerText) + 1
-        } else {
-            noOfFriendsElement.innerText = Number(noOfFriendsElement.innerText)
-        }
-    })
+    if (isFriend) {
+        noOfFriendsElement.innerText = Number(noOfFriendsElement.innerText) + 1
+
+        friendRequestElement.style.display = 'none'
+
+        const newLiElement = document.createElement('li')
+        ulElement.appendChild(newLiElement)
+
+        newLiElement.innerHTML = friendRequestElement.innerHTML
+    } else {
+        noOfFriendsElement.innerText = Number(noOfFriendsElement.innerText)
+    }
 })
 
-friendRequestElements.forEach(element => {
-    element.addEventListener('click', function() {
-        element.style.display = "none"
-    })
+removeBtn.addEventListener('click', function() {
+    friendRequestElement.style.display = 'none'
 })
 
+addFriendBtn.addEventListener('click', function() {
+    suggestedFriendElement.style.display = 'none'
+    alert('Request sent!')
+})
+
+removeRequestBtn.addEventListener('click', function() {
+    suggestedFriendElement.style.display = 'none'
+})

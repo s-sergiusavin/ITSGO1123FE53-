@@ -22,10 +22,10 @@
         <nav class="mainNavigation">
             <ul class="navigation">
                 <li>
-                    <a href="../pages/feed.html" title="Home"><i class="bi bi-house navIcons"></i></a>
+                    <a href="feed.html" title="Home"><i class="bi bi-house navIcons"></i></a>
                 </li>
                 <li>
-                    <a href="../pages/profile.html" title="My Profile">
+                    <a href="profile.html" title="My Profile">
                         <i class="bi bi-person navIcons"></i>
                     </a>
                 </li>
@@ -35,11 +35,18 @@
         </nav>
 
         <ul class="links">
-            <li><a href="../pages/landingPage.html" title="To Landing page"><i
-                        class="bi bi-plus-circle navIcons"></i></a></li>
+            <li><a href="landingPage.html" title="To Landing page"><i class="bi bi-plus-circle navIcons"></i></a></li>
             <li><a href="#" class="bellIcon" title="Notifications"><i class="bi bi-bell navIcons"></i>
                     <span>12</span></a></li>
-            <li><a href="../login.html" title="Logout"><i class="bi bi-gear navIcons"></i></a></li>
+            <li>
+                <div class="accountSettings">
+                    <button id="accountSettingsButton"><i class="bi bi-gear navIcons"></i></button>
+                    <div class="accountSettingsMenu">
+                        <button>Profile Settings</button>
+                        <button id="logoutButton">Logout</button>
+                    </div>
+                </div>
+            </li>
         </ul>
     </header>
 
@@ -64,21 +71,33 @@
             <div class="post">
                 <div class="postHeader">
                     <div class="profileUserInfo">
-                        <a href=""><img src="../assests/profile.jpg" alt="user profile" class="profileImage"
-                                width="100"></a>
+                        <a href=""><img src="../assests/profile.jpg" alt="user profile" class="profileImage"></a>
                         <div class="profileName">
                             <span>Sergiu Savin</span>
                             <span>06 Dec 2023</span>
                         </div>
                     </div>
 
-                    <a href="#" class="profileOptions"><i class="bi bi-three-dots"></i></a>
+                    <div class="profileOptionsWrapper">
+                        <button class="profileOptions"><i class="bi bi-three-dots"></i></button>
+                        <div class="profileOptionsDropdown">
+                            <button>Edit this post</button>
+                            <button>Remove this post</button>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="content">
                     <div class="imgWrapper">
                         <img src="../assests/post.jpg" alt="travel post" class="imgContent">
-                        <i class="bi bi-info-circle infoIcon"></i>
+                        <div class="infoIconWrapper">
+                            <i class="bi bi-info-circle infoIcon" tabindex="1"></i>
+                            <p class="infoMessage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+                                quasi vero dolores esse
+                                deleniti quod tenetur totam et. Laborum dolores provident, suscipit blanditiis eaque
+                                quis.
+                            </p>
+                        </div>
                     </div>
 
 
@@ -111,7 +130,7 @@
                             <i class="bi bi-hand-thumbs-up"></i>
                             <span>Like</span>
                         </li>
-                        <li class="reaction">
+                        <li class="reaction" id="commentButton">
                             <i class="bi bi-chat-dots"></i>
                             <span>Comments</span>
                         </li>
@@ -125,44 +144,26 @@
                 <hr width="100%">
 
                 <div class="commentSection">
-                    <a href=""><img src="../assests/profile.jpg" alt="user profile" class="profileImage"
-                            width="100"></a>
-                    <input type="text" placeholder="Adauga un comentariu" class="newCommentField">
-                    <button class="insertCommentButton"><i class="bi bi-send"></i></button>
+                    <a href=""><img src="../assests/profile.jpg" alt="user profile" class="profileImage"></a>
+                    <input type="text" placeholder="Adauga un comentariu" class="newCommentField" id="commentInput">
+                    <button class="insertCommentButton" id="commentInputButton"><i class="bi bi-send"></i></button>
                 </div>
 
                 <div class="userComments">
 
                     <div class="commentContent">
                         <div class="profileUserComment">
-                            <a href=""><img src="../assests/profile.jpg" alt="user profile" class="profileImage"
-                                    width="100"></a>
-                            <span>User name</span>
+                            <a href=""><img src="../assests/profile.jpg" alt="user profile" class="profileImage"></a>
+                            <span>Username</span>
                         </div>
 
                         <div class="userCommentText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, a accusamus. Accusantium
-                            recusandae placeat cupiditate a possimus ipsam doloremque sit.
+                            <span id="commentMessage">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit,
+                                a accusamus.
+                                Accusantium
+                                recusandae placeat cupiditate a possimus ipsam doloremque sit.</span>
                             <div class="emojiReaction">🥳</div>
-                        </div>
-
-                        <div class="commentReaction">
-                            <strong class="commentReactionButton">Like</strong>
-                            <strong class="commentReactionButton">Comment</strong>
-                        </div>
-                    </div>
-
-                    <div class="commentContent">
-                        <div class="profileUserComment">
-                            <a href=""><img src="../assests/profile.jpg" alt="user profile" class="profileImage"
-                                    width="100"></a>
-                            <span>User name</span>
-                        </div>
-
-                        <div class="userCommentText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, a accusamus. Accusantium
-                            recusandae placeat cupiditate a possimus ipsam doloremque sit.
-                            <div class="emojiReaction">🥳</div>
+                            <span id="removeCommentButton">Remove this comment</span>
                         </div>
 
                         <div class="commentReaction">
