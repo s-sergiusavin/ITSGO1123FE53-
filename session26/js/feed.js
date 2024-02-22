@@ -158,7 +158,7 @@ profileOptionsButton.addEventListener('blur', function () {
     profileOptionsDropdown.style.display = 'none'
 })
 
-const searchInput = document.querySelector('.searchInput')
+const searchInput = document.getElementById('.searchInput')
 
 searchInput.addEventListener('keydown', function (event) {
     // Filtrare pe FE
