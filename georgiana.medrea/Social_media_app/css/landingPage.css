@@ -95,6 +95,13 @@ header .formContainer form input[type="text"] {
     margin-top: 1rem;
 }
 
+header .formContainer form input[type="tel"] {
+    border: 1px solid darkgray;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
 header .formContainer form input[type="button"] {
     background-color: #ffbf00;
     border: none;
@@ -142,6 +149,7 @@ header .formContainer form input[type="button"]:hover {
 
 .callToAction .callToActionMessage {
     font-size: 1.3rem;
+    margin-top: 13rem;
 }
 
 .callToAction img {

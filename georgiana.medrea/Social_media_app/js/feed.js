@@ -230,9 +230,10 @@ console.dir(onlineUserElements)
 onlineUserElements.forEach(element => {
     element.addEventListener('click', function (event) {
         if (event) {
-            let message = prompt('Insert your message for user below: ')
+            const user = element.innerText
+            let message = prompt(`Insert your message for ${user} below: `)
             if (message !== null && message !== '') {
-                alert('Your message for user was: ' + message)
+                alert(`Your message for ${user} was: ` + message)
                 console.log(message)
                 element.style.background = 'aquamarine'
             } else {
@@ -247,9 +248,10 @@ const onlineGroupElements = document.querySelectorAll('.onlineGroup')
 onlineGroupElements.forEach(element => {
     element.addEventListener('click', function (event) {
         if (event) {
-            let message = prompt('Insert your message for the group below: ')
+            const group = element.innerText
+            let message = prompt(`Insert your message for ${group} below: `)
             if (message !== null && message !== '') {
-                alert('Your message for group was: ' + message)
+                alert(`Your message ${group} was: ` + message)
                 console.log(message)
                 element.style.background = 'aquamarine'
             } else {
