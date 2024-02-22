@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url('/session11-13/assests/loginBackground.webp');
+    background-image: url('../assets/loginBackground.jpg');
 }
 
 a {
@@ -11,17 +11,23 @@ a {
 }
 
 .formContainer {
-    margin: 5rem auto;
+    margin: 10rem auto;
     width: 95%;
     max-width: 30rem;
     border-radius: 0.5rem;
-    background-color: teal;
-    box-shadow: 0 1px 4px #888;
-    padding: 2rem 4rem;
+    background-color: rgba(149, 61, 61, 0.566);
+    box-shadow: 0 1px 1px #888;
+    padding: 2rem 5rem;
     text-align: center;
     color: white;
-}
+    opacity: 0.5;
 
+}
+.formContainer:hover {
+    opacity: 0.7;
+    background-color: rgba(239, 70, 3, 0.746);
+
+}
 form {
     display: flex;
     flex-direction: column;
@@ -85,4 +91,4 @@ a strong {
 
 .registerButton:hover {
     opacity: 0.8;
-} 
+}
