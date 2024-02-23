@@ -3,7 +3,7 @@
   margin-top: 15px;
 }
 .header .title {
-  color: red;
+  color: pink;
 }
 .header .headerContainer {
   display: flex;
@@ -18,7 +18,7 @@
   margin: 10px 0;
 }
 .mainSection .firstContainer {
-  border: 1px solid red;
+  border: 1px solid pink;
   padding: 10px;
 }
 .mainSection .firstContainer .title {
@@ -34,7 +34,7 @@
 .box {
   width: 100px;
   height: 100px;
-  background-color: red;
+  background-color: pink;
   margin: 10px;
 }
 .box.yellowBox {
@@ -44,5 +44,5 @@
   background-color: orange;
 }
 .box:hover {
-  background-color: ligh;
+  background-color: lightblue;
 }/*# sourceMappingURL=style.css.map */

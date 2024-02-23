@@ -1,15 +1,17 @@
+// in acest folder ne putem salva proprietati, importam iar apoi folosim @include box in css exemplu: @include box();
+
 // Mixins without params
 @mixin box {
-    width: 100px;
-    height: 100px;
-    background-color: $globalRed;
-    margin: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: $globalRed;
+  margin: 10px;
 }
 
-// Mixins with paramas
+// Mixins with params
 @mixin flexBox($direction) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: $direction;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
 }
