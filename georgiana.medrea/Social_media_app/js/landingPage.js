@@ -4,7 +4,7 @@ const callToActionButton = document.getElementById('callToActionButton')
 const error = document.getElementById('error')
 
 const validateName = (nameValue) => {
-    return nameValue.length > 3
+    return nameValue.length >= 3
 }
 
 const validatePhone = (phoneNumberValue, regex) => {
