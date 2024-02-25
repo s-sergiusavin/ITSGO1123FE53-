@@ -76,6 +76,7 @@ commentMessage.innerText = localStorage.getItem('comment') || commentMessage.inn
 
 commentButton.addEventListener('click', function () {
     commentInput.focus()
+    // commentInput.blur()  // reversul functiei focus
 })
 
 function setComment() {
@@ -85,7 +86,8 @@ function setComment() {
 }
 
 removeCommentButton.addEventListener('click', () => {
-    localStorage.removeItem('comment')
+    // localStorage.clear() // sterge tot din local storage
+    localStorage.removeItem('comment') // sterge numai elementul cu cheia respectiva
 })
 
 commentInput.addEventListener('keydown', function (event) {
@@ -108,6 +110,24 @@ commentText.addEventListener('mouseout', function () {
 
 const infoIcon = document.getElementsByClassName('infoIcon')[0]
 const infoMessage = document.getElementsByClassName('infoMessage')[0]
+
+// infoIcon.addEventListener('mouseover', function() {
+//     setTimeout(() => {
+//         infoMessage.style.display = 'block'
+//     }, 1000)
+// })
+
+// infoIcon.addEventListener('mouseout', function() {
+//     infoMessage.style.display = 'none'
+// })
+
+// infoIcon.addEventListener('click', function () {
+//     if (infoMessage.style.display === 'block') {
+//         infoMessage.style.display = 'none'
+//     } else {
+//         infoMessage.style.display = 'block'
+//     }
+// })
 
 infoIcon.addEventListener('click', function () {
     if (infoMessage.style.display === 'block') {
@@ -161,6 +181,12 @@ searchInput.addEventListener('keydown', function (event) {
             description: 'Description 2'
         }
     ]
+
+    // Ne va returna numai rezultatele in care termenul cautat este 100% identic cu valoarea proprietatii
+    // setTimeout(() => {
+    //     const filtredResults = data.filter(post => post.username === event.target.value)
+    //     console.log(filtredResults)
+    // })
 
     // Ne va returna orice rezultat care contine sirul de caractere folosit la cautare
     setTimeout(() => {
