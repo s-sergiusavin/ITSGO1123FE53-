@@ -1,94 +1,101 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
-    background-image: url('../assets/loginBackground.jpg');
+  background-image: url("../assets/loginBackground.jpg");
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .formContainer {
-    margin: 10rem auto;
-    width: 95%;
-    max-width: 30rem;
-    border-radius: 0.5rem;
-    background-color: rgba(149, 61, 61, 0.566);
-    box-shadow: 0 1px 1px #888;
-    padding: 2rem 5rem;
-    text-align: center;
-    color: white;
-    opacity: 0.5;
-
+  margin: 10rem auto;
+  width: 95%;
+  max-width: 30rem;
+  border-radius: 0.5rem;
+  background-color: rgba(149, 61, 61, 0.566);
+  box-shadow: 0 1px 1px #888888;
+  padding: 2rem 5rem;
+  opacity: 0.5;
 }
 .formContainer:hover {
-    opacity: 0.7;
-    background-color: rgba(239, 70, 3, 0.746);
-
+  opacity: 0.7;
+  background-color: rgba(239, 70, 3, 0.746);
 }
+.formContainer #headerTitle,
+.formContainer #forgotPassword {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .formField {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-
 .formField input {
-    background-color: lightblue;
-    color: purple;
-    border-radius: 0.5rem;
-    border: 1px solid white;
-    width: 100%;
-    padding: 0.5rem;
+  background-color: lightblue;
+  color: purple;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  padding: 0.5rem;
+  width: 100%;
+}
+.formField label {
+  width: 90%;
+  text-align: left;
+  cursor: pointer;
 }
 
 .formField.rememberUserField input {
-    width: 10%;
+  width: 10%;
 }
 
 .formField.rememberUserField label {
-    width: 90%;
-    text-align: left;
-    cursor: pointer;
+  width: 90%;
+  text-align: left;
+  cursor: pointer;
 }
 
 .loginButton {
-    background-color: cadetblue;
-    border: 1px solid white;
-    color: white;
-    padding: 0.5rem 2.5rem;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    margin-bottom: 1rem;
+  background-color: cadetblue;
+  border: 1px solid white;
+  color: white;
+  padding: 0.5rem 2.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
-
 .loginButton:hover {
-    background-color: lightblue;
-    border: cadetblue;
-    color: #000050;
-    font-weight: bold;
+  background-color: lightblue;
+  border: cadetblue;
+  font-weight: bold;
 }
 
 a strong {
-    color: yellow
+  color: lightblue;
 }
 
 .registerButton {
-    background-color: turquoise;
-    border: 1px solid white;
-    padding: 0.5rem 2.5rem;
-    display: block;
-    margin: 0 auto;
-    border-radius: 0.5rem;
-    width: 75%;
-    margin-bottom: 1rem;
-    cursor: pointer;
+  background-color: turquoise;
+  border: 1px solid white;
+  padding: 0.5rem 2.5rem;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  width: 75%;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.registerButton:hover {
+  opacity: 0.8;
 }
 
-.registerButton:hover {
-    opacity: 0.8;
-}
+.switchAccount {
+  color: lightblue;
+  display: flex;
+  position: relative;
+  justify-content: center;
+}/*# sourceMappingURL=login.css.map */

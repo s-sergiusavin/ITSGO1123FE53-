@@ -1,0 +1,97 @@
+@import '../scss/variables';
+@import '../scss/mixins';
+
+body {
+  background-image: url('../assets/loginBackground.jpg');
+}
+
+a {
+  text-decoration: none;
+}
+
+.formContainer {
+  margin: 10rem auto;
+  width: 95%;
+  max-width: 30rem;
+  border-radius: 0.5rem;
+  background-color: rgba(149, 61, 61, 0.566);
+  box-shadow: 0 1px 1px #888888;
+  padding: 2rem 5rem;
+  opacity: 0.5;
+  &:hover {
+    opacity: 0.7;
+    background-color: rgba(239, 70, 3, 0.746);
+  }
+  #headerTitle,
+  #forgotPassword {
+    @include loginFlex();
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+.formField {
+  margin-bottom: 0.5rem;
+  input {
+    background-color: $globalLightBlue;
+    color: purple;
+    border-radius: 0.5rem;
+    border: 1px solid $globalWhite;
+    padding: 0.5rem;
+    width: 100%;
+  }
+  label {
+    width: 90%;
+    text-align: left;
+    cursor: pointer;
+  }
+}
+
+.formField.rememberUserField input {
+  width: 10%;
+}
+
+.formField.rememberUserField label {
+  width: 90%;
+  text-align: left;
+  cursor: pointer;
+}
+.loginButton {
+  background-color: cadetblue;
+
+  border: 1px solid $globalWhite;
+  color: $globalWhite;
+  padding: 0.5rem 2.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  &:hover {
+    background-color: $globalLightBlue;
+    border: cadetblue;
+    font-weight: bold;
+  }
+}
+
+a strong {
+  color: $globalLightBlue;
+}
+
+.registerButton {
+  background-color: turquoise;
+  border: 1px solid $globalWhite;
+  padding: 0.5rem 2.5rem;
+  display: block;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  width: 75%;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+.switchAccount {
+  color: $globalLightBlue;
+  @include loginFlex();
+}

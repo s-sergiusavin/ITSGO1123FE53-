@@ -1,0 +1,186 @@
+@import '../scss/variables';
+@import '../scss/mixins';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-image: url('../assets/fireworks.jpg');
+  background-size: cover;
+  height: 50rem;
+  color: $globalWhite;
+
+
+  .goBack {
+    position: fixed;
+    margin-top: 1rem;
+    left: 2rem;
+    font-size: 1rem;
+    color: $globalOrange;
+  }
+  a {
+    color: $globalWhite;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-left: 12rem;
+    display: block;
+    padding-top: 3rem;
+    bottom: 5rem;
+  }
+
+  .headerSection {
+    @include flexBox(column);
+    color: $globalLightGrey;
+    font-size: 1.2rem;
+    margin-left: 12rem;
+    display: block;
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 2rem 5rem 1.2rem;
+      span {
+        text-transform: uppercase;
+        display: block;
+        font-size: 3rem;
+        color: $globalOrange;
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: ' ';
+          position: absolute;
+          width: 9rem;
+          height: 1.5rem;
+          background-color: $globalTeal;
+          bottom: 0;
+          z-index: -1;
+        }
+      }
+    }
+    .headerDescription {
+      font-weight: bold;
+      max-width: 45rem;
+      margin: 0 5rem 3rem;
+      font-size: 1.1rem;
+    }
+  }
+
+  .formContainer {
+    @include flexBox(row);
+    background-color: $globalWhite;
+    padding: 2rem;
+    max-width: 40rem;
+    justify-content: left;
+    align-items: center;
+    margin-left: 17rem;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem $globalOrange;
+    padding: 30px;
+    label {
+      color: $globalTeal;
+    }
+    p {
+      color: $globalLightGrey;
+      width: 20rem;
+      font-size: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 20%;
+      input[type='text'] {
+        border: 1px solid darkgray;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+        width: 20rem;
+        height: 1rem;
+      }
+      input[type='button'] {
+        background-color: $globalOrange;
+        border-radius: 0.5rem;
+        width: 100%;
+        height: 2rem;
+        font-size: 1.2rem;
+        align-self: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.callToAction {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(247, 242, 242);
+
+  .callToActionMessage {
+    padding: 5rem;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3rem;
+
+    h2 {
+      position: relative;
+      width: 30rem;
+      span {
+        text-transform: uppercase;
+        display: block;
+        font-size: 3rem;
+        color: $globalOrange;
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: ' ';
+          position: absolute;
+          width: 9rem;
+          height: 1.5rem;
+          background-color: $globalTeal;
+          bottom: 0;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+.newYear {
+  display: block;
+  align-self: center;
+  font-size: 8rem;
+  position: relative;
+  padding: 10px;
+  width: 16rem;
+  height: 10rem;
+  color: $globalOrange;
+  top: 70%;
+  top: 300px;
+  h2 {
+    position: relative;
+    width: 30rem;
+    z-index: 1;
+    font-size: 8rem;
+    span {
+      text-transform: uppercase;
+      display: block;
+      font-size: 3rem;
+      color: $globalOrange;
+      position: relative;
+      z-index: -1;
+      font-size: 5rem;
+      &::before {
+        content: ' ';
+        position: absolute;
+        width: 16rem;
+        height: 2.5rem;
+        background-color: $globalTeal;
+        bottom: - 6rem;
+        z-index: -1;
+      }
+    }
+  }
+}

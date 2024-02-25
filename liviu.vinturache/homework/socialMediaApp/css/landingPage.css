@@ -1,152 +1,186 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 header {
-    background-image: url('../assets/fireworks.jpg');
-    background-size: cover;
-    height: 35rem;
-    color: white;
+  background-image: url("../assets/fireworks.jpg");
+  background-size: cover;
+  height: 50rem;
+  color: white;
 }
-
-header .backImage {
-    width: 3rem;
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
+header .goBack {
+  position: fixed;
+  margin-top: 1rem;
+  left: 2rem;
+  font-size: 1rem;
+  color: #ffbf00;
 }
-
 header a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-left: 12rem;
-    display: block;
-    padding-top: 3rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 12rem;
+  display: block;
+  padding-top: 3rem;
+  bottom: 5rem;
 }
-
-header h1 {
-    font-size: 2.5rem;
-    margin: 2rem 5rem 1.2rem;
+header .headerSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+  color: lightgrey;
+  font-size: 1.2rem;
+  margin-left: 12rem;
+  display: block;
 }
-
-header h1 span {
-    text-transform: uppercase;
-    display: block;
-    font-size: 3rem;
-    color: #ffbf00;
-    position: relative;
-    z-index: 1;
+header .headerSection h1 {
+  font-size: 2.5rem;
+  margin: 2rem 5rem 1.2rem;
 }
-
-header h1 span::before {
-    content: ' ';
-    position: absolute;
-    width: 9rem;
-    height: 1.5rem;
-    background-color: teal;
-    bottom: 0;
-    z-index: -1;
+header .headerSection h1 span {
+  text-transform: uppercase;
+  display: block;
+  font-size: 3rem;
+  color: #ffbf00;
+  position: relative;
+  z-index: 1;
 }
-
-header .headerDescription {
-    font-weight: bold;
-    max-width: 45rem;
-    margin: 0 5rem 3rem;
-    font-size: 1.1rem;
+header .headerSection h1 span::before {
+  content: " ";
+  position: absolute;
+  width: 9rem;
+  height: 1.5rem;
+  background-color: teal;
+  bottom: 0;
+  z-index: -1;
 }
-
+header .headerSection .headerDescription {
+  font-weight: bold;
+  max-width: 45rem;
+  margin: 0 5rem 3rem;
+  font-size: 1.1rem;
+}
 header .formContainer {
-    background-color: white;
-    font-weight: bold;
-    padding: 2rem;
-    max-width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 5rem;
-    border-radius: 1rem;
-    box-shadow: 0.5rem 0.5rem 0.5rem #ffbf00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-weight: bold;
+  background-color: white;
+  padding: 2rem;
+  max-width: 40rem;
+  justify-content: left;
+  align-items: center;
+  margin-left: 17rem;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem #ffbf00;
+  padding: 30px;
 }
-
 header .formContainer label {
-    color: teal;
+  color: teal;
 }
-
 header .formContainer p {
-    color: gray;
+  color: lightgrey;
+  width: 20rem;
+  font-size: 1rem;
 }
-
 header .formContainer form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
 }
-
-header .formContainer form input[type="text"] {
-    border: 1px solid darkgray;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    margin-top: 1rem;
+header .formContainer form input[type=text] {
+  border: 1px solid darkgray;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  width: 20rem;
+  height: 1rem;
 }
-
-header .formContainer form input[type="button"] {
-    background-color: #ffbf00;
-    border: none;
-    border-radius: 0.5rem;
-    color: white;
-    padding: 1rem 0;
-    width: 30%;
-    font-size: 1.2rem;
-    align-self: center;
-    cursor: pointer;
-    z-index: 1;
-}
-
-header .formContainer form input[type="button"]:hover {
-    background-color: #d19d00
+header .formContainer form input[type=button] {
+  background-color: #ffbf00;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 2rem;
+  font-size: 1.2rem;
+  align-self: center;
+  cursor: pointer;
 }
 
 .callToAction {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(247, 242, 242);
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(247, 242, 242);
 }
-
 .callToAction .callToActionMessage {
-    padding: 5rem;
-    padding-bottom: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding: 5rem;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.3rem;
 }
-
 .callToAction .callToActionMessage h2 {
-    text-transform: uppercase;
-    position: relative;
+  position: relative;
+  width: 30rem;
+}
+.callToAction .callToActionMessage h2 span {
+  text-transform: uppercase;
+  display: block;
+  font-size: 3rem;
+  color: #ffbf00;
+  position: relative;
+  z-index: 1;
+}
+.callToAction .callToActionMessage h2 span::before {
+  content: " ";
+  position: absolute;
+  width: 9rem;
+  height: 1.5rem;
+  background-color: teal;
+  bottom: 0;
+  z-index: -1;
 }
 
-.callToAction .callToActionMessage h2::before {
-    content: ' ';
-    position: absolute;
-    width: 9rem;
-    height: 0.8rem;
-    background-color: #3ecdcd;
-    bottom: 0;
-    z-index: -1;
-    left: -4rem;
+.newYear {
+  display: block;
+  align-self: center;
+  font-size: 8rem;
+  position: relative;
+  padding: 10px;
+  width: 16rem;
+  height: 10rem;
+  color: #ffbf00;
+  top: 70%;
+  top: 300px;
 }
-
-.callToAction .callToActionMessage {
-    font-size: 1.3rem;
+.newYear h2 {
+  position: relative;
+  width: 30rem;
+  z-index: 1;
+  font-size: 8rem;
 }
-
-.callToAction img {
-    border-radius: 5rem;
-    padding: 2rem;
+.newYear h2 span {
+  text-transform: uppercase;
+  display: block;
+  font-size: 3rem;
+  color: #ffbf00;
+  position: relative;
+  z-index: -1;
+  font-size: 5rem;
 }
+.newYear h2 span::before {
+  content: " ";
+  position: absolute;
+  width: 16rem;
+  height: 2.5rem;
+  background-color: teal;
+  bottom: -6rem;
+  z-index: -1;
+}/*# sourceMappingURL=landingPage.css.map */

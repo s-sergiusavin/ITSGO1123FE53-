@@ -1,5 +1,4 @@
 * {
-  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
@@ -8,67 +7,55 @@ ul {
   padding: 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
 body {
-  background-color: #f2f3f5;
+  background-color: white;
 }
 
-/* Homework - Header - right side */
-/* Header changes and adjustements for
-NavIcons, bell, gear, searchbar, color.. */
 header {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 3.6rem;
+  height: 4rem;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 1;
-  background-color: #ffffff;
-  box-shadow: 20px 0.3px 0.4px #888;
+  background-color: whitesmoke;
+  box-shadow: 20px 0.3px 0.4px #888888;
   width: 100%;
 }
 
 .mainSearch {
   display: flex;
   align-items: center;
-
 }
-
-input[placeholder] {
+.mainSearch:hover .searchIcon, .mainSearch:focus .searchIcon {
+  color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+}
+.mainSearch input[placeholder] {
   text-align: right;
-
 }
-input:focus {
+.mainSearch input:focus {
   text-align: left;
 }
-
 .mainSearch .logo {
   padding: 1rem;
   font-size: 2.5rem;
   color: royalblue;
 }
-
 .mainSearch .logo:hover {
   color: darkblue;
 }
-
 .mainSearch .searchInput {
   height: 2.5rem;
   border-radius: 3rem;
   padding: 0 3rem;
-  border: none;
+  border: 2px solid royalblue;
   width: 16rem;
-  background-color: #eff0f0;
-  display: flex;
+  background-color: whitesmoke;
 }
-
 .mainSearch .searchIcon {
   left: 20px;
   position: relative;
@@ -79,17 +66,6 @@ input:focus {
   opacity: 0.5;
 }
 
-.mainSearch:hover .searchIcon,
-.mainSearch:focus .searchIcon {
-  color: rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.mainSearch .searchIcon:focus {
-  border: 0.2rem solid #7b81ee;
-  opacity: 1;
-}
-
 .navigation,
 .links {
   display: flex;
@@ -98,7 +74,6 @@ input:focus {
 .accountSettings {
   position: relative;
 }
-
 .accountSettings button {
   cursor: pointer;
   border: none;
@@ -112,28 +87,26 @@ input:focus {
   top: 75px;
   right: 0;
   width: 180px;
-  background-color: grey;
+  background-color: lightgrey;
 }
-
 .accountSettingsMenu button {
   padding: 10px 0;
   cursor: pointer;
 }
-
 .accountSettingsMenu button:hover {
-  background-color: #add8e6;
+  background-color: lightblue;
 }
 
 .navigation > li > a {
   border-radius: 50%;
-  background-color: #d8e7f1;
+  background-color: lightblue;
   margin: 0 0.35rem;
   display: flex;
   height: 2.6rem;
 }
 
 .navigation > li > a:hover {
-  background-color: #e1f5f5;
+  background-color: lightblue;
   border: 1px solid royalblue;
 }
 
@@ -143,7 +116,6 @@ input:focus {
   margin: 0 0.5rem;
   justify-content: space-between;
 }
-
 .navIcons:hover {
   color: darkblue;
 }
@@ -153,7 +125,6 @@ input:focus {
   position: relative;
   display: block;
 }
-
 .bellIcon span {
   width: 1rem;
   height: 1rem;
@@ -185,22 +156,10 @@ input:focus {
   30% {
     transform: rotate(15deg);
   }
-
   50% {
     transform: rotate(15deg);
   }
 }
-
-/* Gear rotation key frame */
-@keyframes spinner {
-  0% {
-    transform: translate3d(0, 0, 0) rotate(0deg);
-  }
-  100% {
-    transform: translate3d(0, 0, 0) rotate(360deg);
-  }
-}
-
 main {
   display: flex;
   justify-content: center;
@@ -227,12 +186,10 @@ main {
   height: 70%;
   position: relative;
 }
-
 .leftContent .container .leftFeatures {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: left;
   padding: 4px;
   width: 100%;
   height: 100%;
@@ -240,7 +197,6 @@ main {
   margin-left: 20px;
   cursor: pointer;
 }
-
 .leftContent .container .leftFeatures span {
   font-size: 15px;
   margin-left: 10px;
@@ -249,8 +205,6 @@ main {
   display: inline-block;
   margin-top: 10px;
 }
-
-/* Customizing Icons & text*/
 .leftContent .container .leftFeatures .leftIcons {
   position: relative;
   font-size: 30px;
@@ -259,7 +213,6 @@ main {
   width: 2.5rem;
   margin-left: 4px;
 }
-
 .leftContent .container .leftFeatures .messiPhoto {
   border-radius: 50%;
   width: 2.5rem;
@@ -273,49 +226,66 @@ main {
   top: 0.2rem;
   left: 3rem;
 }
+.leftContent .copyright {
+  display: flex;
+  position: relative;
+  top: 15rem;
+  justify-content: center;
+  cursor: pointer;
+}
+.leftContent .copyright .rights {
+  text-shadow: 0 1px rgba(255, 255, 255, 0.1019607843);
+  color: grey;
+  font-size: 12px;
+}
 
 .leftContent .container .leftFeatures .friends,
 .market {
   color: #05c505;
 }
+
 .leftContent .container .leftFeatures .alarm,
 .person,
 .controller,
 .crypto,
 .awards {
-  color: #00b8f5fc;
+  color: rgba(0, 184, 245, 0.9882352941);
 }
+
 .leftContent .container .leftFeatures .cloud,
 .activity {
   color: #d900ff;
 }
+
 .leftContent .container .leftFeatures .video {
-  color: #f5003dfc;
+  color: rgba(245, 0, 61, 0.9882352941);
 }
+
 .leftContent .container .leftFeatures .seeMore {
   color: #b6b5b5;
 }
+
 .leftContent .container .leftFeatures .poker {
-  color: #ff0101b5;
+  color: rgba(255, 1, 1, 0.7098039216);
 }
+
 .leftContent .container .leftFeatures .amazon {
   color: lightslategray;
 }
+
 .leftContent .container .leftFeatures .iconDescription {
   left: 35px;
   justify-content: center;
   text-align: left;
 }
+
 .leftContent .container .leftFeatures .iconDescription:hover {
-  background-image: linear-gradient(
-    to right,
-    rgba(255, 0, 0, 0),
-    rgb(143, 162, 246)
-  );
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(143, 162, 246));
   width: 50%;
   border-radius: 10px;
   height: 1.5rem;
 }
+
 .leftContent .container .leftFeatures .iconDescription {
   left: 3rem;
 }
@@ -334,8 +304,9 @@ main {
 .editShortcut {
   color: #656565;
 }
+
 .button {
-  background-color: #f2f3f5;
+  background-color: white;
   border: none;
   color: rgb(37, 37, 246);
   text-align: center;
@@ -357,20 +328,6 @@ main {
   visibility: visible;
 }
 
-.leftContent .copyright {
-  display: flex;
-  position: relative;
-  top: 15rem;
-  justify-content: center;
-  cursor: pointer;
-}
-
-.leftContent .copyright .rights {
-  text-shadow: 0 1px #ffffff1a;
-  color: grey;
-  font-size: 12px;
-}
-
 /* Right content customization */
 .rightContent {
   right: 0;
@@ -381,15 +338,11 @@ main {
 .rightContent .rightFeatures p {
   color: #656565;
 }
+
 .rightContent .rightFeatures p,
 .see {
   position: relative;
   display: inline-block;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: row;
-  padding: 0px 2px;
-  color: none;
   cursor: pointer;
 }
 
@@ -397,12 +350,13 @@ main {
   color: royalblue;
   left: 7rem;
   border: none;
-  height: 2rem;
-  width: 4.7rem;
-  background-color: #f2f3f5;
+  height: 1.2rem;
+  width: 3.6rem;
+  background-color: inherit;
 }
-.rightContent .rightFeatures .see:hover {
+.rightContent .rightFeatures .see.see:hover {
   background-color: #dfdfdf;
+  border-radius: 1rem;
 }
 
 .rightContent .rightFeatures .people .userRequest {
@@ -428,9 +382,9 @@ main {
 .rightContent .rightFeatures .requests {
   box-sizing: border-box;
   background-color: #f2f3f5;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 0.5rem;
-  width: 100%;
+  width: 77%;
   height: 6rem;
   position: relative;
   display: flex;
@@ -439,19 +393,8 @@ main {
 .rightContent .rightFeatures .requests:hover {
   background-color: #dfdfdf;
 }
-
-.rightContent .rightFeatures .requests .timeStamp {
-  display: inline;
-  color: #656565;
-  font-size: 0.7rem;
-  position: relative;
-  align-items: center;
-  left: 16.2rem;
-  top: inherit;
-}
-
 .rightContent .rightFeatures .requests .confirm,
-.delete {
+.rightContent .rightFeatures .requests .delete {
   display: flex;
   color: #656565;
   font-size: 0.7rem;
@@ -467,7 +410,6 @@ main {
   border-radius: 0.5rem;
   justify-content: space-between;
 }
-
 .rightContent .rightFeatures .requests .confirm {
   color: whitesmoke;
   background-color: royalblue;
@@ -479,7 +421,6 @@ main {
   display: flex;
   left: 1.2rem;
 }
-
 .rightContent .rightFeatures .requests .delete {
   color: whitesmoke;
   background-color: rgb(184, 184, 184);
@@ -492,10 +433,20 @@ main {
   top: 0.5rem;
   left: 9.2rem;
 }
-
 .rightContent .rightFeatures .requests .delete:hover {
   background-color: #858585;
 }
+
+.rightContent .rightFeatures .requests .timeStamp {
+  display: inline;
+  color: #656565;
+  font-size: 0.7rem;
+  position: relative;
+  align-items: center;
+  left: 16.2rem;
+  top: inherit;
+}
+
 .borderSpaceRight {
   box-sizing: border-box;
   width: 100%;
@@ -508,13 +459,14 @@ main {
   background-image: radial-gradient(#ffffff, #a09a9a, #d3d3d3);
   top: -1.5rem;
 }
+
 /* Birthdays */
 .rightContent .rightFeatures .birthdays {
   box-sizing: border-box;
   background-color: #f2f3f5;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   padding: 0.5rem;
-  width: 100%;
+  width: 77%;
   height: 3.1rem;
   position: relative;
   display: flex;
@@ -523,13 +475,6 @@ main {
 .rightContent .rightFeatures .birthdays:hover {
   background-color: #dfdfdf;
 }
-
-.rightContent .rightFeatures .birthdays .birthText {
-  color: #656565;
-  top: -3rem;
-  right: 10px;
-}
-
 .rightContent .rightFeatures .birthdays span {
   position: relative;
   display: flex;
@@ -538,7 +483,11 @@ main {
   flex-direction: row;
   justify-content: space-between;
 }
-
+.rightContent .rightFeatures .birthdays .birthText {
+  color: #656565;
+  top: -3rem;
+  right: 8px;
+}
 .rightContent .rightFeatures .birthdays .cake {
   color: rgb(143, 52, 192);
   display: flex;
@@ -550,6 +499,7 @@ main {
 .rightContent .rightFeatures .chat span p {
   color: #656565;
 }
+
 .rightContent .rightFeatures .chat {
   display: inline;
   position: relative;
@@ -558,7 +508,6 @@ main {
   text-align: left;
   top: -3.2rem;
 }
-
 .rightContent .rightFeatures .chat .additionalFeatures {
   display: inline-block;
   position: absolute;
@@ -566,15 +515,7 @@ main {
   justify-content: space-between;
   align-content: flex-start;
 }
-
-.rightFeatures .chat .searchTab,
-.moreTab {
-  display: inline;
-  position: relative;
-  color: #656565;
-}
-
-.rightFeatures .chat .searchTab {
+.rightContent .rightFeatures .chat .searchTab {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -586,7 +527,10 @@ main {
   top: 0.8rem;
   left: 10rem;
 }
-.rightFeatures .chat .moreTab {
+.rightContent .rightFeatures .chat .searchTab:hover {
+  background-color: lightgray;
+}
+.rightContent .rightFeatures .chat .moreTab {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -598,20 +542,24 @@ main {
   left: 12.5rem;
   top: -1.2rem;
 }
-.rightFeatures .chat .moreTab:hover {
+.rightContent .rightFeatures .chat .moreTab:hover {
   background-color: lightgray;
 }
-.rightFeatures .chat .searchTab:hover {
-  background-color: lightgray;
+
+.rightFeatures .chat .searchTab,
+.moreTab {
+  display: inline;
+  position: relative;
+  color: #656565;
 }
 
 /* chat users */
 .rightFeatures .chat .usersChat .usersPhoto {
   border-radius: 50%;
+  color: rgba(0, 0, 0, 0);
   width: 2.5rem;
   height: 2.5rem;
 }
-
 .rightFeatures .chat .usersChat .user1 {
   background-color: #f2f3f5;
   color: black;
@@ -623,13 +571,37 @@ main {
   border-radius: 0.5rem;
   flex-direction: column;
   justify-content: space-between;
-  gap: 5px;
+  margin-top: 10px;
   padding: 4px 3px;
 }
 .rightFeatures .chat .usersChat .user1:hover {
   background-color: #dfdfdf;
 }
-
+.rightFeatures .chat .usersChat .user1 p {
+  color: #0b0b0b;
+  text-align: center;
+  position: relative;
+  display: inline;
+  top: -0.7rem;
+  font-size: 14px;
+  margin-left: 1rem;
+}
+.rightFeatures .chat .usersChat .user1 .online {
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  border-radius: 1px solid white;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  color: green;
+  font-weight: bold;
+}
 .rightFeatures .chat .usersChat .user2 {
   background-color: #f2f3f5;
   color: black;
@@ -647,7 +619,31 @@ main {
 .rightFeatures .chat .usersChat .user2:hover {
   background-color: #dfdfdf;
 }
-
+.rightFeatures .chat .usersChat .user2 p {
+  color: #0b0b0b;
+  text-align: center;
+  position: relative;
+  display: inline;
+  top: -0.7rem;
+  font-size: 14px;
+  margin-left: 1rem;
+}
+.rightFeatures .chat .usersChat .user2 .online {
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+  border-radius: 50%;
+  border-radius: 1px solid white;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  color: green;
+  font-weight: bold;
+}
 .rightFeatures .chat .usersChat .user3 {
   background-color: #f2f3f5;
   color: black;
@@ -665,299 +661,14 @@ main {
 .rightFeatures .chat .usersChat .user3:hover {
   background-color: #dfdfdf;
 }
-
-.rightFeatures .chat .usersChat .user4 {
-  background-color: #f2f3f5;
-  color: black;
-  width: 76%;
-  height: 3rem;
-  display: flex;
-  position: relative;
-  top: -1rem;
-  border-radius: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 10px;
-  padding: 4px 3px;
-}
-.rightFeatures .chat .usersChat .user4:hover {
-  background-color: #dfdfdf;
-}
-
-.rightFeatures .chat .usersChat .user5 {
-  background-color: #f2f3f5;
-  color: black;
-  width: 76%;
-  height: 3rem;
-  display: flex;
-  position: relative;
-  top: -1rem;
-  border-radius: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 10px;
-  padding: 3px 3px;
-}
-.rightFeatures .chat .usersChat .user5:hover {
-  background-color: #dfdfdf;
-}
-
-.rightFeatures .chat .usersChat .user6 {
-  background-color: #f2f3f5;
-  color: black;
-  width: 76%;
-  height: 3rem;
-  display: flex;
-  position: relative;
-  top: -1rem;
-  border-radius: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 10px;
-  padding: 4px 3px;
-}
-.rightFeatures .chat .usersChat .user6:hover {
-  background-color: #dfdfdf;
-}
-
-.rightFeatures .chat .usersChat .user7 {
-  background-color: #f2f3f5;
-  color: black;
-  width: 76%;
-  height: 3rem;
-  display: flex;
-  position: relative;
-  top: -1rem;
-  border-radius: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 10px;
-  padding: 4px 3px;
-}
-.rightFeatures .chat .usersChat .user7:hover {
-  background-color: #dfdfdf;
-}
-
-.rightFeatures .chat .usersChat .user8 {
-  background-color: #f2f3f5;
-  color: black;
-  width: 76%;
-  height: 3rem;
-  display: flex;
-  position: relative;
-  top: -1rem;
-  border-radius: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 10px;
-  padding: 4px 3px;
-}
-.rightFeatures .chat .usersChat .user8:hover {
-  background-color: #dfdfdf;
-}
-
-.rightFeatures .chat .usersChat .user9 {
-  background-color: #f2f3f5;
-  color: black;
-  width: 76%;
-  height: 3rem;
-  display: flex;
-  position: relative;
-  top: -1rem;
-  border-radius: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 10px;
-  padding: 4px 3px;
-}
-.rightFeatures .chat .usersChat .user9:hover {
-  background-color: #dfdfdf;
-}
-
-.rightFeatures .chat .usersChat .user10 {
-  background-color: #f2f3f5;
-  color: black;
-  width: 76%;
-  height: 3rem;
-  display: flex;
-  position: relative;
-  top: -1rem;
-  border-radius: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 10px;
-  padding: 4px 3px;
-}
-.rightFeatures .chat .usersChat .user10:hover {
-  background-color: #dfdfdf;
-}
-
-.rightFeatures .chat .usersChat .user11 {
-  background-color: #f2f3f5;
-  color: black;
-  width: 76%;
-  height: 3rem;
-  display: flex;
-  position: relative;
-  top: -1rem;
-  border-radius: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 10px;
-  padding: 4px 3px;
-}
-.rightFeatures .chat .usersChat .user11:hover {
-  background-color: #dfdfdf;
-}
-
-.rightFeatures .chat .usersChat .user12 {
-  background-color: #f2f3f5;
-  color: black;
-  width: 76%;
-  height: 3rem;
-  display: flex;
-  position: relative;
-  top: -1rem;
-  border-radius: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 10px;
-  padding: 4px 3px;
-}
-
-.rightFeatures .chat .usersChat .user12:hover {
-  background-color: #dfdfdf;
-}
-
-.rightFeatures .chat .usersChat .user1 p {
-  color: black;
-  text-align: center;
-  position: relative;
-  display: inline;
-  top: -0.7rem;
-  font-size: 14px;
-}
-.rightFeatures .chat .usersChat .user2 p {
-  color: black;
-  text-align: center;
-  position: relative;
-  display: inline;
-  top: -0.7rem;
-  font-size: 14px;
-}
 .rightFeatures .chat .usersChat .user3 p {
-  color: black;
+  color: #0b0b0b;
   text-align: center;
   position: relative;
   display: inline;
   top: -0.7rem;
   font-size: 14px;
-}
-.rightFeatures .chat .usersChat .user4 p {
-  color: black;
-  text-align: center;
-  position: relative;
-  display: inline;
-  top: -0.7rem;
-  font-size: 14px;
-}
-.rightFeatures .chat .usersChat .user5 p {
-  color: black;
-  text-align: center;
-  position: relative;
-  display: inline;
-  top: -0.7rem;
-  font-size: 14px;
-}
-.rightFeatures .chat .usersChat .user6 p {
-  color: black;
-  text-align: center;
-  position: relative;
-  display: inline;
-  top: -0.7rem;
-  font-size: 14px;
-}
-.rightFeatures .chat .usersChat .user7 p {
-  color: black;
-  text-align: center;
-  position: relative;
-  display: inline;
-  top: -0.7rem;
-  font-size: 14px;
-}
-.rightFeatures .chat .usersChat .user8 p {
-  color: black;
-  text-align: center;
-  position: relative;
-  display: inline;
-  top: -0.7rem;
-  font-size: 14px;
-}
-.rightFeatures .chat .usersChat .user9 p {
-  color: black;
-  text-align: center;
-  position: relative;
-  display: inline;
-  top: -0.7rem;
-  font-size: 14px;
-}
-.rightFeatures .chat .usersChat .user10 p {
-  color: black;
-  text-align: center;
-  position: relative;
-  display: inline;
-  top: -0.7rem;
-  font-size: 14px;
-}
-.rightFeatures .chat .usersChat .user11 p {
-  color: black;
-  text-align: center;
-  position: relative;
-  display: inline;
-  top: -0.7rem;
-  font-size: 14px;
-}
-.rightFeatures .chat .usersChat .user12 p {
-  color: black;
-  text-align: center;
-  position: relative;
-  display: inline;
-  top: -0.7rem;
-  font-size: 14px;
-}
-
-.rightFeatures .chat .usersChat .user1 .online {
-  height: 1rem;
-  width: 1rem;
-  background-color: white;
-  border-radius: 50%;
-  border-radius: 1px solid white;
-  position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.8rem;
-  color: green;
-  font-weight: bold;
-}
-
-.rightFeatures .chat .usersChat .user2 .online {
-  height: 1rem;
-  width: 1rem;
-  background-color: white;
-  border-radius: 50%;
-  border-radius: 1px solid white;
-  position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.8rem;
-  color: green;
-  font-weight: bold;
+  margin-left: 1rem;
 }
 .rightFeatures .chat .usersChat .user3 .online {
   height: 1rem;
@@ -975,6 +686,32 @@ main {
   color: green;
   font-weight: bold;
 }
+.rightFeatures .chat .usersChat .user4 {
+  background-color: #f2f3f5;
+  color: black;
+  width: 76%;
+  height: 3rem;
+  display: flex;
+  position: relative;
+  top: -1rem;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 4px 3px;
+}
+.rightFeatures .chat .usersChat .user4:hover {
+  background-color: #dfdfdf;
+}
+.rightFeatures .chat .usersChat .user4 p {
+  color: #0b0b0b;
+  text-align: center;
+  position: relative;
+  display: inline;
+  top: -0.7rem;
+  font-size: 14px;
+  margin-left: 1rem;
+}
 .rightFeatures .chat .usersChat .user4 .online {
   height: 1rem;
   width: 1rem;
@@ -991,21 +728,31 @@ main {
   color: green;
   font-weight: bold;
 }
-.rightFeatures .chat .usersChat .user2 .online {
-  height: 1rem;
-  width: 1rem;
-  background-color: white;
-  border-radius: 50%;
-  border-radius: 1px solid white;
-  position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+.rightFeatures .chat .usersChat .user5 {
+  background-color: #f2f3f5;
+  color: black;
+  width: 76%;
+  height: 3rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.8rem;
-  color: green;
-  font-weight: bold;
+  position: relative;
+  top: -1rem;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 4px 3px;
+}
+.rightFeatures .chat .usersChat .user5:hover {
+  background-color: #dfdfdf;
+}
+.rightFeatures .chat .usersChat .user5 p {
+  color: #0b0b0b;
+  text-align: center;
+  position: relative;
+  display: inline;
+  top: -0.7rem;
+  font-size: 14px;
+  margin-left: 1rem;
 }
 .rightFeatures .chat .usersChat .user5 .online {
   height: 1rem;
@@ -1023,6 +770,32 @@ main {
   color: green;
   font-weight: bold;
 }
+.rightFeatures .chat .usersChat .user6 {
+  background-color: #f2f3f5;
+  color: black;
+  width: 76%;
+  height: 3rem;
+  display: flex;
+  position: relative;
+  top: -1rem;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 4px 3px;
+}
+.rightFeatures .chat .usersChat .user6:hover {
+  background-color: #dfdfdf;
+}
+.rightFeatures .chat .usersChat .user6 p {
+  color: #0b0b0b;
+  text-align: center;
+  position: relative;
+  display: inline;
+  top: -0.7rem;
+  font-size: 14px;
+  margin-left: 1rem;
+}
 .rightFeatures .chat .usersChat .user6 .online {
   height: 1rem;
   width: 1rem;
@@ -1038,6 +811,32 @@ main {
   font-size: 0.8rem;
   color: green;
   font-weight: bold;
+}
+.rightFeatures .chat .usersChat .user7 {
+  background-color: #f2f3f5;
+  color: black;
+  width: 76%;
+  height: 3rem;
+  display: flex;
+  position: relative;
+  top: -1rem;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 4px 3px;
+}
+.rightFeatures .chat .usersChat .user7:hover {
+  background-color: #dfdfdf;
+}
+.rightFeatures .chat .usersChat .user7 p {
+  color: #0b0b0b;
+  text-align: center;
+  position: relative;
+  display: inline;
+  top: -0.7rem;
+  font-size: 14px;
+  margin-left: 1rem;
 }
 .rightFeatures .chat .usersChat .user7 .online {
   height: 1rem;
@@ -1055,6 +854,32 @@ main {
   color: green;
   font-weight: bold;
 }
+.rightFeatures .chat .usersChat .user8 {
+  background-color: #f2f3f5;
+  color: black;
+  width: 76%;
+  height: 3rem;
+  display: flex;
+  position: relative;
+  top: -1rem;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 4px 3px;
+}
+.rightFeatures .chat .usersChat .user8:hover {
+  background-color: #dfdfdf;
+}
+.rightFeatures .chat .usersChat .user8 p {
+  color: #0b0b0b;
+  text-align: center;
+  position: relative;
+  display: inline;
+  top: -0.7rem;
+  font-size: 14px;
+  margin-left: 1rem;
+}
 .rightFeatures .chat .usersChat .user8 .online {
   height: 1rem;
   width: 1rem;
@@ -1070,6 +895,32 @@ main {
   font-size: 0.8rem;
   color: green;
   font-weight: bold;
+}
+.rightFeatures .chat .usersChat .user9 {
+  background-color: #f2f3f5;
+  color: black;
+  width: 76%;
+  height: 3rem;
+  display: flex;
+  position: relative;
+  top: -1rem;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 4px 3px;
+}
+.rightFeatures .chat .usersChat .user9:hover {
+  background-color: #dfdfdf;
+}
+.rightFeatures .chat .usersChat .user9 p {
+  color: #0b0b0b;
+  text-align: center;
+  position: relative;
+  display: inline;
+  top: -0.7rem;
+  font-size: 14px;
+  margin-left: 1rem;
 }
 .rightFeatures .chat .usersChat .user9 .online {
   height: 1rem;
@@ -1087,21 +938,31 @@ main {
   color: green;
   font-weight: bold;
 }
-.rightFeatures .chat .usersChat .user2 .online {
-  height: 1rem;
-  width: 1rem;
-  background-color: white;
-  border-radius: 50%;
-  border-radius: 1px solid white;
-  position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+.rightFeatures .chat .usersChat .user10 {
+  background-color: #f2f3f5;
+  color: black;
+  width: 76%;
+  height: 3rem;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.8rem;
-  color: green;
-  font-weight: bold;
+  position: relative;
+  top: -1rem;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 4px 3px;
+}
+.rightFeatures .chat .usersChat .user10:hover {
+  background-color: #dfdfdf;
+}
+.rightFeatures .chat .usersChat .user10 p {
+  color: #0b0b0b;
+  text-align: center;
+  position: relative;
+  display: inline;
+  top: -0.7rem;
+  font-size: 14px;
+  margin-left: 1rem;
 }
 .rightFeatures .chat .usersChat .user10 .online {
   height: 1rem;
@@ -1119,6 +980,32 @@ main {
   color: green;
   font-weight: bold;
 }
+.rightFeatures .chat .usersChat .user11 {
+  background-color: #f2f3f5;
+  color: black;
+  width: 76%;
+  height: 3rem;
+  display: flex;
+  position: relative;
+  top: -1rem;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 4px 3px;
+}
+.rightFeatures .chat .usersChat .user11:hover {
+  background-color: #dfdfdf;
+}
+.rightFeatures .chat .usersChat .user11 p {
+  color: #0b0b0b;
+  text-align: center;
+  position: relative;
+  display: inline;
+  top: -0.7rem;
+  font-size: 14px;
+  margin-left: 1rem;
+}
 .rightFeatures .chat .usersChat .user11 .online {
   height: 1rem;
   width: 1rem;
@@ -1134,6 +1021,32 @@ main {
   font-size: 0.8rem;
   color: green;
   font-weight: bold;
+}
+.rightFeatures .chat .usersChat .user12 {
+  background-color: #f2f3f5;
+  color: black;
+  width: 76%;
+  height: 3rem;
+  display: flex;
+  position: relative;
+  top: -1rem;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 4px 3px;
+}
+.rightFeatures .chat .usersChat .user12:hover {
+  background-color: #dfdfdf;
+}
+.rightFeatures .chat .usersChat .user12 p {
+  color: #0b0b0b;
+  text-align: center;
+  position: relative;
+  display: inline;
+  top: -0.7rem;
+  font-size: 14px;
+  margin-left: 1rem;
 }
 .rightFeatures .chat .usersChat .user12 .online {
   height: 1rem;
@@ -1155,8 +1068,9 @@ main {
 .rightFeatures .group {
   display: inline;
   position: relative;
-  top: -6.5rem;
-
+  bottom: 6rem;
+  color: #656565;
+  font-size: 10px;
 }
 .rightFeatures .group .groupPhoto {
   border-radius: 50%;
@@ -1167,59 +1081,58 @@ main {
   display: inline;
 }
 .rightFeatures .group .family {
-  box-sizing: border-box;
   background-color: #f2f3f5;
   color: black;
   width: 76%;
   height: 3rem;
   display: flex;
   position: relative;
+  top: -1rem;
   border-radius: 0.5rem;
   flex-direction: column;
   justify-content: space-between;
-  padding: 2px 3px;
-  bottom: 1.7rem;
-}
-.rightFeatures .group .family p {
-  color: black;
-  font-size: 14px;
-  display: inline;
-  bottom: 10px;
-
+  margin-top: 10px;
+  padding: 4px 3px;
+  top: -5px;
 }
 .rightFeatures .group .family:hover {
   background-color: #dfdfdf;
 }
-
+.rightFeatures .group .family p {
+  color: #0b0b0b;
+  font-size: 14px;
+  display: inline;
+  bottom: 10px;
+}
 .rightFeatures .group .teamMates {
-  box-sizing: border-box;
   background-color: #f2f3f5;
+  color: black;
   width: 76%;
   height: 3rem;
   display: flex;
   position: relative;
+  top: -1rem;
   border-radius: 0.5rem;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
-  padding: 2px 3px;
-  bottom: 1.6rem;
-}
-.rightFeatures .group .teamMates p {
-  color: black;
-  font-size: 14px;
-  display: inline;
-  bottom: 10px;
-
+  margin-top: 10px;
+  padding: 4px 3px;
+  top: -5px;
+  justify-content: center;
 }
 .rightFeatures .group .teamMates:hover {
   background-color: #dfdfdf;
 }
-
+.rightFeatures .group p {
+  color: #0b0b0b;
+  font-size: 14px;
+  display: inline;
+  margin-left: 1rem;
+}
 .rightFeatures .group .newGroup {
   box-sizing: border-box;
   background-color: #f2f3f5;
-  width: 76%;
+  width: 77%;
   height: 3rem;
   display: flex;
   position: relative;
@@ -1228,25 +1141,13 @@ main {
   justify-content: space-between;
   position: relative;
   padding: 2px 3px;
-  bottom: 1.8rem;
+  top: 5px;
 }
-.rightFeatures .group .newGroup .plusCircle {
- align-items: center;
- display: flex;
- position: relative;
- border-radius: 50%;
- width: 2rem;
- height: 2rem;
- color: #3b3b3b;
- justify-content: center;
- margin-top: 8px;
-
-}
-.rightFeatures .group .newGroup .plusCircle:hover {
-  background-color: #cacaca;
+.rightFeatures .group .newGroup:hover {
+  background-color: #dfdfdf;
 }
 .rightFeatures .group .newGroup p {
-  color: black;
+  color: #0b0b0b;
   font-size: 14px;
   display: flex;
   bottom: 9.5px;
@@ -1254,8 +1155,19 @@ main {
   margin-left: 2rem;
   top: 1.5px;
 }
-.rightFeatures .group .newGroup:hover {
-  background-color: #dfdfdf;
+.rightFeatures .group .newGroup .plusCircle {
+  align-items: center;
+  display: flex;
+  position: relative;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  color: #3b3b3b;
+  justify-content: center;
+  margin-top: 8px;
+}
+.rightFeatures .group .newGroup .plusCircle:hover {
+  background-color: #cacaca;
 }
 
 .rightFeatures .plusMessage {
@@ -1284,6 +1196,7 @@ main {
   align-self: center;
   padding: 10px;
 }
+
 .rightFeatures .pen:hover {
   background-color: #d2d2d2;
 }
@@ -1291,7 +1204,6 @@ main {
 /* Main content customization */
 .mainContent {
   width: 40%;
-
 }
 
 .mainContent .post {
@@ -1311,12 +1223,10 @@ main {
   align-items: center;
 }
 
-
 /* .mainContent .post .postHeader .profileUserInfo .profileImage {
     width: 3rem;
     border-radius: 50%;
 } */
-
 .mainContent .post .postHeader .profileUserInfo .profileName {
   display: flex;
   flex-direction: column;
@@ -1331,7 +1241,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .mainContent .post .postHeader .profileOptions:hover {
@@ -1423,12 +1332,15 @@ main {
     width: 3rem;
     border-radius: 50%;
 } */
-
 .commentSection .newCommentField {
   width: 80%;
   border-radius: 0.5rem;
   padding: 0.5rem;
   background-color: #cbf2ff;
+}
+
+.commentSection .newCommentField::-moz-placeholder {
+  color: royalblue;
 }
 
 .commentSection .newCommentField::placeholder {
@@ -1471,7 +1383,6 @@ main {
     width: 3rem;
     border-radius: 50%;
 } */
-
 .profileImage {
   width: 3rem;
   border-radius: 50%;
@@ -1529,7 +1440,7 @@ main {
   content: "";
   border-radius: 50%;
   min-width: calc(3.5rem + 12px);
-  min-height: calc(60px + 12px);
+  min-height: 72px;
   border: 6px solid #00ffcb;
   box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
   position: absolute;
@@ -1577,20 +1488,17 @@ main {
     height: 1.5rem;
     opacity: 1;
   }
-
   100% {
     width: 5.5rem;
     height: 5.5rem;
     opacity: 0;
   }
 }
-
 @keyframes comment-animation {
   from {
     left: -2rem;
   }
-
   to {
     left: 0rem;
   }
-}
+}/*# sourceMappingURL=feed.css.map */

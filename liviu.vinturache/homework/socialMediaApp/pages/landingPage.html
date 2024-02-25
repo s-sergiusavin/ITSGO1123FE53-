@@ -1,58 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Social Media App | Feed</title>
-    <link rel="stylesheet" href="../css/landingPage.css">
-</head>
+    <link rel="stylesheet" href="../css/landingPage.css"/>
+  </head>
 
-<body>
+  <body>
     <header>
-        <a href="../pages/feed.html"><img src="../assets/back.png" class="backImage" alt="back icon"></a>
-        <section class="header">
-            <a href="../pages/feed.html" title="To Feed Section">Landing Page</a>
-        </section>
-
+      <a href="../pages/feed.html">
+        <span class="goBack">Back</span>
+      </a>
+      <div class="headerSection">
         <h1><span>The best </span> New Year's Eve party</h1>
-
         <p class="headerDescription">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum omnis reiciendis officia ad rerum nulla optio
-            quo veniam asperiores placeat perspiciatis aperiam odit quam ipsum, expedita, ullam libero fugiat, eligendi
-            provident aliquam a sed fugit voluptates. Libero earum totam distinctio ea, dicta, nostrum aliquid facere
-            labore velit perferendis quo eligendi!
+            Join us for a night of celebration and joy as we ring in the new year! Let's toast to new beginnings, reminisce on fond memories, and dance the night away. Come dressed in your finest attire and get ready for a night filled with laughter, champagne, and good company. See you there!
+            <br><br>
+            <span><strong>Don't forget to register!</strong></span>
         </p>
-
-        <div class="formContainer">
-            <form action="">
-                <label for="name" id="enterNameColor">Enter your name</label>
-                <input type="text" id="name" placeholder="Your name">
-                <p>Example: Sergiu Savin</p>
-                <input type="button" value="Book now" id="callToActionButton">
-            </form>
-        </div>
+    </div>
+      <div class="formContainer">
+        <form action="">
+          <label for="name" id="enterNameColor">Enter your name</label>
+          <input type="text" id="name" placeholder="Your name" />
+          <p>Example: Liviu Vinturache</p>
+          <input type="button" value="Book now" id="callToActionButton" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()" />
+        </form>
+      </div>
     </header>
 
     <section class="callToAction">
-        <div class="callToActionMessage">
-            <h2>Enjoy the party</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure sint consequuntur voluptatem. Corrupti,
-                ducimus assumenda, veritatis, modi soluta voluptate facilis suscipit excepturi sed inventore cumque.
-                Dolorum architecto impedit voluptatibus recusandae est, doloremque dolor sequi culpa reiciendis
-                necessitatibus saepe inventore accusamus blanditiis minus? Magnam iusto, fuga sequi in veniam modi
-                cumque quia esse eligendi illo omnis debitis numquam odio quos laboriosam, hic voluptas atque, suscipit
-                dignissimos! Suscipit explicabo quidem ullam magni molestias sequi saepe quam deserunt eos. Hic eveniet
-                quod, veritatis vero voluptas possimus architecto, qui dolorem repellendus illum id! Obcaecati quos
-                possimus ut repudiandae et dolore quam quia saepe animi nulla porro commodi maxime deserunt veritatis,
-                ea sapiente nostrum, eos molestias corporis impedit amet, sequi quidem ab a! Quisquam earum, provident
-                dolore alias obcaecati ullam sunt fugit exercitationem tempora voluptatibus magnam odio ipsum? Officiis
-                repellendus commodi eveniet eos rem quasi molestias hic quos perspiciatis, ex ad laboriosam quis at
-                quam!</p>
+      <div class="callToActionMessage">
+        <h2><span>Enjoy the party</span></h2>
+        <p>
+            Picture a glamorous event held in a grand ballroom, decked out in festive decorations and sparkling lights, outside we have the lake where we'll enjoy ourself the fireworks at 00:00. The evening kicks off with a cocktail hour featuring signature drinks and passed hors d'oeuvres, setting the stage for a night of celebration. As the clock strikes midnight, a dazzling fireworks display lights up the sky, accompanied by cheers and laughter from the guests. The dance floor is packed with partygoers grooving to the sounds of a live band, creating an electric atmosphere of joy and excitement. As the night continues, guests enjoy a gourmet dinner, decadent desserts, and a midnight toast with champagne. The partygoers are dressed to the nines in elegant attire, adding to the glitz and glamour of the event. Overall, this New Year's Eve party is a night to remember, filled with unforgettable moments and a sense of camaraderie as everyone rings in the new year together.
+        </p>
+      </div>
+        <div class="newYear">
+          <h2><span>WELCOME</span> 2024</h2>
         </div>
-        <img src="../assets/landingPage.jpg" alt="party 2023-2024">
+      <img src="../assets/landingPage.jpg" alt="party 2023-2024" />
+
     </section>
     <script src="../js/landingPage.js"></script>
-</body>
-
+  </body>
 </html>

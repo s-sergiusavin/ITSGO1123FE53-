@@ -14,9 +14,18 @@
 const callToActionButtonChange = document.getElementById('callToActionButton')
 
 callToActionButton.style.border = '1px solid grey'
-callToActionButton.style.backgroundColor = 'lightBlue'
+callToActionButton.style.backgroundColor = 'orange'
 callToActionButton.style.color = '#020122'
 
+function mouseEnter() {
+  callToActionButton.style.backgroundColor = 'orange'
+}
+
+const mouseLeave = () => {
+  callToActionButton.style.backgroundColor = 'lightblue'
+  callToActionButton.style.border = '2px solid lightblue'
+  callToActionButton.innerText = 'black'
+}
 
 // change the placeholder in upperCase using ID
 const nameUpperCase = document.getElementById('name')
