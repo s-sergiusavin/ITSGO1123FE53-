@@ -222,7 +222,7 @@ async function filterData(searchTerm) {
     return response.json()
 }
 
-// Send message to user/group
+// Right navigation => Send message to user/group
 
 const onlineUserElements = document.querySelectorAll('.onlineUser')
 console.dir(onlineUserElements)
@@ -261,17 +261,19 @@ onlineGroupElements.forEach(element => {
     })
 })
 
+// Left navigation
+
 const bloodDonationElement = document.getElementById('bloodDonation')
 const marketplaceElement = document.getElementById('marketplace')
 const adActivityElement = document.getElementById('adActivity')
 const fundraisersElement = document.getElementById('fundraisers')
 const savedItemsElement = document.getElementById('savedItems')
 
-bloodDonationElement.addEventListener('click', function() {
+bloodDonationElement.addEventListener('click', function () {
     alert('There are not scheduled nearby any blood donation events!')
 })
 
-marketplaceElement.addEventListener('click', function() {
+marketplaceElement.addEventListener('click', function () {
     let message = prompt('If you want to use Marketplace, you need first to agree to use your profile info! Enter AGREE or OK or YES below:')
     if (message === 'AGREE' || message === 'agree' || message === 'Agree' || message === 'OK' || message === 'ok' || message === 'Ok' || message === 'YES' || message === 'yes' || message === 'Yes') {
         alert('Your marketplace account is created!')
@@ -281,14 +283,14 @@ marketplaceElement.addEventListener('click', function() {
     }
 })
 
-adActivity.addEventListener('click', function() {
+adActivity.addEventListener('click', function () {
     alert('You do not have any running ads!')
 })
 
-fundraisers.addEventListener('click', function() {
+fundraisers.addEventListener('click', function () {
     alert('You have not raised money for any cause!')
 })
 
-savedItemsElement.addEventListener('click', function() {
+savedItemsElement.addEventListener('click', function () {
     alert('You do not have any saved items in your collection!')
 })

@@ -22,7 +22,7 @@ const clearInputs = () => {
     phoneNumberField.value = ''
 }
 
-callToActionButton.addEventListener('click', function(event) {
+callToActionButton.addEventListener('click', function (event) {
     event.preventDefault()
 
     const nameValue = nameField.value

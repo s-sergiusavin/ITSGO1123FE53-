@@ -33,15 +33,15 @@ confirmBtn.addEventListener('click', function () {
     }
 })
 
-removeBtn.addEventListener('click', function() {
+removeBtn.addEventListener('click', function () {
     friendRequestElement.style.display = 'none'
 })
 
-addFriendBtn.addEventListener('click', function() {
+addFriendBtn.addEventListener('click', function () {
     suggestedFriendElement.style.display = 'none'
     alert('Request sent!')
 })
 
-removeRequestBtn.addEventListener('click', function() {
+removeRequestBtn.addEventListener('click', function () {
     suggestedFriendElement.style.display = 'none'
 })
