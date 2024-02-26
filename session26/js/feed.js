@@ -64,3 +64,27 @@ shareButton.addEventListener('click', function() {
 
     this.classList.toggle('touched')
 })
+
+const commentButton  = document.getElementById('commentButton')
+const commentInput = document.getElementById('commentInput')
+const commentInputButton = document.getElementById('commentInputButton')
+
+const commentMessage = document.getElementById('commentMessage')
+ const removeCommentButton = document.getElementById('removeCommentButton')
+
+ commentButton.addEventListener('click', function() {
+    commentInput.focus()
+    //commentInput.blur() 
+ })
+
+ commentInput.addEventListener('keydown', function(event) {
+    if(event.key === ' Enter') {
+        commentMessage.innerHTML = commentInput.value;
+        commentInput.value = ''
+        this.blur()
+    }
+ })
+
+ commentInputButton.addEventListener('click', 
+    setComment()
+ )
