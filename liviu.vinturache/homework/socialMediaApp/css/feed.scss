@@ -775,159 +775,126 @@ main {
 /* Main content customization */
 .mainContent {
   width: 40%;
+  .post {
+    box-shadow: 5px 5px 5px 5px #888;
+    margin: 3rem 0;
+    padding: 1rem;
+    .postHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .profileOptionsWrapper {
+        position: relative;
+        .profileOptionsDropdown {
+          position: absolute;
+          z-index: 1;
+          right: 10px;
+          width: 150px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          display: none;
+        }
+      }
+      .profileOptions {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background-color: lightgray;
+        }
+      }
+      .profileUserInfo {
+        display: flex;
+        align-items: center;
+        .profileName {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+    }
+    .content {
+      .imgWrapper {
+        position: relative;
+        .imgContent {
+          width: 100%;
+        }
+        .infoIcon {
+          position: absolute;
+          right: 1rem;
+          bottom: -0.5rem;
+          font-size: 2rem;
+          background-color: gray;
+          border-radius: 50%;
+          width: 2rem;
+          height: 2rem;
+          display: flex;
+          cursor: pointer;
+          color: white;
+        }
+      }
+      .postTitle {
+        padding: 1rem;
+      }
+      .postDescription {
+        padding: 1rem;
+        margin: 0;
+      }
+
+    }
+    .reacts {
+      display: flex;
+      justify-content: space-between;
+      .reactsIcons {
+        color: blue;
+      }
+    }
+    .actions {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      .reaction {
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+        color: royalblue;
+        border-radius: 1rem;
+        &:hover {
+          color: teal;
+          background-color: lightblue;
+        }
+      }
+    }
+    .commentSection {
+      display: flex;
+      justify-content: space-evenly;
+      padding-bottom: 1rem;
+      align-items: center;
+      gap: 0.5rem;
+      .newCommentField {
+        width: 80%;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        background-color: #cbf2ff;
+        &::placeholder {
+          color: royalblue;
+        }
+        &:hover {
+          background-color: #96ddf7;
+          width: 85%;
+        }
+      }
+    }
+  }
 }
 
-.mainContent .post {
-  box-shadow: 5px 5px 5px 5px #888;
-  margin: 3rem 0;
-  padding: 1rem;
-}
 
-.mainContent .post .postHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.mainContent .post .postHeader .profileUserInfo {
-  display: flex;
-  align-items: center;
-}
-
-/* .mainContent .post .postHeader .profileUserInfo .profileImage {
-    width: 3rem;
-    border-radius: 50%;
-} */
-
-.mainContent .post .postHeader .profileUserInfo .profileName {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.mainContent .post .postHeader .profileOptions {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mainContent .post .postHeader .profileOptions:hover {
-  background-color: lightgray;
-}
-
-.profileOptionsWrapper {
-  position: relative;
-}
-
-.profileOptionsDropdown {
-  position: absolute;
-  z-index: 1;
-  right: 10px;
-  width: 150px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  display: none;
-}
-
-.content .imgWrapper {
-  position: relative;
-}
-
-.content .imgWrapper .imgContent {
-  width: 100%;
-}
-
-.content .imgWrapper .infoIcon {
-  position: absolute;
-  right: 1rem;
-  bottom: -0.5rem;
-  font-size: 2rem;
-  background-color: gray;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  cursor: pointer;
-  color: white;
-}
-
-.content .postTitle {
-  padding: 1rem;
-}
-
-.content .postDescription {
-  padding: 1rem;
-  margin: 0;
-}
-
-.post .reacts {
-  display: flex;
-  justify-content: space-between;
-}
-
-.post .reacts .reactsIcons {
-  color: blue;
-}
-
-.post .actions {
-  display: flex;
-  justify-content: space-between;
-  margin: 0;
-}
-
-.post .actions .reaction {
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  color: royalblue;
-  border-radius: 1rem;
-}
-
-.post .actions .reaction:hover {
-  color: teal;
-  background-color: lightblue;
-}
-
-.commentSection {
-  display: flex;
-  justify-content: space-evenly;
-  padding-bottom: 1rem;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-/* .commentSection .profileImage {
-    width: 3rem;
-    border-radius: 50%;
-} */
-
-.commentSection .newCommentField {
-  width: 80%;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  background-color: #cbf2ff;
-}
-
-.commentSection .newCommentField::placeholder {
-  color: royalblue;
-}
-
-.commentSection .newCommentField:hover {
-  background-color: #96ddf7;
-  width: 85%;
-}
-
-.commentSection .insertCommentButton {
-  border: none;
-  background-color: transparent;
-  font-size: 1.2rem;
-  cursor: pointer;
-  padding: 0.5rem 0.7rem;
-}
+.commentSection 
 
 .commentSection .insertCommentButton:hover {
   background-color: #00ffcb;
