@@ -82,6 +82,10 @@ box-shadow: 3px 3px 20px rgba(0, 0, 0, 5);
     font-size: 30px;
     font-weight: normal;
     margin: 20px 0;
+  
+}
+.contact .LinkeDin{
+
 }
 
 .contact h5{
@@ -89,9 +93,13 @@ box-shadow: 3px 3px 20px rgba(0, 0, 0, 5);
     margin: 10px 0;
     text-shadow: 0.5px 3;
 }
+.contact .link{
+    cursor: pointer;
+}   
 
 .contact p {
     font-size: 17px
+    
 }
 
 .skills{
@@ -146,7 +154,9 @@ transform: translateY(-50%);
 border-radius: 10px;
 
 }
-
+.follow .facebook{
+    cursor: pointer;
+}
 .follow h1{
     margin-top: 20px;
     font-size: 30px;
@@ -160,7 +170,7 @@ border-radius: 10px;
 
 .follow p{
     font-size: 15x;
-    color: gray;
+    color: rgb(54, 18, 18);
 }
 
 
@@ -281,14 +291,14 @@ button:hover{
     background-color: black;
     box-shadow: 0 0 30px rgba(0,0,0,.5);
 }
-@media print {
+/* @media print {
     body *{ 
         visibility: hidden;
     }
     print-area * {
         visibility: visible;
     } 
-}
+} */
 /* @media only screen and (max-width: 600px) {
     /* Adaugă aici stilurile specifice pentru ecranele cu lățime maximă de 600px */
     /* De exemplu, modifică lățimea și marginile elementelor pentru a se potrivi ecranului mai mic */
@@ -299,4 +309,17 @@ button:hover{
       font-size: 14px;
     } */
     /* Alte modificări specifice */
-  } */
+  /* } */ 
+     /* @media only screen and (max-width: 600px){
+       .left-area{
+      width: 50%;
+       }
+       .contact p{
+        
+       }
+       .right-area{
+        width: 50%;
+       }
+     } */
+
+    
