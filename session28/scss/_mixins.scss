@@ -1,3 +1,18 @@
+// Mixins without params
+@mixin box {
+    width: 100px;
+    height: 100px;
+    background-color: $globalRed;
+    margin: 10px;
+}
+
+// Mixins with paramas
+@mixin flexBox($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
 //mixins without params
 @mixin box {
     width: 100px;
