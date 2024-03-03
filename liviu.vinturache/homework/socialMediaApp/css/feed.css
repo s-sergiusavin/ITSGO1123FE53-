@@ -70,62 +70,74 @@ header {
 .links {
   display: flex;
 }
-
-.accountSettings {
-  position: relative;
+.navigation .navIcons,
+.links .navIcons {
+  font-size: 1.7rem;
+  color: royalblue;
+  margin: 0 0.5rem;
+  justify-content: space-between;
 }
-.accountSettings button {
-  cursor: pointer;
-  border: none;
-  background-color: inherit;
+.navigation .navIcons:hover,
+.links .navIcons:hover {
+  color: darkblue;
 }
-
-.accountSettingsMenu {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 75px;
-  right: 0;
-  width: 180px;
-  background-color: lightgrey;
-}
-.accountSettingsMenu button {
-  padding: 10px 0;
-  cursor: pointer;
-}
-.accountSettingsMenu button:hover {
-  background-color: lightblue;
-}
-
-.navigation > li > a {
+.navigation .navIcons a,
+.links .navIcons a {
   border-radius: 50%;
   background-color: lightblue;
   margin: 0 0.35rem;
   display: flex;
   height: 2.6rem;
 }
-
-.navigation > li > a:hover {
+.navigation .navIcons a:hover,
+.links .navIcons a:hover {
   background-color: lightblue;
   border: 1px solid royalblue;
 }
-
-.navIcons {
-  font-size: 1.7rem;
-  color: royalblue;
-  margin: 0 0.5rem;
-  justify-content: space-between;
+.navigation .accountSettings,
+.links .accountSettings {
+  position: relative;
 }
-.navIcons:hover {
-  color: darkblue;
+.navigation .accountSettings button,
+.links .accountSettings button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
 }
-
-/* Bell customization */
-.bellIcon {
+.navigation .accountSettings .accountSettingsButton,
+.links .accountSettings .accountSettingsButton {
+  padding: 10px 0;
+  cursor: pointer;
+}
+.navigation .accountSettings .accountSettingsButton:hover,
+.links .accountSettings .accountSettingsButton:hover {
+  background-color: lightblue;
+}
+.navigation .accountSettings .accountSettingsMenu,
+.links .accountSettings .accountSettingsMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  width: 120px;
+  background-color: lightgrey;
+}
+.navigation .accountSettings .accountSettingsMenu #feedButton:hover,
+.links .accountSettings .accountSettingsMenu #feedButton:hover {
+  background-color: royalblue;
+}
+.navigation .accountSettings .accountSettingsMenu #logoutButton:hover,
+.links .accountSettings .accountSettingsMenu #logoutButton:hover {
+  background-color: royalblue;
+}
+.navigation .bellIcon,
+.links .bellIcon {
   position: relative;
   display: block;
 }
-.bellIcon span {
+.navigation .bellIcon span,
+.links .bellIcon span {
   width: 1rem;
   height: 1rem;
   background-color: red;
@@ -140,12 +152,10 @@ header {
   color: white;
   font-weight: bold;
 }
-
-.links:hover .bellIcon {
+.navigation .bellIcon:hover,
+.links .bellIcon:hover {
   animation: shake 1s forwards;
 }
-
-/* Bell shake key frame */
 @keyframes shake {
   0% {
     transform: rotate(15deg);
@@ -160,33 +170,38 @@ header {
     transform: rotate(15deg);
   }
 }
+
 main {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
+  /* Left content */
+  /* Right content*/
+  /* Friend request */
+  /* Birthdays */
+  /* chat */
+  /* chat users */
+  /* Main content*/
 }
-
-.leftContent,
-.rightContent {
+main .leftContent,
+main .rightContent {
   width: 17%;
   overflow: auto;
   height: 100vh;
   position: fixed;
 }
-
-/* Left content */
-.leftContent {
+main .leftContent {
   left: 0;
   margin-top: 0;
   width: 30%;
 }
-.leftContent .container {
+main .leftContent .container {
   margin-top: -1rem;
   display: flex;
   height: 70%;
   position: relative;
 }
-.leftContent .container .leftFeatures {
+main .leftContent .container .leftFeatures {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -197,7 +212,7 @@ main {
   margin-left: 20px;
   cursor: pointer;
 }
-.leftContent .container .leftFeatures span {
+main .leftContent .container .leftFeatures span {
   font-size: 15px;
   margin-left: 10px;
   width: 8rem;
@@ -205,7 +220,7 @@ main {
   display: inline-block;
   margin-top: 10px;
 }
-.leftContent .container .leftFeatures .leftIcons {
+main .leftContent .container .leftFeatures .leftIcons {
   position: relative;
   font-size: 30px;
   align-items: center;
@@ -213,153 +228,108 @@ main {
   width: 2.5rem;
   margin-left: 4px;
 }
-.leftContent .container .leftFeatures .messiPhoto {
+main .leftContent .container .leftFeatures .messiPhoto {
   border-radius: 50%;
   width: 2.5rem;
 }
-.leftContent .container .leftFeatures .messiName {
+main .leftContent .container .leftFeatures .messiName {
   position: absolute;
-  display: inline-block;
+  display: flex;
   text-align: left;
   height: 1rem;
-  width: 17%;
+  width: 20%;
   top: 0.2rem;
-  left: 3rem;
+  left: 2.5rem;
 }
-.leftContent .copyright {
+main .leftContent .copyright {
   display: flex;
   position: relative;
   top: 15rem;
   justify-content: center;
   cursor: pointer;
 }
-.leftContent .copyright .rights {
-  text-shadow: 0 1px rgba(255, 255, 255, 0.1019607843);
-  color: grey;
+main .leftContent .copyright .rights {
+  text-shadow: 0 1px lightgrey;
+  color: #888888;
   font-size: 12px;
 }
-
-.leftContent .container .leftFeatures .friends,
-.market {
+main .leftContent .container .leftFeatures .friends,
+main .market {
   color: #05c505;
 }
-
-.leftContent .container .leftFeatures .alarm,
-.person,
-.controller,
-.crypto,
-.awards {
+main .leftContent .container .leftFeatures .alarm,
+main .person, main .controller, main .crypto, main .awards {
   color: rgba(0, 184, 245, 0.9882352941);
 }
-
-.leftContent .container .leftFeatures .cloud,
-.activity {
+main .leftContent .container .leftFeatures .cloud, main .activity {
   color: #d900ff;
 }
-
-.leftContent .container .leftFeatures .video {
+main .leftContent .container .leftFeatures .video {
   color: rgba(245, 0, 61, 0.9882352941);
 }
-
-.leftContent .container .leftFeatures .seeMore {
+main .leftContent .container .leftFeatures .seeMore {
   color: #b6b5b5;
 }
-
-.leftContent .container .leftFeatures .poker {
+main .leftContent .container .leftFeatures .poker {
   color: rgba(255, 1, 1, 0.7098039216);
 }
-
-.leftContent .container .leftFeatures .amazon {
+main .leftContent .container .leftFeatures .amazon {
   color: lightslategray;
 }
-
-.leftContent .container .leftFeatures .iconDescription {
+main .leftContent .container .leftFeatures .iconDescription {
   left: 35px;
   justify-content: center;
   text-align: left;
 }
-
-.leftContent .container .leftFeatures .iconDescription:hover {
+main .leftContent .container .leftFeatures .iconDescription:hover {
   background-image: linear-gradient(to right, rgba(255, 0, 0, 0), rgb(143, 162, 246));
   width: 50%;
   border-radius: 10px;
   height: 1.5rem;
-}
-
-.leftContent .container .leftFeatures .iconDescription {
   left: 3rem;
 }
-
-.borderSpaceLeft {
+main .borderSpaceLeft {
   box-sizing: border-box;
   width: 60%;
   display: flex;
   height: 1.5px;
   opacity: 0.5;
-  box-shadow: 0.5px solid blue;
+  box-shadow: 0.5px solid darkblue;
   border-radius: 100%;
-  background-image: radial-gradient(#d3d3d3, #d3d3d3, #d3d3d3);
+  background-image: radial-gradient(lightgrey, lightgrey, lightgrey);
 }
-
-.editShortcut {
-  color: #656565;
+main .shortcut {
+  position: relative;
 }
-
-.button {
-  background-color: white;
-  border: none;
-  color: rgb(37, 37, 246);
-  text-align: center;
-  justify-content: center;
-  width: 4rem;
-  display: inline-block;
-  font-size: 14px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  position: absolute;
-  left: 16.4rem;
-  margin-top: -2.5rem;
-  display: none;
+main .shortcut .editShortcut {
+  color: #888888;
 }
-
-.shortcut:hover .button {
-  display: block;
-  background-color: #e2e1e1;
-  visibility: visible;
-}
-
-/* Right content customization */
-.rightContent {
+main .rightContent {
   right: 0;
   overflow-y: auto;
 }
-
-/* Friend request */
-.rightContent .rightFeatures p {
-  color: #656565;
+main .rightContent .rightFeatures p {
+  color: #888888;
 }
-
-.rightContent .rightFeatures p,
-.see {
+main .rightContent .rightFeatures p,
+main .see {
   position: relative;
   display: inline-block;
   cursor: pointer;
 }
-
-.rightContent .rightFeatures .see {
+main .rightContent .rightFeatures .see {
   color: royalblue;
-  left: 7rem;
+  left: 4rem;
   border: none;
   height: 1.2rem;
   width: 3.6rem;
   background-color: inherit;
 }
-.rightContent .rightFeatures .see.see:hover {
-  background-color: #dfdfdf;
+main .rightContent .rightFeatures .see.see:hover {
+  background-color: lightgrey;
   border-radius: 1rem;
 }
-
-.rightContent .rightFeatures .people .userRequest {
+main .rightContent .rightFeatures .people .userRequest {
   border-radius: 50%;
   width: 3rem;
   height: 3rem;
@@ -367,8 +337,7 @@ main {
   position: absolute;
   top: 0.5rem;
 }
-
-.rightContent .rightFeatures .people p {
+main .rightContent .rightFeatures .people p {
   position: absolute;
   display: inline-block;
   text-align: left;
@@ -376,131 +345,128 @@ main {
   width: 8rem;
   top: -0.5rem;
   left: 4rem;
-  color: black;
+  color: rgba(0, 0, 0, 0);
 }
-
-.rightContent .rightFeatures .requests {
+main .rightContent .rightFeatures .requests {
   box-sizing: border-box;
   background-color: #f2f3f5;
   border-radius: 0.5rem;
   padding: 0.5rem;
   width: 77%;
-  height: 6rem;
+  height: 5rem;
   position: relative;
   display: flex;
   bottom: 1rem;
 }
-.rightContent .rightFeatures .requests:hover {
-  background-color: #dfdfdf;
+main .rightContent .rightFeatures .requests:hover {
+  background-color: lightgrey;
 }
-.rightContent .rightFeatures .requests .confirm,
-.rightContent .rightFeatures .requests .delete {
+main .rightContent .rightFeatures .requests .confirm,
+main .rightContent .rightFeatures .requests .delete {
   display: flex;
-  color: #656565;
-  font-size: 0.7rem;
+  color: white;
+  font-size: 0.5rem;
   position: relative;
   flex-direction: row;
   align-content: flex-start;
   height: 2rem;
-  width: 7rem;
-  top: 2.5rem;
+  width: 4rem;
+  top: 2rem;
   left: 2rem;
   border: none;
   text-align: center;
   border-radius: 0.5rem;
   justify-content: space-between;
 }
-.rightContent .rightFeatures .requests .confirm {
+main .rightContent .rightFeatures .requests .confirm {
   color: whitesmoke;
   background-color: royalblue;
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   position: relative;
   display: flex;
   left: 1.2rem;
 }
-.rightContent .rightFeatures .requests .delete {
+main .rightContent .rightFeatures .requests .confirm:hover {
+  background-color: darkblue;
+}
+main .rightContent .rightFeatures .requests .delete {
   color: whitesmoke;
-  background-color: rgb(184, 184, 184);
+  background-color: #888888;
   justify-content: center;
   position: relative;
   display: flex;
   align-items: center;
   font-weight: 500;
-  font-size: 0.8rem;
-  top: 0.5rem;
-  left: 9.2rem;
+  font-size: 0.7rem;
+  top: 0rem;
+  left: 6rem;
 }
-.rightContent .rightFeatures .requests .delete:hover {
-  background-color: #858585;
+main .rightContent .rightFeatures .requests .delete:hover {
+  background-color: #afafaf;
 }
-
-.rightContent .rightFeatures .requests .timeStamp {
+main .rightContent .rightFeatures .requests .timeStamp {
   display: inline;
-  color: #656565;
+  color: #888888;
   font-size: 0.7rem;
   position: relative;
   align-items: center;
-  left: 16.2rem;
+  left: 12rem;
   top: inherit;
 }
-
-.borderSpaceRight {
+main .borderSpaceRight {
   box-sizing: border-box;
-  width: 100%;
+  width: 90%;
   display: flex;
   position: relative;
-  height: 1.5px;
+  height: 1px;
   opacity: 0.5;
-  box-shadow: 0.5px solid blue;
+  box-shadow: 0.5px solid darkblue;
   border-radius: 100%;
   background-image: radial-gradient(#ffffff, #a09a9a, #d3d3d3);
   top: -1.5rem;
 }
-
-/* Birthdays */
-.rightContent .rightFeatures .birthdays {
+main .rightContent .rightFeatures .birthdays {
   box-sizing: border-box;
   background-color: #f2f3f5;
   border-radius: 0.5rem;
   padding: 0.5rem;
   width: 77%;
-  height: 3.1rem;
+  height: 2rem;
+  font-size: 1rem;
   position: relative;
   display: flex;
   top: -1rem;
 }
-.rightContent .rightFeatures .birthdays:hover {
+main .rightContent .rightFeatures .birthdays:hover {
   background-color: #dfdfdf;
 }
-.rightContent .rightFeatures .birthdays span {
+main .rightContent .rightFeatures .birthdays span {
   position: relative;
   display: flex;
   right: 4rem;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
+  font-size: 0.8rem;
 }
-.rightContent .rightFeatures .birthdays .birthText {
-  color: #656565;
+main .rightContent .rightFeatures .birthdays .birthText {
+  color: #888888;
   top: -3rem;
   right: 8px;
 }
-.rightContent .rightFeatures .birthdays .cake {
-  color: rgb(143, 52, 192);
+main .rightContent .rightFeatures .birthdays .cake {
+  color: #8f34c0;
   display: flex;
   position: relative;
   right: 0.5rem;
 }
-
-/* chat */
-.rightContent .rightFeatures .chat span p {
-  color: #656565;
+main .rightContent .rightFeatures .chat span p {
+  color: #afafaf;
 }
-
-.rightContent .rightFeatures .chat {
+main .rightContent .rightFeatures .chat {
   display: inline;
   position: relative;
   justify-content: space-between;
@@ -508,14 +474,14 @@ main {
   text-align: left;
   top: -3.2rem;
 }
-.rightContent .rightFeatures .chat .additionalFeatures {
+main .rightContent .rightFeatures .chat .additionalFeatures {
   display: inline-block;
   position: absolute;
   flex-direction: row;
   justify-content: space-between;
   align-content: flex-start;
 }
-.rightContent .rightFeatures .chat .searchTab {
+main .rightContent .rightFeatures .chat .searchTab {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -523,14 +489,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #656565;
+  color: #888888;
   top: 0.8rem;
-  left: 10rem;
+  left: 8rem;
 }
-.rightContent .rightFeatures .chat .searchTab:hover {
-  background-color: lightgray;
+main .rightContent .rightFeatures .chat .searchTab:hover {
+  background-color: lightgrey;
 }
-.rightContent .rightFeatures .chat .moreTab {
+main .rightContent .rightFeatures .chat .moreTab {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -538,29 +504,29 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #656565;
-  left: 12.5rem;
+  color: #888888;
+  left: 11rem;
   top: -1.2rem;
 }
-.rightContent .rightFeatures .chat .moreTab:hover {
-  background-color: lightgray;
+main .rightContent .rightFeatures .chat .moreTab:hover {
+  background-color: lightgrey;
 }
-
-.rightFeatures .chat .searchTab,
-.moreTab {
+main .rightFeatures .chat .searchTab,
+main .moreTab {
   display: inline;
   position: relative;
-  color: #656565;
+  color: #888888;
 }
-
-/* chat users */
-.rightFeatures .chat .usersChat .usersPhoto {
+main .rightFeatures .chat .usersChat .usersPhoto {
   border-radius: 50%;
   color: rgba(0, 0, 0, 0);
   width: 2.5rem;
   height: 2.5rem;
+  justify-content: center;
+  display: inline;
+  padding: 1px;
 }
-.rightFeatures .chat .usersChat .user1 {
+main .rightFeatures .chat .usersChat .user1 {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -574,10 +540,10 @@ main {
   margin-top: 10px;
   padding: 4px 3px;
 }
-.rightFeatures .chat .usersChat .user1:hover {
+main .rightFeatures .chat .usersChat .user1:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .chat .usersChat .user1 p {
+main .rightFeatures .chat .usersChat .user1 p {
   color: #0b0b0b;
   text-align: center;
   position: relative;
@@ -586,15 +552,14 @@ main {
   font-size: 14px;
   margin-left: 1rem;
 }
-.rightFeatures .chat .usersChat .user1 .online {
+main .rightFeatures .chat .usersChat .user1 .online {
   height: 1rem;
   width: 1rem;
-  background-color: white;
   border-radius: 50%;
-  border-radius: 1px solid white;
+  border-radius: 2px solid white;
   position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+  top: 1.7rem;
+  left: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -602,7 +567,10 @@ main {
   color: green;
   font-weight: bold;
 }
-.rightFeatures .chat .usersChat .user2 {
+main .rightFeatures .chat .usersChat .user1 .online:hover {
+  color: greenyellow;
+}
+main .rightFeatures .chat .usersChat .user2 {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -616,10 +584,10 @@ main {
   margin-top: 10px;
   padding: 4px 3px;
 }
-.rightFeatures .chat .usersChat .user2:hover {
+main .rightFeatures .chat .usersChat .user2:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .chat .usersChat .user2 p {
+main .rightFeatures .chat .usersChat .user2 p {
   color: #0b0b0b;
   text-align: center;
   position: relative;
@@ -628,15 +596,14 @@ main {
   font-size: 14px;
   margin-left: 1rem;
 }
-.rightFeatures .chat .usersChat .user2 .online {
+main .rightFeatures .chat .usersChat .user2 .online {
   height: 1rem;
   width: 1rem;
-  background-color: white;
   border-radius: 50%;
-  border-radius: 1px solid white;
+  border-radius: 2px solid white;
   position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+  top: 1.7rem;
+  left: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -644,7 +611,10 @@ main {
   color: green;
   font-weight: bold;
 }
-.rightFeatures .chat .usersChat .user3 {
+main .rightFeatures .chat .usersChat .user2 .online:hover {
+  color: greenyellow;
+}
+main .rightFeatures .chat .usersChat .user3 {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -658,10 +628,10 @@ main {
   margin-top: 10px;
   padding: 4px 3px;
 }
-.rightFeatures .chat .usersChat .user3:hover {
+main .rightFeatures .chat .usersChat .user3:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .chat .usersChat .user3 p {
+main .rightFeatures .chat .usersChat .user3 p {
   color: #0b0b0b;
   text-align: center;
   position: relative;
@@ -670,15 +640,14 @@ main {
   font-size: 14px;
   margin-left: 1rem;
 }
-.rightFeatures .chat .usersChat .user3 .online {
+main .rightFeatures .chat .usersChat .user3 .online {
   height: 1rem;
   width: 1rem;
-  background-color: white;
   border-radius: 50%;
-  border-radius: 1px solid white;
+  border-radius: 2px solid white;
   position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+  top: 1.7rem;
+  left: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -686,7 +655,10 @@ main {
   color: green;
   font-weight: bold;
 }
-.rightFeatures .chat .usersChat .user4 {
+main .rightFeatures .chat .usersChat .user3 .online:hover {
+  color: greenyellow;
+}
+main .rightFeatures .chat .usersChat .user4 {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -700,10 +672,10 @@ main {
   margin-top: 10px;
   padding: 4px 3px;
 }
-.rightFeatures .chat .usersChat .user4:hover {
+main .rightFeatures .chat .usersChat .user4:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .chat .usersChat .user4 p {
+main .rightFeatures .chat .usersChat .user4 p {
   color: #0b0b0b;
   text-align: center;
   position: relative;
@@ -712,15 +684,14 @@ main {
   font-size: 14px;
   margin-left: 1rem;
 }
-.rightFeatures .chat .usersChat .user4 .online {
+main .rightFeatures .chat .usersChat .user4 .online {
   height: 1rem;
   width: 1rem;
-  background-color: white;
   border-radius: 50%;
-  border-radius: 1px solid white;
+  border-radius: 2px solid white;
   position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+  top: 1.7rem;
+  left: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -728,7 +699,10 @@ main {
   color: green;
   font-weight: bold;
 }
-.rightFeatures .chat .usersChat .user5 {
+main .rightFeatures .chat .usersChat .user4 .online:hover {
+  color: greenyellow;
+}
+main .rightFeatures .chat .usersChat .user5 {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -742,10 +716,10 @@ main {
   margin-top: 10px;
   padding: 4px 3px;
 }
-.rightFeatures .chat .usersChat .user5:hover {
+main .rightFeatures .chat .usersChat .user5:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .chat .usersChat .user5 p {
+main .rightFeatures .chat .usersChat .user5 p {
   color: #0b0b0b;
   text-align: center;
   position: relative;
@@ -754,15 +728,14 @@ main {
   font-size: 14px;
   margin-left: 1rem;
 }
-.rightFeatures .chat .usersChat .user5 .online {
+main .rightFeatures .chat .usersChat .user5 .online {
   height: 1rem;
   width: 1rem;
-  background-color: white;
   border-radius: 50%;
-  border-radius: 1px solid white;
+  border-radius: 2px solid white;
   position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+  top: 1.7rem;
+  left: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -770,7 +743,10 @@ main {
   color: green;
   font-weight: bold;
 }
-.rightFeatures .chat .usersChat .user6 {
+main .rightFeatures .chat .usersChat .user5 .online:hover {
+  color: greenyellow;
+}
+main .rightFeatures .chat .usersChat .user6 {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -784,10 +760,10 @@ main {
   margin-top: 10px;
   padding: 4px 3px;
 }
-.rightFeatures .chat .usersChat .user6:hover {
+main .rightFeatures .chat .usersChat .user6:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .chat .usersChat .user6 p {
+main .rightFeatures .chat .usersChat .user6 p {
   color: #0b0b0b;
   text-align: center;
   position: relative;
@@ -796,15 +772,14 @@ main {
   font-size: 14px;
   margin-left: 1rem;
 }
-.rightFeatures .chat .usersChat .user6 .online {
+main .rightFeatures .chat .usersChat .user6 .online {
   height: 1rem;
   width: 1rem;
-  background-color: white;
   border-radius: 50%;
-  border-radius: 1px solid white;
+  border-radius: 2px solid white;
   position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+  top: 1.7rem;
+  left: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -812,7 +787,10 @@ main {
   color: green;
   font-weight: bold;
 }
-.rightFeatures .chat .usersChat .user7 {
+main .rightFeatures .chat .usersChat .user6 .online:hover {
+  color: greenyellow;
+}
+main .rightFeatures .chat .usersChat .user7 {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -826,10 +804,10 @@ main {
   margin-top: 10px;
   padding: 4px 3px;
 }
-.rightFeatures .chat .usersChat .user7:hover {
+main .rightFeatures .chat .usersChat .user7:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .chat .usersChat .user7 p {
+main .rightFeatures .chat .usersChat .user7 p {
   color: #0b0b0b;
   text-align: center;
   position: relative;
@@ -838,15 +816,14 @@ main {
   font-size: 14px;
   margin-left: 1rem;
 }
-.rightFeatures .chat .usersChat .user7 .online {
+main .rightFeatures .chat .usersChat .user7 .online {
   height: 1rem;
   width: 1rem;
-  background-color: white;
   border-radius: 50%;
-  border-radius: 1px solid white;
+  border-radius: 2px solid white;
   position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+  top: 1.7rem;
+  left: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -854,7 +831,10 @@ main {
   color: green;
   font-weight: bold;
 }
-.rightFeatures .chat .usersChat .user8 {
+main .rightFeatures .chat .usersChat .user7 .online:hover {
+  color: greenyellow;
+}
+main .rightFeatures .chat .usersChat .user8 {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -868,10 +848,10 @@ main {
   margin-top: 10px;
   padding: 4px 3px;
 }
-.rightFeatures .chat .usersChat .user8:hover {
+main .rightFeatures .chat .usersChat .user8:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .chat .usersChat .user8 p {
+main .rightFeatures .chat .usersChat .user8 p {
   color: #0b0b0b;
   text-align: center;
   position: relative;
@@ -880,15 +860,14 @@ main {
   font-size: 14px;
   margin-left: 1rem;
 }
-.rightFeatures .chat .usersChat .user8 .online {
+main .rightFeatures .chat .usersChat .user8 .online {
   height: 1rem;
   width: 1rem;
-  background-color: white;
   border-radius: 50%;
-  border-radius: 1px solid white;
+  border-radius: 2px solid white;
   position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+  top: 1.7rem;
+  left: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -896,7 +875,10 @@ main {
   color: green;
   font-weight: bold;
 }
-.rightFeatures .chat .usersChat .user9 {
+main .rightFeatures .chat .usersChat .user8 .online:hover {
+  color: greenyellow;
+}
+main .rightFeatures .chat .usersChat .user9 {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -910,10 +892,10 @@ main {
   margin-top: 10px;
   padding: 4px 3px;
 }
-.rightFeatures .chat .usersChat .user9:hover {
+main .rightFeatures .chat .usersChat .user9:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .chat .usersChat .user9 p {
+main .rightFeatures .chat .usersChat .user9 p {
   color: #0b0b0b;
   text-align: center;
   position: relative;
@@ -922,15 +904,14 @@ main {
   font-size: 14px;
   margin-left: 1rem;
 }
-.rightFeatures .chat .usersChat .user9 .online {
+main .rightFeatures .chat .usersChat .user9 .online {
   height: 1rem;
   width: 1rem;
-  background-color: white;
   border-radius: 50%;
-  border-radius: 1px solid white;
+  border-radius: 2px solid white;
   position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+  top: 1.7rem;
+  left: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -938,7 +919,10 @@ main {
   color: green;
   font-weight: bold;
 }
-.rightFeatures .chat .usersChat .user10 {
+main .rightFeatures .chat .usersChat .user9 .online:hover {
+  color: greenyellow;
+}
+main .rightFeatures .chat .usersChat .user10 {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -952,10 +936,10 @@ main {
   margin-top: 10px;
   padding: 4px 3px;
 }
-.rightFeatures .chat .usersChat .user10:hover {
+main .rightFeatures .chat .usersChat .user10:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .chat .usersChat .user10 p {
+main .rightFeatures .chat .usersChat .user10 p {
   color: #0b0b0b;
   text-align: center;
   position: relative;
@@ -964,15 +948,14 @@ main {
   font-size: 14px;
   margin-left: 1rem;
 }
-.rightFeatures .chat .usersChat .user10 .online {
+main .rightFeatures .chat .usersChat .user10 .online {
   height: 1rem;
   width: 1rem;
-  background-color: white;
   border-radius: 50%;
-  border-radius: 1px solid white;
+  border-radius: 2px solid white;
   position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+  top: 1.7rem;
+  left: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -980,7 +963,10 @@ main {
   color: green;
   font-weight: bold;
 }
-.rightFeatures .chat .usersChat .user11 {
+main .rightFeatures .chat .usersChat .user10 .online:hover {
+  color: greenyellow;
+}
+main .rightFeatures .chat .usersChat .user11 {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -994,10 +980,10 @@ main {
   margin-top: 10px;
   padding: 4px 3px;
 }
-.rightFeatures .chat .usersChat .user11:hover {
+main .rightFeatures .chat .usersChat .user11:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .chat .usersChat .user11 p {
+main .rightFeatures .chat .usersChat .user11 p {
   color: #0b0b0b;
   text-align: center;
   position: relative;
@@ -1006,15 +992,14 @@ main {
   font-size: 14px;
   margin-left: 1rem;
 }
-.rightFeatures .chat .usersChat .user11 .online {
+main .rightFeatures .chat .usersChat .user11 .online {
   height: 1rem;
   width: 1rem;
-  background-color: white;
   border-radius: 50%;
-  border-radius: 1px solid white;
+  border-radius: 2px solid white;
   position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+  top: 1.7rem;
+  left: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1022,7 +1007,10 @@ main {
   color: green;
   font-weight: bold;
 }
-.rightFeatures .chat .usersChat .user12 {
+main .rightFeatures .chat .usersChat .user11 .online:hover {
+  color: greenyellow;
+}
+main .rightFeatures .chat .usersChat .user12 {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -1036,10 +1024,10 @@ main {
   margin-top: 10px;
   padding: 4px 3px;
 }
-.rightFeatures .chat .usersChat .user12:hover {
+main .rightFeatures .chat .usersChat .user12:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .chat .usersChat .user12 p {
+main .rightFeatures .chat .usersChat .user12 p {
   color: #0b0b0b;
   text-align: center;
   position: relative;
@@ -1048,15 +1036,14 @@ main {
   font-size: 14px;
   margin-left: 1rem;
 }
-.rightFeatures .chat .usersChat .user12 .online {
+main .rightFeatures .chat .usersChat .user12 .online {
   height: 1rem;
   width: 1rem;
-  background-color: white;
   border-radius: 50%;
-  border-radius: 1px solid white;
+  border-radius: 2px solid white;
   position: absolute;
-  top: 1.5rem;
-  left: 1.7rem;
+  top: 1.7rem;
+  left: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1064,15 +1051,17 @@ main {
   color: green;
   font-weight: bold;
 }
-
-.rightFeatures .group {
+main .rightFeatures .chat .usersChat .user12 .online:hover {
+  color: greenyellow;
+}
+main .rightFeatures .group {
   display: inline;
   position: relative;
   bottom: 6rem;
-  color: #656565;
+  color: #888888;
   font-size: 10px;
 }
-.rightFeatures .group .groupPhoto {
+main .rightFeatures .group .groupPhoto {
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
@@ -1080,7 +1069,7 @@ main {
   position: relative;
   display: inline;
 }
-.rightFeatures .group .family {
+main .rightFeatures .group .family {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -1095,16 +1084,16 @@ main {
   padding: 4px 3px;
   top: -5px;
 }
-.rightFeatures .group .family:hover {
+main .rightFeatures .group .family:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .group .family p {
+main .rightFeatures .group .family p {
   color: #0b0b0b;
   font-size: 14px;
   display: inline;
   bottom: 10px;
 }
-.rightFeatures .group .teamMates {
+main .rightFeatures .group .teamMates {
   background-color: #f2f3f5;
   color: black;
   width: 76%;
@@ -1118,18 +1107,21 @@ main {
   margin-top: 10px;
   padding: 4px 3px;
   top: -5px;
-  justify-content: center;
 }
-.rightFeatures .group .teamMates:hover {
+main .rightFeatures .group .teamMates:hover {
   background-color: #dfdfdf;
 }
-.rightFeatures .group p {
+main .rightFeatures .group .teamMates p {
+  bottom: 25%;
+}
+main .rightFeatures .group p {
   color: #0b0b0b;
   font-size: 14px;
   display: inline;
   margin-left: 1rem;
+  justify-content: center;
 }
-.rightFeatures .group .newGroup {
+main .rightFeatures .group .newGroup {
   box-sizing: border-box;
   background-color: #f2f3f5;
   width: 77%;
@@ -1141,12 +1133,12 @@ main {
   justify-content: space-between;
   position: relative;
   padding: 2px 3px;
-  top: 5px;
+  bottom: 4px;
 }
-.rightFeatures .group .newGroup:hover {
-  background-color: #dfdfdf;
+main .rightFeatures .group .newGroup:hover {
+  background-color: lightgrey;
 }
-.rightFeatures .group .newGroup p {
+main .rightFeatures .group .newGroup p {
   color: #0b0b0b;
   font-size: 14px;
   display: flex;
@@ -1155,70 +1147,104 @@ main {
   margin-left: 2rem;
   top: 1.5px;
 }
-.rightFeatures .group .newGroup .plusCircle {
+main .rightFeatures .group .newGroup .plusCircle {
+  font-size: 20px;
   align-items: center;
   display: flex;
   position: relative;
   border-radius: 50%;
   width: 2rem;
   height: 2rem;
-  color: #3b3b3b;
+  color: #0b0b0b;
   justify-content: center;
   margin-top: 8px;
 }
-.rightFeatures .group .newGroup .plusCircle:hover {
-  background-color: #cacaca;
+main .rightFeatures .group .newGroup .plusCircle:hover {
+  background-color: lightgrey;
 }
-
-.rightFeatures .plusMessage {
+main .rightFeatures .group .plusMessage {
   display: flex;
   position: relative;
   box-sizing: border-box;
-  border-radius: 50%;
   color: white;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-  box-shadow: 4px 0 solid grey;
 }
-
-.rightFeatures .pen {
-  color: #6a6a6a;
-  background-color: white;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  text-align: center;
+main .rightFeatures .group .plusMessage .newMessageDropdown {
   position: relative;
-  bottom: 8rem;
-  left: 18rem;
+  display: flex;
+  z-index: 1;
+}
+main .rightFeatures .group .plusMessage .newMessageDropdown button {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  z-index: 1;
+  padding: 10px;
+  display: flex;
+  bottom: 70px;
+  right: -6rem;
+  position: absolute;
+  width: 8rem;
   justify-content: center;
+  border-radius: 10px;
+  border: 1.5px solid darkblue;
+  overflow-y: auto;
+}
+main .rightFeatures .group .plusMessage .newMessageDropdown button:hover {
+  background-color: lightgrey;
+}
+main .rightFeatures .group .plusMessage .newMessageDropdown .composeMessage {
+  display: none;
+  height: 4rem;
+  width: 5rem;
+  right: 15rem;
+  position: relative;
+  border-radius: 1rem;
+  border: 1.5px solid darkblue;
+  background-color: white;
+}
+main .rightFeatures .group .plusMessage .newMessageDropdown input[placeholder] {
+  text-align: center;
+  width: 20rem;
+  display: flex;
+}
+main .rightFeatures .group .plusMessage .penOptions {
+  font-size: 1rem;
+  color: #888888;
+  background-color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 20%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 7rem;
+  margin-left: 50%;
+  border: 1.5px solid darkblue;
   align-self: center;
   padding: 10px;
 }
-
-.rightFeatures .pen:hover {
-  background-color: #d2d2d2;
+main .rightFeatures .group .plusMessage .penOptions:hover {
+  background-color: lightgrey;
 }
-
-/* Main content customization */
-.mainContent {
+main .mainContent {
   width: 40%;
 }
-.mainContent .post {
-  box-shadow: 5px 5px 5px 5px #888;
+main .mainContent .post {
+  box-shadow: 5px 5px 5px 5px lightgrey;
   margin: 3rem 0;
   padding: 1rem;
 }
-.mainContent .post .postHeader {
+main .mainContent .post .postHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.mainContent .post .postHeader .profileOptionsWrapper {
+main .mainContent .post .postHeader .profileOptionsWrapper {
   position: relative;
 }
-.mainContent .post .postHeader .profileOptionsWrapper .profileOptionsDropdown {
+main .mainContent .post .postHeader .profileOptionsWrapper .profileOptionsDropdown {
   position: absolute;
   z-index: 1;
   right: 10px;
@@ -1228,7 +1254,7 @@ main {
   flex-direction: column;
   display: none;
 }
-.mainContent .post .postHeader .profileOptions {
+main .mainContent .post .postHeader .profileOptions {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -1237,25 +1263,30 @@ main {
   justify-content: center;
   align-items: center;
 }
-.mainContent .post .postHeader .profileOptions:hover {
-  background-color: lightgray;
+main .mainContent .post .postHeader .profileOptions:hover {
+  background-color: lightgrey;
 }
-.mainContent .post .postHeader .profileUserInfo {
+main .mainContent .post .postHeader .profileUserInfo {
   display: flex;
   align-items: center;
 }
-.mainContent .post .postHeader .profileUserInfo .profileName {
+main .mainContent .post .postHeader .profileUserInfo .profileImageUser {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+main .mainContent .post .postHeader .profileUserInfo .profileName {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.mainContent .post .content .imgWrapper {
+main .mainContent .post .content .imgWrapper {
   position: relative;
 }
-.mainContent .post .content .imgWrapper .imgContent {
+main .mainContent .post .content .imgWrapper .imgContent {
   width: 100%;
 }
-.mainContent .post .content .imgWrapper .infoIcon {
+main .mainContent .post .content .imgWrapper .infoIcon {
   position: absolute;
   right: 1rem;
   bottom: -0.5rem;
@@ -1268,166 +1299,108 @@ main {
   cursor: pointer;
   color: white;
 }
-.mainContent .post .content .postTitle {
+main .mainContent .post .content .postTitle {
   padding: 1rem;
 }
-.mainContent .post .content .postDescription {
+main .mainContent .post .content .postDescription {
   padding: 1rem;
   margin: 0;
 }
-.mainContent .post .reacts {
+main .mainContent .post .reacts {
   display: flex;
   justify-content: space-between;
 }
-.mainContent .post .reacts .reactsIcons {
-  color: blue;
+main .mainContent .post .reacts .reactsIcons {
+  color: darkblue;
 }
-.mainContent .post .actions {
+main .mainContent .post .actions {
   display: flex;
   justify-content: space-between;
   margin: 0;
 }
-.mainContent .post .actions .reaction {
+main .mainContent .post .actions .reaction {
   cursor: pointer;
   padding: 0.5rem 1rem;
   color: royalblue;
   border-radius: 1rem;
 }
-.mainContent .post .actions .reaction:hover {
+main .mainContent .post .actions .reaction:hover {
   color: teal;
   background-color: lightblue;
 }
-.mainContent .post .commentSection {
+main .mainContent .post .commentSection {
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 1rem;
   align-items: center;
   gap: 0.5rem;
 }
-.mainContent .post .commentSection .newCommentField {
+main .mainContent .post .commentSection .newCommentField {
   width: 80%;
   border-radius: 0.5rem;
   padding: 0.5rem;
   background-color: #cbf2ff;
 }
-.mainContent .post .commentSection .newCommentField::-moz-placeholder {
+main .mainContent .post .commentSection .newCommentField::-moz-placeholder {
   color: royalblue;
 }
-.mainContent .post .commentSection .newCommentField::placeholder {
+main .mainContent .post .commentSection .newCommentField::placeholder {
   color: royalblue;
 }
-.mainContent .post .commentSection .newCommentField:hover {
+main .mainContent .post .commentSection .newCommentField:hover {
   background-color: #96ddf7;
   width: 85%;
 }
-
-.commentSection .commentSection .insertCommentButton:hover {
+main .mainContent .post .commentSection .profileImage {
+  width: 2rem;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 6px;
+}
+main .mainContent .post .commentSection .insertCommentButton:hover {
   background-color: #00ffcb;
   border-radius: 0.5rem;
   color: teal;
 }
-
-.userComments {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.userComments .profileUserComment {
-  display: flex;
-  align-items: flex-start;
-  margin-left: 1rem;
-  gap: 0.5rem;
-}
-
-/*.userComments .profileUserComment .profileImage {
-    width: 3rem;
-    border-radius: 50%;
-} */
-.profileImage {
-  width: 3rem;
-  border-radius: 50%;
-}
-
-.userComments .userCommentText {
-  margin: 0 1rem;
-  border: 1px solid #888;
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: #f3eeee;
-  position: relative;
-}
-
-.userComments .userCommentText:hover {
-  animation-name: comment-animation;
-  animation-duration: 1s;
-}
-
-.userComments .userCommentText .emojiReaction {
-  position: absolute;
-  bottom: 0;
-  right: 0.5rem;
-}
-
-.userComments .commentContent .commentReaction {
-  margin-left: 3rem;
-  color: #888;
-  display: flex;
-  gap: 0.7rem;
-}
-
-.userComments .commentContent .commentReaction .commentReactionButton:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.commentSection .insertCommentButton {
+main .mainContent .post .commentSection .insertCommentButton {
   font-family: "Nunito", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1.3px;
   font-weight: 700;
-  color: #313133;
+  color: #888888;
   border: none;
   border-radius: 1000px;
-  box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+  box-shadow: 12px 12px 24px teal;
   transition: all 0.3s ease-in-out 0s;
   cursor: pointer;
   outline: none;
   position: relative;
 }
-
-.commentSection .insertCommentButton::before {
+main .mainContent .post .commentSection .insertCommentButton::before {
   content: "";
   border-radius: 50%;
-  min-width: calc(3.5rem + 12px);
-  min-height: 72px;
-  border: 6px solid #00ffcb;
-  box-shadow: 0 0 60px rgba(0, 255, 203, 0.64);
+  min-width: calc(2rem + 10px);
+  min-height: calc(2rem + 10px);
+  border: 2px solid #00ffcb;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
   transition: all 0.3s ease-in-out 0s;
 }
-
-.commentSection .insertCommentButton:hover,
-.commentSection .insertCommentButton:focus {
+main .mainContent .post .commentSection .insertCommentButton:hover, main .mainContent .post .commentSection .insertCommentButton:focus {
   color: #313133;
-  transform: translateY(-6px);
+  transform: translateY(-2px);
 }
-
-.commentSection .insertCommentButton:hover::before,
-.commentSection .insertCommentButton:focus::before {
+main .mainContent .post .commentSection .insertCommentButton:hover, main .mainContent .post .commentSection .insertCommentButton::before, main .mainContent .post .commentSection .insertCommentButton:focus, main .mainContent .post .commentSection .insertCommentButton::before {
   opacity: 1;
 }
-
-.commentSection .insertCommentButton::after {
+main .mainContent .post .commentSection .insertCommentButton::after {
   content: "";
   width: 30px;
   height: 30px;
-  border-radius: 100%;
+  border-radius: 50%;
   border: 6px solid #00ffcb;
   position: absolute;
   z-index: -1;
@@ -1436,13 +1409,50 @@ main {
   transform: translate(-50%, -50%);
   animation: ring 1.5s infinite;
 }
-
-.commentSection .insertCommentButton:hover::after,
-.commentSection .insertCommentButton:focus::after {
-  animation: none;
-  display: none;
+main .mainContent .post .userComments {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-
+main .mainContent .post .userComments .profileUserComment {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 1rem;
+  gap: 0.5rem;
+}
+main .mainContent .post .userComments .profileUserComment .profileImage2 {
+  width: 2rem;
+  border-radius: 50%;
+  bottom: 4px;
+  position: relative;
+}
+main .mainContent .post .userComments .userCommentText {
+  margin: 0 1rem;
+  border: 1px solid lightgrey;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: S white;
+  position: relative;
+}
+main .mainContent .post .userComments .userCommentText:hover {
+  animation-name: comment-animation;
+  animation-duration: 1s;
+}
+main .mainContent .post .userComments .userCommentText .emojiReaction {
+  position: absolute;
+  bottom: 0;
+  right: 0.5rem;
+}
+main .mainContent .post .userComments .commentReaction {
+  margin-left: 3rem;
+  color: #888888;
+  display: flex;
+  gap: 0.7rem;
+}
+main .mainContent .post .userComments:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
 @keyframes ring {
   0% {
     width: 1.5rem;
@@ -1461,5 +1471,20 @@ main {
   }
   to {
     left: 0rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .leftContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 430px) {
+  .rightContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
   }
 }/*# sourceMappingURL=feed.css.map */

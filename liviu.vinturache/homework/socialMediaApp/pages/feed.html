@@ -47,7 +47,7 @@
               <div class="accountSettings">
                   <button id="accountSettingsButton"><i class="bi bi-gear navIcons gear"></i></button>
                   <div class="accountSettingsMenu">
-                      <button>Profile Settings</button>
+                      <button id="feedButton">Profile Settings</button>
                       <button id="logoutButton">Logout</button>
                   </div>
               </div>
@@ -103,7 +103,6 @@
 
             <div class="shortcut">
               <p class="editShortcut">Your shortcuts</p>
-              <button class="button">Edit</button>
             </div>
 
             <li>
@@ -159,7 +158,7 @@
         <div class="post">
             <div class="postHeader">
                 <div class="profileUserInfo">
-                    <a href=""><img src="../assets/messi.jpg" alt="user profile" class="profileImage"></a>
+                    <a href=""><img src="../assets/messi.jpg" alt="user profile" class="profileImageUser"></a>
                     <div class="profileName">
                         <span>Lionel Messi</span>
                         <span>06 Dec 2023</span>
@@ -237,7 +236,7 @@
 
                 <div class="commentContent">
                     <div class="profileUserComment">
-                        <a href=""><img src="../assets/rocuzzo.jpg" alt="user profile" class="profileImage"></a>
+                        <a href=""><img src="../assets/rocuzzo.jpg" alt="user profile" class="profileImage2"></a>
                         <span>Antonella Roccuzzo</span>
                     </div>
 
@@ -438,9 +437,22 @@
                 <i class="bi bi-plus-circle plusCircle"></i>
                 <p>Create a new group</p>
               </div>
+
               <div class="plusMessage">
-                <i class="bi bi-pencil-square pen"></i>
+                <button class="penOptions"><i class="bi bi-pencil-square"></i></button>
+                <div class="newMessageDropdown">
+                  <button> New Message</button>
+                  <input type="text" class="composeMessage" placeholder="Compose new message">
+
+              </div>
+            </div>
+
              </div>
+          </div>
+      </div>
+
+
+
           </div>
         </div>
 

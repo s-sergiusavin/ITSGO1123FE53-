@@ -1,3 +1,4 @@
+
 const accountSettingsButton = document.getElementById('accountSettingsButton')
 const accountSettingsList = document.getElementsByClassName(
   'accountSettingsMenu'
@@ -15,6 +16,11 @@ accountSettingsButton.addEventListener('click', function () {
 
 logoutButton.addEventListener('click', () => {
   window.open('../login.html', '_self')
+})
+
+const feedButton = document.getElementById('feedButton')
+feedButton.addEventListener('click', () => {
+  window.open('../pages/feed.html', '_blank')
 })
 
 const noOfLikesElem = document.getElementById('likesNumber')
@@ -228,3 +234,39 @@ async function filterData(searchTerm) {
 
   return response.json()
 }
+
+// Compose new message
+const buttonElement = document.getElementsByClassName ('penOptions')[0]
+const buttonMessage = document.getElementsByClassName('newMessageDropdown')[0]
+const createMessage = document.getElementsByClassName('composeMessage')[0].value
+
+
+// let showMessage = false;
+
+buttonElement.addEventListener('click', function () {
+
+  if (
+    buttonMessage.style.display === 'none' ||
+    buttonMessage.style.display === ''
+  ) {
+    buttonMessage.style.display = 'flex'
+  } else {
+    buttonMessage.style.display = 'none'
+  }
+  buttonMessage.addEventListener('click', function() {
+
+    if (
+      createMessage.style.display === 'none' ||
+      createMessage.style.display === ''
+    )  {
+      createMessage.style.display = 'flex'
+
+    } else {
+      createMessage.style.display = 'none'
+    }
+  })
+})
+
+
+
+
