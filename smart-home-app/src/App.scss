@@ -21,24 +21,25 @@
   .features {
     @include flexbox();
     gap: 2rem;
+    flex-wrap: wrap;
+  }
+}
+
+.form {
+  margin-top: 3rem;
+  padding: 10px;
+  @include flexbox();
+  flex-direction: column;
+  gap: 1rem;
+
+  &.invalid {
+    border: 1px solid red;
   }
 
-  .form {
-    margin-top: 3rem;
-    padding: 10px;
-    @include flexbox();
-    flex-direction: column;
-    gap: 1rem;
-
-    &.invalid {
-      border: 1px solid red;
-    }
-
-    .control {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 20rem;
-    }
+  .control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
   }
 }

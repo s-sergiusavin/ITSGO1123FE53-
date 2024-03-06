@@ -4,6 +4,7 @@ import Features from './logic/Features'
 import Light from './ui/Light'
 import Room from './ui/Room';
 import AC from './ui/AC';
+import FeaturesForm from './logic/FeaturesForm';
 
 function App() {
 
@@ -15,26 +16,17 @@ function App() {
     cleaned: 0
   })
 
-  /** Bad example: Nu folositi un obiect de state pt variabile care nu au legatura */
-  // const [actions, setActions] = useState( {
-  //   lightsState: false,
-  //   acState: false,
-  //   dirtStatus: 0,
-  //   cleaned: 0
-  // })
+  const [feature, setFeature] = useState({
+    name: '',
+    action: '',
+    state: false,
+    id: 0
+  })
 
-  /** Use effect model */
-  // useEffect(() => {
-  //   console.log('Effect triggered')
-
-  //   return () => {
-  //     console.log('Component Unmount')
-  //   }
-  // }, [lightState])
   let dirtInterval = useRef();
 
-  useEffect( () => {
-    dirtInterval.current = setInterval( () => {
+  useEffect(() => {
+    dirtInterval.current = setInterval(() => {
       setDirtProgress(prevState => {
         if (prevState.status > 1) {
           clearInterval(dirtInterval.current);
@@ -46,7 +38,6 @@ function App() {
       })
     }, 2000)
     return () => {
-      console.log('Before effect')
       clearInterval(dirtInterval.current)
     }
   }, [dirtProgress.cleaned])
@@ -85,8 +76,11 @@ function App() {
         startCleaning();
         break
     }
-
   }
+
+  const updateFeatures = (newFeature) => {
+    setFeature(newFeature)
+}
 
   return (
     <div>
@@ -95,7 +89,9 @@ function App() {
         <Room status={dirtProgress.status} />
         <AC acOn={acState} />
       </div>
-      <Features toggleAction={toggleActionHandler} />
+      <Features toggleAction={toggleActionHandler} newFeature={feature}/>
+
+      <FeaturesForm updateTheFeatures={updateFeatures}/>
     </div>
   )
 }
