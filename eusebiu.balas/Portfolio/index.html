@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./style.css">
+    <title>Eusebiu Balas</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+
+        <i class='bx bx-menu' id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skill">Skills</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, its Me</h3>
+            <h1>Eusebiu Balas</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+
+            <div class="social-icon">
+                <a href="https://www.linkedin.com/in/eusebiu-balas-784560263/" target="_blank"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Eusebiu25" target="_blank"><i class='bx bxl-github'></i></i></a>
+                <a href="https://www.instagram.com/eusebiub/"><i class='bx bxl-instagram'></i></a>
+
+            </div>
+            <a href="CV Eusebiu Bălaș - Shortcut.lnk" class="btn">Download CV</a>
+        </div>
+        <div class="home-img">
+            <img src="img/WhatsApp Image 2024-03-03 at 18.43.19_70e1d8b6.jpg" alt="home-img">
+        </div>
+    </section>
+
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="#" alt="">
+        </div>
+
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Junior Front-End Developer</h3>
+            <p> Following the Front-End Developer course at IT School, courses from Udemy,GrowIntern internship and
+                personal projects, I have
+                acquired the necessary skills for a junior Front-End Developer</p>
+            <p>Address: Cluj-Napoca</p>
+            <p>Phone Number: <a href="tel:+40745295266" style="color: #2196F3; text-decoration: none;">0745 295 266</a>
+            <p>Email: <a href="mailto:eusebiub25@gmail.com"
+                    style="color: #2196F3; text-decoration: none;">eusebiub25@gmail.com</a></p>
+            </p>
+            <div class="education">
+                <h2>Education:</h2>
+                <p><strong>High School:</strong> Technological High School of Tășnad, Tășnad (Sep 2012 - Jul 2016)</p>
+                <p><strong>University:</strong> University of Agricultural Sciences and Veterinary Medicine of
+                    Cluj-Napoca, Cluj-Napoca<br>
+                    <strong>Field of Study:</strong> Agriculture<br>
+                    <strong>Specialization:</strong> Operation of Machinery and Installations in Agriculture and the
+                    Food Industry (Sep 2016 - Jul 2020)
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="skills" id="skill">
+        <h2 class="heading"> <span>Skills</span></h2>
+        <div class="skills-container">
+            <div class="skills-box">
+                <i class='bx bxl-html5'></i>
+                <h3>HTML </h3>
+                <P>HTML, or Hypertext Markup Language,
+                    is the standard language
+                    used to create and design web pages.</P>
+                <div class="skill-container">
+                    <div class="skill html">HTML</div>
+                    <div class="skill-level" style="width: 70%;">70%</div>
+                </div>
+                <a href="#" class="btn">Read More</a>
+            </div>
+
+            <div class="skills-box">
+                <i class='bx bxl-css3'></i>
+                <h3>CSS </h3>
+                <P>CSS, or Cascading Style Sheets, is a
+                    language used to style and
+                    design web pages.</P>
+                <div class="skill-container">
+                    <div class="skill css">CSS</div>
+                    <div class="skill-level" style="width: 65%;">65%</div>
+                </div>
+                <a href="#" class="btn" onclick="return false">Read More</a>
+            </div>
+            <div class="skills-box">
+                <i class='bx bxl-nodejs'></i>
+                <h3>JS (java script)</h3>
+                <P>JS is a programming
+                    language used for web development.
+                    It enables dynamic behavior
+                    in web pages</P>
+                <div class="skill-container">
+                    <div class="skill js">JavaScript</div>
+                    <div class="skill-level" style="width: 55%;">55%</div>
+                </div>
+              
+                <a href="#" class="btn">Read More</a>
+            </div>
+        </div>
+    </section>
+
+
+
+   
+
+
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <form action="mailto:jr1yadaav@gmail.com" onsubmit="return validateform()" method="post" autocomplete="on"
+            id="form">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name" id="name" name="name">
+                <input type="email" placeholder="Email Adresss" id="email" name="email">
+                <span class="error" id="nameerror"></span>
+            </div>
+
+            <div class="input-box">
+                <input type="number" placeholder="Mobile Number" id="number" name="number">
+                <input type="text" placeholder="Subject" id="subject" name="subject">
+            </div>
+            <textarea name="msg" id="msg" cols="3" rows="10" placeholder="Your Message"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by Eusebiu B | All Rights Reserved</p>
+        </div>
+        <div class="footer-icontop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
