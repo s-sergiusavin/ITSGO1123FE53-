@@ -36,7 +36,7 @@ const Features = ({ toggleAction, newFeature }) => {
     useEffect(() => {
         if (newFeature.name !== '') {
             setFeatures(prevState => {
-                return [newFeature, ...prevState]
+                return [...prevState, newFeature]
             })
         }
     }, [newFeature])
