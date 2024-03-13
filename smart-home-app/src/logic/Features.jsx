@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 
 const Features = ({ toggleAction, newFeature }) => {
 
+    // console.log(localStorage.getItem('localStorageTest'))
+    // console.log(sessionStorage.getItem('setSessionStorage'))
+
     const FEATURES = [
         {
             name: 'Toggle Lights',
