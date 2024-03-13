@@ -1,3 +1,4 @@
+import FeaturesForm from "./FeaturesForm";
 import Feature from "./Feature";
 
 const Features = ({toggleAction}) => {
@@ -45,10 +46,7 @@ const Features = ({toggleAction}) => {
                 )
             })}
 
-            {/* <Feature name={FEATURES[0].name} action={FEATURES[0].action}/>
-            <Feature name={FEATURES[1].name} action={FEATURES[1].action}/>
-            <Feature name={FEATURES[2].name} action={FEATURES[2].action}/>
-            <Feature name={FEATURES[3].name} action={FEATURES[3].action}/> */}
+            <FeaturesForm/>
         </div>
     )
 }
