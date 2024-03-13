@@ -31,8 +31,12 @@ function App() {
   const testLocalStorage = 'Acest text va aparea in local stoarge';
   const testSessionStorage = 'Acest text va aparea in session storage';
 
+  const objectLocalStorage = {
+    testLocalStorage: 'Acest text va aparea in local stoarge'
+  }
+
   const setStorage = () => {
-    localStorage.setItem('localStorageTest', testLocalStorage)
+    localStorage.setItem('localStorageTest', JSON.stringify(objectLocalStorage))
     localStorage.setItem('localStorageTest2', 'testLocalStorage')
     sessionStorage.setItem('setSessionStorage', testSessionStorage)
     sessionStorage.setItem('setSessionStorage2', 'testSessionStorage')

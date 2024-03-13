@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Features = ({ toggleAction, newFeature }) => {
 
-    // console.log(localStorage.getItem('localStorageTest'))
+    // console.log(localStorage.getItem('localStorageTest')) // folosim JSON.parse() daca e obiect
     // console.log(sessionStorage.getItem('setSessionStorage'))
 
     const FEATURES = [
