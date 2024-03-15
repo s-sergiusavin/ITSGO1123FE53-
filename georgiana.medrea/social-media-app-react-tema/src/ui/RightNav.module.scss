@@ -1,0 +1,17 @@
+.rightNav {
+    top: 2rem;
+    right: 0;
+    width: 20rem;
+    height: 90vh;
+    border: 5px solid whitesmoke;
+    position: fixed;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .title {
+        opacity: 0.5;
+        margin-left: 0.5rem;
+    }
+}
