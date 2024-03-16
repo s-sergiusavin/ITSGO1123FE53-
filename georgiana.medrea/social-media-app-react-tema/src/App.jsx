@@ -5,6 +5,9 @@ import MyProfile from './logic/MyProfile';
 import Home from './logic/Home';
 import NotFound from './logic/NotFound';
 import PropTypes from 'prop-types';
+import LeftNavFriends from './logic/LeftNavFriends';
+import LeftNavPagesFollow from './logic/LeftNavPagesFollow';
+import LeftNavEvent from './logic/LeftNavEvent';
 
 function App() {
 
@@ -22,17 +25,29 @@ function App() {
             <li>
               <NavLink to={'./my-profile'}>My profile</NavLink>
             </li>
+            <li>
+              <NavLink to={'./left-nav-friends'}>Friends</NavLink>
+            </li>
+            <li>
+              <NavLink to={'./left-nav-pages-follow'}>Pages</NavLink>
+            </li>
+            <li>
+              <NavLink to={'./left-nav-event'}>Events</NavLink>
+            </li>
           </ul>
         </nav>
       </header>
 
-        <Routes>
-          <Route path='/' element={<Login/>}></Route>
-          <Route path='/login' element={<Login/>}></Route>
-          <Route path='/home' element={<Home/>}></Route>
-          <Route path='/my-profile' element={<MyProfile/>}></Route>
-          <Route path='*' element={<NotFound/>}></Route>
-        </Routes>
+      <Routes>
+        <Route path='/' element={<Login />}></Route>
+        <Route path='/login' element={<Login />}></Route>
+        <Route path='/home' element={<Home />}></Route>
+        <Route path='/my-profile' element={<MyProfile />}></Route>
+        <Route path='*' element={<NotFound />}></Route>
+        <Route path='/left-nav-friends' element={<LeftNavFriends />}></Route>
+        <Route path='/left-nav-pages-follow' element={<LeftNavPagesFollow />}></Route>
+        <Route path='/left-nav-event' element={<LeftNavEvent />}></Route>
+      </Routes>
     </>
   )
 }

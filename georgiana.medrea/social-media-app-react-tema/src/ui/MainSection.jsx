@@ -1,6 +1,7 @@
 
 import PropTypes from 'prop-types';
-import styles from './Main.module.scss';
+import styles from './MainSection.module.scss';
+
 
 const Main = () => {
     return (

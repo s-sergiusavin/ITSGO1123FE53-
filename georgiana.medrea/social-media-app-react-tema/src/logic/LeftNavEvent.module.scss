@@ -1,0 +1,140 @@
+.events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    .suggestedEvents {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 80rem;
+        height: 50rem;
+        left: 35rem;
+        gap: 1rem;
+        border: 2px solid whitesmoke;
+
+        .suggestedEvent {
+            padding: 0.2rem;
+
+            .suggestedEventText {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                gap: 0.1rem;
+
+                .suggestedEventName {
+                    margin-top: -1rem;
+                }
+
+                .suggestedEventIntestedPeople {
+                    margin-top: -0.9rem;
+                }
+
+            }
+
+            .actionButtons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: -1rem;
+                gap: 1.5rem;
+
+
+                .button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    width: 15rem;
+                    height: 2rem;
+                    background-color: rgb(59, 112, 247);
+                    color: white;
+                    border-radius: 10%;
+                    border: 1px solid blue;
+                }
+
+                .sendIcon {
+                    color: blue;
+                    background-color: whitesmoke;
+                    border-radius: 10%;
+                    width: 2.5rem;
+                    height: 2rem;
+                    display: flex;
+                    align-self: center;
+                }
+            }
+        }
+    }
+
+    .interestedEvents {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 80rem;
+        height: 50rem;
+        left: 35rem;
+        gap: 1rem;
+        border: 2px solid whitesmoke;
+
+        .interestedEvent {
+            padding: 0.2rem;
+
+            .interestedEventText {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                gap: 0.1rem;
+
+                .interestedEventName {
+                    margin-top: -1rem;
+                }
+
+                .peopleAttending {
+                    margin-top: -0.9rem;
+                }
+
+            }
+
+            .interestedActionButtons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: -1rem;
+                gap: 1.5rem;
+
+
+                .interestedButton {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    width: 15rem;
+                    height: 2rem;
+                    background-color: rgb(59, 112, 247);
+                    color: white;
+                    border-radius: 10%;
+                    border: 1px solid blue;
+                }
+
+                .interestedSendIcon {
+                    color: blue;
+                    background-color: whitesmoke;
+                    border-radius: 10%;
+                    width: 2.5rem;
+                    height: 2rem;
+                    display: flex;
+                    align-self: center;
+                }
+            }
+        }
+    }
+
+}

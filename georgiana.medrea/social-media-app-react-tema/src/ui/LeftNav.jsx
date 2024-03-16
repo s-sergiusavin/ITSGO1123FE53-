@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types';
 import PeopleIcon from '@mui/icons-material/People';
 import MmsIcon from '@mui/icons-material/Mms';
@@ -19,6 +18,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
+import { NavLink, Route, Routes } from 'react-router-dom';
+
 
 const LeftNav = () => {
     return (
@@ -26,105 +27,105 @@ const LeftNav = () => {
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }} className={styles.leftNav}>
             <ListItem>
                 <ListItemAvatar >
-                    <Avatar alt="Profile photo" src={profileImage} />
+                    <Avatar alt="Profile photo" src={profileImage} sx={{ width: 75, height: 75 }} />
                 </ListItemAvatar>
-                <ListItemText primary="Georgiana Medrea" />
+                <ListItemText primary="Georgiana Medrea" className={styles.userName} />
             </ListItem>
             <ListItem>
                 <ListItemAvatar>
-                    <Avatar sx={{ bgcolor: 'blue' }}>
-                        <PeopleIcon sx={{ bgcolor: 'blue' }} />
+                    <Avatar sx={{ bgcolor: 'blue', width: 55, height: 55 }}>
+                        <PeopleIcon sx={{ bgcolor: 'blue', width: 35, height: 35 }} />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="Friends" />
+                <ListItemText primary="Friends" className={styles.pageName} />
             </ListItem>
             <ListItem>
                 <ListItemAvatar>
-                    <Avatar sx={{ bgcolor: 'blue' }}>
-                        <MmsIcon sx={{ bgcolor: 'blue' }} />
+                    <Avatar sx={{ bgcolor: 'blue', width: 55, height: 55 }}>
+                        <MmsIcon sx={{ bgcolor: 'blue', width: 35, height: 35 }} />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="Feeds" />
+                <ListItemText primary="Feeds" className={styles.pageName} />
             </ListItem>
             <ListItem>
                 <ListItemAvatar>
-                    <Avatar sx={{ bgcolor: 'blue' }}>
-                        <GroupsIcon sx={{ bgcolor: 'blue' }} />
+                    <Avatar sx={{ bgcolor: 'blue', width: 55, height: 55 }}>
+                        <GroupsIcon sx={{ bgcolor: 'blue', width: 35, height: 35 }} />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="Groups" />
+                <ListItemText primary="Groups" className={styles.pageName} />
             </ListItem>
             <ListItem>
                 <ListItemAvatar>
-                    <Avatar sx={{ bgcolor: 'blue' }}>
-                        <YouTubeIcon sx={{ bgcolor: 'blue' }} />
+                    <Avatar sx={{ bgcolor: 'blue', width: 55, height: 55 }}>
+                        <YouTubeIcon sx={{ bgcolor: 'blue', width: 35, height: 35 }} />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="Video" />
+                <ListItemText primary="Video" className={styles.pageName} />
             </ListItem>
             <ListItem>
                 <ListItemAvatar>
-                    <Avatar sx={{ bgcolor: 'blue' }}>
-                        <AccessTimeIcon sx={{ bgcolor: 'blue' }} />
+                    <Avatar sx={{ bgcolor: 'blue', width: 55, height: 55 }}>
+                        <AccessTimeIcon sx={{ bgcolor: 'blue', width: 35, height: 35 }} />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="Memories" />
+                <ListItemText primary="Memories" className={styles.pageName} />
             </ListItem>
             <ListItem>
                 <ListItemAvatar>
-                    <Avatar sx={{ bgcolor: 'blue' }}>
-                        <BookmarkBorderIcon sx={{ bgcolor: 'blue' }} />
+                    <Avatar sx={{ bgcolor: 'blue', width: 55, height: 55 }}>
+                        <BookmarkBorderIcon sx={{ bgcolor: 'blue', width: 35, height: 35 }} />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="Saved" />
+                <ListItemText primary="Saved" className={styles.pageName} />
             </ListItem>
             <ListItem>
                 <ListItemAvatar>
-                    <Avatar sx={{ bgcolor: 'blue' }}>
-                        <WebIcon sx={{ bgcolor: 'blue' }} />
+                    <Avatar sx={{ bgcolor: 'blue', width: 55, height: 55 }}>
+                        <WebIcon sx={{ bgcolor: 'blue', width: 35, height: 35 }} />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="Pages" />
+                <ListItemText primary="Pages" className={styles.pageName} />
             </ListItem>
             <ListItem>
                 <ListItemAvatar>
-                    <Avatar sx={{ bgcolor: 'blue' }}>
-                        <EventIcon sx={{ bgcolor: 'blue' }} />
+                    <Avatar sx={{ bgcolor: 'blue', width: 55, height: 55 }}>
+                        <EventIcon sx={{ bgcolor: 'blue', width: 35, height: 35 }} />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="Events" />
+                <ListItemText primary="Events" className={styles.pageName} />
             </ListItem>
             <ListItem>
                 <ListItemAvatar>
-                    <Avatar sx={{ bgcolor: 'blue' }}>
-                        <WaterDropIcon sx={{ bgcolor: 'blue' }} />
+                    <Avatar sx={{ bgcolor: 'blue', width: 55, height: 55 }}>
+                        <WaterDropIcon sx={{ bgcolor: 'blue', width: 35, height: 35 }} />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="Blood donations" />
+                <ListItemText primary="Blood donations" className={styles.pageName} />
             </ListItem>
             <ListItem>
                 <ListItemAvatar>
-                    <Avatar sx={{ bgcolor: 'blue' }}>
-                        <StorefrontIcon sx={{ bgcolor: 'blue' }} />
+                    <Avatar sx={{ bgcolor: 'blue', width: 55, height: 55 }}>
+                        <StorefrontIcon sx={{ bgcolor: 'blue', width: 35, height:35 }} />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="Marketplace" />
+                <ListItemText primary="Marketplace" className={styles.pageName} />
             </ListItem>
             <ListItem>
                 <ListItemAvatar>
-                    <Avatar sx={{ bgcolor: 'blue' }}>
-                        <InsightsIcon sx={{ bgcolor: 'blue' }} />
+                    <Avatar sx={{ bgcolor: 'blue', width: 55, height: 55 }}>
+                        <InsightsIcon sx={{ bgcolor: 'blue', width: 35, height: 35 }} />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="Recent ad activity" />
+                <ListItemText primary="Recent ad activity" className={styles.pageName} />
             </ListItem>
             <ListItem>
                 <ListItemAvatar>
-                    <Avatar sx={{ bgcolor: 'blue' }}>
-                        <FavoriteBorderIcon sx={{ bgcolor: 'blue' }} />
+                    <Avatar sx={{ bgcolor: 'blue', width: 55, height: 55 }}>
+                        <FavoriteBorderIcon sx={{ bgcolor: 'blue', width: 35, height: 35 }} />
                     </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary="Fundraisers" />
+                <ListItemText primary="Fundraisers"className={styles.pageName} />
             </ListItem>
         </List>
     )

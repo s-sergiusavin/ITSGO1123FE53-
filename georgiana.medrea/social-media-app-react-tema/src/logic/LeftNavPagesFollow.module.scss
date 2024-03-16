@@ -1,0 +1,106 @@
+.pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+
+    .suggestedPages {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 60rem;
+        height: 40rem;
+        left: 35rem;
+        gap: 1rem;
+        border: 2px solid whitesmoke;
+
+        .suggestedPage {
+            padding: 0.2rem;
+
+            .pageText {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                gap: 0.1rem;
+
+                .pageName {
+                    margin-top: -1rem;
+                }
+
+                .pageLikes {
+                    margin-top: -0.9rem;
+                }
+
+            }
+
+            .button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: -1.5rem;
+                margin-left: 2.5rem;
+                width: 10rem;
+                height: 2rem;
+                background-color: rgb(59, 112, 247);
+                color: white;
+                border-radius: 10%;
+                border: 1px solid blue;
+            }
+        }
+    }
+
+    .likedPages {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 60rem;
+        height: 40rem;
+        left: 35rem;
+        gap: 1rem;
+        border: 2px solid whitesmoke;
+
+        .likedPage {
+            padding: 0.2rem;
+
+            .likedPageText {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                gap: 0.1rem;
+
+                .likedPageName {
+                    margin-top: -1rem;
+                }
+
+                .likedPageLikes {
+                    margin-top: -0.9rem;
+                }
+
+            }
+
+            .likedButton {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: -1.5rem;
+                margin-left: 2.5rem;
+                width: 10rem;
+                height: 2rem;
+                background-color: rgb(59, 112, 247);
+                color: white;
+                border-radius: 10%;
+                border: 1px solid blue;
+            }
+        }
+    }
+
+}
