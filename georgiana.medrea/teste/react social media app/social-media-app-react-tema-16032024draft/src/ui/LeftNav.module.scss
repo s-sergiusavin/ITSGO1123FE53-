@@ -1,0 +1,22 @@
+.leftNav {
+    top: 2rem;
+    left: 0;
+    width: 20rem;
+    height: 90vh;
+    border: 5px solid whitesmoke;
+    position: fixed;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .userName {
+        position: relative;
+        left: 1rem;
+    }
+
+    .pageName {
+        position: relative;
+        left: 1rem;
+    }
+}
