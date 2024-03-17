@@ -2,6 +2,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+.body {
+  margin: 0;
+}
 
 ul {
   list-style: none;
@@ -382,6 +385,58 @@ main {
   transform: translate(-50%, -50%);
   animation: ring 1.5s infinite;
 }
+
+.container {
+  position: relative;
+  width: 100vw; /* Lățimea containerului să fie întreaga lățime a ecranului */
+  height: 25vh; /* Înălțimea containerului să fie un sfert din înălțimea ecranului */
+}
+
+.myPhoto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myImg {
+  position: absolute;
+  top: 80%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  width: 222px;
+  height: 212px;
+  border-radius: 50%;
+  z-index: 1;
+  border: 5px solid black;
+}
+
+.name {
+  position: absolute;
+  top: 80%; /* Ajustează această valoare pentru a poziționa textul corect */
+  left: 50%; /* Ajustează această valoare pentru a plasa textul corect în lateral */
+  transform: translateX(-50%);
+  font-size: 38px;
+  color: #000; /* Culorea textului */
+  font-family: Arial, sans-serif; /* Fontul textului */
+}
+.friends {
+  position: absolute;
+  top: 88%; /* Ajustează această valoare pentru a poziționa textul corect */
+  left: 45%; /* Ajustează această valoare pentru a plasa textul corect în lateral */
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: #000; /* Culorea textului */
+  font-family: Arial, sans-serif; /* Fontul textului */
+}
+/* .myContainer {
+  padding: 10px;
+  margin-top: 5px;
+} */
 
 .commentSection .insertCommentButton:hover::after,
 .commentSection .insertCommentButton:focus::after {

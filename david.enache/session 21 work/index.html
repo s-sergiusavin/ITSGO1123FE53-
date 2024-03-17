@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>session 21 work DOM</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>session 21 work</h1>
+
+    <div class="flexContainer">
+      <div class="flexItems">
+        <div class="redSquare">red square</div>
+        <div class="redSquare"></div>
+      </div>
+      <div class="flexItems">
+        <div class="blueSquare"></div>
+        <div class="blueSquare"></div>
+        <div class="blueSquare"></div>
+      </div>
+    </div>
+
+    <ul id="changedList">
+      <li class="changeList">Unchanged</li>
+      <li class="changeList">Unchanged</li>
+      <li class="changeList">Unchanged</li>
+      <li class="changeList">Unchanged</li>
+      <li class="changeList">Unchanged</li>
+    </ul>
+
+    <div id="changedList">
+      <p>DO NOT use id for multiple elem</p>
+    </div>
+
+    <p>ThIS text will be changed later with js</p>
+    <p>21321fqsa</p>
+
+    <span class="styledMessages">This message was style by js </span>
+    <p class="styledMessages">This message was style by js</p>
+
+    <!--ON MOUSE ENTER $ MOUSE LEAVE EVENTS-->
+    <div
+      class="greenSquare"
+      onmouseenter="mouseEnter()"
+      onmouseleave="mouseLeave()"
+    >
+      black
+    </div>
+
+    <!--on click event-->
+    <input
+      type="button"
+      value="Click this to change color"
+      onclick="changeGreenSquare()"
+    />
+
+    <!--on focus and blur events-->
+    <label for="demoInput">Demo Input events</label>
+    <input
+      type="text"
+      id="demoInput"
+      onfocus="focusInput()"
+      onblur="blurInput"
+    />
+
+    <!--ON KEY DOWN AND ON KEY UP-->
+    <label for="demoKey">Demo Key events</label>
+    <input
+      type="text"
+      id="demoKey"
+      onkeydown="onKeyDown()"
+      onkeyup="onKeyUp()"
+      placeholder="placeholder"
+    />
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
