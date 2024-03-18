@@ -1,0 +1,181 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 2000px;
+}
+
+nav.menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav.menu ul li::before {
+    content: "🐱‍👤";
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    display: inline-flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li:hover {
+    background-color: yellow;
+    border: 1px solid orange;
+    border-radius: 10px;
+}
+
+/* ul li a:visited{
+    color: green;
+} */
+
+ul li a:active {
+    background-color: green;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p::first-letter {
+    color: red;
+    font-size: xx-large;
+}
+
+p::first-line {
+    color: blue;
+    font-variant: small-caps;
+}
+
+p::selection {
+    background-color: yellow;
+    color: red;
+}
+
+p:empty {
+    width: 100px;
+    height: 20px;
+    border: 1px solid red;
+}
+
+.Firstword {
+    font-size: xx-large;
+    color: red;
+}
+
+blockquote {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.2rem;
+    padding: 40px 80px;
+    position: relative;
+}
+
+blockquote::before {
+    content: open-quote;
+    top: 0;
+    left: 0;
+}
+
+blockquote::after {
+    content: close-quote;
+    bottom: 0;
+    right: 0;
+}
+
+blockquote::before,
+blockquote::after {
+    position: absolute;
+    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.portraitImage {
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+td:first-child {
+    padding: 0;
+}
+
+tr:nth-child(2) {
+    background-color: gray;
+}
+
+tr:nth-of-type(even) {
+    background-color: gray;
+}
+
+tr:nth-of-type(odd) {
+    background-color: aquamarine;
+}
+
+form {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+}
+
+input::placeholder {
+    color: red;
+}
+
+input:focus {
+    background-color: aqua;
+    border: 1px solid blue;
+}
+
+input[type="submit"] {
+    background-color: blue;
+    color: yellow;
+    border-radius: 10px;
+    border: 1px solid blueviolet;
+    width: 150px;
+    height: 35px;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}

@@ -1,0 +1,55 @@
+* {
+    font-size: 24px;
+}
+
+h1 {
+    background-color: rgb(0, 0, 0);
+    color: rgb(170, 0, 0);
+    font-family: overwatch;
+    font-size: 70px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 30px;
+
+}
+
+h2 {
+    background-color: aquamarine;
+}
+
+h2 {
+    background-color: burlywood;
+}
+
+.myList {
+    border: 1px solid darkred;
+}
+
+p {
+    color: #383838;
+    font-size: 20px;
+
+}
+
+
+.purpose {
+    color: #8b0000;
+}
+
+
+#cv {
+    color: blueviolet;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid black;
+    width: 300px;
+    height: 150px;
+    margin: 20px;
+    padding: 20px 25px 30px 35px;
+    text-align: center;
+    box-sizing: border-box;
+
+}
+
+.experienceText {
+    color: brown;
+}

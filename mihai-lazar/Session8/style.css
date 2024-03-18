@@ -1,0 +1,346 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 3000px;
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(red, yellow);
+    background-image: radial-gradient(red, purple, yellow, black);
+}
+
+.overflowBox {
+    background-color: #eee;
+    width: 300px;
+    height: 200px;
+    border: 1px solid blue;
+    overflow: auto;
+    overflow-x: scroll;
+    overflow-y: auto;
+}
+
+/* Combinators */
+
+
+.parentSelector {
+    border: 5px solid black;
+}
+
+/* direct child */
+.parentSelector>p {
+    background-color: aqua;
+}
+
+.parentSelector+p {
+    background-color: blueviolet;
+}
+
+.parentSelector~p {
+    background-color: red;
+}
+
+/* Opacity */
+
+.opacityImage {
+    width: 200px;
+    opacity: 0.7;
+}
+
+.opacityBox.first {
+    opacity: 0.1;
+}
+
+.opacityBox.second {
+    opacity: 0.5;
+}
+
+.opacityBox.third {
+    opacity: 0.8;
+}
+
+.displayText {
+    display: none;
+}
+
+.visibilityText {
+    visibility: hidden;
+}
+
+.opacityText {
+    opacity: 0;
+}
+
+a[target] {
+    background-color: aqua;
+}
+
+form {
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: lightblue;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"] {
+    width: 200px;
+    display: block;
+    margin-top: 10px;
+    background-color: lightseagreen;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: blue;
+    color: wheat;
+    padding: 15px 20px;
+    border: 1px solid teal;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: blueviolet;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Border box */
+
+.noPadding {
+    width: 300px;
+    height: 100px;
+    border: 1px solid red;
+}
+
+.withPadding {
+    width: 300px;
+    height: 100px;
+    border: 1px solid red;
+    padding: 50px;
+}
+
+/* Saddow Effects */
+
+.textShaddow {
+    text-shadow: 2px, 2px;
+    text-shadow: 2px 2px red;
+    text-shadow: 2px 2px red, 3px 3px blue;
+}
+
+.shaddowBox {
+    background-color: lightgray;
+    border: 1px solid yellow;
+    box-shadow: 10px 10px;
+    box-shadow: 5px 5px red;
+    box-shadow: 5px 5px red inset;
+    box-shadow: 5px 5px red inset, 3px 3px blue, 5px 5px green;
+}
+
+/* transform */
+
+.transformBox {
+    width: 300px;
+    height: 150px;
+    background-color: greenyellow;
+    border: 2px solid green;
+    margin: 10px;
+}
+
+#rotate {
+    transform: rotate(20deg);
+    transform: rotate(-20deg);
+}
+
+.transitionBox {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: width 2s;
+    transition: width 2s, height 4s, transform 6s;
+    transition-delay: 0.3s;
+
+}
+
+.transitionBox:hover {
+    width: 300px;
+    height: 300px;
+    transform: rotate(150deg);
+}
+
+/* Animations and keyframes */
+
+.animationBox {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: relative;
+    animation-name: numelePeCareIlAlegEu;
+    animation-duration: 3s;
+    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    animation-delay: -1;
+
+}
+
+@keyframes numelePeCareIlAlegEu {
+    /* Change color animation */
+
+    /* form{background-color: blue;}
+    to{background-color: royalblue;} */
+
+    /* 0%{
+        background-color: red;
+    }
+
+    26%{
+        background-color: greenyellow;
+    }
+
+    55%{
+        background-color: hotpink;
+    }
+
+    100%{
+        background-color: indigo;
+    } */
+
+    0% {
+        background-color: royalblue;
+        top: 0;
+        left: 0;
+    }
+
+    25% {
+        background-color: greenyellow;
+        left: 300px;
+        top: 0;
+    }
+
+    55% {
+        background-color: hotpink;
+        left: 200px;
+        top: 200px;
+    }
+
+    73% {
+        background-color: yellow;
+        top: 200px;
+        left: 0;
+    }
+
+    100% {
+        background-color: indigo;
+        top: 0;
+        left: 0;
+    }
+}
+
+.spinnerContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.spinner {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    border: 4px solid teal;
+    border-top: 4px solid white;
+    border-radius: 50%;
+
+    /* animation for spinner */
+
+    transition-property: transform;
+    animation-name: rotate;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(1deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.scene {
+    width: 150px;
+    height: 300px;
+    perspective: 600px;
+    background: lightblue;
+    border: 1px solid blue;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card .face {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    line-height: 300px;
+    text-align: center;
+    position: absolute;
+
+    backface-visibility: hidden;
+}
+
+.card .front {
+    background-color: royalblue;
+}
+
+.card .back {
+    background-color: grey;
+    transform: rotateY(180deg);
+}
+
+.scene:hover .card {
+    transform: rotateY(180deg);
+}
+
+.button {
+    margin-top: 25px;
+    background-color: royalblue;
+    border: 2px solid blue;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 8px, 16px;
+    transition: 0.5s transform ease-in-out;
+}
+
+.button:hover {
+    background-color: #061955;
+    border: #1c1c5a;
+    transform: scale(1.05);
+}

@@ -1,0 +1,271 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+@font-face {
+    font-family: overwatch;
+    src: url(/Session11-13/fonts/BIGNOODLETOO.TTF);
+}
+
+body {
+    background-image: url(/Session11-13/assets/login\ background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #000000;
+}
+
+.mainSearch {
+    display: flex;
+    align-items: center;
+}
+
+.mainSearch .logo {
+    padding: 1rem;
+    font-size: 3rem;
+    color: #ff0000;
+}
+
+.mainSearch .logo:hover {
+    color: lightcoral;
+}
+
+.mainSearch .searchInput {
+    height: 3rem;
+    border-radius: 1.5rem;
+    padding: 0 1rem;
+    border-color: black;
+}
+
+.mainSearch .searchInput:focus {
+    border: 0.35rem solid darkred;
+}
+
+.navigation,
+.links {
+    display: flex;
+}
+
+.navigation>li>a {
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    margin: 0 0.35rem;
+    display: flex;
+}
+
+.navigation>li>a:hover {
+    background-color: #ff00d4;
+    border: 3px solid #a70090;
+}
+
+.navicons {
+    font-size: 3rem;
+    margin: 0 0.5rem;
+    color: #ff0000;
+}
+
+.navicons:hover {
+    color: #ff00d4;
+}
+
+.bellIcon {
+    position: relative;
+    display: block;
+}
+
+.bellIcon span {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #ff00b3;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    margin-top: 5rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.profile {
+    background-color: #000000;
+    position: absolute;
+    display: flex;
+    top: 5rem;
+    left: 0;
+    right: 0;
+}
+
+.profile .profileUserInfo {
+    display: flex;
+    width: 100%;
+}
+
+.profile .profileUserInfo .profileImg {
+    width: 60%;
+    padding-left: 10rem;
+}
+
+.profile .profileUserInfo .profileName span {
+    font-family: overwatch;
+    font-size: 50px;
+    color: #ff00b3;
+    position: absolute;
+    left: 27rem;
+}
+
+.profile .profileUserInfo .bio {
+    color: #ff00b3;
+    position: absolute;
+    left: 27rem;
+    top: 5rem;
+    right: 5rem;
+    font-size: 20px;
+}
+
+.socials {
+    position: absolute;
+    bottom: 0;
+    top: 3rem;
+    left: 30rem;
+    margin-top: 5rem;
+    color: #a70090;
+}
+
+.socials .linkItems {
+    position: relative;
+    display: flex;
+    font-size: 40px;
+    bottom: 0;
+    gap: 1rem;
+}
+
+.postHistory {
+    position: relative;
+    top: 20rem;
+    display: inline-block;
+    margin-left: 10rem;
+}
+
+.postHistory .post {
+    display: inline-block;
+    width: 30%;
+    border: 5px solid #ff00b3;
+    margin: 3rem 0;
+    padding: 1rem;
+    background-color: #000000;
+}
+
+
+.postHistory .post .postHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.postHistory .post .postHeader .profileUserInfo {
+    display: flex;
+    align-items: center;
+}
+
+.postHistory .post .postHeader .profileUserInfo .profileName {
+    display: flex;
+    flex-direction: column;
+    color: #ff00b3;
+    margin: 10px;
+    font-family: overwatch;
+}
+
+.postHistory .post .postHeader .profileOptions {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff00b3;
+}
+
+.postHistory .post .postHeader .profileOptions:hover {
+    background-color: lightgray;
+}
+
+.content .imgWrapper {
+    position: relative;
+}
+
+.content .imgWrapper .imgContent {
+    max-width: 50%;
+    min-width: 50%;
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .imgWrapper .infoIcon {
+    position: absolute;
+    bottom: -0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    background-color: grey;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    cursor: pointer;
+    color: white;
+}
+
+.content .postTitle {
+    padding: 1rem;
+    color: blueviolet;
+    font-family: overwatch;
+    font-size: x-large;
+}
+
+.content .postDescription {
+    padding: 1rem;
+    margin: 0;
+    color: #ff00b3;
+}
+
+.profileImage {
+    width: 3rem;
+    border-radius: 50%;
+}

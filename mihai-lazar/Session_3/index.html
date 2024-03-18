@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>primea app web</title>
+    <style>
+        /* Aparent modalitatea prosta de stilizare css 
+
+        *{
+            font-size: 24px;
+        }
+
+        h1 {
+            background-color: blue;
+            color: white;
+        }
+
+        h2 {
+            background-color: aquamarine;
+        }
+
+        h2 {
+            background-color: burlywood;
+        }
+
+        .myList {
+            border: 1px solid darkred;
+        }
+
+        p {
+            color: #383838;
+            font-size: 20px;
+        }
+
+        
+        .purpose {
+            color: #8b0000;
+        }
+
+        
+        #cv {
+            color: blueviolet;
+        }
+
+        */
+        @font-face {
+            font-family: overwatch;
+            src: url(BIGNOODLETOO.TTF);
+        }
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Lazar Mihai</h1>
+
+
+    <!-- <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUQEBIVDxUQFQ8QEBAPFQ8PDw8PFRUWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0lHyAtLy0rLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIAKgBLAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAACBAABAwUGB//EADUQAAIBAgQEAwYFBQEBAAAAAAABAgMRBBIhMQVBUWFxgZETIqGxwfAGFDLR8RVCUnLhI6L/xAAaAQACAwEBAAAAAAAAAAAAAAABAgADBAUG/8QAJxEAAgICAgEEAgIDAAAAAAAAAAECEQMhEjEEEzJBUSJhBRQj4fD/2gAMAwEAAhEDEQA/APFfmZAPFSHKWEVgZ4M12jC0xT82wHjWMSwRjPBMZUVuwPzrLjjTOWEYDwzG0JsZ/OFrGISdFleyZKQrs6lHELqdLDVl1PPU6THKNOQGgJs9PQqrqP0ai6nmaObuNxqySuUuJZZ6ilNdRmMu54t8cUNGxzDcfjLRO4rxsnJD/wCK/wAQ/lKd4pTqVLxpRb0vbWT7LRnyKrKdSblKTnKbcpSvvJu7frc9J+OcW51VtJOnDxjaU9Oybcb/AOohwzBWjmlv96D44Xo6PiYuXRzlgZcrhvh811fhc9HCgbyos0ehE60fEhWzyywr/wBWt1y9AKmClG7lp4O1/I9PXpKVtFq7+Ltpc5WNm1JRaWl3pfVvS/z9QSxJIkvGglZxvY3dly7vUCpScdzo0KT/AFZbNN2s977pmlWHu6+RR6Vqyn+vqzj+b9QJXXMZrULAON077rVd0VL8jNKDXYvdhKbVmm01s03dMiQJKorPScK4i6iyy/XHW/8Akuo5Jnk6FVwanHdHosJis6V1Z+qfga8U7VM5XlYOD5R6N2wWy2Cy0yoCTBbCYJCxEuU2RgsgyKcgXIjYDZBkgnIuMjO5cGAdI9fQ2Lki6K0LkjIXmMkZyRvJGUkMhTFopoNooIpm4lxpoIr2iQRWMUaS6D9Gguhz6OJR0KGIQjsGh2lh0FisPHKSlXRlxDEpR3EV2FniuPxSloZ8Bjmna4txivmmXwWrlqI2JDpf4js/iTAx9tQ6uMnL/WLVvizXD0r+XzC4lPNXT/xp04rzcm/mjWi+RMS0d3+OhWFP7NIU1uOQopowgxrDssZvYrLDWut730a2EVw+LzSa3bt2iuR18Q166eXMTm7LTo2vEidhRwZUcra8bP5oB09k9ne3bsdHEU1lTWltdPjcRqK6uvJBosatHMxVFrTpzEa0e3a/0OtX5NnPxdjDmhxdoweRjrYpG2vdfHoZzjZ/FeBa3+9yS+N/v6FfK0c6gBzA1HGaT2e3jya+Qqtvl8b/AEN8DFOai+uniNDTVFWSuLs7HtyvzAFalYTs7mxs58ccZD/tyvbGMKbI6bJsHGJt7VFOoYODAaYLGUEbuZVzDUmpLG4GxrTgKqQxTkQnE9nQ2CaOLRxrSNP6gZ+DLLOjJGUhT+oAvHoiixWxllMW/Oov84hqYraNasrI4+MxRri8XfY4+Iq3D0SEebNvzzN6XFZLmcgtBVml4IHoafHGuYGL4w5Lc4LZLksr/rR+zWc8zuNYSFpJidHdeJ3aGG2ZbFiZ5cUoobhPNObfJxS8FFf9G6SbF6uWOu2a1+/I0p46mtL7Bj0d/wAGS9CI/RiMxdvMUw2PpvTNsr3CnjYqz5deSGZtpsmITbVr89DKonbX/hP6zSafvbcmn6oCfEKb/u+BEwPQjNuzi3e19eqFKE1bL11GquIhfftoc+pDK/kFstjIqrLkcrFHQqSE8TC+pk8hWjJ5W1o5rI2XNagsyHKZaf8AHUd4TTUqlny95Nbpxf8A0RR0uBR95y6K3r/CLMe5IpzusbOlijnrcfxUhCG5vMGL2j1LYJoCmHchU+wXEFxQbYDYAoFQuMQwisL5huniFYg1imIw9jOERjE1LmdOD6MDY8WxynNFSmglgZWMZ4WS5FY7bLbM5AuEkA5MNgqwpMXnXYc5i0r3I2NGC+TTM2A8OzWixunJBSsksjh0c10H0BdJ9DtxSNI0YsNCf2mvg89KLKOxi6K6CSoIHEuh5Kkti1J6o9Hh8Ukjh1KNth3DUXYeKKs7UqlY1jKmezTtlT26nOhh5O0kv1PKurem7b7j9Cg0nfW7+g9h3lWVxhON08tRXV+qJwTZ2/FxuXjRr/ti64TVhGNSUWlO9nvz5mVerJKz5fe/mejnxKrVtC6tayjCK22tdmGL/DlZxdpReblmlH6WD7VvR0cWT01UjyGW75+QSovVq6767bfsb1sLOjNQrRcddL/pkuzR2MHXhllTlTzxqWzSTyzutU108CmGL7M1c02uzzynKNl1v02NVWlbXVfQ7c6lGEZRUJ1HUVpSqtXceSVkcXJrdc+QZQcX+LY+FZK/IGTuBON1Y2lDn6oFAcb7GyQa7ORiY2ZkNY1e94gYWnd3ZjlpnNcLnSM6WHnL9MW/LT1OlweLWdNNfp38wquMa92OlzTCt3u3dOPPxLsbgpqtg8vxl6UuLuts0xDFKe4ziGLU9zaciHtHYbBAx2IAqIAwmwWAKAZWYtgMA6GKMbs7VOkkrHAhUsdGjxDTUoyxb6NGJpdnpqNFWM6mGRrQqqxcpIr3YDn1cGhSpgEdaRlJDKTEaONPhxjLhx22iRiPzEo4T4aynw+R6OEEbKkg+oCn9nj50ZIOkpHoMVhlcvD4WNmNzQjT6PMYmbAops6mPw6zHS4ZwtNXaHbSVkU9Uls8xWuh3C1U0P8AFeHpPQnDuF5gpqrBOSar5JhknG/RsbwNF1G4xWa3PkvF8ga1D2Xu9b/A6/CZNUoxSy6yu1ZN+87X72DerR6nw3XiwaN+H8JyzSupc20rLskdbGRyowweLUW1zeluegOKx0al0nquRRLlKWxZcmzg8bUalqctVJq/VJc10YrV4NKmlkbqxlorL/0XktxjiUFfMmn0aaewzwfE3nG7/SnbxNPUbQ0HTs89jsF1vF8k7p+jMaWE15+Z77EZWpOdmrXalaSSS6fe54zFTy6rS7fl2Fg1LdGzG3M52Ihb9/p8hOTHMRUbi2+pzpy1Ks0qE8l0qFsfy8zOnpqaYmQEYtpJadX0RiybOb3JtDmGpJuF1pJ27+PhoFCWXMukml4fdyUJpLq1dReiWvMvJp16vq3qzRhim9D+XKMMH7ZnUqmdOZdSAEUatnIjGPEdjVL9qK5StSFXpobdQpyFbsmZgJ6YxcFsxzEzkoPA1bLgzHOFCQHFho7FLi1tDWPFzzxLlVIjh+z00eJoNcQXU8vnYaqMlIHFnpvzyNYYxHllWZpHEsPFCOMj11LEoap1keNhjWhqlxJoDgLcl8HocRJMxlWSRxpcQuY1cZ3Coi22+h2DzT8z1mAp2j5HjeE1byR7SjUtEGQEVTZxONS1HuBr3UcbjNf3jucBXuoktQFj7xf8RJJwf+30JwjEwUW5ytaX6eb0Wy5m/wCKKP8A5qdr5ZI87T0vJ7afIsxbjR6j+Nan4/F/DOrgeIwjVqZtFJylBy/VJN7eK28Dn/iTicVJTpOzV01or+HU43E6+efuvRdN7iOJb0/ubulfWwk8lXRbllFWolwxs1rTbjrdre77noeC49uzas9HpfXuux5ak2r8r79ju8JxHs3G60Sauub6eAnjyly29A8dKcvyPXcVxF6OaLup5Y6WutdTzNefLe2hricSr3vfn59ROrI2RXFHThDghevLQSluNVBOuzHm27MPlP5FK0tRmkopXvy1XITqFcjM9nOjk4u6s6kab32XQ11EKXEH/crr0Y/RrRmvdfiuaN+CWOKqJzfIllk7n/owrMCkaVwKKLuSsRP8TexTQdgbFlxK7ByFezCCTJxiG2ZOkV7I3uS4fTROTFvZBQpsZRpCKJ6SJ6hzbkuDclznmhoO5aM7kTACjWxaRmpBKQbFaDsWgVIJSGTEZAZhORbDZDbh9RpnpI8Qageawq1O5Cg3G42n2ZsrfLRysdiW5eZ6zgGI91djys6F5HsOC4S0ULOqImrVDfGJqdKUXzizw1Wo2ktuvie54nStF300d30R4VOLckndZnZrawMXR1/42b5vH9i6oJbvV/epq8NHSWZabLm3f4G1ejGyvpp6sWahfe37juKX0d5YsaQvOitbdufXkSMndLkt0SpBW0ZlST2evdbmRyaZmnGpaHo1L6BTn9DGKswaszVz1s1PI4Q2FUkI13qMVqlkc+rUuzNllbMOfJZlNly2LjAOtHT0KUY61ZnCJpSquOq8Ao09AZIuSaViuOqY0q2ZX58w6TEaUrDlGSZfCVmTJDitDTYLZVyNj2ZkimU2QpgtjImYpyKbBYebQyQaqGlOsLBQD60g8UZMhbKKqLSiyEJRCXKuSxRKIHmCUgC0QVoLMapmIUWFCtG+HlZnZo4r3bHDpsbhMZGbLCxr2nvXPQ0ONwo0883toktXJ9EeUz8xPE1HPd7bRXIkkmh8Hjucr+B/jv4lq4iWjdOGyhF795M53D61nYWtrqWuu3RlKdbOrjioe07slnSXTsKVMN2DwdfRa6+rb7DqgpLRpard677dy+lNHVXHKrfZy/YegSpWGq0VffRJabX9edga+IXrbN4/zqVvFFdjKMIdi7qcjGrUBrVPvmKSk2USmZM2Vt0XWqNl06RVOlzGILZFL2Uxjbtgxp/D4gYiOi8R107P0M60dF97Dxg12Wzx1EXkYM3qswLpmRlLoHTqOPyM0FJffcRNitJo6CmTMJ0Z2duX1GLmmL5Ixzx8WaORVzO5LhoWgmymwcxLi0GiMOmZ3DpgaYyM2yFMtBCQhCEIQlgi0ggsGwSRCwAbI0QhCACibwYumDKv0GugcHLo2xlSytzfyEIy1+pJTbYDKpz+jXjhwjQ1CV9HugZxWpi5a3XYYnqrrnYDdl62BTqOI77d239RCfU7/DKKdNKST0ur9HsTGnJ0aMHK6TOZKsY1Kvx6HWWEjqrJNfIwq0Una1tNCTxS7bL3inLtnMVKTNqeHsOKJcYfERYWyR8YwlTViUKV5aa2NqivZdlv35msUoqy8x1jTl+kW+iuSM5Q+dvNGWIWnqaxlf4sxrS09B0kxfIaURKp3MvE2q9tTFxK59nMZmtzRqxnE2nO6+H/AEriKjMbpTuvmKXDw7s/EeEqZXkjaGmU0WUX2ZQWirBFAsZMo0gAHAPIhmyFsogSFpFBAAWkWgQkEUhCMhCEIQkiBSt0BMFxNMpJRG47NSpLQvYqouhdVfsBconrQ6BNKdTK+z3RmykrlW70S6GKkr2S2PVNZXG3+KXwPIwV5JLsl4s9jioaR7JfI14Pk2eK7bKqUluuW/Wwti6X6Xvq9uaHaNnG75LUxe11rkd7rmv4LmrOpFCbou3LV2KqJR3036selFNrXTf79RStG9RJdV/87/EWWlodIyhSe+1/PZaXLqwtF/E6FOj8dWK49apd/gRxSiw0hHLy6aC1aXLoOSVm/U57/kqqjleW/gzqS0t0MW7m0499zGXyKZ9mJmfMNoB7mmawiFB7lX/kLmDLYjIawr330NbiIcKrQ8MvxIplj+hsq4MJphF6SfRTVEuHBgBwJwCA1qXYogoSWLsQhAFoIhCAaJYtRIQgpLFWIQZFmJbLYLbeyv8AIhBm7ZeujCqm+TdjNU30IQqnBPZEy8hUF2IQremMPcFpp1Y3XfzPVSju/JEIacPtOh4ntAwi1a66ARpZbp62vtzIQtR0sfVEpR0XN+6Y4WneTbfJeCzXk0Qgr7Q/yPNdL+C3fZC+Iwqdm076t9Ekv4IQZi3s5k1o5PT9uRypPXbv1IQomcnzJfnQErrX+TGS6kIZpsyMzjFmmUhBF0BF2528ipx10IQcjMnEmV9CEEoBLM3p1Xs/UhAxk49CtJ9mqNIIhDapGdn/2Q=="
+        alt="Imaginea mea"> -->
+    <img src="profile.jpg" alt="Imaginea mea">
+    <ul class="myList">
+        <li>Home</li>
+        <li>About me</li>
+        <li>Conact</li>
+    </ul>
+
+
+    <p class="purpose" id="cv">
+        <strong>Scop</strong>: Acesta estte CV-ul meu care ma va ajuta sa obtin un job in IT
+    </p>
+
+    <h2>Descriere</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, repudiandae.</p>
+
+    <!-- Sectiune Experienta -->
+
+    <h2>Experienta</h2>
+
+    <h3>2023-2024</h3>
+    <p class="experienceText">Am lucrat ca pprogramator senior</p>
+
+    <h3>2022-2023</h3>
+    <p class="experienceText">Am lucrat ca programamtor mid</p>
+
+    <h3>2021-2022</h3>
+    <p class="experienceText">Am lucrat ca programamtor junior</p>
+
+    <!-- Sectiune sttudii -->
+
+    <h2>Studii</h2>
+
+    <h3>2023-2024</h3>
+    <p>Masterat</p>
+
+    <h3>2022-2023</h3>
+    <p>Facultate</p>
+
+    <h3>2021-2022</h3>
+    <p>Liceu</p>
+
+    <form>
+        <label for="">Numele meu</label>
+        <input type="text">
+
+        <label for="">Emal</label>
+        <input type="email">
+
+        <label for="">Telefon</label>
+        <input type="tel">
+
+        <label for="">Trimmite-mi un mesaj</label>
+        <select name="" id="">
+            <option value="">Oferta de munca</option>
+            <option value="">Mmesaj personal</option>
+            <option value="">Plangere</option>
+        </select>
+
+        <label for="">Introduce-ti un mesaj</label>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+        <input type="submit" value="Trimite mesaj">
+    </form>
+
+    <footer>Copyright Lazar Mihai 2023 &copy;</footer>
+
+</body>
+
+</html>
+<!-- Ctrl + / = comment -->

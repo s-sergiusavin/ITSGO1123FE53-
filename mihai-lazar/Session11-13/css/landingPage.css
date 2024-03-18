@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+    font-family: overwatch;
+    src: url(/Session11-13/fonts/BIGNOODLETOO.TTF);
+}
+
+body {
+    margin: 0;
+    background-color: salmon;
+}
+
+header {
+    background: gray url(/Session11-13/assets/Curentu\ de\ pe\ somes.png);
+    background-size: cover;
+    height: 35rem;
+    color: white;
+}
+
+header .backIcon{
+    font-size: 5rem;
+    width: 3rem;
+    position: fixed;
+    top: 0;
+    left: 2rem;
+}
+
+header a {
+    color: #ff0000;
+    font-family: overwatch;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 5rem;
+    margin-left: 0;
+    display: block;
+    padding-top: 2.5rem;
+}
+
+header h1 {
+    font-size: 4rem;
+    margin: 2rem 5rem 1.2rem;
+    font-family: overwatch;
+}
+
+header h1 span {
+    text-transform: uppercase;
+    display: block;
+    font-size: 5rem;
+    color: red;
+    position: relative;
+    z-index: 1;
+    font-family: overwatch;
+}
+
+header h1 span::before {
+    content: ' ';
+    position: absolute;
+    width: 9rem;
+    height: 1.5rem;
+    background-color: #4d3de4;
+    bottom: 0;
+    z-index: -1;
+}
+
+header .headerDescription {
+    font-weight: bold;
+    max-width: 45rem;
+    margin: 0 5rem 3rem;
+    font-size: 1.1rem;
+}
+
+.formContainer {
+    background-color: white;
+    font-weight: bold;
+    padding: 2rem;
+    max-width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5rem;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem red;
+}
+
+.formContainer label {
+    color: red;
+}
+
+.formContainer p {
+    color: gray;
+}
+
+.formContainer form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formContainer form input[type="text"] {
+    border: 1px solid darkgray;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.formContainer form input[type="number"] {
+    border: 1px solid darkgray;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.formContainer form input[type="button"] {
+    background-color: red;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem;
+    width: 30%;
+    font-size: 1.2rem;
+    align-self: center;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.formContainer form input[type="button"]:hover {
+    background-color: #850101;
+}
+
+.callToAction {
+    display: flex;
+    flex-direction: column;
+}
+
+.callToAction .callToActionMsg {
+    padding: 5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.callToAction .callToActionMsg h2{
+    text-transform: uppercase;
+    position: relative;
+    width: 20rem;
+    font-family: overwatch;
+    font-size: 3rem;
+}
+
+.callToAction .callToActionMsg h2::before{
+    content: '';
+    position: absolute;
+    width: 9rem;
+    height: 0.8rem;
+    bottom: 0;
+    z-index: -1;
+    background-color: #4d3de4;
+    left: 1rem;
+}
+
+.callToAction .callToActionMsg{
+    font-size: 1.3rem;
+}
+
+.callToAction img{
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

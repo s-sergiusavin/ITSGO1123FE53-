@@ -1,0 +1,355 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+@font-face {
+    font-family: overwatch;
+    src: url(/Session11-13/fonts/BIGNOODLETOO.TTF);
+}
+
+body {
+    background-image: url(/Session11-13/assets/login\ background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #000000;
+}
+
+.mainSearch {
+    display: flex;
+    align-items: center;
+}
+
+.mainSearch .logo {
+    padding: 1rem;
+    font-size: 3rem;
+    color: #ff0000;
+}
+
+.mainSearch .logo:hover {
+    color: lightcoral;
+}
+
+.mainSearch .searchInput {
+    height: 3rem;
+    border-radius: 1.5rem;
+    padding: 0 1rem;
+    border-color: black;
+}
+
+.mainSearch .searchInput:focus {
+    border: 0.35rem solid darkred;
+}
+
+.navigation,
+.links {
+    display: flex;
+}
+
+.navigation>li>a {
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    margin: 0 0.35rem;
+    display: flex;
+}
+
+.navigation>li>a:hover {
+    background-color: #ff00d4;
+    border: 3px solid #a70090;
+}
+
+.navicons {
+    font-size: 3rem;
+    margin: 0 0.5rem;
+    color: #ff0000;
+}
+
+.navicons:hover {
+    color: #ff00d4;
+}
+
+.bellIcon {
+    position: relative;
+    display: block;
+}
+
+.bellIcon span {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: #ff00b3;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.leftContent,
+.rightContent {
+    width: 17%;
+    border: 5px solid black;
+    overflow: auto;
+    height: 100vh;
+    position: fixed;
+}
+
+.leftContent {
+    left: 0;
+}
+
+.rightContent {
+    right: 0;
+}
+
+.mainContent {
+    width: 40%;
+}
+
+.mainContent .post {
+    border: 5px solid #ff00b3;
+    margin: 3rem 0;
+    padding: 1rem;
+    background-color: #000000;
+}
+
+
+.mainContent .post .postHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainContent .post .postHeader .profileUserInfo {
+    display: flex;
+    align-items: center;
+}
+
+.mainContent .post .postHeader .profileUserInfo .profileName {
+    display: flex;
+    flex-direction: column;
+    color: #ff00b3;
+    margin: 10px;
+    font-family: overwatch;
+}
+
+.mainContent .post .postHeader .profileOptions {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff00b3;
+}
+
+.mainContent .post .postHeader .profileOptions:hover {
+    background-color: lightgray;
+}
+
+.content .imgWrapper {
+    position: relative;
+}
+
+.content .imgWrapper .imgContent {
+    max-width: 100%;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .imgWrapper .infoIcon {
+    position: absolute;
+    bottom: -0.5rem;
+    right: 1rem;
+    font-size: 2rem;
+    background-color: grey;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    cursor: pointer;
+    color: white;
+}
+
+.content .postTitle {
+    padding: 1rem;
+    color: blueviolet;
+    font-family: overwatch;
+    font-size: x-large;
+}
+
+.content .postDescription {
+    padding: 1rem;
+    margin: 0;
+    color: #ff00b3;
+}
+
+.post .reacts {
+    display: flex;
+    justify-content: space-between;
+    color: blueviolet;
+}
+
+.post .actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.post .actions .reactions {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    color: blueviolet;
+    border-radius: 1rem;
+}
+
+.post .actions .reactions:hover {
+    color: magenta;
+    background-color: lightcoral;
+}
+
+.commentSection {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* .commentSection .profileImage {
+    width: 3rem;
+    border-radius: 50%;
+} */
+
+.commentSection .newCommentField {
+    width: 80%;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background-color: blueviolet;
+}
+
+.commentSection .newCommentField::placeholder {
+    color: red;
+}
+
+.commentSection .newCommentField:hover {
+    background-color: rgb(62, 0, 119);
+    width: 85%;
+}
+
+.commentSection .insertCommentButton {
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.5rem 0.7rem;
+}
+
+.commentSection .insertCommentButton:hover {
+    border-radius: 0.5rem;
+    background-color: blueviolet;
+    color: red;
+}
+
+.userComments {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.userComments .profileUserComment {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    color: #ff00b3;
+}
+
+.profileImage {
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.userComments .userCommentText {
+    margin: 0 1rem;
+    border: 1px solid #888;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #e2e2e2;
+    position: relative;
+}
+
+.userComments .userCommentText:hover {
+    animation-name: comment-animation;
+    animation-duration: 1s;
+}
+
+.userComments .userCommentText .emojiReaction {
+    position: absolute;
+    bottom: 0;
+    right: 0.5rem;
+}
+
+.userComments .userCommentText .commentReaction {
+    margin-left: 3rem;
+    color: #ff00b3;
+    display: flex;
+    gap: 0.7rem;
+}
+
+.userComments .commentContent .commentReaction .commentReactionButton {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #ff00b3;
+}
+
+
+
+
+
+
+@keyframes comment-animation {
+    from {
+        left: -1rem;
+    }
+
+    to {
+        right: 0rem;
+    }
+}

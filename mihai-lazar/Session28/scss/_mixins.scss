@@ -1,0 +1,14 @@
+// mixins w/ out params
+@mixin box {
+    width: 100px;
+    height: 100px;
+    background-color: $globalRed;
+    margin: 10px;
+}
+
+// mixins w/ params
+@mixin flexbox($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
