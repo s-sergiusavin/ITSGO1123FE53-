@@ -12,7 +12,7 @@ const LeftNavElement = ({ icon, name }) => {
 }
 
 LeftNavElement.propTypes = {
-    // icon: PropTypes.element.isRequired,
+    icon: PropTypes.object.isRequired,
     name: PropTypes.string.isRequired
 }
 

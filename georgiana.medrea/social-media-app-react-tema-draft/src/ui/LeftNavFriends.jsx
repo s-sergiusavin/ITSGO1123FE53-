@@ -22,453 +22,481 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 const LeftNavFriends = () => {
 
     return (
-        <div className={styles.friends}>
-            <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }} className={styles.leftNavFriends}>
-                <ListItemText primary="Friends list" className={styles.listTitle} />
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName1} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 1" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName2} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 2" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName3} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 3" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName4} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 4" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName5} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 5" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName6} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 6" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName7} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 7" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName8} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 8" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName9} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 9" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName10} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 10" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName11} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 11" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName12} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 12" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName1} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 13" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName2} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 14" className={styles.friendName} />
-                </ListItem>
-                <ListItem>
-                    <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userName3} sx={{ width: 75, height: 75 }} />
-                    </ListItemAvatar>
-                    <ListItemText primary="Username 15" className={styles.friendName} />
-                </ListItem>
-            </List>
+        <div>
+            <Box
+                component="form"
+                sx={{
+                    '& > :not(style)': { m: 1, width: '15ch' }
+                }}
+                noValidate
+                autoComplete="off"
+                className={styles.titleRequests}
+            >
+                <TextField id="standard-basic" label="Friend requests" variant="standard" />
+            </Box>
 
-            <div className={styles.requests}>
-                <div className={styles.friendRequestsContainer}>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName1}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
-                                Username 17
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName9}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
-                                Username 18
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName4}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
-                                Username 19
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName12}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
-                                Username 20
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName1}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
-                                Username 21
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName7}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
-                                Username 22
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName9}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
-                                Username 24
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName10}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
-                                Username 23
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName1}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
-                                Username 16
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName12}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
-                                Username 25
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                </div>
+            <div className={styles.friends}>
+                <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }} className={styles.leftNavFriends}>
+                    <ListItemText primary="Friends list" className={styles.listTitle} />
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName1} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 1" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName2} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 2" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName3} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 3" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName4} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 4" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName5} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 5" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName6} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 6" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName7} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 7" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName8} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 8" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName9} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 9" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName10} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 10" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName11} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 11" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName12} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 12" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName1} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 13" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName2} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 14" className={styles.friendName} />
+                    </ListItem>
+                    <ListItem>
+                        <ListItemAvatar >
+                            <Avatar alt="Profile photo" src={userName3} sx={{ width: 75, height: 75 }} />
+                        </ListItemAvatar>
+                        <ListItemText primary="Username 15" className={styles.friendName} />
+                    </ListItem>
+                </List>
 
-                <div className={styles.suggestedFriendsContainer}>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName8}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
-                                Username 26
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName4}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
-                                Username 27
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName10}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
-                                Username 28
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName1}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
-                                Username 29
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName12}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
-                                Username 30
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName7}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
-                                Username 31
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName1}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
-                                Username 32
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName9}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
-                                Username 33
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName7}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
-                                Username 34
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
-                    <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
-                        <CardMedia
-                            component="img"
-                            alt="user photo"
-                            height="120"
-                            image={userName10}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
-                                Username 35
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.button}>
-                            <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
-                            <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
-                        </CardActions>
-                    </Card>
+                <Box
+                    component="form"
+                    sx={{
+                        '& > :not(style)': { m: 1, width: '20ch' }
+                    }}
+                    noValidate
+                    autoComplete="off"
+                    className={styles.titleSuggested}
+                >
+                    <TextField id="standard-basic" label="People you may know" variant="standard" />
+                </Box>
+
+                <div className={styles.requests}>
+                    <div className={styles.friendRequestsContainer}>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName1}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
+                                    Username 17
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName9}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
+                                    Username 18
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName4}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
+                                    Username 19
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName12}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
+                                    Username 20
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName1}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
+                                    Username 21
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName7}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
+                                    Username 22
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName9}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
+                                    Username 24
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName10}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
+                                    Username 23
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName1}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
+                                    Username 16
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName12}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.friendName}>
+                                    Username 25
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                    </div>
+
+                    <div className={styles.suggestedFriendsContainer}>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName8}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
+                                    Username 26
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName4}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
+                                    Username 27
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName10}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
+                                    Username 28
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName1}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
+                                    Username 29
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName12}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
+                                    Username 30
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName7}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
+                                    Username 31
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName1}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
+                                    Username 32
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName9}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
+                                    Username 33
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName7}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
+                                    Username 34
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                        <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
+                            <CardMedia
+                                component="img"
+                                alt="user photo"
+                                height="120"
+                                image={userName10}
+                            />
+                            <CardContent>
+                                <Typography gutterBottom variant="h6" component="div" className={styles.suggestedFriendName}>
+                                    Username 35
+                                </Typography>
+                            </CardContent>
+                            <CardActions className={styles.button}>
+                                <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
+                                <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                            </CardActions>
+                        </Card>
+                    </div>
                 </div>
-            </div>
-        </div >
+            </div >
+        </div>
     )
 }
 

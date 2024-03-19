@@ -1,3 +1,15 @@
+.titleSuggested {
+    position: relative;
+    left: 7rem;
+    top: 0.5rem;  
+}
+
+.titleInterested {
+    position: relative;
+    left: -46rem;
+    top: 5.5rem;  
+}
+
 .events {
     display: flex;
     flex-direction: column;
@@ -52,14 +64,14 @@
                     flex-wrap: wrap;
                     width: 15rem;
                     height: 2rem;
-                    background-color: rgb(59, 112, 247);
-                    color: white;
+                    background-color: lightgray;
+                    color: black;
                     border-radius: 10%;
-                    border: 1px solid blue;
+                    border: 1px solid black;
                 }
 
                 .sendIcon {
-                    color: blue;
+                    color: black;
                     background-color: whitesmoke;
                     border-radius: 10%;
                     width: 2.5rem;
@@ -124,8 +136,8 @@
                     border: 1px solid blue;
                 }
 
-                .interestedSendIcon {
-                    color: blue;
+                .sendInterestedIcon {
+                    color: black;
                     background-color: whitesmoke;
                     border-radius: 10%;
                     width: 2.5rem;

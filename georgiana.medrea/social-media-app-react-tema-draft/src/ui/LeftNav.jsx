@@ -1,4 +1,3 @@
-
 import PeopleIcon from '@mui/icons-material/People';
 import MmsIcon from '@mui/icons-material/Mms';
 import GroupsIcon from '@mui/icons-material/Groups';
@@ -65,7 +64,7 @@ const LeftNav = () => {
             id: 7
         },
         {
-            icon: {WaterDropIcon},
+            icon: WaterDropIcon,
             name: 'Blood donations',
             id: 8
         },
@@ -177,7 +176,7 @@ const LeftNav = () => {
         //     <ListItem>
         //         <ListItemAvatar>
         //             <Avatar sx={{ bgcolor: 'blue', width: 55, height: 55 }}>
-        //                 <WaterDropIcon sx={{ bgcolor: 'blue', width: 35, height: 35 }} />
+        //                 <WaterDropIcon sx={{ bgcolor: 'blue', width: 35, height: 35 }}/>
         //             </Avatar>
         //         </ListItemAvatar>
         //         <ListItemText primary="Blood donations" className={styles.pageName} />
