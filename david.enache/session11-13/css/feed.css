@@ -413,6 +413,7 @@ main {
   border-radius: 50%;
   z-index: 1;
   border: 5px solid black;
+  cursor: pointer;
 }
 
 .name {
@@ -436,6 +437,28 @@ main {
 /* .myContainer {
   padding: 10px;
   margin-top: 5px;
+} */
+.about {
+  position: relative;
+}
+.aboutMe {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 78rem;
+  gap: 2rem;
+  left: 16rem;
+  cursor: pointer;
+}
+/* .icon {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 1;
 } */
 
 .commentSection .insertCommentButton:hover::after,
