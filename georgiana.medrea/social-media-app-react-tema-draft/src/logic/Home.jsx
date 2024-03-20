@@ -5,10 +5,10 @@ import styles from './Home.module.scss';
 
 const Home = () => {
     return (
-        <div className={styles.main}>
-            <LeftNav />
-            <Main />
-            <RightNav />
+        <div className={styles.mainContainer}>
+            <LeftNav className={styles.leftNav}/>
+            <Main className={styles.newsfeed}/>
+            <RightNav className={styles.rightNav}/>
         </div>
     )
 }
