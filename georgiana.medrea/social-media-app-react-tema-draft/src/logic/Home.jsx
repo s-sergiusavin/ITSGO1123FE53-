@@ -8,7 +8,7 @@ const Home = () => {
         <div className={styles.mainContainer}>
             <LeftNav className={styles.leftNav}/>
             <Main className={styles.newsfeed}/>
-            <RightNav className={styles.rightNav}/>
+            <RightNav className={styles.rightNav}></RightNav>
         </div>
     )
 }

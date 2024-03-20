@@ -1,66 +1,79 @@
 import RightNavElement from './RightNavElement';
 import styles from './RightNav.module.scss';
+import userName1 from './assets/images/userName1.jpg';
+import userName2 from './assets/images/userName2.jpg';
+import userName3 from './assets/images/userName3.jpg';
+import userName4 from './assets/images/userName4.jpeg';
+import userName5 from './assets/images/userName5.jpeg';
+import userName6 from './assets/images/userName6.jpg';
+import userName7 from './assets/images/userName7.jpg';
+import userName8 from './assets/images/userName8.jpg';
+import userName9 from './assets/images/userName9.jpg';
+import userName10 from './assets/images/userName10.jpg';
+import userName11 from './assets/images/userName11.jpg';
+import userName12 from './assets/images/userName12.jpg';
+
 
 const RightNav = () => {
 
     const FriendsElements = [
         {
-            imageUrl: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTbzMHWQ8YbGA-N1AGdbdFBXPr_qQ5O-wgXfbf62e2_vahCu-z0',
+            imageUrl: userName1,
             name: 'Username 1',
             id: 0
         },
         {
-            imageUrl: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQc-0OOz-YcwXqETP0Ejssv1g_xWUFbq_kv4-4wDcsBGmJ8D8ez',
+            imageUrl: userName2,
             name: 'Username 2',
             id: 1
         },
         {
-            imageUrl: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRWURShFTiTxUYBFzZDhkrNvoHvTfvek86GG3vMoRIXvrfSv5Vn',
+            imageUrl: userName3,
             name: 'Username 3',
             id: 2
         },
         {
-            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKBJL-iCloJc7R4mgkJI0bECtvCDZ1nxkgLFc0-O7COSKUqsJ',
+            imageUrl: userName4,
             name: 'Username 4',
             id: 3
         },
         {
-            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqwSEAdEG_UMhONxxcGk1siakq2Pp4sHMwGDVYCBIC-EuBjppV',
+            imageUrl: userName5,
             name: 'Username 5',
             id: 4
         },
         {
-            imageUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQUiLItFSy8oi_nqQ8zCndjuOpL6uEn0vX0qzITFgiBfAzMtfSo',
+            imageUrl: userName6,
             name: 'Username 6',
             id: 5
         },
         {
-            imageUrl: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRzdJL8Zxp_Sy_f9c4TeJjLoacWlKjWWfHL_r6EcpNc92Tuw9p8',
+            imageUrl: userName7,
             name: 'Username 7',
             id: 6
         },
         {
-            imageUrl: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQBpu3igHBQOOkY4UVZ0lexb2CuVKncYwV0Xd8P0lKLD48hqZ2Q',
+            imageUrl: userName8,
             name: 'Username 8',
             id: 7
         },
         {
-            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1d1oDPh6gnzx1rtcjjJAqoc_TbiWEzoCI7ZaJ4bHxeLIdA0da',
+            imageUrl: userName9,
             name: 'Username 9',
             id: 8
         },
         {
-            imageUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTh0DogaYKDVNyrk67_vYGDaTsNbeYtrai23yAhN7yovySjcZse',
+            imageUrl: userName10,
             name: 'Username 10',
             id: 9
         },
         {
-            imageUrl: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSZqOzzYvEhW2GDBq9fQUqDi0Ca2ezAJ_S7nX2oGPwRpTrJLp0n',
+            imageUrl: userName11,
             name: 'Username 11',
             id: 10
         },
         {
-            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWLpEOZwxIQJc6NJ67ThZximHqId7cPlugfZrvKhFLNkt-l3r',
+            imageUrl: userName12,
             name: 'Username 12',
             id: 11
         }
