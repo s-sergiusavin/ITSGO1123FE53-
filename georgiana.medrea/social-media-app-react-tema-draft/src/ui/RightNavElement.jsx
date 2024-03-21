@@ -58,7 +58,7 @@ const RightNavElement = ({ imageUrl, name }) => {
 }
 
 RightNavElement.propTypes = {
-    image: PropTypes.object,
+    imageUrl: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired
 }
 
