@@ -1,46 +1,39 @@
-.titleRequests {
-    position: relative;
-    left: 25rem;
-    top: 0.5rem;
-}
-
-.titleSuggested {
-    position: relative;
-    left: 23rem;
-    top: 1rem;
-}
-
-.friends {
+.friendsCotainer {
     display: flex;
-    align-items: center;
 
-    .leftNavFriends {
-        top: 2rem;
+    .friendList {
+        top: 5.5rem;
         left: 0;
         width: 20rem;
-        height: 95vh;
+        height: 90vh;
         border: 5px solid whitesmoke;
         position: fixed;
         overflow: auto;
         display: flex;
         flex-direction: column;
-        gap: 1rem;
-
-        .friendName {
-            position: relative;
-            left: 1rem;
-        }
 
         .listTitle {
             position: relative;
-            left: 1rem;
+            align-self: flex-start;
+            left: 0.5rem;
+        }
+
+        .friendName {
+            position: relative;
+            left: 2rem;
         }
     }
 
     .requests {
         display: flex;
         flex-direction: column;
-        gap: 5rem;
+        gap: 10rem;
+
+        .titleRequests {
+            position: relative;
+            left: 35rem;
+            top: 2rem;
+        }
 
         .friendRequestsContainer {
             display: flex;
@@ -49,11 +42,14 @@
             align-items: center;
             border: 2px solid whitesmoke;
             position: relative;
-            width: 60rem;
-            height: 40rem;
-            left: 25rem;
+            overflow: auto;
+            display: flex;
+            width: 70rem;
+            height: 50rem;
+            left: 35rem;
             gap: 1rem;
             padding: 0.2rem;
+            top: -7rem;
 
             .friendRequest {
                 padding: 0.2rem;
@@ -94,6 +90,13 @@
             }
         }
 
+
+        .titleSuggested {
+            position: relative;
+            left: 35rem;
+            top: -8rem;
+        }
+
         .suggestedFriendsContainer {
             display: flex;
             flex-wrap: wrap;
@@ -101,11 +104,13 @@
             align-items: center;
             border: 2px solid whitesmoke;
             position: relative;
-            width: 60rem;
-            height: 40rem;
-            left: 25rem;
+            overflow: auto;
+            width: 70rem;
+            height: 50rem;
+            left: 35rem;
             gap: 1rem;
             padding: 0.2rem;
+            top: -17rem;
 
             .suggestedFriend {
                 padding: 0.2rem;

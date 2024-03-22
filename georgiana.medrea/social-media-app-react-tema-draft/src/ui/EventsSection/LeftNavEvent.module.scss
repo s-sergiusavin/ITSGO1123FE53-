@@ -1,21 +1,15 @@
-.titleSuggested {
-    position: relative;
-    left: 7rem;
-    top: 0.5rem;  
-}
-
-.titleInterested {
-    position: relative;
-    left: -46rem;
-    top: 5.5rem;  
-}
-
 .events {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5rem;
+    gap: 15rem;
+
+    .titleSuggestedEvents {
+        position: relative;
+        left: -34rem;
+        top:5rem;  
+    }
 
     .suggestedEvents {
         display: flex;
@@ -23,10 +17,12 @@
         align-items: center;
         justify-content: center;
         width: 80rem;
-        height: 50rem;
-        left: 35rem;
+        height: 45rem;
+        overflow: auto;
         gap: 1rem;
         border: 2px solid whitesmoke;
+        position: relative;
+        top: -10rem;
 
         .suggestedEvent {
             padding: 0.2rem;
@@ -83,21 +79,29 @@
         }
     }
 
-    .interestedEvents {
+    .titleMyEvents {
+        position: relative;
+        left: -37rem;
+        top: -20rem;  
+    }
+
+    .myEvents {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         width: 80rem;
-        height: 50rem;
-        left: 35rem;
+        height: 45rem;
+        overflow: auto;
         gap: 1rem;
         border: 2px solid whitesmoke;
+        position: relative;
+        top: -35rem;
 
-        .interestedEvent {
+        .myEvent {
             padding: 0.2rem;
 
-            .interestedEventText {
+            .myEventText {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -105,17 +109,17 @@
                 position: relative;
                 gap: 0.1rem;
 
-                .interestedEventName {
+                .myEventName {
                     margin-top: -1rem;
                 }
 
-                .peopleAttending {
+                .myEventIntestedPeople {
                     margin-top: -0.9rem;
                 }
 
             }
 
-            .interestedActionButtons {
+            .myActionButtons {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -123,7 +127,7 @@
                 gap: 1.5rem;
 
 
-                .interestedButton {
+                .myButton {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -136,7 +140,7 @@
                     border: 1px solid blue;
                 }
 
-                .sendInterestedIcon {
+                .mySendIcon {
                     color: black;
                     background-color: whitesmoke;
                     border-radius: 10%;

@@ -41,19 +41,19 @@ const RightNavElement = ({ imageUrl, name }) => {
 
     return (
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }} className={styles.rightNav}>
-        <ListItem>
-            <ListItemAvatar>
-                <StyledBadge
-                    overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                    variant="dot"
-                >
-                    <Avatar alt={name} src={imageUrl} sx={{ width: 65, height: 65 }} />
-                </StyledBadge>
-            </ListItemAvatar>
-            <ListItemText primary={name} className={styles.onlineUserName} />
-        </ListItem>
-    </List>
+            <ListItem>
+                <ListItemAvatar>
+                    <StyledBadge
+                        overlap="circular"
+                        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                        variant="dot"
+                    >
+                        <Avatar alt={name} src={imageUrl} sx={{ width: 65, height: 65 }} />
+                    </StyledBadge>
+                </ListItemAvatar>
+                <ListItemText primary={name} className={styles.onlineUserName} />
+            </ListItem>
+        </List>
     )
 }
 

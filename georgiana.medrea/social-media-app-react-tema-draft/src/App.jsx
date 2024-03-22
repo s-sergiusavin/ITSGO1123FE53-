@@ -5,9 +5,9 @@ import MyProfile from './logic/MyProfile';
 import Home from './logic/Home';
 import NotFound from './logic/NotFound';
 import PropTypes from 'prop-types';
-import LeftNavFriends from './ui/LeftNavFriends';
+import LeftNavFriends from './ui/FriendsSection/LeftNavFriends';
 import LeftNavPagesFollow from './ui/LeftNavPagesFollow';
-import LeftNavEvent from './ui/LeftNavEvent';
+import LeftNavEvents from './ui/EventsSection/LeftNavEvents';
 
 function App() {
 
@@ -32,7 +32,7 @@ function App() {
               <NavLink to={'./left-nav-pages-follow'}>Pages</NavLink>
             </li>
             <li>
-              <NavLink to={'./left-nav-event'}>Events</NavLink>
+              <NavLink to={'./left-nav-events'}>Events</NavLink>
             </li>
           </ul>
         </nav>
@@ -46,7 +46,7 @@ function App() {
         <Route path='*' element={<NotFound />}></Route>
         <Route path='/left-nav-friends' element={<LeftNavFriends />}></Route>
         <Route path='/left-nav-pages-follow' element={<LeftNavPagesFollow />}></Route>
-        <Route path='/left-nav-event' element={<LeftNavEvent />}></Route>
+        <Route path='/left-nav-events' element={<LeftNavEvents />}></Route>
       </Routes>
     </>
   )

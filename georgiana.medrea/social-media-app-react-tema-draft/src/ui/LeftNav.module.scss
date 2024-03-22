@@ -1,5 +1,5 @@
-.leftNav {
-    top: 2rem;
+.leftContainer {
+    top: 5.5rem;
     left: 0;
     width: 20rem;
     height: 90vh;
@@ -8,15 +8,14 @@
     overflow: auto;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 
-    .userName {
-        position: relative;
-        left: 1rem;
+    .rightNav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .pageName {
-        position: relative;
-        left: 1rem;
+        margin-left: 1rem;
     }
 }

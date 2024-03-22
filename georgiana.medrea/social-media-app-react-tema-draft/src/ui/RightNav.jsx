@@ -12,6 +12,7 @@ import userName9 from './assets/images/userName9.jpg';
 import userName10 from './assets/images/userName10.jpg';
 import userName11 from './assets/images/userName11.jpg';
 import userName12 from './assets/images/userName12.jpg';
+import { useEffect, useState } from 'react';
 
 
 const RightNav = () => {
@@ -34,7 +35,7 @@ const RightNav = () => {
         return result;
     }
 
-    let randomIds = randomUniqueNum(23, 23)
+    let randomIds = randomUniqueNum(23, 23);
 
     const FriendsElements = [
         {
@@ -159,7 +160,14 @@ const RightNav = () => {
         }
     ]
 
-    console.log(FriendsElements)
+    const [time, setTime] = useState(Date.now());
+
+    useEffect(() => {
+        const interval = setInterval(() => setTime(Date.now()), 10000);
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
 
     return (
         <div className={styles.rightContainer}>
@@ -173,7 +181,6 @@ const RightNav = () => {
                         />
                     )
                 }
-
             })}
         </div>
     )
