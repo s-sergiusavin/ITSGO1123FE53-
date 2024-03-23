@@ -6,12 +6,25 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useState } from 'react';
 
 
 const SuggestedFriendElement = ({ imageUrl, name }) => {
+
+    const [isVisible, setIsVisible] = useState(true);
+
+    function removeFriendRequest() {
+        setIsVisible((isVisible) => !isVisible)
+    }
+
+    function addFriend() {
+        setTimeout(function() {alert('Friend request sent!'); }, 1000);
+        setIsVisible((isVisible) => !isVisible)
+    }
+
     return (
         <div>
-            <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
+            {isVisible && <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.suggestedFriend}>
                 <CardMedia
                     component="img"
                     alt="user photo"
@@ -24,10 +37,10 @@ const SuggestedFriendElement = ({ imageUrl, name }) => {
                     </Typography>
                 </CardContent>
                 <CardActions className={styles.button}>
-                    <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton}>Add friend</Button>
-                    <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                    <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton} onClick={addFriend}>Add friend</Button>
+                    <Button size="small" sx={{ border: 1 }} className={styles.removeButton} onClick={removeFriendRequest}>Remove</Button>
                 </CardActions>
-            </Card>
+            </Card>}
         </div>
     )
 }

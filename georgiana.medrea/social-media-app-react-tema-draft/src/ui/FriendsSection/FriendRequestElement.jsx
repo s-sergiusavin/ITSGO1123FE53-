@@ -6,11 +6,21 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { useState } from 'react';
 
 const FriendRequestElement = ({ imageUrl, name }) => {
+
+    const [isVisible, setIsVisible] = useState(true);
+    const [buttonText, setButtonText] = useState('Remove')
+    
+
+    function removeHandler() {
+        setIsVisible((isVisible) => !isVisible)
+    }
+
     return (
         <div>
-            <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
+            {isVisible && <Card sx={{ maxWidth: 180, maxHeight: 250 }} className={styles.friendRequest}>
                 <CardMedia
                     component="img"
                     alt="user photo"
@@ -23,10 +33,10 @@ const FriendRequestElement = ({ imageUrl, name }) => {
                     </Typography>
                 </CardContent>
                 <CardActions className={styles.button}>
-                    <Button size="small" sx={{ border: 1 }} className={styles.confirmButton}>Confirm</Button>
-                    <Button size="small" sx={{ border: 1 }} className={styles.removeButton}>Remove</Button>
+                    <Button size="small" sx={{ border: 1 }} className={styles.confirmButton} onClick={() => setButtonText("Friends")}>Confirm</Button>
+                    <Button size="small" sx={{ border: 1 }} className={styles.removeButton} onClick={removeHandler}>{buttonText}</Button>
                 </CardActions>
-            </Card>
+            </Card>}
         </div>
     )
 }
