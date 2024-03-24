@@ -28,7 +28,7 @@ const MyPageElement = ({ imageUrl, pageName, likes}) => {
                     </CardActionArea>
                     <CardActions>
                         <Button size="small" color="primary" className={styles.likedPageButton}>
-                            Like
+                            Liked
                         </Button>
                     </CardActions>
                 </Card>

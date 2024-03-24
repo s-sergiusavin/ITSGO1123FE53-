@@ -3,9 +3,10 @@ import pageName3 from '../assets/images/pageName3.jpeg';
 import pageName4 from '../assets/images/pageName4.jpeg';
 import MyPagesElement from './MyPagesElement';
 import styles from './LeftNavPages.module.scss'
+import PropTypes from 'prop-types';
 
 
-const LeftNavMyPages = () => {
+const LeftNavMyPages = ({ newPage }) => {
 
     const MyPages = [
         {
@@ -82,6 +83,15 @@ const LeftNavMyPages = () => {
         }
     ]
 
+    // const [myPages, setMyPages] = useState(MyPages)
+
+    // useEffect(() => {
+    //     if(newPage) {
+    //         setMyPages(prevState => {
+    //             return[...prevState, newPage]
+    //         })
+    //     }
+    // }, [newPage])
 
     return (
         <>
@@ -101,6 +111,10 @@ const LeftNavMyPages = () => {
         </>
     )
 }
+
+// LeftNavMyPages.propTypes = {
+//     newPage: PropTypes.object
+// }
 
 export default LeftNavMyPages;
 
