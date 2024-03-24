@@ -11,11 +11,15 @@ import { useState } from 'react';
 const FriendRequestElement = ({ imageUrl, name }) => {
 
     const [isVisible, setIsVisible] = useState(true);
-    const [buttonText, setButtonText] = useState('Remove')
-    
+    const [hideButton, setHideButton] = useState(false);
 
-    function removeHandler() {
-        setIsVisible((isVisible) => !isVisible)
+    let initialValue = "Remove"
+    const [buttonText, setButtonText] = useState(initialValue)
+
+    const handleClick = () => {
+        setHideButton(!hideButton)
+        setButtonText("Friends!")
+        setTimeout((setIsVisible), 2000)
     }
 
     return (
@@ -33,8 +37,8 @@ const FriendRequestElement = ({ imageUrl, name }) => {
                     </Typography>
                 </CardContent>
                 <CardActions className={styles.button}>
-                    <Button size="small" sx={{ border: 1 }} className={styles.confirmButton} onClick={() => setButtonText("Friends")}>Confirm</Button>
-                    <Button size="small" sx={{ border: 1 }} className={styles.removeButton} onClick={removeHandler}>{buttonText}</Button>
+                    <Button size="small" sx={{ border: 1, visibility: hideButton ? 'hidden' : 'display' }} className={styles.confirmButton} onClick={handleClick}>Confirm</Button>
+                    <Button size="small" sx={{ border: 1 }} className={styles.removeButton} onClick={() => setIsVisible((isVisible) => !isVisible)}>{buttonText}</Button>
                 </CardActions>
             </Card>}
         </div>

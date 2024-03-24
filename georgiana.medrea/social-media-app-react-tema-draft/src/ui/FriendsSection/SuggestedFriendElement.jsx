@@ -12,14 +12,15 @@ import { useState } from 'react';
 const SuggestedFriendElement = ({ imageUrl, name }) => {
 
     const [isVisible, setIsVisible] = useState(true);
+    const [hideButton, setHideButton] = useState(false);
 
-    function removeFriendRequest() {
-        setIsVisible((isVisible) => !isVisible)
-    }
+    let initialValue = "Remove"
+    const [buttonText, setButtonText] = useState(initialValue)
 
-    function addFriend() {
-        setTimeout(function() {alert('Friend request sent!'); }, 1000);
-        setIsVisible((isVisible) => !isVisible)
+    const handleClick = () => {
+        setHideButton(!hideButton);
+        setButtonText('Sent!')
+        setTimeout((setIsVisible), 2000)
     }
 
     return (
@@ -37,8 +38,8 @@ const SuggestedFriendElement = ({ imageUrl, name }) => {
                     </Typography>
                 </CardContent>
                 <CardActions className={styles.button}>
-                    <Button size="small" sx={{ border: 1 }} className={styles.addFriendButton} onClick={addFriend}>Add friend</Button>
-                    <Button size="small" sx={{ border: 1 }} className={styles.removeButton} onClick={removeFriendRequest}>Remove</Button>
+                    <Button size="small" sx={{ border: 1, visibility: hideButton ? 'hidden' : 'display' }} className={styles.addFriendButton} onClick={handleClick}>Add friend</Button>
+                    <Button size="small" sx={{ border: 1 }} className={styles.removeButton} onClick={() => setIsVisible((isVisible) => !isVisible)}>{buttonText}</Button>
                 </CardActions>
             </Card>}
         </div>
