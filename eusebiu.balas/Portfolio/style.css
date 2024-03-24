@@ -254,7 +254,7 @@ span{
   
 
 
-.portfolio{
+  .portfolio{
     background: var(--second-bg-color);
 }
 
@@ -327,6 +327,8 @@ span{
     font-size: 2rem;
     color: var(--second-bg-color);
 }
+
+
 
 
 .contact h2{
