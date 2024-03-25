@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 
-const LeftNavMyPages = () => {
+const LeftNavMyPages = ({ newPage }) => {
 
     const MyPages = [
         {
@@ -85,7 +85,7 @@ const LeftNavMyPages = () => {
         }
     ]
 
-    // const [myPages, setMyPages] = useState(MyPages)
+    const [myPages, setMyPages] = useState(MyPages)
 
     // const updateMyPages = (newPage) => {
     //     setMyPages(prevState => {
@@ -96,22 +96,22 @@ const LeftNavMyPages = () => {
     //     })
     // }
 
-    // useEffect(() => {
-    //     if(newPage) {
-    //         setMyPages(prevState => {
-    //             return[
-    //                 ...prevState, 
-    //                 newPage
-    //             ]
-    //         })
-    //     }
-    // }, [newPage])
+    useEffect(() => {
+        if(newPage) {
+            setMyPages(prevState => {
+                return[
+                    ...prevState, 
+                    newPage
+                ]
+            })
+        }
+    }, [newPage])
 
     return (
         <>
             <h3 className={styles.titleLikedPages}>Liked Pages</h3>
             <div className={styles.likedPages}>
-                {MyPages.map((myPage) => {
+                {myPages.map((myPage) => {
                     return (
                         <MyPagesElement
                             imageUrl={myPage.imageUrl}
@@ -120,12 +120,14 @@ const LeftNavMyPages = () => {
                             pageLikes={myPage.pageLikes}
                         />
                     )
-                })}
-                {/* <MyPageElement updateThePages={updateMyPages}/> */}
-                    
+                })}                  
             </div>
         </>
     )
+}
+
+LeftNavMyPages.propTypes = {
+    newPage: PropTypes.object
 }
 
 export default LeftNavMyPages;

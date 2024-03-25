@@ -3,6 +3,8 @@ import pageName3 from '../assets/images/pageName3.jpeg';
 import pageName4 from '../assets/images/pageName4.jpeg';
 import SuggestedPagesElement from './SuggestedPagesElement';
 import styles from './LeftNavPages.module.scss'
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 
 const LeftNavSuggestedPages = () => {
@@ -82,20 +84,33 @@ const LeftNavSuggestedPages = () => {
         }
     ]
 
+    const [newPage, setPage] = useState({
+        pageName: '',
+        imageUrl: '',
+        pageLikes: 0,
+        id: 0
+    })
+
+    const updatePages = (newPage) => {
+        setPage(newPage)
+    }
+
+    // console.log(newPage)
+
     return (
         <>
             <h3 className={styles.titleSuggestedPages}>Suggested Pages</h3>
             <div className={styles.suggestedPages}>
                 {SuggestedPagesList.map((suggestedPage) => {
-                return (
-                <SuggestedPagesElement
-                    imageUrl={suggestedPage.imageUrl}
-                    pageName={suggestedPage.pageName}
-                    key={suggestedPage.id}
-                    pageLikes={suggestedPage.pageLikes}
-                />
-                )
-            })}
+                    return (
+                        <SuggestedPagesElement
+                            imageUrl={suggestedPage.imageUrl}
+                            pageName={suggestedPage.pageName}
+                            key={suggestedPage.id}
+                            pageLikes={suggestedPage.pageLikes}
+                            updateThePages={updatePages} />
+                    )
+                })}
             </div>
         </>
     )
