@@ -12,14 +12,18 @@ import CommentIcon from '@mui/icons-material/Comment';
 import profile from '../../../assets/icons/profile.jpeg'
 import post1 from '../../../assets/images/post1.jpg'
 import post2 from '../../../assets/images/post2.jpg'
-import { useState } from 'react';
+import {  useState } from 'react';
 import CommentsSection from './comments/CommentsSection';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../../redux/selectors';
 
 const Newsfeed = ({ postData }) => {
     const [isLiked, setIsLiked] = useState(false);
     const [likes, setLikes] = useState(Math.floor(Math.random() * 100))
     const [isShared, setIsShared] = useState(false)
     const [shares, setShares] = useState(Math.floor(Math.random() * 100))
+
+    const user = useSelector(selectUser)
 
     const postImages = {
         0: post1,
@@ -46,11 +50,11 @@ const Newsfeed = ({ postData }) => {
     return (
         <div className={styles.mainPost}>
             <div className={styles.userInfo}>
-                <Link to='/me'>
+                <Link to={`/profile/${postData.id}`}>
                     <img src={profile} alt="Profile Picture"
                         className={styles.profilePictureImg} />
                 </Link>
-                <Link to='/me'>Userul Meu</Link>
+                <Link to={`/profile/${postData.id}`}>Userul Meu</Link>
 
                 <div className={styles.contextMenu}>
                     <MoreHorizIcon />
