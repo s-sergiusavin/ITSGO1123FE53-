@@ -3,92 +3,106 @@ import pageName3 from '../assets/images/pageName3.jpeg';
 import pageName4 from '../assets/images/pageName4.jpeg';
 import MyPagesElement from './MyPagesElement';
 import styles from './LeftNavPages.module.scss'
+import MyPageElement from './MyPagesElement';
+import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 
-const LeftNavMyPages = ({ newPage }) => {
+const LeftNavMyPages = () => {
 
     const MyPages = [
         {
             imageUrl: pageName2,
-            pageName: 'Event name 1',
+            pageName: 'Page name 1',
+            id: 0,
+            pageLikes: Math.floor(Math.random() * 25),
+        },
+        {
+            imageUrl: pageName3,
+            pageName: 'Page name 2',
             id: 1,
-            likes: Math.floor(Math.random() * 25),
+            pageLikes: Math.floor(Math.random() * 15)
         },
         {
-            imageUrl: pageName3,
-            pageName: 'Event name 2',
+            imageUrl: pageName4,
+            pageName: 'Page name 3',
             id: 2,
-            likes: Math.floor(Math.random() * 15)
+            pageLikes: Math.floor(Math.random() * 15)
         },
         {
-            imageUrl: pageName4,
-            pageName: 'Event name 3',
+            imageUrl: pageName3,
+            pageName: 'Page name 4',
             id: 3,
-            likes: Math.floor(Math.random() * 15)
+            pageLikes: Math.floor(Math.random() * 15)
         },
         {
-            imageUrl: pageName3,
-            pageName: 'Event name 4',
+            imageUrl: pageName4,
+            pageName: 'Page name 5',
             id: 4,
-            likes: Math.floor(Math.random() * 15)
+            pageLikes: Math.floor(Math.random() * 15)
         },
         {
-            imageUrl: pageName4,
-            pageName: 'Event name 5',
+            imageUrl: pageName2,
+            pageName: 'Page name 6',
             id: 5,
-            likes: Math.floor(Math.random() * 15)
+            pageLikes: Math.floor(Math.random() * 15)
         },
         {
-            imageUrl: pageName2,
-            pageName: 'Event name 6',
+            imageUrl: pageName3,
+            pageName: 'Page name 7',
             id: 6,
-            likes: Math.floor(Math.random() * 15)
+            pageLikes: Math.floor(Math.random() * 15)
         },
         {
-            imageUrl: pageName3,
-            pageName: 'Event name 7',
+            imageUrl: pageName2,
+            pageName: 'Page name 8',
             id: 7,
-            likes: Math.floor(Math.random() * 15)
-        },
-        {
-            imageUrl: pageName2,
-            pageName: 'Event name 8',
-            id: 8,
-            likes: Math.floor(Math.random() * 15)
+            pageLikes: Math.floor(Math.random() * 15)
         },
         {
             imageUrl: pageName3,
-            pageName: 'Event name 9',
-            id: 9,
-            likes: Math.floor(Math.random() * 15)
+            pageName: 'Page name 9',
+            id: 8,
+            pageLikes: Math.floor(Math.random() * 15)
         },
         {
             imageUrl: pageName4,
-            pageName: 'Event name 10',
-            id: 10,
-            likes: Math.floor(Math.random() * 15)
+            pageName: 'Page name 10',
+            id: 9,
+            pageLikes: Math.floor(Math.random() * 15)
         },
         {
             imageUrl: pageName2,
-            pageName: 'Event name 11',
-            id: 11,
-            likes: Math.floor(Math.random() * 15)
+            pageName: 'Page name 11',
+            id: 10,
+            pageLikes: Math.floor(Math.random() * 15)
         },
         {
             imageUrl: pageName4,
-            pageName: 'Event name 12',
-            id: 12,
-            likes: Math.floor(Math.random() * 15)
+            pageName: 'Page name 12',
+            id: 11,
+            pageLikes: Math.floor(Math.random() * 15)
         }
     ]
 
     // const [myPages, setMyPages] = useState(MyPages)
 
+    // const updateMyPages = (newPage) => {
+    //     setMyPages(prevState => {
+    //         return [
+    //             ...prevState,
+    //             newPage
+    //         ]
+    //     })
+    // }
+
     // useEffect(() => {
     //     if(newPage) {
     //         setMyPages(prevState => {
-    //             return[...prevState, newPage]
+    //             return[
+    //                 ...prevState, 
+    //                 newPage
+    //             ]
     //         })
     //     }
     // }, [newPage])
@@ -103,18 +117,16 @@ const LeftNavMyPages = ({ newPage }) => {
                             imageUrl={myPage.imageUrl}
                             pageName={myPage.pageName}
                             key={myPage.id}
-                            likes={myPage.likes}
+                            pageLikes={myPage.pageLikes}
                         />
                     )
                 })}
+                {/* <MyPageElement updateThePages={updateMyPages}/> */}
+                    
             </div>
         </>
     )
 }
-
-// LeftNavMyPages.propTypes = {
-//     newPage: PropTypes.object
-// }
 
 export default LeftNavMyPages;
 

@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import styles from './LeftNavPages.module.scss'
 
 
-const MyPageElement = ({ imageUrl, pageName, likes}) => {
+const MyPageElement = ({ imageUrl, pageName, pageLikes }) => {
     return (
         <Card sx={{ maxWidth: 300 }} className={styles.likedPage}>
                     <CardActionArea>
@@ -22,7 +22,7 @@ const MyPageElement = ({ imageUrl, pageName, likes}) => {
                                 <strong>{pageName}</strong>
                             </Typography>
                             <Typography gutterBottom component="div" className={styles.likedPageLikes}>
-                                <small>{likes} people like this page</small>
+                                <small>{pageLikes} people like this page</small>
                             </Typography>
                         </CardContent>
                     </CardActionArea>
@@ -38,7 +38,7 @@ const MyPageElement = ({ imageUrl, pageName, likes}) => {
 MyPageElement.propTypes = {
     imageUrl: PropTypes.string.isRequired,
     pageName: PropTypes.string.isRequired,
-    likes: PropTypes.number.isRequired
+    pageLikes: PropTypes.number.isRequired
 }
 
 export default MyPageElement;

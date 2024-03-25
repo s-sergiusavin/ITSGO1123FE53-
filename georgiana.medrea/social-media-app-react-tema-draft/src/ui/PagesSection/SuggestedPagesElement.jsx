@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import styles from './LeftNavPages.module.scss';
 import { useState } from 'react';
 
-const SuggestedPagesElement = ({ imageUrl, pageName, likes, updateThePages }) => {
+const SuggestedPagesElement = ({ imageUrl, pageName, pageLikes, updateThePages }) => {
 
     const [isVisible, setIsVisible] = useState(true);
 
@@ -22,11 +22,13 @@ const SuggestedPagesElement = ({ imageUrl, pageName, likes, updateThePages }) =>
         setTimeout((setIsVisible), 2000)
 
         // const newPage = {
-        //     imageUrl: imageUrl,
         //     pageName: pageName,
-        //     id: Math.random() * 100,
-        //     likes: likes
+        //     imageUrl: imageUrl,
+        //     pageLikes: pageLikes,
+        //     id: Math.floor(Math.random()) * 100
         // }
+
+        // console.log(newPage)
 
         // updateThePages(newPage)
     }
@@ -46,7 +48,7 @@ const SuggestedPagesElement = ({ imageUrl, pageName, likes, updateThePages }) =>
                             <strong>{pageName}</strong>
                         </Typography>
                         <Typography gutterBottom component="div" className={styles.suggestedPageLikes}>
-                            <small>{likes} people like this page</small>
+                            <small>{pageLikes} people like this page</small>
                         </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -63,8 +65,8 @@ const SuggestedPagesElement = ({ imageUrl, pageName, likes, updateThePages }) =>
 SuggestedPagesElement.propTypes = {
     imageUrl: PropTypes.string.isRequired,
     pageName: PropTypes.string.isRequired,
-    likes: PropTypes.number.isRequired,
-    updateThePages: PropTypes.func
+    pageLikes: PropTypes.number.isRequired,
+    // updateThePages: PropTypes.func
 }
 
 
