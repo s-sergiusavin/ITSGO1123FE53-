@@ -1,0 +1,38 @@
+.sidebar {
+    width: 30%;
+    background-color: #f0f2f5;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
+  
+    &__header {
+      h2 {
+        margin-bottom: 20px;
+      }
+    }
+  
+    &__menu {
+     
+      a {
+        display: block;
+        color: #333;
+        text-decoration: none;
+        margin-bottom: 10px;
+        font-size: 24px;
+        
+        &:hover {
+          color: #1877f2; // Culoare de accent pentru hover
+        }
+      }
+    }
+  
+    &__footer {
+      position: absolute;
+      bottom: 20px;
+    }
+  }
+  

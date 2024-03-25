@@ -1,71 +1,75 @@
-.mainContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-
-    aside {
-        width: 15rem;
-        background-color: lightgray;
-        height: 50vh;
-        position: fixed;
-        top: 5rem;
-
-        &.leftSide {
-            left: 0;
-        }
-
-        &.rightSide {
-            right: 0;
-        }
-    }
-}
-
-
 // .mainContainer {
 //     display: flex;
 //     justify-content: center;
 //     align-items: center;
 //     gap: 3rem;
-//       aside {
 
-
- 
-//       } 
-
-//     .leftSide,
-//     .rightSide {
-//         width: 20rem;
+//     aside {
+//         width: 15rem;
 //         background-color: lightgray;
-//         height: 100vh;
-//         padding: 20px;
-//         overflow-y: auto;
+//         height: 50vh;
 //         position: fixed;
-//         top: 0;
-//     }
+//         top: 5rem;
 
-//     .leftSide {
-//         left: 0;
-//     }
+//         &.leftSide {
+//             left: 0;
+//         }
 
-//     .rightSide {
-//         right: 0;
-//     }
-
-//     ul {
-//         list-style-type: none;
-//         padding: 0;
-//         margin: 0;
-        
-//         li {
-//             padding: 10px 0;
-//             font-size: 18px;
-//             color: #333;
-//             cursor: pointer;
-            
-//             &:hover {
-//                 background-color: #ddd;
-//             }
+//         &.rightSide {
+//             right: 0;
 //         }
 //     }
 // }
+
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    //   aside {
+    //     width: 15rem;
+    //      background-color: lightgray;
+    //     height: 50vh;
+    //     position: fixed;
+    //     top: 5rem;
+
+ 
+    //   } 
+
+    .leftSide,
+    .rightSide {
+        width: 20rem;
+        background-color: lightgray;
+        height: 100vh;
+        padding: 20px;
+        overflow-y: auto;
+        position: fixed;
+        top: 0;
+    }
+
+    .leftSide {
+        left: 0;
+    }
+
+    .rightSide {
+        right: 0;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+            padding: 10px 0;
+            font-size: 18px;
+            color: #333;
+            cursor: pointer;
+            
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+    }
+}
