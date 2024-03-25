@@ -1,9 +1,9 @@
-import './App.scss'
+import './App.css'
 import { Routes, Route } from 'react-router-dom'
-import HomePage from '../pages/home/HomePage'
-import AuthPage from '../pages/auth/AuthPage'
-import NotFound from '../pages/NotFound'
-import Layout from '../components/Layout'
+import HomePage from './pages/home/HomePage'
+import AuthPage from './pages/auth/AuthPage'
+import NotFound from './pages/NotFound'
+import Layout from './components/Layout'
 
 function App() {
 

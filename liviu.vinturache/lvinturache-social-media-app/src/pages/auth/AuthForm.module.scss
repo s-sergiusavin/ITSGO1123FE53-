@@ -1,0 +1,167 @@
+@import 'normalize.css';
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.auth {
+  margin: 3rem auto;
+  width: 100%;
+  max-width: 30rem;
+  border-radius: 5%;
+  border-color: rgb(241, 156, 37);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  background-color: teal;
+  position: absolute;
+  top: 10%;
+  letter-spacing: 0.2rem;
+  line-height: 2.5rem;
+  display: inline-block;
+  margin-left: 40%;
+  
+
+
+  form {
+    .control {
+      margin-bottom: 0.5rem;
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+      }
+
+      input {
+        background-color: lightgray;
+        border-radius: 5px;
+        color: teal;
+        border: 1px solid teal;
+        width: 100%;
+        text-align: left;
+        padding: 0.25rem;
+      }
+    }
+
+    .actions {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      button {
+        cursor: pointer;
+        color: white;
+        background-color: cadetblue;
+        border: 1px solid white;
+        border-radius: 5%;
+        padding: 0.5rem 2.5rem;
+
+        &:hover {
+          background-color: lightblue;
+          border: cadetblue;
+        }
+      }
+
+      .toggle {
+        margin-top: 1rem;
+        background-color: transparent;
+        color: white;
+        border: none;
+        padding: 0.15rem 1.5rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+// .formContainer {
+//   margin: 10rem auto;
+//   width: 95%;
+//   max-width: 30rem;
+//   border-radius: 0.5rem;
+//   background-color: rgba(149, 61, 61, 0.566);
+//   box-shadow: 0 1px 1px #888888;
+//   padding: 2rem 5rem;
+//   opacity: 0.5;
+//   &:hover {
+//     opacity: 0.7;
+//     background-color: rgba(239, 70, 3, 0.746);
+//   }
+//   #headerTitle,
+//   #forgotPassword {
+//     @include loginFlex();
+//   }
+// }
+// form {
+//   display: flex;
+//   flex-direction: column;
+// }
+// .formField {
+//   margin-bottom: 0.5rem;
+//   input {
+//     background-color: $globalLightBlue;
+//     color: purple;
+//     border-radius: 0.5rem;
+//     border: 1px solid $globalWhite;
+//     padding: 0.5rem;
+//     width: 100%;
+//   }
+//   label {
+//     width: 90%;
+//     text-align: left;
+//     cursor: pointer;
+//   }
+// }
+
+// .formField.rememberUserField input {
+//   width: 10%;
+// }
+
+// .formField.rememberUserField label {
+//   width: 90%;
+//   text-align: left;
+//   cursor: pointer;
+// }
+// .loginButton {
+//   background-color: cadetblue;
+
+//   border: 1px solid $globalWhite;
+//   color: $globalWhite;
+//   padding: 0.5rem 2.5rem;
+//   border-radius: 0.3rem;
+//   cursor: pointer;
+//   margin-bottom: 1rem;
+//   &:hover {
+//     background-color: $globalLightBlue;
+//     border: cadetblue;
+//     font-weight: bold;
+//   }
+// }
+
+// a strong {
+//   color: $globalLightBlue;
+// }
+
+// .registerButton {
+//   background-color: turquoise;
+//   border: 1px solid $globalWhite;
+//   padding: 0.5rem 2.5rem;
+//   display: block;
+//   margin: 0 auto;
+//   border-radius: 0.5rem;
+//   width: 75%;
+//   margin-bottom: 1rem;
+//   cursor: pointer;
+//   &:hover {
+//     opacity: 0.8;
+//   }
+// }
+// .switchAccount {
+//   color: $globalLightBlue;
+//   @include loginFlex();
+// }

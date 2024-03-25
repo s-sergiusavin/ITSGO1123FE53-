@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import styles from './AuthForm.module.scss'
 import { useNavigate } from 'react-router-dom';
@@ -17,7 +18,7 @@ const AuthForm = () => {
 
     const submitHandler = (event) => {
         event.preventDefault()
-        navigate('/')
+         navigate('/')
 
     }
 
@@ -58,3 +59,4 @@ const AuthForm = () => {
 }
 
 export default AuthForm
+

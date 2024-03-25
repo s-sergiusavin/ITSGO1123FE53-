@@ -1,0 +1,52 @@
+@import 'normalize.css';
+@import '../../scss/variables';
+
+
+
+.mainContainer {
+  position: relative;
+  display: block;
+
+  top: 40rem;
+
+  background: linear-gradient(90deg, rgb(83, 81, 122) 0%, rgb(104, 104, 210) 35%, rgb(239, 242, 243) 100%);
+
+
+  justify-content: space-around;
+  text-align: center;
+  flex-direction: column;
+  height: 20rem;
+
+
+
+
+  .logoImage {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 30%;
+    left: 20%;
+    height: 20rem;
+    flex-direction: column;
+  }
+
+  .logoDescription {
+    position: relative;
+    display: flex;
+    bottom: 10rem;
+    left: 40%;
+    color: $globalWhitesmoke;
+    letter-spacing: 5px;
+    font-size: 1.5rem;
+
+
+    .logoQuote {
+      color: $globalLightGrey;
+       top: 3rem;
+       left: -12.1rem;
+       display: flex;
+       position: relative;
+    }
+
+  }
+}
