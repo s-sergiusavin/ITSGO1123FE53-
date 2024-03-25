@@ -8,6 +8,19 @@ import RightSide from './rightSide/RightSide';
 const StartingPage = () => {
     const posts = useFetch('https://jsonplaceholder.typicode.com/posts')
 
+    const [postList, setPostList] = useState([])
+
+    useEffect( () => {
+        async function getPosts() {
+            const response = await postService.get()
+            setPostList(response)
+            return response;
+        }
+        getPosts().catch(error => {
+            console.error(error)
+        })
+    }, [])
+
     return (
         <div className={styles.mainContainer}>
         <aside><LeftSide/></aside>
