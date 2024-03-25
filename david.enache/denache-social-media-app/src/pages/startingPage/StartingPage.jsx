@@ -4,11 +4,6 @@ import styles from './StartingPage.module.scss';
 import Newsfeed from './newsfeed/Newsfeed';
 import LeftSide from './leftside/LeftSide';
 import RightSide from './rightSide/RightSide';
-// import LeftSide from './leftside/LeftSide';
-// import RightSide from './rightSide/RightSide';
-
-// import LeftSide from './../../../src/pages/startingPage/leftside/LeftSide'
-// import RightSide from './../../../src/pages/startingPage/rightSide/RightSide'
 
 const StartingPage = () => {
     const posts = useFetch('https://jsonplaceholder.typicode.com/posts')
