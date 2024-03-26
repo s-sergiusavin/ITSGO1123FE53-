@@ -8,6 +8,8 @@ import NotFound from './logic/NotFound';
 import HomeIcon from '@mui/icons-material/Home';
 import DevicesOtherIcon from '@mui/icons-material/DevicesOther';
 import AddToQueueIcon from '@mui/icons-material/AddToQueue';
+import useFetch from './hooks/use-fetch';
+import useAxios from './hooks/use-axios';
 
 function App() {
 
@@ -17,24 +19,37 @@ function App() {
     state: false,
     id: 0
   })
+
+  const [users] = useFetch('https://reqres.in/api/users?page=2')
+  const {data, loading, error} = useAxios('https://reqres.in/api/users?page=2')
+
+
   const updateFeatures = (newFeature) => {
     setFeature(newFeature)
   }
 
-const testLocalStorage = 'Acest text va aparea in local storage'
-const testSessionStorage = 'acest text va aparea in session storage'
+  const testLocalStorage = 'Acest text va aparea in local stoarge';
+  const testSessionStorage = 'Acest text va aparea in session storage';
+
+  const objectLocalStorage = {
+    testLocalStorage: 'Acest text va aparea in local stoarge'
+  }
 
   const setStorage = () => {
-    localStorage.setItem('localStorageTest', testLocalStorage)
+    localStorage.setItem('localStorageTest', JSON.stringify(objectLocalStorage))
     localStorage.setItem('localStorageTest2', 'testLocalStorage')
     sessionStorage.setItem('setSessionStorage', testSessionStorage)
     sessionStorage.setItem('setSessionStorage2', 'testSessionStorage')
   }
 
   const removeStorage = () => {
-    localStorage.clear(),
-    sessionStorage.clear()
+    // Metoda remove item sterge elementul cu cheia oferita
+    // localStorage.removeItem('localStorageTest')
+    // sessionStorage.removeItem('setSessionStorage')
 
+    // Metoda clear sterge tot din locul in care e apelat
+    localStorage.clear();
+    sessionStorage.clear()
   }
 
   return (
@@ -70,6 +85,14 @@ const testSessionStorage = 'acest text va aparea in session storage'
         <Route path='/features-form' element={<FeaturesForm updateTheFeatures={updateFeatures} />}></Route>
         <Route path='*' element={<NotFound/>}></Route>
       </Routes>
+
+      <h2>Data with use fetch</h2>
+      {users && users.map(user => <div key={user.id}>{user.first_name} {user.last_name}</div>)}
+
+      <h2>Data with axios</h2>
+      {loading && <div>{loading}</div>}
+      {error && <div>{error}</div>}
+      {!loading && !error && data && data.map(user => <div key={user.id}>{user.first_name} {user.last_name}</div>)}
     </>
   )
 }
