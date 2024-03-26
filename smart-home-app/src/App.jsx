@@ -21,6 +21,22 @@ function App() {
     setFeature(newFeature)
   }
 
+const testLocalStorage = 'Acest text va aparea in local storage'
+const testSessionStorage = 'acest text va aparea in session storage'
+
+  const setStorage = () => {
+    localStorage.setItem('localStorageTest', testLocalStorage)
+    localStorage.setItem('localStorageTest2', 'testLocalStorage')
+    sessionStorage.setItem('setSessionStorage', testSessionStorage)
+    sessionStorage.setItem('setSessionStorage2', 'testSessionStorage')
+  }
+
+  const removeStorage = () => {
+    localStorage.clear(),
+    sessionStorage.clear()
+
+  }
+
   return (
     <>
       <header>
@@ -41,6 +57,9 @@ function App() {
           </ul>
         </nav>
       </header>
+
+      <button onClick={setStorage}>Set storage</button>
+      <button onClick={removeStorage}>Remove storage</button>
 
       <div className='lights yellow'></div>
 
