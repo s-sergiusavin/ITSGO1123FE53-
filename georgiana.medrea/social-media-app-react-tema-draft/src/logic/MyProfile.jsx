@@ -37,7 +37,7 @@ import Box from '@mui/material/Box';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as React from 'react';
 import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
@@ -46,7 +46,9 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import WomanIcon from '@mui/icons-material/Woman';
 import CakeIcon from '@mui/icons-material/Cake';
-import IntroElement from "./IntroElement";
+import MyProfileIntroElement from "./MyProfileIntroElement";
+import MyProfilePostSection from "./MyProfilePostSection";
+import useFetch from '../ui/hooks/useFetch';
 
 
 const MyProfile = () => {
@@ -263,7 +265,7 @@ const MyProfile = () => {
     const [dense, setDense] = useState(false);
     const [secondary, setSecondary] = useState(false);
 
-
+    const posts = useFetch('https://jsonplaceholder.typicode.com/posts')
 
     return (
         <div className={styles.myProfileContainer}>
@@ -279,10 +281,10 @@ const MyProfile = () => {
             <div className={styles.myProfileSections}>
                 <section className={styles.myProfileLeftSection}>
                     <div className={styles.intro}>
-                        <ListItemText primary="Intro" className={styles.myProfileIntroTitle} />
+                        <ListItemText primary="About me" className={styles.myProfileIntroTitle} />
                         {IntroDataList.map((introData) => {
                             return (
-                                <IntroElement
+                                <MyProfileIntroElement
                                     icon={introData.icon}
                                     text={introData.text}
                                     key={introData.id}
@@ -323,7 +325,11 @@ const MyProfile = () => {
                         </ImageList>
                     </div>
                 </section>
-                <section className={styles.myProfileRightSection}></section>
+                <section className={styles.myProfileRightSection}>
+                    {posts && posts.map(post => {
+                        return <MyProfilePostSection postData={post} key={post.id} />
+                    })}
+                </section>
             </div>
 
         </div>

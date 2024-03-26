@@ -24,7 +24,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 
-const IntroElement = ({ icon, text }) => {
+const MyProfileIntroElement = ({ icon, text }) => {
 
     const Demo = styled('div')(({ theme }) => ({
         backgroundColor: theme.palette.background.paper,
@@ -72,4 +72,4 @@ const IntroElement = ({ icon, text }) => {
     )
 }
 
-export default IntroElement;
+export default MyProfileIntroElement;
