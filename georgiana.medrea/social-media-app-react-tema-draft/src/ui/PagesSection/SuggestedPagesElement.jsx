@@ -21,16 +21,16 @@ const SuggestedPagesElement = ({ imageUrl, pageName, pageLikes, updateThePages }
         setActive(!active);
         setTimeout((setIsVisible), 2000)
 
-        const newPage = {
-            pageName: pageName,
-            imageUrl: imageUrl,
-            pageLikes: pageLikes,
-            id: Math.floor(Math.random()) * 100
-        }
+        // const newPage = {
+        //     pageName: pageName,
+        //     imageUrl: imageUrl,
+        //     pageLikes: 0,
+        //     id: Math.floor(Math.random() * 15)
+        // }
 
-        console.log(newPage)
+        // console.log(newPage)
 
-        updateThePages(newPage)
+        // updateThePages(newPage)
     }
 
     return (
@@ -66,7 +66,7 @@ SuggestedPagesElement.propTypes = {
     imageUrl: PropTypes.string.isRequired,
     pageName: PropTypes.string.isRequired,
     pageLikes: PropTypes.number.isRequired,
-    updateThePages: PropTypes.func
+    // updateThePages: PropTypes.func
 }
 
 

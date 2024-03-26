@@ -27,6 +27,26 @@ import userName9 from '../ui/assets/images/userName9.jpg';
 import userName10 from '../ui/assets/images/userName10.jpg';
 import userName11 from '../ui/assets/images/userName11.jpg';
 import userName12 from '../ui/assets/images/userName12.jpg';
+import { styled } from '@mui/material/styles';
+import IconButton from '@mui/material/IconButton';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import FolderIcon from '@mui/icons-material/Folder';
+import DeleteIcon from '@mui/icons-material/Delete';
+import Box from '@mui/material/Box';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import { useState } from "react";
+import * as React from 'react';
+import WorkIcon from '@mui/icons-material/Work';
+import SchoolIcon from '@mui/icons-material/School';
+import HomeIcon from '@mui/icons-material/Home';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import WomanIcon from '@mui/icons-material/Woman';
+import CakeIcon from '@mui/icons-material/Cake';
+import IntroElement from "./IntroElement";
 
 
 const MyProfile = () => {
@@ -202,6 +222,48 @@ const MyProfile = () => {
         }
     ]
 
+    const IntroDataList = [
+        {
+            icon: <WomanIcon />,
+            text: "Gender: Female",
+            id: 0
+        },
+        {
+            icon: <CakeIcon />,
+            text: "Birthdate: 10 November 1983",
+            id: 1
+        },
+        {
+            icon: <FavoriteIcon />,
+            text: "In a relationship",
+            id: 2
+        },
+        {
+            icon: <HomeIcon />,
+            text: "Lives in Timisoara, Romania",
+            id: 3
+        },
+        {
+            icon: <WorkIcon />,
+            text: "Controller at Draxlmaier Group",
+            id: 4
+        },
+        {
+            icon: <SchoolIcon />,
+            text: "Studied at West University",
+            id: 5
+        }
+    ]
+
+    const Demo = styled('div')(({ theme }) => ({
+        backgroundColor: theme.palette.background.paper,
+    }));
+
+
+    const [dense, setDense] = useState(false);
+    const [secondary, setSecondary] = useState(false);
+
+
 
     return (
         <div className={styles.myProfileContainer}>
@@ -216,7 +278,18 @@ const MyProfile = () => {
             </header>
             <div className={styles.myProfileSections}>
                 <section className={styles.myProfileLeftSection}>
-                    <div className={styles.intro}>Intro</div>
+                    <div className={styles.intro}>
+                        <ListItemText primary="Intro" className={styles.myProfileIntroTitle} />
+                        {IntroDataList.map((introData) => {
+                            return (
+                                <IntroElement
+                                    icon={introData.icon}
+                                    text={introData.text}
+                                    key={introData.id}
+                                />
+                            )
+                        })}
+                    </div>
                     <div className={styles.myPhotos}>
                         <ListItemText primary="Photos" className={styles.myProfilePhotosTitle} />
                         <ImageList sx={{ width: 500, height: 500 }} cols={3} rowHeight={164}>
@@ -256,5 +329,6 @@ const MyProfile = () => {
         </div>
     )
 }
+
 
 export default MyProfile;

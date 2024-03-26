@@ -85,7 +85,7 @@ const LeftNavMyPages = ({ newPage }) => {
         }
     ]
 
-    const [myPages, setMyPages] = useState(MyPages)
+    // const [myPages, setMyPages] = useState(MyPages)
 
     // const updateMyPages = (newPage) => {
     //     setMyPages(prevState => {
@@ -96,22 +96,22 @@ const LeftNavMyPages = ({ newPage }) => {
     //     })
     // }
 
-    useEffect(() => {
-        if(newPage) {
-            setMyPages(prevState => {
-                return[
-                    ...prevState, 
-                    newPage
-                ]
-            })
-        }
-    }, [newPage])
+    // useEffect(() => {
+    //     if(newPage.pageName !== '') {
+    //         setMyPages(prevState => {
+    //             return[
+    //                 ...prevState, 
+    //                 newPage
+    //             ]
+    //         })
+    //     }
+    // }, [newPage])
 
     return (
         <>
             <h3 className={styles.titleLikedPages}>Liked Pages</h3>
             <div className={styles.likedPages}>
-                {myPages.map((myPage) => {
+                {MyPages.map((myPage) => {
                     return (
                         <MyPagesElement
                             imageUrl={myPage.imageUrl}
@@ -126,9 +126,9 @@ const LeftNavMyPages = ({ newPage }) => {
     )
 }
 
-LeftNavMyPages.propTypes = {
-    newPage: PropTypes.object
-}
+// LeftNavMyPages.propTypes = {
+//     newPage: PropTypes.object
+// }
 
 export default LeftNavMyPages;
 
