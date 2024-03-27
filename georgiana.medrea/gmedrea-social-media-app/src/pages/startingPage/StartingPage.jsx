@@ -1,20 +1,39 @@
+import { useEffect, useState } from 'react';
 import useFetch from '../../hooks/useFetch';
 import styles from './StartingPage.module.scss'
 import Newsfeed from './newsfeed/Newsfeed';
-import RightSide from './rightSide/RightSide';
+import LeftSide from './leftside/LeftSide.jsx';
+import RightSide from './rightSide/RightSide.jsx';
+import postService from '../../services/postService';
 
 const StartingPage = () => {
     const posts = useFetch('https://jsonplaceholder.typicode.com/posts')
 
+    const [postList, setPostList] = useState([])
+
+    useEffect( () => {
+        async function getPosts() {
+            const response = await postService.get()
+            setPostList(response)
+            return response;
+        }
+        getPosts().catch(error => {
+            console.error(error)
+        })
+    }, [])
+
     return (
         <div className={styles.mainContainer}>
-            <aside className={styles.leftSide}>Left side</aside>
+            <LeftSide className={styles.leftSide} />
             <section className={styles.newsfeed}>
+                {postList && postList.map(post => {
+                    return <Newsfeed postData={post} key={post.id}/>
+                })}
                 {posts && posts.map(post => {
                     return <Newsfeed postData={post} key={post.id}/>
                 })}
             </section>
-            <RightSide className={styles.rightSide}/>
+            <RightSide className={styles.rightSide} />
         </div>
     )
 }

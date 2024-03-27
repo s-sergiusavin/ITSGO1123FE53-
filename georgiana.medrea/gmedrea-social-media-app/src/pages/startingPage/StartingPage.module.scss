@@ -1,38 +1,22 @@
 .mainContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 3rem;
 
-    .rightContainer {
-        width: 20rem;
+    aside {
+        width: 15rem;
         background-color: lightgray;
-        height: 90vh;
-        top: 2rem;
-        border: 5px solid whitesmoke;
+        height: 50vh;
         position: fixed;
-        overflow: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
+        top: 5rem;
 
-    .leftSide {
-        width: 20rem;
-        background-color: lightgray;
-        height: 90vh;
-        top: 5.5rem;
-        border: 5px solid whitesmoke;
-        position: fixed;
-        overflow: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
+        &.leftSide {
+            left: 0;
+        }
 
-    .newsfeed {
-        width: 40rem;
-        position: relative;
-        left: 50rem;
+        &.rightSide {
+            right: 0;
+        }
     }
 }

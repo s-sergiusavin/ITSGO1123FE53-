@@ -104,221 +104,228 @@
             position: relative;
             right: -5rem;
             border-radius: 10px;
-            background-color: whitesmoke;
             top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
 
-            .userInfo {
-                display: flex;
-                margin: 0 1rem;
-                justify-content: space-between;
-                align-items: center;
+            .mainPost {
 
-                a {
-                    text-decoration: none;
-                    color: black;
+                background-color: whitesmoke;
+                border: 1px solid whitesmoke;
 
-                    &:hover {
-                        text-decoration: underline;
+                .userInfo {
+                    display: flex;
+                    margin: 0 1rem;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    a {
+                        text-decoration: none;
+                        color: black;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .myProfilePictureImg {
+                        height: 3rem;
+                        width: 3rem;
+                        border-radius: 50%;
+                        object-fit: cover;
+                        margin-right: 0.3rem;
+                    }
+
+                    .contextMenu {
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+                        position: relative;
+                        right: 0;
+                        flex-direction: column;
+
+                        &:hover {
+                            border: 1px solid teal;
+                        }
+
+                        .dropDownListItems {
+                            list-style-type: none;
+                            position: absolute;
+                            top: -0.3rem;
+                            right: -8.5rem;
+                            width: 10rem;
+                            padding: 0.5rem;
+                            border-radius: 8px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
+                            z-index: 1;
+
+                            .dropDownDelete {
+                                width: 7.5rem;
+                                height: 1.5rem;
+                            }
+
+                            .dropDownHide {
+                                width: 7.5rem;
+                                height: 1.5rem;
+                            }
+                        }
                     }
                 }
 
-                .myProfilePictureImg {
-                    height: 3rem;
-                    width: 3rem;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    margin-right: 0.3rem;
-                }
-
-                .contextMenu {
-                    border-radius: 50%;
+                .content {
                     display: flex;
+                    flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    cursor: pointer;
-                    position: relative;
-                    right: 0;
-                    flex-direction: column;
 
-                    &:hover {
-                        border: 1px solid teal;
+                    p {
+                        margin: 0.2rem 1rem;
+                        align-self: flex-start;
+                        text-align: justify;
                     }
 
-                    .dropDownListItems {
-                        list-style-type: none;
-                        position: absolute;
-                        top: -0.3rem;
-                        right: -8.5rem;
-                        width: 10rem;
-                        padding: 0.5rem;
-                        border-radius: 8px;
+                    .imageWrapper {
+                        position: relative;
+
+                        .mainPostImage {
+                            max-width: 100%;
+                        }
+
+                        .infoIcon {
+                            cursor: pointer;
+                            position: absolute;
+                            right: 3rem;
+                            color: teal;
+                            bottom: -1rem;
+                        }
+                    }
+                }
+
+                .reacts {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0.5rem;
+                }
+
+                .reactsActions {
+                    display: flex;
+                    justify-content: space-around;
+                    margin: 0.5rem 0;
+
+                    .reaction {
                         display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        flex-direction: column;
-                        z-index: 1;
-
-                        .dropDownDelete {
-                            width: 7.5rem;
-                            height: 1.5rem;
-                        }
-
-                        .dropDownHide {
-                            width: 7.5rem;
-                            height: 1.5rem;
-                        }
-                    }
-                }
-            }
-
-            .content {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-
-                p {
-                    margin: 0.2rem 1rem;
-                    align-self: flex-start;
-                    text-align: justify;
-                }
-
-                .imageWrapper {
-                    position: relative;
-
-                    .mainPostImage {
-                        max-width: 100%;
-                    }
-
-                    .infoIcon {
                         cursor: pointer;
-                        position: absolute;
-                        right: 3rem;
-                        color: teal;
-                        bottom: -1rem;
+                        padding: 0.2rem;
+                        border-radius: 5px;
+                        align-items: center;
+
+                        &:hover {
+                            background-color: lightgray;
+                        }
+
+                        &.blue {
+                            color: blue;
+                        }
+
+                        ;
                     }
                 }
-            }
 
-            .reacts {
-                display: flex;
-                justify-content: space-between;
-                margin: 0.5rem;
-            }
-
-            .reactsActions {
-                display: flex;
-                justify-content: space-around;
-                margin: 0.5rem 0;
-
-                .reaction {
+                .commentsInputContainer {
+                    margin: 0.5rem 0.5rem;
                     display: flex;
-                    cursor: pointer;
-                    padding: 0.2rem;
-                    border-radius: 5px;
+                    flex-direction: column;
                     align-items: center;
+                    justify-content: center;
 
-                    &:hover {
-                        background-color: lightgray;
-                    }
-
-                    &.blue {
-                        color: blue;
-                    }
-
-                    ;
-                }
-            }
-
-            .commentsInputContainer {
-                margin: 0.5rem 0.5rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-
-                .commentInputSection {
-                    display: flex;
-                    gap: 2rem;
-
-                    form {
+                    .commentInputSection {
                         display: flex;
-                        gap: 1rem;
+                        gap: 2rem;
 
-                        input {
-                            width: 25rem;
-                            border-radius: 3px;
-                        }
-                    }
-                }
+                        form {
+                            display: flex;
+                            gap: 1rem;
 
-                .profilePictureImg {
-                    margin-right: 0.5rem;
-                    width: 50px;
-                    height: 50px;
-                    object-fit: cover;
-                    border-radius: 50%;
-                }
-
-                .commentInput {
-                    width: 100%;
-                    padding: 0.5rem;
-                    margin-bottom: 0.5rem;
-                    border-radius: 10px;
-                    border: transparent;
-                }
-            }
-
-            .postComments {
-                margin: 1rem 1rem;
-                height: 19rem;
-                overflow: auto;
-
-                .comments {
-                    background-color: #e8e7e7;
-                    border-radius: 15px;
-                    width: 100%;
-                    margin: 1rem 0;
-
-                    .userInfo {
-                        display: flex;
-                        justify-content: start;
-                        margin-left: 0.5rem;
-                        align-items: start;
-
-                        .profilePictureImg {
-                            width: 40px;
-                            height: 40px;
-                            object-fit: cover;
-                            border-radius: 50%;
-                        }
-
-                        .username {
-                            margin-left: 0.5rem;
-                            font-weight: 600;
-                            font-size: 0.8rem;
-
-                            &:hover {
-                                text-decoration: underline;
+                            input {
+                                width: 25rem;
+                                border-radius: 3px;
                             }
                         }
                     }
 
-                    .commentInfo {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: 0.2rem 1rem;
-                        margin-left: 3rem;
-                        padding-bottom: 1rem;
+                    .profilePictureImg {
+                        margin-right: 0.5rem;
+                        width: 50px;
+                        height: 50px;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
 
-                        .timeOfPost {
-                            font-size: 0.75rem;
+                    .commentInput {
+                        width: 100%;
+                        padding: 0.5rem;
+                        margin-bottom: 0.5rem;
+                        border-radius: 10px;
+                        border: transparent;
+                    }
+                }
+
+                .postComments {
+                    margin: 1rem 1rem;
+                    height: 19rem;
+                    overflow: auto;
+
+                    .comments {
+                        background-color: #e8e7e7;
+                        border-radius: 15px;
+                        width: 100%;
+                        margin: 1rem 0;
+
+                        .userInfo {
+                            display: flex;
+                            justify-content: start;
+                            margin-left: 0.5rem;
+                            align-items: start;
+
+                            .profilePictureImg {
+                                width: 40px;
+                                height: 40px;
+                                object-fit: cover;
+                                border-radius: 50%;
+                            }
+
+                            .username {
+                                margin-left: 0.5rem;
+                                font-weight: 600;
+                                font-size: 0.8rem;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+                        .commentInfo {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 0.2rem 1rem;
+                            margin-left: 3rem;
+                            padding-bottom: 1rem;
+
+                            .timeOfPost {
+                                font-size: 0.75rem;
+                            }
                         }
                     }
                 }
             }
-
         }
     }
 }

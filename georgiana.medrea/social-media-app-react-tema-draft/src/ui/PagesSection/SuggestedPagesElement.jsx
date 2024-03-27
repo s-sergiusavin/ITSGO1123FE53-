@@ -28,8 +28,6 @@ const SuggestedPagesElement = ({ imageUrl, pageName, pageLikes, updateThePages }
         //     id: Math.floor(Math.random() * 15)
         // }
 
-        // console.log(newPage)
-
         // updateThePages(newPage)
     }
 

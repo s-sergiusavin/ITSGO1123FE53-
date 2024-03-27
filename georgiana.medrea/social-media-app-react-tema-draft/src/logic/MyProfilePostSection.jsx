@@ -46,8 +46,15 @@ const MyProfilePostSection = ({ postData }) => {
 
     const [openDropDown, setOpenDropDown] = useState(false);
 
+    const [isVisible, setIsVisible] = useState(true);
+
+    const handleClick = () => {
+        setIsVisible((isVisible) => !isVisible)
+    }
+
     return (
-        <div className={styles.mainPost}>
+        <>
+            {isVisible && <div className={styles.mainPost}>
                 <div className={styles.userInfo}>
                     <Link to='/me'>
                         <img src={profile} alt="Profile Picture"
@@ -57,7 +64,7 @@ const MyProfilePostSection = ({ postData }) => {
 
                     <div className={styles.contextMenu}>
                         <MoreHorizIcon onClick={() => setOpenDropDown((openDropDown) => !openDropDown)} />
-                        {openDropDown && <DropDownList />}
+                        {openDropDown && <DropDownList onButtonClick={handleClick}/>}
                     </div>
                 </div>
 
@@ -105,7 +112,8 @@ const MyProfilePostSection = ({ postData }) => {
                 <section className={styles.commentContainer}>
                     <MyProfileCommentSection />
                 </section>
-        </div>
+            </div>}
+        </>
     )
 }
 

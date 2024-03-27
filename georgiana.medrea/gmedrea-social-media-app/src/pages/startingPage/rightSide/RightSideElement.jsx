@@ -1,5 +1,7 @@
-import PropTypes from 'prop-types';
 import styles from './RightSide.module.scss';
+
+import PropTypes from 'prop-types';
+
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
@@ -41,24 +43,24 @@ const RightSideElement = ({ imageUrl, name }) => {
 
     return (
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }} className={styles.rightNav}>
-        <ListItem>
-            <ListItemAvatar>
-                <StyledBadge
-                    overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                    variant="dot"
-                >
-                    <Avatar alt={name} src={imageUrl} sx={{ width: 65, height: 65 }} />
-                </StyledBadge>
-            </ListItemAvatar>
-            <ListItemText primary={name} className={styles.onlineUserName} />
-        </ListItem>
-    </List>
+            <ListItem>
+                <ListItemAvatar>
+                    <StyledBadge
+                        overlap="circular"
+                        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+                        variant="dot"
+                    >
+                        <Avatar alt={name} src={imageUrl} sx={{ width: 65, height: 65 }} />
+                    </StyledBadge>
+                </ListItemAvatar>
+                <ListItemText primary={name} className={styles.onlineUserName} />
+            </ListItem>
+        </List>
     )
 }
 
 RightSideElement.propTypes = {
-    image: PropTypes.object,
+    imageUrl: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired
 }
 

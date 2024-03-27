@@ -97,7 +97,7 @@ const LeftNavMyPages = ({ newPage }) => {
     // }
 
     // useEffect(() => {
-    //     if(newPage.pageName !== '') {
+    //     if(newPage.pageName !== "") {
     //         setMyPages(prevState => {
     //             return[
     //                 ...prevState, 
@@ -117,10 +117,9 @@ const LeftNavMyPages = ({ newPage }) => {
                             imageUrl={myPage.imageUrl}
                             pageName={myPage.pageName}
                             key={myPage.id}
-                            pageLikes={myPage.pageLikes}
-                        />
+                            pageLikes={myPage.pageLikes} />
                     )
-                })}                  
+                })}
             </div>
         </>
     )

@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 
-const LeftNavSuggestedPages = () => {
+const LeftNavSuggestedPages = (props) => {
 
     const SuggestedPagesList = [
         {
@@ -120,6 +120,7 @@ const LeftNavSuggestedPages = () => {
     //         ]
     //     }, [newPage])
     // })
+    
 
 return (
         <>
@@ -132,6 +133,7 @@ return (
                             pageName={suggestedPage.pageName}
                             key={suggestedPage.id}
                             pageLikes={suggestedPage.pageLikes}
+                            // onClick={props.pageHandler}
                             />
                     )
                 })}
@@ -139,9 +141,5 @@ return (
         </>
     )
 }
-
-// LeftNavSuggestedPages.propTypes = {
-//     newPage: PropTypes.object
-// }
 
 export default LeftNavSuggestedPages;

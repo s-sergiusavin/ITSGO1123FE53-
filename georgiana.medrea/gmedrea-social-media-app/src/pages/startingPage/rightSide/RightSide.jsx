@@ -1,81 +1,188 @@
-import RightSideElement from './RightSideElement';
 import styles from './RightSide.module.scss';
 
+import { useEffect, useState } from 'react';
+
+import RightSideElement from './RightSideElement';
+
+import userName1 from '../../../assets/images/userName1.jpg';
+import userName2 from '../../../assets/images/userName2.jpg';
+import userName3 from '../../../assets/images/userName3.jpg';
+import userName4 from '../../../assets/images/userName4.jpeg';
+import userName5 from '../../../assets/images/userName5.jpeg';
+import userName6 from '../../../assets/images/userName6.jpg';
+import userName7 from '../../../assets/images/userName7.jpg';
+import userName8 from '../../../assets/images/userName8.jpg';
+import userName9 from '../../../assets/images/userName9.jpg';
+import userName10 from '../../../assets/images/userName10.jpg';
+import userName11 from '../../../assets/images/userName11.jpg';
+import userName12 from '../../../assets/images/userName12.jpg';
 
 const RightSide = () => {
 
+    function randomUniqueNum(range, outputCount) {
+
+        let arr = []
+        for (let i = 0; i <= range; i++) {
+            arr.push(i)
+        }
+
+        let result = [];
+
+        for (let i = 0; i <= outputCount; i++) {
+            const random = Math.floor(Math.random() * (range - i));
+            result.push(arr[random]);
+            arr[random] = arr[range - i];
+        }
+
+        return result;
+    }
+
+    let randomIds = randomUniqueNum(23, 23);
+
     const FriendsElements = [
         {
-            imageUrl: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTbzMHWQ8YbGA-N1AGdbdFBXPr_qQ5O-wgXfbf62e2_vahCu-z0',
+            imageUrl: userName1,
             name: 'Username 1',
-            id: 0
+            id: randomIds[0]
         },
         {
-            imageUrl: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQc-0OOz-YcwXqETP0Ejssv1g_xWUFbq_kv4-4wDcsBGmJ8D8ez',
+            imageUrl: userName2,
             name: 'Username 2',
-            id: 1
+            id: randomIds[1]
         },
         {
-            imageUrl: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRWURShFTiTxUYBFzZDhkrNvoHvTfvek86GG3vMoRIXvrfSv5Vn',
+            imageUrl: userName3,
             name: 'Username 3',
-            id: 2
+            id: randomIds[2]
         },
         {
-            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThKBJL-iCloJc7R4mgkJI0bECtvCDZ1nxkgLFc0-O7COSKUqsJ',
+            imageUrl: userName4,
             name: 'Username 4',
-            id: 3
+            id: randomIds[3]
         },
         {
-            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqwSEAdEG_UMhONxxcGk1siakq2Pp4sHMwGDVYCBIC-EuBjppV',
+            imageUrl: userName5,
             name: 'Username 5',
-            id: 4
+            id: randomIds[4]
         },
         {
-            imageUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQUiLItFSy8oi_nqQ8zCndjuOpL6uEn0vX0qzITFgiBfAzMtfSo',
+            imageUrl: userName6,
             name: 'Username 6',
-            id: 5
+            id: randomIds[5]
         },
         {
-            imageUrl: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRzdJL8Zxp_Sy_f9c4TeJjLoacWlKjWWfHL_r6EcpNc92Tuw9p8',
+            imageUrl: userName7,
             name: 'Username 7',
-            id: 6
+            id: randomIds[6]
         },
         {
-            imageUrl: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQBpu3igHBQOOkY4UVZ0lexb2CuVKncYwV0Xd8P0lKLD48hqZ2Q',
+            imageUrl: userName8,
             name: 'Username 8',
-            id: 7
+            id: randomIds[7]
         },
         {
-            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1d1oDPh6gnzx1rtcjjJAqoc_TbiWEzoCI7ZaJ4bHxeLIdA0da',
+            imageUrl: userName9,
             name: 'Username 9',
-            id: 8
+            id: randomIds[8]
         },
         {
-            imageUrl: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTh0DogaYKDVNyrk67_vYGDaTsNbeYtrai23yAhN7yovySjcZse',
+            imageUrl: userName10,
             name: 'Username 10',
-            id: 9
+            id: randomIds[9]
         },
         {
-            imageUrl: 'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSZqOzzYvEhW2GDBq9fQUqDi0Ca2ezAJ_S7nX2oGPwRpTrJLp0n',
+            imageUrl: userName11,
             name: 'Username 11',
-            id: 10
+            id: randomIds[10]
         },
         {
-            imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpWLpEOZwxIQJc6NJ67ThZximHqId7cPlugfZrvKhFLNkt-l3r',
+            imageUrl: userName12,
             name: 'Username 12',
-            id: 11
+            id: randomIds[11]
+        },
+        {
+            imageUrl: userName1,
+            name: 'Username 13',
+            id: randomIds[12]
+        },
+        {
+            imageUrl: userName2,
+            name: 'Username 14',
+            id: randomIds[13]
+        },
+        {
+            imageUrl: userName3,
+            name: 'Username 15',
+            id: randomIds[14]
+        },
+        {
+            imageUrl: userName4,
+            name: 'Username 16',
+            id: randomIds[15]
+        },
+        {
+            imageUrl: userName5,
+            name: 'Username 17',
+            id: randomIds[16]
+        },
+        {
+            imageUrl: userName6,
+            name: 'Username 18',
+            id: randomIds[17]
+        },
+        {
+            imageUrl: userName7,
+            name: 'Username 19',
+            id: randomIds[18]
+        },
+        {
+            imageUrl: userName8,
+            name: 'Username 20',
+            id: randomIds[19]
+        },
+        {
+            imageUrl: userName9,
+            name: 'Username 21',
+            id: randomIds[20]
+        },
+        {
+            imageUrl: userName10,
+            name: 'Username 22',
+            id: randomIds[21]
+        },
+        {
+            imageUrl: userName11,
+            name: 'Username 23',
+            id: randomIds[22]
+        },
+        {
+            imageUrl: userName12,
+            name: 'Username 24',
+            id: randomIds[23]
         }
     ]
 
+    const [time, setTime] = useState(Date.now());
+
+    useEffect(() => {
+        const interval = setInterval(() => setTime(Date.now()), 10000);
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
+
     return (
         <div className={styles.rightContainer}>
-            {FriendsElements.map( (friendElement) => {
-                return (
-                    <RightSideElement 
-                    imageUrl={friendElement.imageUrl}
-                    name={friendElement.name}
-                    key={friendElement.id} />
-                )
+            {FriendsElements.map((friendElement) => {
+                if (friendElement.id < 12) {
+                    return (
+                        <RightSideElement
+                            imageUrl={friendElement.imageUrl}
+                            name={friendElement.name}
+                            key={friendElement.id}
+                        />
+                    )
+                }
             })}
         </div>
     )
