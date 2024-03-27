@@ -1,42 +1,10 @@
-// .mainContainer {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     gap: 3rem;
-
-//     aside {
-//         width: 15rem;
-//         background-color: lightgray;
-//         height: 50vh;
-//         position: fixed;
-//         top: 5rem;
-
-//         &.leftSide {
-//             left: 0;
-//         }
-
-//         &.rightSide {
-//             right: 0;
-//         }
-//     }
-// }
-
 
 .mainContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    //   aside {
-    //     width: 15rem;
-    //      background-color: lightgray;
-    //     height: 50vh;
-    //     position: fixed;
-    //     top: 5rem;
-
- 
-    //   } 
-
+   
     .leftSide,
     .rightSide {
         width: 20rem;
@@ -50,22 +18,27 @@
 
     .leftSide {
         left: 0;
+        width: 23%;
     }
 
     .rightSide {
         right: 0;
+        width: 23%;
     }
+    
 
     ul {
         list-style-type: none;
         padding: 0;
         margin: 0;
+        margin-top: 5rem;
         
         li {
             padding: 10px 0;
             font-size: 18px;
             color: #333;
             cursor: pointer;
+            
             
             &:hover {
                 background-color: #ddd;
