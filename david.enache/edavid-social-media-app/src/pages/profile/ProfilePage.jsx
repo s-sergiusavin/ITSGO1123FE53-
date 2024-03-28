@@ -10,7 +10,7 @@ import imagineProfil from '../../assets/images/imagineProfil.jpg';
     const {} = useParams();
 
     return (
-         <>
+         
          <div className="profile-page-container">
              <div className="cover-photo">
                  <img src={imagineCoperta} alt="Imagine copertă" />
@@ -28,8 +28,8 @@ import imagineProfil from '../../assets/images/imagineProfil.jpg';
                  {/* Structura anterioară a meniului */}
              </nav>
         </div>
-         <ProfilePage></ProfilePage>
-      </>
+     
+      
      );
  }
 

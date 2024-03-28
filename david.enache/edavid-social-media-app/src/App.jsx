@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />}></Route>
           <Route path='/auth' element={<AuthPage />}></Route>
-          <Route path='/profile/:id' element={<ProfilePage></ProfilePage>}/>
+          <Route path='/my-profile' element={<ProfilePage></ProfilePage>}/>
           <Route path='*' element={<NotFound />}></Route>
         </Routes>
       </Layout>
