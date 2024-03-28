@@ -8,14 +8,12 @@
     overflow: auto;
     display: flex;
     flex-direction: column;
-
+    
     .rightNav {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin-top: -0.5rem;
+    }
 
-        .onlineUserName {
-            margin-left: 1rem;
-        }
+    .onlineUserName {
+        margin-left: 1rem;
     }
 }

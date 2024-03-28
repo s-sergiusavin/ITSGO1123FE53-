@@ -9,10 +9,12 @@
     display: flex;
     flex-direction: column;
 
-    .rightNav {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     .pageName {

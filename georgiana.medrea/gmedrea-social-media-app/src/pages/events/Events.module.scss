@@ -1,0 +1,156 @@
+.events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+
+    .titleSuggestedEvents {
+        position: relative;
+        left: -34rem;
+        top:5rem;  
+    }
+
+    .suggestedEvents {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 80rem;
+        height: 45rem;
+        overflow: auto;
+        gap: 1rem;
+        border: 2px solid whitesmoke;
+        position: relative;
+        top: -10rem;
+
+        .suggestedEvent {
+            padding: 0.2rem;
+
+            .suggestedEventText {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                gap: 0.1rem;
+
+                .suggestedEventName {
+                    margin-top: -1rem;
+                }
+
+                .suggestedEventIntestedPeople {
+                    margin-top: -0.9rem;
+                }
+
+            }
+
+            .actionButtons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: -1rem;
+                gap: 1.5rem;
+
+
+                .button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    width: 15rem;
+                    height: 2rem;
+                    background-color: lightgray;
+                    color: black;
+                    border-radius: 10%;
+                    border: 1px solid black;
+                }
+
+                .sendIcon {
+                    color: black;
+                    background-color: whitesmoke;
+                    border-radius: 10%;
+                    width: 2.5rem;
+                    height: 2rem;
+                    display: flex;
+                    align-self: center;
+                }
+            }
+        }
+    }
+
+    .titleMyEvents {
+        position: relative;
+        left: -37rem;
+        top: -20rem;  
+    }
+
+    .myEvents {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 80rem;
+        height: 45rem;
+        overflow: auto;
+        gap: 1rem;
+        border: 2px solid whitesmoke;
+        position: relative;
+        top: -35rem;
+
+        .myEvent {
+            padding: 0.2rem;
+
+            .myEventText {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                gap: 0.1rem;
+
+                .myEventName {
+                    margin-top: -1rem;
+                }
+
+                .myEventIntestedPeople {
+                    margin-top: -0.9rem;
+                }
+
+            }
+
+            .myActionButtons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: -1rem;
+                gap: 1.5rem;
+
+
+                .myButton {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    width: 15rem;
+                    height: 2rem;
+                    background-color: rgb(59, 112, 247);
+                    color: white;
+                    border-radius: 10%;
+                    border: 1px solid blue;
+                }
+
+                .mySendIcon {
+                    color: black;
+                    background-color: whitesmoke;
+                    border-radius: 10%;
+                    width: 2.5rem;
+                    height: 2rem;
+                    display: flex;
+                    align-self: center;
+                }
+            }
+        }
+    }
+
+}

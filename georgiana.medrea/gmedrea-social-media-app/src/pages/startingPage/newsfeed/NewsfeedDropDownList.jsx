@@ -5,7 +5,7 @@ const DropDownList = (props) => {
         <div>
             <ul className={styles.dropDownListItems}>
                 <button className={styles.dropDownHide} onClick={props.onButtonClick}>Hide post</button>
-                <button className={styles.dropDownSnooze} onClick={props.onButtonClick}>Snooze </button>
+                <button className={styles.dropDownSnooze} onClick={props.onButtonClick}>Snooze profile</button>
             </ul>
         </div>
     )

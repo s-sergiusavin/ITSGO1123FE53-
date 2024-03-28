@@ -3,9 +3,12 @@ import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/home/HomePage'
 import AuthPage from './pages/auth/AuthPage'
 import NotFound from './pages/NotFound'
-import ProfilePage from './pages/profile/ProfilePage'
+import UserProfilePage from './pages/profile/userProfile/UserProfilePage'
 import Layout from './components/Layout'
 import MyProfile from './pages/profile/MyProfile'
+import Friends from './pages/friends/Friends'
+import Events from './pages/events/Events'
+import Pages from './pages/pagesSection/Pages'
 
 function App() {
 
@@ -15,8 +18,11 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />}></Route>
           <Route path='/auth' element={<AuthPage />}></Route>
-          <Route path='/profile/:id' element={<ProfilePage></ProfilePage>}/>
-          <Route path='/my-profile' element={<MyProfile/>}/>
+          <Route path='/profile/:id' element={<UserProfilePage></UserProfilePage>} />
+          <Route path='/my-profile' element={<MyProfile />} />
+          <Route path='/friends' element={<Friends />} />
+          <Route path='/events' element={<Events/>}/>
+          <Route path='/pages-section' element={<Pages/>}/>
           <Route path='*' element={<NotFound />}></Route>
         </Routes>
       </Layout>
