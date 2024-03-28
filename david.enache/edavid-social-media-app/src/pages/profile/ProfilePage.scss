@@ -1,0 +1,32 @@
+.profile-page-container {
+    .cover-photo {
+        width: 100%;
+        height: 300px; /* sau orice înălțime dorești */
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .profile-photo {
+        position: absolute;
+        top: 250px; /* Ajustează poziția după înălțimea imaginii de copertă */
+        left: 20px; /* Ajustează poziția la stânga */
+        width: 150px; /* sau orice dimensiune dorești */
+        height: 150px; /* sau orice dimensiune dorești */
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .profile-details {
+        margin-top: 20px; /* Ajustează spațiul între imaginea de profil și detaliile profilului */
+        // Stilurile pentru detaliile profilului (nume, prieteni etc.)
+    }
+}

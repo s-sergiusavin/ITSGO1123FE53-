@@ -1,5 +1,5 @@
 
-import React,{useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import useFetch from '../../hooks/useFetch';
 import styles from './StartingPage.module.scss';
 import Newsfeed from './newsfeed/Newsfeed';
@@ -19,9 +19,9 @@ const StartingPage = () => {
             setPostList(response)
             return response;
         }
-        getPosts().catch(error => {
-            console.error(error)
-        })
+        // getPosts().catch(error => {
+        //     console.error(error)
+        // })
     }, [])
 
     return (

@@ -14,7 +14,6 @@ import imagineVlad from '../images/imagineVlad.jpg';
 import imagineAndreea from '../images/imagineAndreea.jpg';
 import imagineLaurentiu from '../images/imagineLaurentiu.jpg';
 
-
 const friendsWithImages = [
   { name: "David", imageUrl: imagineDavid, width: '30px', height: '30px', borderRadius: '50%'},
   { name: "Postu", imageUrl: imaginePostu, width: '30px', height: '30px', borderRadius: '50%' },
@@ -31,37 +30,34 @@ const friendsWithImages = [
 
 const RightSide = () => {
   const [searchInput, setSearchInput] = useState("");
-  
 
   const searchInputFn = (e) => {
     e.preventDefault();
     setSearchInput(e.target.value);
   }; 
 
-
   const filteredFriends = friendsWithImages.filter(friend =>
     friend.name.toLowerCase().includes(searchInput.toLowerCase())
   );
 
-
   return (
     <div className={styles.rightSide}>
       <div className="card">
-        <title>Friends</title>
-        <input value={searchInput} type="text" onChange={searchInputFn} placeholder='Search...'  style={{ marginTop: '7rem' }}/>
-       
-       <ul>
+        <div className="cardTitle">Friends</div>{}
+        <input value={searchInput} type="text" onChange={searchInputFn} placeholder='Search...' style={{ marginTop: '7rem' }}/>
+        <ul>
           {filteredFriends.map((friend, index) => (
-            <li key={index}>
-              <img src={friend.imageUrl} alt={friend.name} className={styles.profileImage}
-              style={{ 
-                width: friend.width,
-                height: friend.height,
-                borderRadius: friend.borderRadius,
-              }}/>
-              <FiberManualRecordIcon className={styles.statusIcon} style={{ color: index % 2 === 0 ? 'green' : 'red' }} />
-              <span>{friend.name}</span>
-              <FiberManualRecordIcon className={styles.statusIcon} />
+            <li key={index} className={styles.friendItem}>
+              <div className={styles.friendContainer}>
+                <img src={friend.imageUrl} alt={friend.name} className={styles.profileImage}
+                  style={{ 
+                    width: friend.width,
+                    height: friend.height,
+                    borderRadius: friend.borderRadius,
+                  }}/>
+                <FiberManualRecordIcon className={styles.statusIcon} style={{ color: index % 2 === 0 ? 'green' : 'red' }} />
+                <span style={{ cursor: 'pointer' }}>{friend.name}</span>
+              </div>
             </li>
           ))}
         </ul>

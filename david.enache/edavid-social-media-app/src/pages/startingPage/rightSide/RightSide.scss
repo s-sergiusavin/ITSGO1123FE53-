@@ -1,33 +1,39 @@
 .rightSide {
-  width: 20%;
-  background-color: #f0f2f5;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: 0;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
   .card {
-    title {
+    position: relative; // Asigură poziționarea relativă a containerului .card
+    .cardTitle {
       font-size: 20px;
       margin-bottom: 10px;
-      display: block;
+      position: absolute; // Face titlul să fie poziționat absolut în containerul .card
+      top: -40px; // Mută titlul deasupra containerului .card cu 40px
+      right: 0; // Aliniază titlul la dreapta în containerul .card
     }
-    // searchContainer{
-    //   margin-top: 8rem;
-    // }
-
+  }
+    
     input {
       width: calc(100% - 20px);
       padding: 10px;
       margin-bottom: 20px;
     }
-     
+
     ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
+      
+      .friendContainer {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        // cursor: pointer;
+      }
+
+      .profileImage {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
 
       li {
         display: flex;
@@ -35,12 +41,14 @@
         padding: 10px 0;
         font-size: 16px;
         color: #333;
+        flex-direction: column;
 
         img {
           width: 40px;
           height: 40px;
           border-radius: 50%;
           margin-right: 10px;
+          margin-bottom: 5px;
         }
        
         .statusIcon {
@@ -49,10 +57,11 @@
           margin-right: 5px;
         }
 
-        span {
-          margin-right: 5px;
+        span.friendName {
+          margin-right: 10px; // Spațiu între nume și puncte
+          font-size: 18px; // Dimensiunea fontului mai mare
         }
       }
     }
   }
-}
+
