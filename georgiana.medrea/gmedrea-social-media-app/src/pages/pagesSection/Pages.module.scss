@@ -118,3 +118,51 @@
     }
 
 }
+
+@media only screen and (max-width: 1000px) {
+    .pages {
+        flex-direction: row;
+
+        .titleSuggestedPages {
+            left: 2rem;
+            top: -25rem;
+        }
+
+        .suggestedPages {
+            height: 55rem;
+        }
+
+        .titleLikedPages {
+            left: 3rem;
+            top: -25rem;
+        }
+
+        .likedPages {
+            height: 55rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .pages {
+        flex-direction: column;
+
+        .titleLikedPages {
+            top: 4rem;
+            left: -5rem;
+        }
+
+        .likedPages {
+            width: 20rem;
+        }
+
+        .titleSuggestedPages {
+            top: 4rem;
+            left: -4rem;
+        }
+
+        .suggestedPages {
+            width: 20rem;
+        }
+    }
+}

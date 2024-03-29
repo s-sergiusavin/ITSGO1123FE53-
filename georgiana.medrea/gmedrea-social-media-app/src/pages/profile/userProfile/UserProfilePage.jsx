@@ -1,8 +1,7 @@
 import { useParams } from "react-router-dom";
 import styles from './UserProfile.module.scss';
 
-import coverPhoto from '../../../assets/images/cover.jpg';
-import profileImage from '../../../assets/icons/profile.jpg';
+import coverUser from '../../../assets/images/coverUser.jpg'
 import pageName1 from '../../../assets/images/pageName1.jpeg';
 import pageName2 from '../../../assets/images/pageName2.jpeg';
 import pageName3 from '../../../assets/images/pageName3.jpeg';
@@ -33,9 +32,9 @@ import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
 import HomeIcon from '@mui/icons-material/Home';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import WomanIcon from '@mui/icons-material/Woman';
+import WcIcon from '@mui/icons-material/Wc';
 import CakeIcon from '@mui/icons-material/Cake';
-import MyProfileIntroElement from "../MyProfileIntroElement";
+import UserProfileIntroElement from "../userProfile/UserProfileIntroElement";
 
 import useFetch from '../../../hooks/useFetch';
 import { styled } from '@mui/material/styles';
@@ -98,127 +97,132 @@ const UserProfilePage = () => {
     const FriendsData = [
         {
             img: userName1,
-            name: 'Username 1',
+            name: 'Username 101',
             id: 0
         },
         {
             img: userName9,
-            name: 'Username 2',
+            name: 'Username 102',
             id: 1
         },
         {
             img: userName7,
-            name: 'Username 3',
+            name: 'Username 103',
             id: 2
         },
         {
             img: userName4,
-            name: 'Username 4',
+            name: 'Username 104',
             id: 3
         },
         {
             img: userName5,
-            name: 'Username 5',
+            name: 'Username 105',
             id: 4
         },
         {
             img: userName6,
-            name: 'Username 6',
+            name: 'Username 106',
             id: 5
         },
         {
             img: userName7,
-            name: 'Username 7',
+            name: 'Username 107',
             id: 6
         },
         {
             img: userName8,
-            name: 'Username 8',
+            name: 'Username 108',
             id: 7
         },
         {
             img: userName9,
-            name: 'Username 9',
+            name: 'Username 109',
             id: 8
         },
         {
             img: userName10,
-            name: 'Username 10',
+            name: 'Username 110',
             id: 9
         },
         {
             img: userName4,
-            name: 'Username 11',
+            name: 'Username 111',
             id: 10
         },
         {
             img: userName12,
-            name: 'Username 12',
+            name: 'Username 112',
             id: 11
         },
         {
             img: userName1,
-            name: 'Username 13',
+            name: 'Username 113',
             id: 12
         },
         {
             img: userName9,
-            name: 'Username 14',
+            name: 'Username 114',
             id: 13
         },
         {
             img: userName10,
-            name: 'Username 15',
+            name: 'Username 115',
             id: 14
         },
         {
             img: userName4,
-            name: 'Username 16',
+            name: 'Username 116',
             id: 15
         },
         {
             img: userName9,
-            name: 'Username 17',
+            name: 'Username 117',
             id: 16
         },
         {
             img: userName6,
-            name: 'Username 18',
+            name: 'Username 118',
             id: 17
         },
         {
             img: userName7,
-            name: 'Username 19',
+            name: 'Username 119',
             id: 18
         },
         {
             img: userName8,
-            name: 'Username 20',
+            name: 'Username 120',
             id: 19
         },
         {
             img: userName9,
-            name: 'Username 21',
+            name: 'Username 121',
             id: 20
         },
         {
             img: userName10,
-            name: 'Username 22',
+            name: 'Username 122',
             id: 21
         },
         {
             img: userName7,
-            name: 'Username 23',
+            name: 'Username 123',
             id: 22
         },
         {
             img: userName12,
-            name: 'Username 24',
+            name: 'Username 124',
             id: 23
         }
     ]
 
     const IntroDataList = [
+        {
+            icon: <WcIcon />,
+            text: "Gender: xxxxx",
+            id: 1
+        },
         {
             icon: <CakeIcon />,
             text: "Birthdate: xx  xxxxxxx xxxx",
@@ -281,24 +285,27 @@ const UserProfilePage = () => {
         96: 'Username 96', 97: 'Username 97', 98: 'Username 98', 99: 'Username 99', 100: 'Username 100'
     }
 
+    let photo = userProfileImage[id];
+    let name = userProfileName[id];
+
     return (
-        <div className={styles.myProfileContainer}>
-            <div className={styles.myProfileHeader}>
-                <img src={coverPhoto} alt="" className={styles.coverPhoto} />
-                <ListItem className={styles.myProfileData}>
+        <div className={styles.userProfileContainer}>
+            <div className={styles.userProfileHeader}>
+                <img src={coverUser} alt="" className={styles.userCoverPhoto} />
+                <ListItem className={styles.userProfileData}>
                     <ListItemAvatar >
-                        <Avatar alt="Profile photo" src={userProfileImage[id]} sx={{ width: 120, height: 120 }} className={styles.myProfilePhoto} />
+                        <Avatar alt="Profile photo" src={photo} sx={{ width: 120, height: 120 }} className={styles.userProfilePhoto} />
                     </ListItemAvatar>
-                    <ListItemText primary={userProfileName[id]} className={styles.myProfileName} />
+                    <ListItemText primary={name} className={styles.userProfileName} />
                 </ListItem>
             </div>
-            <div className={styles.myProfileSections}>
-                <section className={styles.myProfileLeftSection}>
-                    <div className={styles.intro}>
-                        <ListItemText primary="About me" className={styles.myProfileIntroTitle} />
+            <div className={styles.userProfileSections}>
+                <section className={styles.userProfileLeftSection}>
+                    <div className={styles.userIntro}>
+                        <ListItemText primary="About me" className={styles.userProfileIntroTitle} />
                         {IntroDataList.map((introData) => {
                             return (
-                                <MyProfileIntroElement
+                                <UserProfileIntroElement
                                     icon={introData.icon}
                                     text={introData.text}
                                     key={introData.id}
@@ -306,8 +313,8 @@ const UserProfilePage = () => {
                             )
                         })}
                     </div>
-                    <div className={styles.myPhotos}>
-                        <ListItemText primary="Photos" className={styles.myProfilePhotosTitle} />
+                    <div className={styles.userPhotos}>
+                        <ListItemText primary="Photos" className={styles.userProfilePhotosTitle} />
                         <ImageList sx={{ width: 500, height: 500 }} cols={3} rowHeight={164}>
                             {ItemData.map((item) => (
                                 <ImageListItem key={item.id}>
@@ -320,8 +327,8 @@ const UserProfilePage = () => {
                             ))}
                         </ImageList>
                     </div>
-                    <div className={styles.myFriends}>
-                        <ListItemText primary="Friends" className={styles.myProfileFriendsTitle} />
+                    <div className={styles.userFriends}>
+                        <ListItemText primary="Friends" className={styles.userProfileFriendsTitle} />
                         <ImageList sx={{ width: 500, height: 500 }} cols={3}>
                             {FriendsData.map((friend) => (
                                 <ImageListItem key={friend.id}>
@@ -329,19 +336,19 @@ const UserProfilePage = () => {
                                         srcSet={`${friend.img}?w=248&fit=crop&auto=format&dpr=2 3x`}
                                         src={`${friend.img}?w=248&fit=crop&auto=format`}
                                         alt={friend.title}
-                                        className={styles.friendPhoto} />
+                                        className={styles.userFriendPhoto} />
                                     <ImageListItemBar
                                         title={friend.name}
                                         position="below"
-                                        className={styles.friendName} />
+                                        className={styles.userFriendName} />
                                 </ImageListItem>
                             ))}
                         </ImageList>
                     </div>
                 </section>
-                <section className={styles.myProfileRightSection}>
+                <section className={styles.userProfileRightSection}>
                     {posts && posts.map(post => {
-                        return <UserProfilePostSection postData={post} key={post.id}/>
+                        return <UserProfilePostSection postData={post} key={post.id} name={name} photo={photo} />
                     })}
                 </section>
             </div>

@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .mainPost {
     width: 40rem;
     border: 1px solid whitesmoke;
@@ -12,56 +16,60 @@
         margin: 0 1rem;
         justify-content: space-between;
         align-items: center;
-            a {
-                text-decoration: none;
-                color: black;
-                &:hover {
-                    text-decoration: underline;
-                }
+
+        a {
+            text-decoration: none;
+            color: black;
+
+            &:hover {
+                text-decoration: underline;
             }
-            .profilePictureImg {
-                height: 3rem;
-                width: 3rem;
-                border-radius: 50%;
-                object-fit: cover;
-                margin-right: 0.3rem;
+        }
+
+        .profilePictureImg {
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 0.3rem;
+        }
+
+        .contextMenu {
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover {
+                border: 1px solid teal;
             }
-            .contextMenu {
-                border-radius: 50%;
+
+            .dropDownListItems {
+                list-style-type: none;
+                position: absolute;
+                top: 0.3rem;
+                right: -7.5rem;
+                width: 10rem;
+                padding: 0.5rem;
+                border-radius: 8px;
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                cursor: pointer;
+                justify-content: center;
+                flex-direction: column;
+                z-index: 1;
 
-                &:hover {
-                    border: 1px solid teal;
+                .dropDownSnooze {
+                    width: 7.5rem;
+                    height: 1.5rem;
                 }
 
-                .dropDownListItems {
-                    list-style-type: none;
-                    position: absolute;
-                    top: 0.3rem;
-                    right: -7.5rem;
-                    width: 10rem;
-                    padding: 0.5rem;
-                    border-radius: 8px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: column;
-                    z-index: 1;
-
-                    .dropDownSnooze {
-                        width: 7.5rem;
-                        height: 1.5rem;
-                    }
-
-                    .dropDownHide {
-                        width: 7.5rem;
-                        height: 1.5rem;
-                    }
+                .dropDownHide {
+                    width: 7.5rem;
+                    height: 1.5rem;
                 }
             }
+        }
     }
 
     .content {
@@ -75,11 +83,14 @@
             align-self: flex-start;
             text-align: justify;
         }
+
         .imageWrapper {
             position: relative;
+
             .mainPostImage {
                 max-width: 100%;
             }
+
             .infoIcon {
                 cursor: pointer;
                 position: absolute;
@@ -111,10 +122,24 @@
             &:hover {
                 background-color: lightgray;
             }
-    
+
             &.blue {
                 color: blue;
-            };
+            }
+
+            ;
         }
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .mainPost {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .mainPost {
+        width: 100%;
     }
 }

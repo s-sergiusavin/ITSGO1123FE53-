@@ -1,4 +1,4 @@
-.myProfileContainer {
+.userProfileContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,7 +8,7 @@
     gap: 5rem;
     width: 100rem;
 
-    .myProfileHeader {
+    .userProfileHeader {
         border: 1px solid whitesmoke;
         width: 70rem;
         height: 30rem;
@@ -17,37 +17,37 @@
         flex-direction: column;
         top: 0;
 
-        .coverPhoto {
-            width: 70rem;
-            height: 30rem;
+        .userCoverPhoto {
+            width: 100%;
+            height: 100%;
         }
 
-        .myProfileData {
+        .userProfileData {
             position: relative;
             bottom: 3rem;
             gap: 0.5rem;
 
-            .myProfilePhoto {
+            .userProfilePhoto {
                 border: 2px solid whitesmoke;
             }
 
-            .myProfileName {
+            .userProfileName {
                 position: relative;
                 top: 0.5rem;
             }
         }
     }
 
-    .myProfileSections {
+    .userProfileSections {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         position: relative;
 
-        .myProfileLeftSection {
+        .userProfileLeftSection {
             border: 1px solid transparent;
             width: 32rem;
-            height: 80rem;
+            height: 110rem;
             position: relative;
             left: -2rem;
             display: flex;
@@ -57,7 +57,7 @@
             gap: 2rem;
             top: 2rem;
 
-            .intro {
+            .userIntro {
                 border: 1px solid whitesmoke;
                 width: 32rem;
                 height: 37rem;
@@ -69,7 +69,7 @@
                 gap: 0.8rem;
             }
 
-            .myPhotos {
+            .userPhotos {
                 border: 1px solid whitesmoke;
                 width: 32rem;
                 height: 35rem;
@@ -78,7 +78,7 @@
                 border-radius: 10px;
             }
 
-            .myFriends {
+            .userFriends {
                 border: 1px solid black;
                 width: 32rem;
                 height: 35rem;
@@ -88,20 +88,20 @@
                 display: flex;
                 flex-wrap: wrap;
 
-                .friendPhoto {
+                .userFriendPhoto {
                     width: 8rem;
                     height: 8rem;
                     border-radius: 10px;
                 }
 
-                .friendName {
+                .userFriendName {
                     position: relative;
                     left: 1.5rem;
                 }
             }
         }
 
-        .myProfileRightSection {
+        .userProfileRightSection {
             border: 1px solid transparent;
             width: 40rem;
             position: relative;
@@ -112,7 +112,7 @@
             flex-direction: column;
             gap: 1rem;
 
-            .mainPost {
+            .userMainPost {
                 background-color: whitesmoke;
                 border: 1px solid whitesmoke;
                 border-radius: 10px;
@@ -132,7 +132,7 @@
                         }
                     }
 
-                    .myProfilePictureImg {
+                    .userProfilePictureImg {
                         height: 3rem;
                         width: 3rem;
                         border-radius: 50%;
@@ -140,7 +140,7 @@
                         margin-right: 0.3rem;
                     }
 
-                    .contextMenu {
+                    .userContextMenu {
                         border-radius: 50%;
                         display: flex;
                         justify-content: center;
@@ -154,7 +154,7 @@
                             border: 1px solid teal;
                         }
 
-                        .dropDownListItems {
+                        .userDropDownListItems {
                             list-style-type: none;
                             position: absolute;
                             top: -0.3rem;
@@ -168,12 +168,12 @@
                             flex-direction: column;
                             z-index: 1;
 
-                            .dropDownDelete {
+                            .userDropDownDelete {
                                 width: 7.5rem;
                                 height: 1.5rem;
                             }
 
-                            .dropDownHide {
+                            .userDropDownHide {
                                 width: 7.5rem;
                                 height: 1.5rem;
                             }
@@ -181,7 +181,7 @@
                     }
                 }
 
-                .content {
+                .userContent {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -193,14 +193,14 @@
                         text-align: justify;
                     }
 
-                    .imageWrapper {
+                    .userImageWrapper {
                         position: relative;
 
-                        .mainPostImage {
+                        .userMainPostImage {
                             max-width: 100%;
                         }
 
-                        .infoIcon {
+                        .userInfoIcon {
                             cursor: pointer;
                             position: absolute;
                             right: 3rem;
@@ -210,18 +210,18 @@
                     }
                 }
 
-                .reacts {
+                .userReacts {
                     display: flex;
                     justify-content: space-between;
                     margin: 0.5rem;
                 }
 
-                .reactsActions {
+                .userReactsActions {
                     display: flex;
                     justify-content: space-around;
                     margin: 0.5rem 0;
 
-                    .reaction {
+                    .userReaction {
                         display: flex;
                         cursor: pointer;
                         padding: 0.2rem;
@@ -240,14 +240,14 @@
                     }
                 }
 
-                .commentsInputContainer {
+                .userCommentsInputContainer {
                     margin: 0.5rem 0.5rem;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
 
-                    .commentInputSection {
+                    .userCommentInputSection {
                         display: flex;
                         gap: 2rem;
 
@@ -262,7 +262,7 @@
                         }
                     }
 
-                    .profilePictureImg {
+                    .userProfilePictureImg {
                         margin-right: 0.5rem;
                         width: 50px;
                         height: 50px;
@@ -270,7 +270,7 @@
                         border-radius: 50%;
                     }
 
-                    .commentInput {
+                    .userCommentInput {
                         width: 100%;
                         padding: 0.5rem;
                         margin-bottom: 0.5rem;
@@ -279,12 +279,12 @@
                     }
                 }
 
-                .postComments {
+                .userPostComments {
                     margin: 1rem 1rem;
                     height: 19rem;
                     overflow: auto;
 
-                    .comments {
+                    .userComments {
                         background-color: #e8e7e7;
                         border-radius: 15px;
                         width: 100%;
@@ -296,7 +296,7 @@
                             margin-left: 0.5rem;
                             align-items: start;
 
-                            .profilePictureImg {
+                            .userProfilePictureImg {
                                 width: 40px;
                                 height: 40px;
                                 object-fit: cover;
@@ -314,7 +314,7 @@
                             }
                         }
 
-                        .commentInfo {
+                        .userCommentInfo {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
@@ -322,9 +322,52 @@
                             margin-left: 3rem;
                             padding-bottom: 1rem;
 
-                            .timeOfPost {
+                            .userTimeOfPost {
                                 font-size: 0.75rem;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .userProfileContainer {
+        width: 80%;
+
+        .userMainPost {
+            width: 90%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .userProfileContainer {
+
+        .userProfilePhoto {
+            margin-left: 22rem;
+        }
+
+        .userProfileSections {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .userProfileRightSection {
+                margin-left: -7rem;
+
+                .userMainPost {
+                    width: 32rem;
+
+                    .userCommentInputSection {
+                        gap: 0.2rem;
+
+                        form {
+                            width: 25rem;
+                            gap: 0.2rem;
                         }
                     }
                 }

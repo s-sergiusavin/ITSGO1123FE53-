@@ -8,8 +8,8 @@ import ReplyIcon from '@mui/icons-material/Reply';
 import CommentIcon from '@mui/icons-material/Comment';
 
 import profile from '../../assets/images/profile.jpg';
-import post1 from '../../assets/images/event1.jpeg';
-import post2 from '../../assets/images/event2.jpeg';
+import post3 from '../../assets/images/post3.jpg';
+import post4 from '../../assets/images/post4.jpg';
 import { useState } from 'react';
 import MyProfileCommentSection from './MyProfileCommentSection';
 import styles from "./MyProfile.module.scss"
@@ -22,8 +22,8 @@ const MyProfilePostSection = ({ postData }) => {
     const [shares, setShares] = useState(Math.floor(Math.random() * 100))
 
     const postImages = {
-        0: post1,
-        1: post2
+        0: post3,
+        1: post4
     }
 
     const handleLike = () => {

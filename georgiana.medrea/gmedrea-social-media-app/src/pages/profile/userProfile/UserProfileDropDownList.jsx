@@ -4,8 +4,8 @@ const UserProfileDropDownList = (props) => {
     return (
         <div>
             <ul className={styles.dropDownListItems}>
-                <button className={styles.dropDownDelete} onClick={props.onButtonClick}>Delete post</button>
-                <button className={styles.dropDownHide} onClick={props.onButtonClick}>Hide from profile</button>
+                <button className={styles.userDropDownDelete} onClick={props.onButtonClick}>Delete post</button>
+                <button className={styles.userDropDownHide} onClick={props.onButtonClick}>Hide from profile</button>
             </ul>
         </div>
     )

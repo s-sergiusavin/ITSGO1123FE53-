@@ -4,6 +4,8 @@ import profileImg from '../../../assets/images/profile.jpg';
 import { Link } from 'react-router-dom';
 import styles from "./UserProfile.module.scss";
 
+import PropTypes from 'prop-types';
+
 const USER_DATA = [
     {
         "id": 1,
@@ -24,7 +26,7 @@ const USER_DATA = [
     { "id": 9, "firstName": "Dorine", "lastName": "Overthrow", "fullName": "Dorine Overthrow", "date": "6/23/2023", "profileImage": "http://dummyimage.com/223x100.png/cc0000/ffffff", "comment": "sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero" },
     { "id": 10, "firstName": "Pandora", "lastName": "Vowels", "fullName": "Pandora Vowels", "date": "6/25/2023", "profileImage": "http://dummyimage.com/102x100.png/5fa2dd/ffffff", "comment": "nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in" }]
 
-const UserProfileCommentSection = () => {
+const UserProfileCommentSection = ({ photo, name }) => {
     const [newComment, setNewComment] = useState('');
     const [listOfComments, setListOfComments] = useState(USER_DATA)
 
@@ -36,7 +38,7 @@ const UserProfileCommentSection = () => {
                 id: prevState.length,
                 fullName: 'Georgiana Medrea',
                 date: 'right now',
-                comment: newComment,
+                comment: newComment
             }
 
             setNewComment('');
@@ -46,30 +48,30 @@ const UserProfileCommentSection = () => {
 
 
     return (
-        <div className={styles.commentsInputContainer}>
-            <div className={styles.commentInputSection}>
-                <img src={profileImg} alt="" className={styles.profilePictureImg} />
+        <div className={styles.userCommentsInputContainer}>
+            <div className={styles.userCommentInputSection}>
+                <img src={photo} alt="" className={styles.userProfilePictureImg} />
                 <form onSubmit={submitHandler} noValidate>
                     <input type="text" placeholder='Write a comment...' onChange={(e) => setNewComment(e.target.value)} />
                     <button>Add comment</button>
                 </form>
             </div>
 
-            <div className={styles.postComments}>
+            <div className={styles.userPostComments}>
                 {listOfComments && listOfComments.map((comment, idx) => {
                     return (
-                        <div className={styles.comments} key={idx}>
+                        <div className={styles.userComments} key={idx}>
                             <div className={styles.userInfo}>
                                 <Link to='/'>
-                                    <img src={comment.profileImage} alt="Profile pic" className={styles.profilePictureImg} />
+                                    <img src={comment.profileImage} alt="Profile pic" className={styles.userProfilePictureImg} />
                                 </Link>
                                 <Link to='/'>
                                     <span>{comment.fullName}</span>
                                 </Link>
                             </div>
-                            <div className={styles.commentInfo}>
+                            <div className={styles.userCommentInfo}>
                                 <p>{comment.comment}</p>
-                                <p className={styles.timeOfPost}>{comment.date}</p>
+                                <p className={styles.userTimeOfPost}>{comment.date}</p>
                             </div>
                         </div>
                     )
@@ -79,5 +81,9 @@ const UserProfileCommentSection = () => {
     )
 }
 
+UserProfileCommentSection.propTypes = {
+    photo: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired
+}
 
 export default UserProfileCommentSection;

@@ -10,6 +10,8 @@ import CommentIcon from '@mui/icons-material/Comment';
 import profile from '../../../assets/images/profile.jpg';
 import post1 from '../../../assets/images/event1.jpeg';
 import post2 from '../../../assets/images/event2.jpeg';
+import post5 from '../../../assets/images/post5.jpeg';
+import post6 from '../../../assets/images/post6.jpg';
 import userName1 from '../../../assets/images/userName1.jpg';
 import userName2 from '../../../assets/images/userName2.jpg';
 import userName3 from '../../../assets/images/userName3.jpg';
@@ -28,15 +30,15 @@ import styles from "./UserProfile.module.scss"
 import DropDownList from './UserProfileDropDownList';
 import UserProfileCommentSection from './UserProfileCommentSection';
 
-const UserProfilePostSection = ({ postData, id }) => {
+const UserProfilePostSection = ({ postData, name, photo }) => {
     const [isLiked, setIsLiked] = useState(false);
     const [likes, setLikes] = useState(Math.floor(Math.random() * 100))
     const [isShared, setIsShared] = useState(false)
     const [shares, setShares] = useState(Math.floor(Math.random() * 100))
 
     const postImages = {
-        0: post1,
-        1: post2
+        0: post5,
+        1: post6
     }
 
     const handleLike = () => {
@@ -67,25 +69,23 @@ const UserProfilePostSection = ({ postData, id }) => {
 
     return (
         <>
-            {isVisible && <div className={styles.mainPost}>
+            {isVisible && <div className={styles.userMainPost}>
                 <div className={styles.userInfo}>
-                    <Link to='/me'>
-                        <img src={profile} alt="Profile Picture"
-                            className={styles.myProfilePictureImg} />
-                    </Link>
-                    <Link to='/me' className={styles.myProfileName}>Username</Link>
+                    <img src={photo} alt="Profile Picture"
+                        className={styles.userProfilePictureImg} />
+                    <div className={styles.userProfileName}>{name}</div>
 
-                    <div className={styles.contextMenu}>
+                    <div className={styles.userContextMenu}>
                         <MoreHorizIcon onClick={() => setOpenDropDown((openDropDown) => !openDropDown)} />
-                        {openDropDown && <DropDownList onButtonClick={handleClick}/>}
+                        {openDropDown && <DropDownList onButtonClick={handleClick} />}
                     </div>
                 </div>
 
-                <section className={styles.content}>
+                <section className={styles.userContent}>
                     <p>{postData.title}</p>
-                    <div className={styles.imageWrapper}>
-                        <img src={postImages[postData.id % 2]} alt="post content" className={styles.mainPostImage} />
-                        <div className={styles.infoIcon}>
+                    <div className={styles.userImageWrapper}>
+                        <img src={postImages[postData.id % 2]} alt="post content" className={styles.userMainPostImage} />
+                        <div className={styles.userInfoIcon}>
                             <InfoIcon fontSize='large' color='info' />
                         </div>
                     </div>
@@ -93,37 +93,37 @@ const UserProfilePostSection = ({ postData, id }) => {
                     <p>{postData.body}</p>
                 </section>
 
-                <section className={styles.reacts}>
-                    <div className={styles.likesNumber}>
+                <section className={styles.userReacts}>
+                    <div className={styles.userLikesNumber}>
                         <ThumbUpIcon />
-                        <span className={styles.reactsCount}>{likes}</span>
+                        <span className={styles.userReactsCount}>{likes}</span>
                     </div>
 
-                    <div className={styles.sharesNumber}>
+                    <div className={styles.userSharesNumber}>
                         <ReplyIcon />
                         <span className={styles.reactsCount}>{shares}</span>
                     </div>
                 </section>
 
-                <section className={styles.reactsActions}>
-                    <div className={`${styles.reaction} ${isLiked && styles.blue}`} onClick={handleLike}>
+                <section className={styles.userReactsActions}>
+                    <div className={`${styles.userReaction} ${isLiked && styles.blue}`} onClick={handleLike}>
                         <ThumbUpIcon />
                         <span>Like</span>
                     </div>
 
-                    <div className={styles.reaction}>
+                    <div className={styles.userReaction}>
                         <CommentIcon />
                         <span>Comment</span>
                     </div>
 
-                    <div className={`${styles.reaction} ${isShared && styles.blue}`} onClick={handleShare}>
+                    <div className={`${styles.userReaction} ${isShared && styles.blue}`} onClick={handleShare}>
                         <ReplyIcon />
                         <span>Share</span>
                     </div>
                 </section>
 
-                <section className={styles.commentContainer}>
-                    <UserProfileCommentSection />
+                <section className={styles.userCommentContainer}>
+                    <UserProfileCommentSection photo={photo} />
                 </section>
             </div>}
         </>
@@ -131,7 +131,9 @@ const UserProfilePostSection = ({ postData, id }) => {
 }
 
 UserProfilePostSection.propTypes = {
-    postData: PropTypes.object.isRequired
+    postData: PropTypes.object.isRequired,
+    name: PropTypes.string.isRequired,
+    photo: PropTypes.string.isRequired
 }
 
 

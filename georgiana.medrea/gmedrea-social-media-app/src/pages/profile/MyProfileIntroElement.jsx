@@ -53,7 +53,6 @@ const MyProfileIntroElement = ({ icon, text }) => {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                             </ListItem>
-
                         </List>
                     </Demo>
                 </Grid>

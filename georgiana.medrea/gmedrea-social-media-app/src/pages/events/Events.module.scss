@@ -8,7 +8,7 @@
     .titleSuggestedEvents {
         position: relative;
         left: -34rem;
-        top:5rem;  
+        top: 5rem;
     }
 
     .suggestedEvents {
@@ -82,7 +82,7 @@
     .titleMyEvents {
         position: relative;
         left: -37rem;
-        top: -20rem;  
+        top: -20rem;
     }
 
     .myEvents {
@@ -153,4 +153,66 @@
         }
     }
 
+}
+
+@media only screen and (max-width: 1000px) {
+    .events {
+        flex-direction: row;
+        gap: 1rem;
+
+        .titleMyEvents {
+            top: -27rem;
+            left: 6rem;
+            width: 7rem;
+        }
+
+        .myEvents {
+            flex-direction: row;
+            width: 32rem;
+            height: 60rem;
+            justify-content: flex-start;
+            top: 5rem;
+            left: -1rem;
+        }
+
+        .titleSuggestedEvents {
+            top: -27rem;
+            left: 9rem;
+            width: 11rem;
+            height: 2rem;
+        }
+
+        .suggestedEvents {
+            flex-direction: row;
+            width: 32rem;
+            height: 60rem;
+            justify-content: flex-start;
+            top: 5rem;
+            left: -1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .events {
+        flex-direction: column;
+
+        .titleMyEvents {
+            top: 5rem;
+            left: -6rem;
+        }
+
+        .myEvents {
+            width: 25rem;
+        }
+
+        .titleSuggestedEvents {
+            top: 4rem;
+            left: -4rem;
+        }
+
+        .suggestedEvents {
+            width: 25rem;
+        }
+    }
 }

@@ -1,6 +1,7 @@
 import styles from './MyProfile.module.scss';
 
 import coverPhoto from '../../assets/images/cover.jpg';
+import coverProfile from '../../assets/images/coverProfile.jpg'
 import profileImage from '../../assets/icons/profile.jpg';
 import pageName1 from '../../assets/images/pageName1.jpeg';
 import pageName2 from '../../assets/images/pageName2.jpeg';
@@ -236,7 +237,7 @@ const MyProfile = () => {
         },
         {
             icon: <WorkIcon />,
-            text: "Controller at Draxlmaier Group",
+            text: "Works as Financial Controller",
             id: 4
         },
         {
@@ -259,7 +260,7 @@ const MyProfile = () => {
     return (
         <div className={styles.myProfileContainer}>
             <div className={styles.myProfileHeader}>
-                <img src={coverPhoto} alt="" className={styles.coverPhoto} />
+                <img src={coverProfile} alt="" className={styles.coverPhoto} />
                 <ListItem className={styles.myProfileData}>
                     <ListItemAvatar >
                         <Avatar alt="Profile photo" src={profileImage} sx={{ width: 120, height: 120 }} className={styles.myProfilePhoto} />
