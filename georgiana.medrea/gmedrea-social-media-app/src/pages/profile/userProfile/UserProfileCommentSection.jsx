@@ -36,9 +36,10 @@ const UserProfileCommentSection = ({ photo, name }) => {
         setListOfComments(prevState => {
             const myComment = {
                 id: prevState.length,
-                fullName: 'Georgiana Medrea',
+                fullName: name,
                 date: 'right now',
-                comment: newComment
+                comment: newComment,
+                profileImage: photo
             }
 
             setNewComment('');
@@ -51,7 +52,7 @@ const UserProfileCommentSection = ({ photo, name }) => {
         <div className={styles.userCommentsInputContainer}>
             <div className={styles.userCommentInputSection}>
                 <img src={photo} alt="" className={styles.userProfilePictureImg} />
-                <form onSubmit={submitHandler} noValidate>
+                <form onSubmit={submitHandler} noValidate >
                     <input type="text" placeholder='Write a comment...' onChange={(e) => setNewComment(e.target.value)} />
                     <button>Add comment</button>
                 </form>

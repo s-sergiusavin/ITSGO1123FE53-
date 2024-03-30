@@ -6,7 +6,7 @@ import styles from './Friends.module.scss'
 const Friends = () => {
     return (
         <div className={styles.friendsCotainer}>
-            <FriendsList />
+            <FriendsList className={styles.myFriendsList}/>
             <div className={styles.requests}>
                 <FriendRequestsList />
                 <SuggestedFriends />

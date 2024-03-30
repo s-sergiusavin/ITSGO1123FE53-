@@ -347,7 +347,7 @@
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1300px) {
     .myProfileContainer {
 
         .myProfilePhoto {
@@ -358,6 +358,7 @@
             width: 80%;
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 2rem;
 
             .myProfileRightSection {

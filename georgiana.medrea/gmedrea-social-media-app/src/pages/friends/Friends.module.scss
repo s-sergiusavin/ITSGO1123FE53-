@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .friendsCotainer {
     display: flex;
 
@@ -15,15 +19,15 @@
         .friendElement {
             margin-top: -1rem;
 
-        .listTitle {
-            position: relative;
-            align-self: flex-start;
-        }
+            .listTitle {
+                position: relative;
+                align-self: flex-start;
+            }
 
-        .friendName {
-            position: relative;
-            left: 2rem;
-        }
+            .friendName {
+                position: relative;
+                left: 2rem;
+            }
         }
     }
 
@@ -31,6 +35,9 @@
         display: flex;
         flex-direction: column;
         gap: 10rem;
+        width: 70rem;
+        position: relative;
+        left: 25rem;
 
         .titleRequests {
             position: relative;
@@ -49,7 +56,6 @@
             display: flex;
             width: 70rem;
             height: 50rem;
-            left: 25rem;
             gap: 1rem;
             padding: 0.2rem;
             top: -9rem;
@@ -110,7 +116,6 @@
             overflow: auto;
             width: 70rem;
             height: 50rem;
-            left: 25rem;
             gap: 1rem;
             padding: 0.2rem;
             top: -23rem;
@@ -120,6 +125,7 @@
 
                 .suggestedFriendName {
                     position: relative;
+                    top: -0.5;
                 }
 
                 .button {
@@ -152,6 +158,100 @@
                         border: 1px solid gray;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .friendsCotainer {
+
+        .friendList {
+            display: none;
+        }
+
+        .requests {
+            left: 10rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .friendsCotainer {
+
+        .requests {
+            left: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .friendsCotainer {
+
+        .requests {
+            flex-direction: row;
+            gap: 1rem;
+
+            .titleRequests {
+                top: 1rem;
+                left: 6rem;
+                width: 11rem;
+                height: 2rem;
+            }
+
+            .friendRequestsContainer {
+                flex-direction: row;
+                width: 27rem;
+                height: 60rem;
+                justify-content: flex-start;
+                top: 5rem;
+                left: -5rem;
+            }
+
+            .titleSuggested {
+                top: 1rem;
+                left: -1rem;
+                width: 11rem;
+                height: 2rem;
+            }
+
+            .suggestedFriendsContainer {
+                flex-direction: row;
+                width: 27rem;
+                height: 60rem;
+                justify-content: flex-start;
+                top: 5rem;
+                left: -12rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .friendsCotainer {
+        .requests {
+            flex-direction: column;
+
+
+            .titleRequests {
+                top: 0.5rem;
+                left: 8rem;
+                width: 10rem;
+            }
+
+            .friendRequestsContainer {
+                left: 8rem;
+                top: -1rem;
+            }
+
+            .titleSuggested {
+                top: 0.5rem;
+                left: 8rem;
+            }
+
+            .suggestedFriendsContainer {
+                left: 8rem;
+                top: -1rem;
             }
         }
     }

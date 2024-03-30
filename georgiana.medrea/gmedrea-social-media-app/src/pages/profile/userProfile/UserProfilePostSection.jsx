@@ -123,7 +123,7 @@ const UserProfilePostSection = ({ postData, name, photo }) => {
                 </section>
 
                 <section className={styles.userCommentContainer}>
-                    <UserProfileCommentSection photo={photo} />
+                    <UserProfileCommentSection photo={photo} name={name}/>
                 </section>
             </div>}
         </>

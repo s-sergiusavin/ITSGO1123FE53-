@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 
 import { useState } from 'react';
 
-const SuggestedPagesElement = ({ imageUrl, pageName, pageLikes, updateThePages }) => {
+const SuggestedPagesElement = ({ imageUrl, pageName, pageLikes }) => {
 
     const [isVisible, setIsVisible] = useState(true);
 

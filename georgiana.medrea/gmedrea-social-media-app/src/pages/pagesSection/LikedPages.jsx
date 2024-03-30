@@ -1,5 +1,7 @@
 import styles from './Pages.module.scss';
 
+import { useState, useEffect } from 'react';
+
 import LikedPagesElement from './LikedPagesElement';
 
 import pageName2 from '../../assets/images/pageName2.jpeg';

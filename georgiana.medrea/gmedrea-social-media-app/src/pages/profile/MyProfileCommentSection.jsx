@@ -37,6 +37,7 @@ const MyProfileCommentSection = () => {
                 fullName: 'Georgiana Medrea',
                 date: 'right now',
                 comment: newComment,
+                profileImage: profileImg
             }
 
             setNewComment('');

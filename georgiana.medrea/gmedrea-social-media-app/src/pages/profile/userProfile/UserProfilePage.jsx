@@ -221,7 +221,7 @@ const UserProfilePage = () => {
         {
             icon: <WcIcon />,
             text: "Gender: xxxxx",
-            id: 1
+            id: 0
         },
         {
             icon: <CakeIcon />,
@@ -276,12 +276,12 @@ const UserProfilePage = () => {
     const userProfileName = {
         1: 'Username 1', 2: 'Username 2', 3: 'Username 3', 4: 'Username 4', 5: 'Username 5', 6: 'Username 6', 7: 'Username 7', 8: 'Username 8', 9: 'Username 9', 10: 'Username 10', 11: 'Username 11',
         12: 'Username 12', 13: 'Username 13', 14: 'Username 14', 15: 'Username 15', 16: 'Username 16', 17: 'Username 17', 18: 'Username 18', 19: 'Username 19', 20: 'Username 20', 21: 'Username 21', 22: 'Username 22', 23: 'Username 23', 24: 'Username 24',
-        25: 'Username 25', 26: 'Username 26', 27: 'Username 27', 28: 'Username 28', 29: 'Username 29', 30: 'Username 30', 31: 'Username 31', 32: 'Username 32', 33: 'Username 33', 34: 'Username 34', 35: 'Username 36',
-        37: 'Username 37', 38: 'Username 38', 39: 'Username 39', 40: 'Username 40', 41: 'Username 41', 42: 'Username 42', 43: 'Username 43', 44: 'Username 44', 45: 'Username 45',
+        25: 'Username 25', 26: 'Username 26', 27: 'Username 27', 28: 'Username 28', 29: 'Username 29', 30: 'Username 30', 31: 'Username 31', 32: 'Username 32', 33: 'Username 33', 34: 'Username 34', 35: 'Username 35',
+        36: 'Username 36', 37: 'Username 37', 38: 'Username 38', 39: 'Username 39', 40: 'Username 40', 41: 'Username 41', 42: 'Username 42', 43: 'Username 43', 44: 'Username 44', 45: 'Username 45',
         46: 'Username 46', 47: 'Username 47', 48: 'Username 48', 49: 'Username 49', 50: 'Username 50', 51: 'Username 51', 52: 'Username 52', 53: 'Username 53', 54: 'Username 54', 55: 'Username 55', 56: 'Username 56', 57: 'Username 57', 58: 'Username 58', 59: 'Username 59', 60: 'Username 60', 61: 'Username 61',
         62: 'Username 62', 63: 'Username 63', 64: 'Username 64', 65: 'Username 65', 66: 'Username 66', 67: 'Username 67', 68: 'Username 68', 69: 'Username 69', 70: 'Username 70', 71: 'Username 71', 72: 'Username 72', 73: 'Username 73', 74: 'Username 74',
         75: 'Username 75', 76: 'Username 76', 77: 'Username 77', 78: 'Username 78', 79: 'Username 79', 80: 'Username 80', 81: 'Username 81', 82: 'Username 82', 83: 'Username 83', 84: 'Username 84', 85: 'Username 85',
-        86: 'Username 87', 88: 'Username 88', 89: 'Username 89', 90: 'Username 90', 91: 'Username 91', 92: 'Username 92', 93: 'Username 93', 94: 'Username 94', 95: 'Username 95',
+        86: 'Username 86', 87: 'Username 87', 88: 'Username 88', 89: 'Username 89', 90: 'Username 90', 91: 'Username 91', 92: 'Username 92', 93: 'Username 93', 94: 'Username 94', 95: 'Username 95',
         96: 'Username 96', 97: 'Username 97', 98: 'Username 98', 99: 'Username 99', 100: 'Username 100'
     }
 
