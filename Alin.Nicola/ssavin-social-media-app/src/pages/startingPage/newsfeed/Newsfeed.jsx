@@ -12,7 +12,8 @@ import CommentIcon from '@mui/icons-material/Comment';
 import profile from '../../../assets/icons/profile.jpeg'
 import post1 from '../../../assets/images/post1.jpg'
 import post2 from '../../../assets/images/post2.jpg'
-import {  useState } from 'react';
+import post3 from '../../../assets/images/post3.jpg'
+import { useState } from 'react';
 import CommentsSection from './comments/CommentsSection';
 import { useSelector } from 'react-redux';
 import { selectUser } from '../../../redux/selectors';
@@ -27,7 +28,8 @@ const Newsfeed = ({ postData }) => {
 
     const postImages = {
         0: post1,
-        1: post2
+        1: post2,
+        2: post3
     }
 
     const handleLike = () => {
@@ -64,7 +66,7 @@ const Newsfeed = ({ postData }) => {
             <section className={styles.content}>
                 <p>{postData.title}</p>
                 <div className={styles.imageWrapper}>
-                    <img src={postImages[postData.id % 2]} alt="post content" className={styles.mainPostImage} />
+                    <img src={postImages[postData.id % 3]} alt="post content" className={styles.mainPostImage} />
                     <div className={styles.infoIcon}>
                         <InfoIcon fontSize='large' color='info' />
                     </div>
@@ -103,7 +105,7 @@ const Newsfeed = ({ postData }) => {
             </section>
 
             <section className={styles.commentContainer}>
-                <CommentsSection/>
+                <CommentsSection />
             </section>
         </div>
     )

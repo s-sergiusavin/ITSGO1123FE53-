@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 import useFetch from '../../hooks/useFetch';
 import styles from './StartingPage.module.scss'
 import Newsfeed from './newsfeed/Newsfeed';
+import LeftSide from './leftside/LeftSide';
+import RightSide from './rightSide/RightSide';
 import postService from '../../services/postService';
 
 const StartingPage = () => {
@@ -9,7 +11,7 @@ const StartingPage = () => {
 
     const [postList, setPostList] = useState([])
 
-    useEffect( () => {
+    useEffect(() => {
         async function getPosts() {
             const response = await postService.get()
             setPostList(response)
@@ -22,16 +24,20 @@ const StartingPage = () => {
 
     return (
         <div className={styles.mainContainer}>
-            <aside className={styles.leftSide}>Left side (folosim components leftside)</aside>
+            <aside className={styles.leftSide}>Friends suggestions
+                <LeftSide />
+            </aside>
             <section className={styles.newsfeed}>
                 {postList && postList.map(post => {
-                    return <Newsfeed postData={post} key={post.id}/>
+                    return <Newsfeed postData={post} key={post.id} />
                 })}
                 {posts && posts.map(post => {
-                    return <Newsfeed postData={post} key={post.id}/>
+                    return <Newsfeed postData={post} key={post.id} />
                 })}
             </section>
-            <aside className={styles.rightSide}>Right side content</aside>
+            <aside className={styles.rightSide}>Te-ar putea interesa ..
+                <RightSide />
+            </aside>
         </div>
     )
 }

@@ -1,6 +1,10 @@
+import InterestsSection from './interests/InterestsSection';
 const RightSide = () => {
     return (
-        <div>Rightside</div>
+        <section>
+            <InterestsSection />
+        </section>
+
     )
 }
 

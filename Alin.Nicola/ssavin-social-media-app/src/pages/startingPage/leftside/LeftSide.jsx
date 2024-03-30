@@ -1,7 +1,9 @@
+import FriendsSection from './friends/FriendsSection';
 const LeftSide = () => {
     return (
-        <div>LeftSide</div>
+        <section>
+            <FriendsSection />
+        </section>
     )
 }
-
 export default LeftSide;
