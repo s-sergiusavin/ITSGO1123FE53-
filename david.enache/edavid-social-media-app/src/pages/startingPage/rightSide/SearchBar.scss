@@ -1,0 +1,26 @@
+.search {
+  position: relative;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 23rem; // Lățimea de 23 de unități
+}
+
+.searchIcon {
+  padding: 0 8px;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputRoot {
+  color: inherit;
+}
+
+.inputInput {
+  padding: 8px 8px 8px 0;
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  width: 100%;
+}

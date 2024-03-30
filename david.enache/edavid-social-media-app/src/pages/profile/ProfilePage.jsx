@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, Link} from "react-router-dom";
-import './ProfilePage.scss'
+import './ProfilePage.scss';
 import imagineCoperta from '../../assets/images/imagineCoperta.jpg';
 import imagineProfil from '../../assets/images/imagineProfil.jpg';
 // import CameraAltIcon from '@mui/icons-material/CameraAlt';

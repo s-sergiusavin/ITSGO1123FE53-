@@ -1,0 +1,107 @@
+
+    
+.rightSide {
+  position: fixed;
+  top: 0; 
+  right: 0;
+  width: 25%;
+  height: 100%;
+  background-color: #fff;
+  // overflow-y: auto; 
+  border-left: 1px solid #ccc; 
+
+    .card {
+      position: relative;
+      .cardTitle {
+        font-size: 20px;
+        margin-bottom: 10px;
+        position: absolute;
+        top: -40px;
+        right: 0;
+      }
+      .inputClass {
+        width: calc(100% - 20px); /* Lățimea căutării, ajustată pentru a ține cont de margini */
+        padding: 10px;
+        margin-bottom: 20px; /* Spațiu între căutare și următorul element */
+        margin-top: 6rem; /* Spațiu de sus */
+        border-radius: 10px; /* Bordură rotunjită */
+        border: 2px solid #ccc; /* Bordură de 2px solidă cu gri */
+        background-color: #f5f5f5; /* Fundal gri deschis */
+        color: #333; /* Culoare text */
+        font-size: 16px; /* Dimensiunea textului */
+        outline: none; /* Nu afișăm conturul la focus */
+        width: 100%;
+      }
+
+      .inputClass:focus{
+        border-color: #007bff;
+      }
+      .friendList { 
+        padding: 0 -20px;
+        margin: 17rem;
+        display: flex;
+        flex-direction: column; /* Afișează elementele într-o singură coloană */
+        align-items: center;
+        margin-top: 4rem;
+        margin-right: 2rem;
+
+      
+        .liClass {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px 0;
+          font-size: 20px;
+          color: #333;
+          flex-direction: column;
+          list-style: none;
+          margin-bottom: -19px; 
+          // margin-bottom: 10px;
+
+          .friendContainer {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            .profileImage {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              margin-right: 5px;
+              margin-left: -20rem;
+            }
+          }
+          .statusIcon {
+            font-size: 14px;
+            color: green;
+            margin-right: 5px;
+          }
+          .friendName {
+            margin-right: 10px;
+            font-size: 18px;
+          }
+          .joinTime { 
+                 font-size: 1rem;
+                 
+          }
+           .active {
+            color: green; 
+          }
+          
+          .inactive {
+            color: red; 
+          }
+
+          
+          
+          
+          
+        }
+      }
+    }
+  }
+  
+       
+      
+    
+
