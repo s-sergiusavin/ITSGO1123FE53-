@@ -289,6 +289,7 @@ const UserProfilePage = () => {
 
     let photo = userProfileImage[id];
     let name = userProfileName[id];
+    let friendsNumber = Math.floor(Math.random() * 225) + ' Friends'
 
     return (
         <div className={styles.userProfileContainer}>
@@ -298,7 +299,7 @@ const UserProfilePage = () => {
                     <ListItemAvatar >
                         <Avatar alt="Profile photo" src={photo} sx={{ width: 120, height: 120 }} className={styles.userProfilePhoto} />
                     </ListItemAvatar>
-                    <ListItemText primary={name} className={styles.userProfileName} />
+                    <ListItemText primary={name} secondary={friendsNumber} className={styles.userProfileName} />
                 </ListItem>
             </div>
             <div className={styles.userProfileSections}>

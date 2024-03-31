@@ -265,7 +265,7 @@ const MyProfile = () => {
                     <ListItemAvatar >
                         <Avatar alt="Profile photo" src={profileImage} sx={{ width: 120, height: 120 }} className={styles.myProfilePhoto} />
                     </ListItemAvatar>
-                    <ListItemText primary="Georgiana Medrea" className={styles.myProfileName} />
+                    <ListItemText primary="Georgiana Medrea" secondary="24 Friends" className={styles.myProfileName} />
                 </ListItem>
             </div>
             <div className={styles.myProfileSections}>
