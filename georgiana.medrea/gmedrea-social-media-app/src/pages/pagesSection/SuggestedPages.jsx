@@ -1,10 +1,10 @@
 import styles from './Pages.module.scss';
-import SuggestedPagesElement from './SuggestedPagesElement';
 
 import pageName2 from '../../assets/images/pageName2.jpeg';
 import pageName3 from '../../assets/images/pageName3.jpeg';
 import pageName4 from '../../assets/images/pageName4.jpeg';
-import { useState } from 'react';
+
+import SuggestedPagesElement from './SuggestedPagesElement';
 
 
 const SuggestedPages = () => {

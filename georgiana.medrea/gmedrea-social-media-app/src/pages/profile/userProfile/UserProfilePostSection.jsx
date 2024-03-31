@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import styles from "./UserProfile.module.scss";
+
 import PropTypes from 'prop-types';
 
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
@@ -7,28 +8,14 @@ import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ReplyIcon from '@mui/icons-material/Reply';
 import CommentIcon from '@mui/icons-material/Comment';
 
-import profile from '../../../assets/images/profile.jpg';
-import post1 from '../../../assets/images/event1.jpeg';
-import post2 from '../../../assets/images/event2.jpeg';
 import post5 from '../../../assets/images/post5.jpeg';
 import post6 from '../../../assets/images/post6.jpg';
-import userName1 from '../../../assets/images/userName1.jpg';
-import userName2 from '../../../assets/images/userName2.jpg';
-import userName3 from '../../../assets/images/userName3.jpg';
-import userName4 from '../../../assets/images/userName4.jpeg';
-import userName5 from '../../../assets/images/userName5.jpeg';
-import userName6 from '../../../assets/images/userName6.jpg';
-import userName7 from '../../../assets/images/userName7.jpg';
-import userName8 from '../../../assets/images/userName8.jpg';
-import userName9 from '../../../assets/images/userName9.jpg';
-import userName10 from '../../../assets/images/userName10.jpg';
-import userName11 from '../../../assets/images/userName11.jpg';
-import userName12 from '../../../assets/images/userName12.jpg';
 
-import { useState } from 'react';
-import styles from "./UserProfile.module.scss"
 import DropDownList from './UserProfileDropDownList';
 import UserProfileCommentSection from './UserProfileCommentSection';
+
+import { useState } from 'react';
+
 
 const UserProfilePostSection = ({ postData, name, photo }) => {
     const [isLiked, setIsLiked] = useState(false);

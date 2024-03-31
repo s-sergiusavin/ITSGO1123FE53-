@@ -1,9 +1,5 @@
 import styles from './RightSide.module.scss';
 
-import { useEffect, useState } from 'react';
-
-import RightSideElement from './RightSideElement';
-
 import userName1 from '../../../assets/images/userName1.jpg';
 import userName2 from '../../../assets/images/userName2.jpg';
 import userName3 from '../../../assets/images/userName3.jpg';
@@ -16,6 +12,11 @@ import userName9 from '../../../assets/images/userName9.jpg';
 import userName10 from '../../../assets/images/userName10.jpg';
 import userName11 from '../../../assets/images/userName11.jpg';
 import userName12 from '../../../assets/images/userName12.jpg';
+
+import RightSideElement from './RightSideElement';
+
+import { useEffect, useState } from 'react';
+
 
 const RightSide = () => {
 

@@ -1,5 +1,7 @@
-import { Link } from 'react-router-dom'
+import styles from "./MyProfile.module.scss";
+
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import InfoIcon from '@mui/icons-material/Info';
@@ -10,10 +12,12 @@ import CommentIcon from '@mui/icons-material/Comment';
 import profile from '../../assets/images/profile.jpg';
 import post3 from '../../assets/images/post3.jpg';
 import post4 from '../../assets/images/post4.jpg';
-import { useState } from 'react';
+
 import MyProfileCommentSection from './MyProfileCommentSection';
-import styles from "./MyProfile.module.scss"
 import DropDownList from './MyProfileDropDownList';
+
+import { useState } from 'react';
+
 
 const MyProfilePostSection = ({ postData }) => {
     const [isLiked, setIsLiked] = useState(false);

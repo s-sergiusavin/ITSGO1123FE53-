@@ -1,4 +1,4 @@
-import styles from './MyProfile.module.scss'
+import styles from './MyProfile.module.scss';
 
 const DropDownList = (props) => {
     return (

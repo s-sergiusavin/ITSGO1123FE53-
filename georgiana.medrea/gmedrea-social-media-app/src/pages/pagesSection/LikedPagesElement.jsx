@@ -1,12 +1,12 @@
-import styles from './Pages.module.scss'
+import styles from './Pages.module.scss';
+
+import PropTypes from 'prop-types';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
-
-import PropTypes from 'prop-types';
 
 
 const LikedPagesElement = ({ imageUrl, pageName, pageLikes }) => {

@@ -1,13 +1,13 @@
 import styles from './Events.module.scss';
 
+import PropTypes from 'prop-types';
+
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
-
-import PropTypes from 'prop-types';
 
 
 const MyEventElement = ({ imageUrl, eventName, interested, going}) => {

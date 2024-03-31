@@ -1,10 +1,10 @@
-import { useState } from 'react';
-import profileImg from '../../../assets/images/profile.jpg';
-
-import { Link } from 'react-router-dom';
 import styles from "./UserProfile.module.scss";
 
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
+import { useState } from 'react';
+
 
 const USER_DATA = [
     {

@@ -1,8 +1,11 @@
-import { useState } from 'react';
-import profileImg from '../../assets/images/profile.jpg';
+import styles from "./MyProfile.module.scss";
 
 import { Link } from 'react-router-dom';
-import styles from "./MyProfile.module.scss"
+
+import profileImg from '../../assets/images/profile.jpg';
+
+import { useState } from 'react';
+
 
 const USER_DATA = [
     {

@@ -1,14 +1,16 @@
-import './App.css'
-import { Routes, Route } from 'react-router-dom'
-import HomePage from './pages/home/HomePage'
-import AuthPage from './pages/auth/AuthPage'
-import NotFound from './pages/NotFound'
-import UserProfilePage from './pages/profile/userProfile/UserProfilePage'
-import Layout from './components/Layout'
-import MyProfile from './pages/profile/MyProfile'
-import Friends from './pages/friends/Friends'
-import Events from './pages/events/Events'
-import Pages from './pages/pagesSection/Pages'
+import './App.css';
+
+import { Routes, Route } from 'react-router-dom';
+
+import HomePage from './pages/home/HomePage';
+import AuthPage from './pages/auth/AuthPage';
+import NotFound from './pages/NotFound';
+import UserProfilePage from './pages/profile/userProfile/UserProfilePage';
+import Layout from './components/Layout';
+import MyProfile from './pages/profile/MyProfile';
+import Friends from './pages/friends/Friends';
+import Events from './pages/events/Events';
+import Pages from './pages/pagesSection/Pages';
 
 function App() {
 

@@ -23,7 +23,6 @@ import userName9 from '../../../assets/images/userName9.jpg';
 import userName10 from '../../../assets/images/userName10.jpg';
 import userName11 from '../../../assets/images/userName11.jpg';
 import userName12 from '../../../assets/images/userName12.jpg';
-import profileNewsfeed from '../../../assets/icons/profileNewsfeed.jpeg';
 
 import CommentsSection from './comments/CommentsSection';
 import DropDownList from './NewsfeedDropDownList';

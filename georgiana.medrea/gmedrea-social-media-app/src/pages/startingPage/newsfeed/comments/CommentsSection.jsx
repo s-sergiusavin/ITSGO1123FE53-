@@ -1,13 +1,12 @@
-import { useState } from 'react';
-import profileImg from '../../../../assets/icons/profile.jpg';
-import userName1 from '../../../../assets/images/userName1.jpg';
-import userName2 from '../../../../assets/images/userName2.jpg';
+import styles from './CommentsSection.module.scss';
 
-import styles from './CommentsSection.module.scss'
 import { Link } from 'react-router-dom';
-import { useParams } from "react-router-dom";
 
-// https://www.mockaroo.com/
+import profileImg from '../../../../assets/icons/profile.jpg';
+
+import { useState } from 'react';
+
+
 const USER_DATA = [
     {
         "id": 1,

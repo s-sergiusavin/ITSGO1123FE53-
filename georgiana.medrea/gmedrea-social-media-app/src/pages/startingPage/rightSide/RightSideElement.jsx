@@ -10,6 +10,7 @@ import { styled } from '@mui/material/styles';
 import Badge from '@mui/material/Badge';
 import List from '@mui/material/List';
 
+
 const RightSideElement = ({ imageUrl, name }) => {
 
     const StyledBadge = styled(Badge)(({ theme }) => ({

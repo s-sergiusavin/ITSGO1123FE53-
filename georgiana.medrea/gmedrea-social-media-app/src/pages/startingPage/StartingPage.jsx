@@ -1,10 +1,14 @@
-import { useEffect, useState } from 'react';
-import useFetch from '../../hooks/useFetch';
-import styles from './StartingPage.module.scss'
+import styles from './StartingPage.module.scss';
+
 import Newsfeed from './newsfeed/Newsfeed';
 import LeftSide from './leftside/LeftSide.jsx';
 import RightSide from './rightSide/RightSide.jsx';
+
 import postService from '../../services/postService';
+import useFetch from '../../hooks/useFetch';
+
+import { useEffect, useState } from 'react';
+
 
 const StartingPage = () => {
     const posts = useFetch('https://jsonplaceholder.typicode.com/posts')

@@ -1,7 +1,9 @@
-import FriendRequestsList from './FriendRequestsList.jsx'
+import styles from './Friends.module.scss';
+
+import FriendRequestsList from './FriendRequestsList.jsx';
 import FriendsList from "./FriendsList.jsx";
 import SuggestedFriends from "./SuggestedFriends.jsx";
-import styles from './Friends.module.scss'
+
 
 const Friends = () => {
     return (

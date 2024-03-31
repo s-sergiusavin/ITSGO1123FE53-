@@ -1,9 +1,11 @@
-import { useState } from 'react'
-import styles from './AuthForm.module.scss'
+import styles from './AuthForm.module.scss';
+
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginUser, registerUser } from '../../redux/slices/authSlice';
 import { selectUser } from '../../redux/selectors';
+
 
 const AuthForm = () => {
     const [isLogin, setIsLogin] = useState(true);

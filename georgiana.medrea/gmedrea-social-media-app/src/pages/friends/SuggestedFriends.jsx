@@ -1,7 +1,5 @@
 import styles from './Friends.module.scss';
 
-import SuggestedFriendElement from './SuggestedFriendElement';
-
 import userName1 from '../../assets/images/userName1.jpg';
 import userName2 from '../../assets/images/userName2.jpg';
 import userName3 from '../../assets/images/userName3.jpg';
@@ -14,6 +12,8 @@ import userName9 from '../../assets/images/userName9.jpg';
 import userName10 from '../../assets/images/userName10.jpg';
 import userName11 from '../../assets/images/userName11.jpg';
 import userName12 from '../../assets/images/userName12.jpg';
+
+import SuggestedFriendElement from './SuggestedFriendElement';
 
 
 const SuggestedFriends = () => {
@@ -140,7 +140,6 @@ const SuggestedFriends = () => {
             id: 83
         }
     ]
-
 
     return (
         <>

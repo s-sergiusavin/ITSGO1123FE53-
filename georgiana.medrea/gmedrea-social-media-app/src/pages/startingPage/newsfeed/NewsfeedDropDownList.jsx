@@ -1,4 +1,4 @@
-import styles from './Newsfeed.module.scss'
+import styles from './Newsfeed.module.scss';
 
 const DropDownList = (props) => {
     return (

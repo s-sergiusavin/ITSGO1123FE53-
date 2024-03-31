@@ -1,8 +1,6 @@
 import styles from "./MyProfile.module.scss";
 
-import { useState } from "react";
 import * as React from 'react';
-
 import { styled } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import Grid from '@mui/material/Grid';
@@ -13,6 +11,9 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
+
+import { useState } from "react";
+
 
 const MyProfileIntroElement = ({ icon, text }) => {
 

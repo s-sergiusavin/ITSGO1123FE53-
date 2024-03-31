@@ -1,6 +1,23 @@
 import styles from './MyProfile.module.scss';
 
-import coverPhoto from '../../assets/images/cover.jpg';
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
+import ImageListItemBar from '@mui/material/ImageListItemBar';
+import WorkIcon from '@mui/icons-material/Work';
+import SchoolIcon from '@mui/icons-material/School';
+import HomeIcon from '@mui/icons-material/Home';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import WomanIcon from '@mui/icons-material/Woman';
+import CakeIcon from '@mui/icons-material/Cake';
+import MyProfileIntroElement from "./MyProfileIntroElement";
+import MyProfilePostSection from "./MyProfilePostSection";
+
 import coverProfile from '../../assets/images/coverProfile.jpg'
 import profileImage from '../../assets/icons/profile.jpg';
 import pageName1 from '../../assets/images/pageName1.jpeg';
@@ -19,26 +36,9 @@ import userName9 from '../../assets/images/userName9.jpg';
 import userName10 from '../../assets/images/userName10.jpg';
 import userName12 from '../../assets/images/userName12.jpg';
 
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import Avatar from '@mui/material/Avatar';
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
-import ImageListItemBar from '@mui/material/ImageListItemBar';
-import WorkIcon from '@mui/icons-material/Work';
-import SchoolIcon from '@mui/icons-material/School';
-import HomeIcon from '@mui/icons-material/Home';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import WomanIcon from '@mui/icons-material/Woman';
-import CakeIcon from '@mui/icons-material/Cake';
-import MyProfileIntroElement from "./MyProfileIntroElement";
-import MyProfilePostSection from "./MyProfilePostSection";
-
 import useFetch from '../../hooks/useFetch';
-import { styled } from '@mui/material/styles';
-import { useState, useEffect } from "react";
-import * as React from 'react';
+
+import { useState } from "react";
 
 
 const MyProfile = () => {
