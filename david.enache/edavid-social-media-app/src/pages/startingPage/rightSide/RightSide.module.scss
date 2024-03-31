@@ -6,8 +6,7 @@
   right: 0;
   width: 25%;
   height: 100%;
-  background-color: #fff;
-  // overflow-y: auto; 
+  background-color:  #f0f2f5;
   border-left: 1px solid #ccc; 
 
     .card {
@@ -20,16 +19,16 @@
         right: 0;
       }
       .inputClass {
-        width: calc(100% - 20px); /* Lățimea căutării, ajustată pentru a ține cont de margini */
+        width: calc(100% - 20px);
         padding: 10px;
-        margin-bottom: 20px; /* Spațiu între căutare și următorul element */
-        margin-top: 6rem; /* Spațiu de sus */
-        border-radius: 10px; /* Bordură rotunjită */
-        border: 2px solid #ccc; /* Bordură de 2px solidă cu gri */
-        background-color: #f5f5f5; /* Fundal gri deschis */
-        color: #333; /* Culoare text */
-        font-size: 16px; /* Dimensiunea textului */
-        outline: none; /* Nu afișăm conturul la focus */
+        margin-bottom: 20px; 
+        margin-top: 6rem;
+        border-radius: 10px;
+        border: 2px solid #ccc;
+        background-color: #f5f5f5;
+        color: #333;
+        font-size: 16px; 
+        outline: none; 
         width: 100%;
       }
 
@@ -40,7 +39,7 @@
         padding: 0 -20px;
         margin: 17rem;
         display: flex;
-        flex-direction: column; /* Afișează elementele într-o singură coloană */
+        flex-direction: column; 
         align-items: center;
         margin-top: 4rem;
         margin-right: 2rem;
@@ -57,7 +56,7 @@
           flex-direction: column;
           list-style: none;
           margin-bottom: -19px; 
-          // margin-bottom: 10px;
+        
 
           .friendContainer {
             display: flex;
@@ -92,11 +91,6 @@
           .inactive {
             color: red; 
           }
-
-          
-          
-          
-          
         }
       }
     }

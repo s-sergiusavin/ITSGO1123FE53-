@@ -1,7 +1,31 @@
-.leftSidePage {
+// Stiluri pentru lista de elemente
+.listClass {
+  padding: 0;
+  margin: 0;
+  width: 10rem;
+  margin-top: 2rem;
+   
+  li {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    list-style-type: none;
+  
+   
+    
+    a {
+      color: #333;
+      text-decoration: none;
+      &:hover {
+        color: #1877f2;
+      }
+    }
+  }
+}
 
+// Stiluri pentru LeftPage
+.leftSidePage {
   .sidebar {
-    width: 25%;
+    width: 280px;
     background-color: #f0f2f5;
     height: 100vh;
     position: fixed;
@@ -10,15 +34,19 @@
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-top: 5rem;
+    font-size: 1.2rem;
 
     .sidebar__header {
       .myApp {
-        display: flex;
-        margin: 0;
-        padding: 0;
-        margin-bottom: 3rem;
-        margin-top: -1rem;
         cursor: pointer;
+        margin-bottom: 1rem;
+        font-size: 24px;
+        color: #333;
+        text-decoration: none;
+        margin-top: -1rem;
+        &:hover {
+          color: #1877f2;
+        }
       }
     }
 
@@ -27,10 +55,8 @@
         display: flex;
         align-items: center;
         margin-bottom: 20px;
-        font-size: 24px;
-
+        
         a {
-          display: block;
           color: #333;
           text-decoration: none;
           margin-left: 10px;
@@ -40,33 +66,12 @@
         }
 
         svg {
-          margin-left: 0.2rem;
-        }
-
-        // Stilurile pentru lista din Drawer
-        ul {
-          padding: 0;
-          margin: 0;
-        }
-
-        // Stilurile pentru fiecare element din lista Drawer
-        li {
-          margin-bottom: 10px;
-          font-size: 20px;
-        }
-
-        Stilurile pentru link-uri în lista Drawer
-        a {
-          color: #333;
-          text-decoration: none;
-          &:hover {
-            color: #435974;
-          }
+          margin-right: 10px;
         }
       }
 
       .more {
-        margin-left: 11px;
+        margin-left: 10px;
         cursor: pointer;
         &:hover {
           color: #1877f2;
@@ -75,8 +80,8 @@
     }
 
     &__footer {
-      position: absolute;
-      bottom: 20px;
+      margin-top: 13rem;
+      margin-bottom: 10px;
     }
   }
 }

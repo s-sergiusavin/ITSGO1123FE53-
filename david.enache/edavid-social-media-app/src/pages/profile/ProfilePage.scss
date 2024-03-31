@@ -1,11 +1,55 @@
+
+
+.story-images-drawer {
+    padding: 20px;
+  
+    .image-row {
+      display: flex;
+      justify-content: space-between; 
+      margin-bottom: 7px;
+    }
+  
+    .story-image {
+      width: 48%; 
+      height: 9rem; 
+      margin-right: 2px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+  }
+  
+
+.edit-profile-menu {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 200px;
+    margin-left: -23px;
+}
+
+.menu-item {
+    display: flex;
+    color: #333;
+    text-decoration: none;
+    padding: 8px 0;
+    font-weight: bold;
+    margin-left: -3px;
+
+   
+}
+
+.menu-item:hover {
+    background-color: #f0f0f0;
+}
+
 .profile-page-container {
     height: 200vh;
-    // display: flex;
-    // justify-content: flex-end; /* Aliniază la stânga */
-// position: relative;
+   
     .cover-photo {
         width: 100%;
-        height: 300px; /* sau orice înălțime dorești */
+        height: 300px; 
         overflow: hidden;
         img {
             width: 100%;
@@ -17,10 +61,10 @@
 
     .profile-photo {
         position: absolute;
-        top: 19rem; /* Ajustează poziția după înălțimea imaginii de copertă */
-        left: 12rem; /* Ajustează poziția la stânga */
-        width: 150px; /* sau orice dimensiune dorești */
-        height: 150px; /* sau orice dimensiune dorești */
+        top: 19rem; 
+        left: 12rem; 
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         overflow: hidden;
         border: 2px solid black;
@@ -32,18 +76,6 @@
            
         }
     }
-    // .camera-icon {
-    //     // position: absolute;
-    //     top: 0;
-    //     width: 100px;
-    //     right: 0;
-    //     z-index: 1; /* Asigurați-vă că iconița camerei foto are un z-index mai mare pentru a fi afișată peste poza de profil */
-    //     background-color: rgb(14, 1, 1);
-    //     border-radius: 50%;
-    //     padding: 5px;
-    //     cursor: pointer;
-      
-    // }
     .profile-details {
         margin-top: 16px;
         display: flex;
@@ -53,7 +85,7 @@
         
     }
     .name {
-        font-size: 1.5rem; /* sau orice dimensiune dorești */
+        font-size: 1.5rem;
         font-weight: bold;
         margin-bottom: 5px;
         cursor: pointer;
@@ -61,7 +93,7 @@
 
     .friends {
         font-size: 1.3rem;
-        font-weight: bold; /* sau orice dimensiune dorești */
+        font-weight: bold;
         cursor: pointer;
     }
     .Buttons{
@@ -83,8 +115,7 @@
 
 .ButtonsDet {
     display: flex;
-    // justify-content: flex-end;
-    padding: 3px; /* Aliniați butoanele la dreapta */
+    padding: 3px; 
     margin-left: 10rem;
 }
 
@@ -119,10 +150,8 @@ h2{
 }
 
 .friend {
-    // display: flex;
     text-align: center;
     margin: 5px; 
-    // left: 20px;
     cursor: pointer;
 
     img {

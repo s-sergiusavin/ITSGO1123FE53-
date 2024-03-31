@@ -11,6 +11,12 @@ import CollectionsIcon from '@mui/icons-material/Collections';
 import VideoCameraFrontIcon from '@mui/icons-material/VideoCameraFront';
 import MoreIcon from '@mui/icons-material/More';
 import { Drawer } from '@mui/material';
+import SaveIcon from '@mui/icons-material/Save';
+import GroupsIcon from '@mui/icons-material/Groups';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 
 
@@ -18,28 +24,23 @@ const LeftSide = () => {
  
   const list = () => {
     return (
-      <div>
-        <li><Link to="/saved">Saved</Link></li>
-        <li><Link to="/groups">Groups</Link></li>
-        <li><Link to="/events">Events</Link></li>
-        <li><Link to="/pages">Pages</Link></li>
-        <li><Link to="/Gaming">Gaming</Link></li>
-        <li><Link to="/reels">Reels</Link></li>
+      <div className={styles.listClass}>
+        <li><Link to="/saved">Saved</Link>
+        <SaveIcon className={styles.iconStyle}/></li>
+        <li><Link to="/groups">Groups</Link> <GroupsIcon className={styles.iconStyle}/></li>  
+        <li><Link to="/events">Events</Link><EmojiEventsIcon className={styles.iconStyle}/></li>
+        <li><Link to="/pages">Pages</Link> <AutoStoriesIcon className={styles.iconStyle}/></li>
+        <li><Link to="/Gaming">Gaming</Link><SportsEsportsIcon className={styles.iconStyle}/></li>
+        <li><Link to="/setings">Setings</Link><SettingsIcon className={styles.iconStyle}/></li>
       </div>
     );
   };
-
-
     const [isMenuOpen, setIsMenuOpen] = useState(false);
   
     const toggleMenu = () => {
       setIsMenuOpen(!isMenuOpen);
     };
 
-  
-
-
-    
   return (
     <div className={styles.leftSidePage}>
       <div className={styles.sidebar}>
@@ -81,16 +82,14 @@ const LeftSide = () => {
             Mai multe
             <MoreIcon />
           </div>
-          {/* Meniul asociat cu "Mai multe" */}
           <Drawer anchor={'left'} open={isMenuOpen} onClose={toggleMenu}>
-            {list()} {/* Definește funcția "list" pentru a returna conținutul meniului */}
+            {list()} 
           </Drawer>
 
 
 
         </div>
         <div className={styles.sidebar__footer}>
-          {/* Un mic footer */}
           <p>© 2024 My Social App</p>
         </div>
       </div>

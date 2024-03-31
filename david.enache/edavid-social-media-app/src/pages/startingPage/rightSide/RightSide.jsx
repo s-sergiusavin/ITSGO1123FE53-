@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import styles from '../StartingPage.module.scss';
 import  styles from './RightSide.module.scss';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import imagineDavid from '../images/imagineDavid.jpg';
@@ -39,7 +38,7 @@ const RightSide = () => {
   const filteredFriends = friendsWithImages.filter(friend =>
     friend.name.toLowerCase().includes(searchInput.toLowerCase())
   );
-// style={{ marginTop: '7rem' }}
+
   return (
     <div className={styles.rightSide}>
       <div className={styles.card}>
