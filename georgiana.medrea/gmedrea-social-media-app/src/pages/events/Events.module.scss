@@ -155,15 +155,15 @@
 
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
     .events {
         flex-direction: row;
         gap: 1rem;
 
         .titleMyEvents {
             top: -27rem;
-            left: 6rem;
-            width: 7rem;
+            left: 2rem;
+            width: 10rem;
         }
 
         .myEvents {
@@ -172,13 +172,13 @@
             height: 60rem;
             justify-content: flex-start;
             top: 5rem;
-            left: -1rem;
+            left: -6rem;
         }
 
         .titleSuggestedEvents {
             top: -27rem;
-            left: 9rem;
-            width: 11rem;
+            left: 7rem;
+            width: 20rem;
             height: 2rem;
         }
 
@@ -188,7 +188,20 @@
             height: 60rem;
             justify-content: flex-start;
             top: 5rem;
-            left: -1rem;
+            left: -8rem;
+
+            .suggestedEvent {
+
+                .actionButtons {
+                    .button {
+                        width: 10rem;
+                    }
+
+                    .sendIcon {
+                        right: -2rem;
+                    }
+                }
+            }
         }
     }
 }
@@ -199,20 +212,36 @@
 
         .titleMyEvents {
             top: 5rem;
-            left: -6rem;
+            left: -7rem;
         }
 
         .myEvents {
             width: 25rem;
+            left: 0.5rem;
         }
 
         .titleSuggestedEvents {
             top: 4rem;
-            left: -4rem;
+            left: -2rem;
         }
 
         .suggestedEvents {
             width: 25rem;
+            left: 0.5rem;
+
+
+            .suggestedEvent {
+
+                .actionButtons {
+                    .button {
+                        width: 15rem;
+                    }
+
+                    .sendIcon {
+                        right: 0;
+                    }
+                }
+            }
         }
     }
 }
