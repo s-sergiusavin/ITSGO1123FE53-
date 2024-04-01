@@ -1,11 +1,14 @@
 import StartingPage from "../startingPage/StartingPage";
 
+
 const HomePage = () => {
     return (
         <>
-            <StartingPage/>
+            <StartingPage />
+
         </>
     )
+
 }
 
 export default HomePage;

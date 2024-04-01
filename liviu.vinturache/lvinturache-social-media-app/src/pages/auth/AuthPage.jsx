@@ -1,55 +1,33 @@
-import AuthForm from "./AuthForm";
-import logo from '../../assets/images/logo.jpg';
+import AuthForm from './AuthForm'
+import hangoverLogo from '../../assets/images/hangoverLogo.jpg'
 import styles from './AuthPage.module.scss'
-import useMediaQuery from '../../hooks/useMediaQuery';
-
-
-
-
-
+import Footer from '../../components/footer/Footer'
+import React, { useEffect } from 'react'
 
 const AuthPage = () => {
-
-
-    const MediaResponsive = ({isDesktop}) => (
-        <nav className={`base ${isDesktop ? "desktop" : "mobile"}`}>
-          <Icon />
-        </nav>
-      );
-
-      const Icon = () => (
-        <img src={logo}
-        alt='login image'
-        className={styles.logoImage}>
-        </img>
-      );
-
-    const isDesktop = useMediaQuery('(min-width: 1020px)');
-
-    return (
-
-        <>
-        <div className={styles.mainContainer}>
-        <div className="App">
-            {/* {isDesktop ? <h1>Desktop</h1> : <h1>Mobile</h1>} */}
-            <MediaResponsive isDesktop={isDesktop}/>
-        </div>
+  return (
+    <>
+      <div className={styles.mainContainer}>
+        <img
+          src={hangoverLogo}
+          alt="login image"
+          className={styles.brandLogo}
+        ></img>
 
         <div className={styles.logoDescription}>
-            <h1>funtime</h1>
-            <div className={styles.logoQuote}>
-                <p>Explore and share your experience </p>
-            </div>
+          <h1>Connect</h1>
+          <div className={styles.logoQuote}>
+            <p>with people and share amazing experiencies. </p>
+          </div>
         </div>
-        </div>
+      </div>
 
-            <AuthForm />
-        </>
-
-
-     )
-
-
+      {/* call footer */}
+      <Footer />
+      {/* call autentification form */}
+      <AuthForm />
+    </>
+  )
 }
 
-export default AuthPage;
+export default AuthPage

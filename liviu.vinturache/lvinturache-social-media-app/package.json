@@ -15,12 +15,18 @@
     "@mui/icons-material": "^5.15.14",
     "@mui/material": "^5.15.14",
     "@react-hook/media-query": "^1.1.1",
+    "@reduxjs/toolkit": "^2.2.2",
     "axios": "^1.6.8",
+    "copyright-update": "^1.19.0",
     "normalize-scss": "^8.0.0",
     "normalize.css": "^8.0.1",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
     "react-router-dom": "^6.22.3",
+    "redux-persist": "^6.0.0",
+    "requirejs": "^2.3.6",
     "sass": "^1.72.0"
   },
   "devDependencies": {

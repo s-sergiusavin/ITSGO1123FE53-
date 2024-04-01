@@ -1,18 +1,22 @@
-import styles from './Newsfeed.module.scss';
-
+// react
+import {  useState } from 'react';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../../redux/selectors';
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
-
+// material ui
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import InfoIcon from '@mui/icons-material/Info';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ReplyIcon from '@mui/icons-material/Reply';
 import CommentIcon from '@mui/icons-material/Comment';
-
+// styles
+import styles from './Newsfeed.module.scss';
+// assets
 import profile from '../../../assets/icons/profile.jpeg'
 import post1 from '../../../assets/images/post1.jpg'
 import post2 from '../../../assets/images/post2.jpg'
-import { useState } from 'react';
+// components
 import CommentsSection from './comments/CommentsSection';
 
 const Newsfeed = ({ postData }) => {
@@ -20,6 +24,8 @@ const Newsfeed = ({ postData }) => {
     const [likes, setLikes] = useState(Math.floor(Math.random() * 100))
     const [isShared, setIsShared] = useState(false)
     const [shares, setShares] = useState(Math.floor(Math.random() * 100))
+
+    const user = useSelector(selectUser)
 
     const postImages = {
         0: post1,
@@ -46,11 +52,12 @@ const Newsfeed = ({ postData }) => {
     return (
         <div className={styles.mainPost}>
             <div className={styles.userInfo}>
-                <Link to='/me'>
+
+                <Link to={`/profile/${postData.id}`}>
                     <img src={profile} alt="Profile Picture"
                         className={styles.profilePictureImg} />
                 </Link>
-                <Link to='/me'>Userul Meu</Link>
+                <Link to={`/profile/${postData.id}`}>Userul Meu</Link>
 
                 <div className={styles.contextMenu}>
                     <MoreHorizIcon />

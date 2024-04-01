@@ -1,5 +1,5 @@
-@import '../../node_modules/normalize.css/normalize.css';
-@import '../scss/variables';
+@import '../../../node_modules/normalize.css/normalize.css';
+@import '../../scss/variables';
 
 * {
     padding: 0;
@@ -19,20 +19,40 @@
   }
 
   /* navbar */
-  .navbar {
-    background-color: $globalWhitesmoke;
-    padding: 10px 20px;
+  .navigation {
+    // padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     min-height: 70px;
     position: fixed;
     width: 100%;
-    z-index: 10;
+    top: 0;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 3px solid black;
+    z-index: 1;
 
+    .logoImageNav {
+      color: red;
+      background-color: red;
+
+    }
+    /* logo icon */
+  .logoImage {
+    position: relative;
+    display: flex;
+    height: 3rem;
+    width: 3rem;
+    margin-left: 10px;
+    align-items: center;
+    border-radius: 50%;
+    background-color: red;
+    &:hover {
+        opacity: 0.8;
+    }
   }
-
+  }
   .navlink {
 
     &:hover {
@@ -47,24 +67,14 @@
     font-family: Arial, Helvetica, sans-serif;
     color: $globalRoyalBlue;
 
+
     cursor: pointer;
     &:hover {
         color: $globalDarkBlue;
 
     }
   }
-/* logo icon */
-  .logoImage {
-    position: relative;
-    height: 3rem;
-    width: 3rem;
-    justify-content: left;
-    object-fit: contain;
-    display: flex;
-    &:hover {
-        opacity: 0.8;
-    }
-  }
+
 
   /* ul  */
   .navMenu {
@@ -107,9 +117,7 @@
       transform: translateY(-8px) rotate(-45deg);
     }
 
-
     /* navMenu */
-
     .navMenu{
       position: absolute;
       flex-direction: column;
@@ -131,57 +139,3 @@
       margin: 16px 0;
     }
   }
-
-
-// header {
-//     width: 100%;
-//     height: 5rem;
-//     background-color: $globalWhitesmoke;
-//     box-shadow: 20px 0.3px 0.4px $globalGrey;
-//     display: flex;
-//     justify-content: right;
-//     align-items: center;
-//     position: fixed;
-//     z-index: 1;
-
-// }
-
-
-
-//     .logo {
-//         color: $globalLightBlack;
-//         font-size: 2rem;
-//         left: 2rem;
-//         position: relative;
-//         display: flex;
-
-//     }
-
-//     .menu {
-//         list-style: none;
-//         margin: 0;
-//         padding: 0;
-//         display: flex;
-//         align-items: baseline;
-
-//         .menuItem {
-//             margin: 0 1rem;
-
-//             a {
-//                 text-decoration: none;
-//                 color: $globalLightBlack;
-//                 white-space: nowrap;
-//                 font-weight: bold;
-
-
-//                 &:global.active {
-//                     color: yellow;
-//                 }
-
-//                 &:hover {
-//                     color: lightblue;
-//                 }
-//             }
-//         }
-//     }
-

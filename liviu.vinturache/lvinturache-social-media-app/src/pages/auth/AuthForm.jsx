@@ -1,35 +1,61 @@
-
 import { useState } from 'react'
 import styles from './AuthForm.module.scss'
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { loginUser, registerUser } from '../../redux/slices/authSlice';
+import { selectUser } from '../../redux/selectors';
 
 const AuthForm = () => {
     const [isLogin, setIsLogin] = useState(true);
-    const [isError, setIsError] = useState(false);
-    const [isLoading, setIsLoading] = useState(false)
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('')
 
+    const user = useSelector(selectUser)
+
     const navigate = useNavigate();
+
+    const dispatch = useDispatch()
 
     const toggleAuthState = () => {
         setIsLogin(prevState => !prevState)
     }
 
-    const submitHandler = (event) => {
+    const submitHandler = async (event) => {
         event.preventDefault()
-         navigate('/')
+        if (isLogin) {
+            try {
+                const payload = {
+                    email: username,
+                    password: password
+                }
 
+                await dispatch(loginUser(payload))
+                if (user.isAuthenticated) {
+                    navigate('/')
+                }
+            } catch (err) {
+                console.error(err)
+            }
+        } else {
+            try {
+                const payload = {
+                    email: username,
+                    password: password
+                }
+                await dispatch(registerUser(payload))
+
+            } catch(err) {
+                console.error(err)
+            }
+        }
     }
 
     const actionIsNotLoading = (
         <button>{isLogin ? 'Login' : 'Create new account'}</button>
     )
-
-
     return (
         <div className={styles.auth}>
-            <h2>{isLogin ? 'Login' : 'Create new account'}</h2>
+            <h2 className={styles.action}>{isLogin ? 'Login' : 'Create new account'}</h2>
             <form onSubmit={submitHandler} autoComplete='off' noValidate>
                 <div className={styles.control}>
                     <label htmlFor="username">Username</label>
@@ -46,9 +72,9 @@ const AuthForm = () => {
                         required onChange={(e) => setPassword(e.target.value)} />
                 </div>
                 <div className={styles.actions}>
-                    {isError && <p>Please try again</p>}
-                    {isLoading && <p>Sending request...</p>}
-                    {!isLoading && actionIsNotLoading}
+                    {user.loading && <p>Please try again</p>}
+                    {user.error && <p>Sending request...</p>}
+                    {!user.loading && actionIsNotLoading}
                     <button type='button' className={styles.toggle} onClick={toggleAuthState}>
                         {isLogin ? 'Create new account' : 'Login with an existing account'}
                     </button>
@@ -59,4 +85,3 @@ const AuthForm = () => {
 }
 
 export default AuthForm
-
