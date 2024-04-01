@@ -54,7 +54,7 @@ const Newsfeed = ({ postData }) => {
                     <img src={profile} alt="Profile Picture"
                         className={styles.profilePictureImg} />
                 </Link>
-                <Link to={`/profile/${postData.id}`}>Userul Meu</Link>
+                <Link to={`/profile/${postData.id}`}>Macrescu Alex Post</Link>
 
                 <div className={styles.contextMenu}>
                     <MoreHorizIcon />

@@ -4,19 +4,63 @@
     align-items: center;
     gap: 3rem;
 
+    // .newsfeed {
+    //     flex: 0;
+    //     /* Ocupă tot spațiul disponibil */
+    //     margin: 0 auto;
+    //     /* Plasează în mijloc orizontal */
+    // }
+
+    // .leftSide {
+    //     /* Stilurile pentru partea din stânga, dacă este cazul */
+    // }
+
+    // .rightSide {
+    //     /* Stilurile pentru partea din dreapta, dacă este cazul */
+    // }
+
     aside {
-        width: 15rem;
-        background-color: lightgray;
-        height: 50vh;
-        position: fixed;
-        top: 5rem;
+        width: 22rem;
+        background-color: rgb(186, 180, 240);
+        height: 2561cm;
+        // height: 15vh;
+        position: static;
+        // left: 50%;
+        // right: 50%;
+        top: 15rem;
+
 
         &.leftSide {
-            left: 0;
+            left: 50%;
         }
 
         &.rightSide {
-            right: 0;
+            right: 50%;
         }
     }
+
+
+    // .left-side {
+    //     position: left;
+    //     left: 0;
+    // }
+
+    // .right-side {
+    //     position: right;
+    //     right: 0;
+    // }
+    // aside {
+    //     width: 15rem;
+    //     background-color: lightgray;
+    //     height: 50vh;
+    //     position: fixed;
+    //     top: 5rem;
+
+    //     &.leftSide {
+    //         left: 50%;
+    //     }
+
+    //     &.rightSide {
+    //         right: 50%;
+    //     }
 }

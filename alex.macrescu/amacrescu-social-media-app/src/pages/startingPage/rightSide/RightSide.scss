@@ -1,0 +1,11 @@
+.rightSide {
+    position: fixed; /* Poziționare fixă pentru a menține coloana în afara fluxului normal */
+    top: 15rem; /* Distanța de la partea de sus a paginii */
+    right: 0; /* Plasare la marginea dreaptă a paginii */
+
+    width: 15rem; /* Lățimea coloanei din dreapta */
+    background-color: rgb(136, 132, 132); /* Culorea de fundal */
+    height: 100vh; /* Înălțimea coloanei să fie egală cu înălțimea ferestrei de vizualizare */
+
+    /* Alte stiluri specifice pentru coloana din dreapta */
+}

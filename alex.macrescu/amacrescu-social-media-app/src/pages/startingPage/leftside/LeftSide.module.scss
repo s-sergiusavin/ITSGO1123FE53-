@@ -1,0 +1,35 @@
+// LeftSide.scss
+
+.leftSide {
+    width: auto; // Ajustează dimensiunea laterală a paginii după preferințe
+    background-color: #f0f0f0; // Schimbă culoarea de fundal după preferințe
+    padding: 20px; // Adaugă puțin spațiu între margini și conținut
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); // Adaugă un efect de umbră pentru adâncime
+    float: left; // Aliniază în stânga
+    left: 50%;
+
+    ul {
+        list-style-type: none; // Elimină marcatorii din lista de navigare
+        padding: 0;
+        margin: 0;
+
+        li {
+            margin-bottom: 10px; // Adaugă un mic spațiu între elementele listei
+        }
+
+        a {
+            text-decoration: none; // Elimină sublinierea implicită a link-urilor
+            color: #333; // Schimbă culoarea textului pentru link-uri
+            display: block; // Face ca link-urile să umple complet lățimea disponibilă
+            padding: 8px 10px; // Adaugă puțin spațiu în jurul textului link-urilor
+
+            &:hover {
+                background-color: #ddd; // Schimbă culoarea de fundal la hover
+            }
+        }
+    }
+}
+
+.container {
+    display: flex; // Asigură poziționarea flexibilă a conținutului
+}

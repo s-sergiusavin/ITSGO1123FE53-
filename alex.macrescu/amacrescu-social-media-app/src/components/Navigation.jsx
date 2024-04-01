@@ -29,9 +29,15 @@ const Navigation = () => {
                             <li className={styles.menuItem}>
                                 <NavLink to='/my-profile'>My Profile</NavLink>
                             </li>
+                            {/* <li className={styles.menuItem}>
+                                <NavLink to='/friend-requests'>Friend requests</NavLink>
+                            </li>
                             <li className={styles.menuItem}>
                                 <NavLink to='/friends'>Friends</NavLink>
                             </li>
+                            <li className={styles.menuItem}>
+                                <NavLink to='/settings'>Settings</NavLink>
+                            </li> */}
                         </>}
                     <li className={styles.menuItem} onClick={toggleAuth}>
                         <NavLink to='/auth'>{isLoggedIn ? 'Logout' : 'Login'}</NavLink>
