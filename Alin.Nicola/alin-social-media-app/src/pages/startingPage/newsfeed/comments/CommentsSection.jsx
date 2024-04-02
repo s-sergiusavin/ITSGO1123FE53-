@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import profileImg from '../../../../assets/icons/profile.jpeg'
 
-import styles from './CommentsSection.module.scss'
+import styles from './CommentsSection.module.scss' 
 import { Link } from 'react-router-dom';
 
 // https://www.mockaroo.com/

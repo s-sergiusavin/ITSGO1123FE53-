@@ -7,22 +7,22 @@ import { Link } from 'react-router-dom';
 const INTEREST_DATA = [
     {
         "id": 1,
-        "tilu": "Programare in React",
-        "interest": "Invata sa programezi in React, vezi cursurile disponibile la ITSchool",
+        "tilu": "Programming in React",
+        "interest": "Learn to program inreact,see the courses available at ITSchool",
         "link": "https://www.itschool.ro/cursuri/curs-web-development-online",
         "imagine": "https://cdn.icon-icons.com/icons2/2415/PNG/512/react_original_wordmark_logo_icon_146375.png",
     },
     {
         "id": 2,
-        "tilu": "Vacante la munte",
-        "interest": "Descopera natura din Bucegi si Fagaras",
+        "tilu": "Holidays in the Mountains",
+        "interest": "Discover the nature of Bucegi and Fagaras",
         "link": "https://christiantour.ro/sejur-oferte-vacante/sua/fagaras",
         "imagine": "https://www.experimenteaza.ro/23520-superlarge_default/vacanta-ca-n-povesti-in-casute-construite-la-poalale-muntilor-fagaras-pe-valea-porumbacului.jpg",
     },
     {
         "id": 2,
-        "tilu": "Cursuri de olarit",
-        "interest": "Relaxeaza-te si creaza ceva deosebit",
+        "tilu": "Pottery classes",
+        "interest": "Relaxed and create something special",
         "link": "https://arttime.ro/olarit/",
         "imagine": "https://www.experimenteaza.ro/8562-large_default_landscape/experimenteaza-conectarea-cu-lutul-atelier-de-olarit.jpg",
     }
@@ -43,7 +43,7 @@ const InterestsSection = () => {
                             </div>
                             <div className={styles.commentInfo}>
                                 <p>{interest.interest}</p>
-                                <Link to={interest.link}>Vezi mai multe</Link>
+                                <Link to={interest.link}>See more</Link>
                             </div>
                         </div>
                     )

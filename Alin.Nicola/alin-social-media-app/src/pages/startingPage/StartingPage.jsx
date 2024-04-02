@@ -35,7 +35,7 @@ const StartingPage = () => {
                     return <Newsfeed postData={post} key={post.id} />
                 })}
             </section>
-            <aside className={styles.rightSide}>Te-ar putea interesa ..
+            <aside className={styles.rightSide}>You might be interested ..
                 <RightSide />
             </aside>
         </div>
