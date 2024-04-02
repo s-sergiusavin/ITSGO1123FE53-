@@ -18,7 +18,7 @@
         justify-content: center;
         overflow: auto;
         width: 60rem;
-        height: 37rem;
+        height: 35rem;
         left: 35rem;
         gap: 1rem;
         border: 2px solid whitesmoke;
@@ -35,11 +35,13 @@
                 gap: 0.1rem;
 
                 .suggestedPageName {
-                    margin-top: -1rem;
+                    position: absolute;
+                    top: -0.2rem;
                 }
 
                 .suggestedPageLikes {
-                    margin-top: -0.9rem;
+                    position: absolute;
+                    top: 1.2rem;
                 }
 
             }
@@ -49,7 +51,7 @@
                 align-items: center;
                 justify-content: center;
                 flex-wrap: wrap;
-                margin-top: -1.5rem;
+                top: 0.4rem;
                 margin-left: 2.5rem;
                 width: 10rem;
                 height: 2rem;
@@ -74,7 +76,7 @@
         justify-content: center;
         overflow: auto;
         width: 60rem;
-        height: 37rem;
+        height: 35rem;
         left: 35rem;
         gap: 1rem;
         border: 2px solid whitesmoke;
@@ -91,11 +93,13 @@
                 gap: 0.1rem;
 
                 .likedPageName {
-                    margin-top: -1rem;
+                    position: absolute;
+                    top: -0.2rem;
                 }
 
                 .likedPageLikes {
-                    margin-top: -0.9rem;
+                    position: absolute;
+                    top: 1.2rem;
                 }
 
             }
@@ -105,7 +109,7 @@
                 align-items: center;
                 justify-content: center;
                 flex-wrap: wrap;
-                margin-top: -1.5rem;
+                top: 0.4rem;
                 margin-left: 2.5rem;
                 width: 10rem;
                 height: 2rem;

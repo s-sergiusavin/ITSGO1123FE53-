@@ -318,7 +318,7 @@ const UserProfilePage = () => {
                     </div>
                     <div className={styles.userPhotos}>
                         <ListItemText primary="Photos" className={styles.userProfilePhotosTitle} />
-                        <ImageList sx={{ width: 500, height: 500 }} cols={3} rowHeight={164}>
+                        <ImageList sx={{ width:500, height:500 }} cols={3} rowHeight={164}>
                             {ItemData.map((item) => (
                                 <ImageListItem key={item.id}>
                                     <img
@@ -332,7 +332,7 @@ const UserProfilePage = () => {
                     </div>
                     <div className={styles.userFriends}>
                         <ListItemText primary="Friends" className={styles.userProfileFriendsTitle} />
-                        <ImageList sx={{ width: 500, height: 500 }} cols={3}>
+                        <ImageList sx={{ width:500, height:500 }} cols={3} >
                             {FriendsData.map((friend) => (
                                 <ImageListItem key={friend.id}>
                                     <img

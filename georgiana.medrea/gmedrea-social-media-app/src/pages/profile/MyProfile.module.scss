@@ -82,7 +82,7 @@
             }
 
             .myFriends {
-                border: 1px solid black;
+                border: 1px solid whitesmoke;
                 width: 32rem;
                 height: 35rem;
                 border: 5px solid whitesmoke;
@@ -90,16 +90,19 @@
                 border-radius: 10px;
                 display: flex;
                 flex-wrap: wrap;
+                overflow-x: hidden;
 
                 .friendPhoto {
                     width: 8rem;
                     height: 8rem;
                     border-radius: 10px;
+                    position: relative;
+                    left: 1rem;
                 }
 
                 .friendName {
                     position: relative;
-                    left: 1.5rem;
+                    left: 1.2rem;
                 }
             }
         }
@@ -361,7 +364,7 @@
             gap: 2rem;
 
             .myProfileRightSection {
-                margin-left: -7rem;
+                left: 2rem;
 
                 .mainPost {
                     width: 32rem;
@@ -377,5 +380,11 @@
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .myProfileSections {
+        left:7rem;
     }
 }

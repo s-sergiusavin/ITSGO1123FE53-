@@ -17,8 +17,9 @@
         align-items: center;
         justify-content: center;
         width: 80rem;
-        height: 45rem;
+        height: 44rem;
         overflow: auto;
+        overflow-x: hidden;
         gap: 1rem;
         border: 2px solid whitesmoke;
         position: relative;
@@ -36,11 +37,13 @@
                 gap: 0.1rem;
 
                 .suggestedEventName {
-                    margin-top: -1rem;
+                    position: absolute;
+                    top: -0.1rem;
                 }
 
                 .suggestedEventIntestedPeople {
-                    margin-top: -0.9rem;
+                    position: absolute;
+                    top: 1.4rem;
                 }
 
             }
@@ -49,7 +52,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-top: -1rem;
+                position: relative;
+                top: 0.4rem;
                 gap: 1.5rem;
 
 
@@ -91,7 +95,7 @@
         align-items: center;
         justify-content: center;
         width: 80rem;
-        height: 45rem;
+        height: 44rem;
         overflow: auto;
         gap: 1rem;
         border: 2px solid whitesmoke;
@@ -110,11 +114,13 @@
                 gap: 0.1rem;
 
                 .myEventName {
-                    margin-top: -1rem;
+                    position: absolute;
+                    top: -0.1rem;
                 }
 
                 .myEventIntestedPeople {
-                    margin-top: -0.9rem;
+                    position: absolute;
+                    top: 1.4rem;
                 }
 
             }
@@ -123,7 +129,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-top: -1rem;
+                position: relative;
+                top: 0.4rem;
                 gap: 1.5rem;
 
 
@@ -241,6 +248,36 @@
                         right: 0;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .events {
+        position: relative;
+
+        .myEvents {
+            width: 80%;
+        }
+
+        .suggestedEvents {
+            width: 80%;
+
+            // .actionButtons {
+            //     width: 65%;
+            //     left: 3rem;
+            // }
+        }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .events {
+        .suggestedEvents {
+            .actionButtons {
+                width: 80%;
+                left: 1rem;
             }
         }
     }
