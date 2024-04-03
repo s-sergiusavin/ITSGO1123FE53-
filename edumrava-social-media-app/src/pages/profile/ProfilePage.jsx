@@ -101,7 +101,7 @@ const FriendsSection = () => {
 
              <div className="profile-details">
                  <span className="name">Eduard Dumbrava</span>
-                 <span className="friends">1k Prieteni</span>
+                 <span className="friends">164 Prieteni</span>
              </div>
 
              <div className="Buttons">
