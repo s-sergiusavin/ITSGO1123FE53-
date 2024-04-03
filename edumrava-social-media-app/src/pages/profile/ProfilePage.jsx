@@ -100,7 +100,7 @@ const FriendsSection = () => {
              </div>
 
              <div className="profile-details">
-                 <span className="name">Enache David</span>
+                 <span className="name">Eduard Dumbrava</span>
                  <span className="friends">1k Prieteni</span>
              </div>
 
