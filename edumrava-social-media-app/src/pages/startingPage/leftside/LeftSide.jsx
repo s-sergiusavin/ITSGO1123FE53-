@@ -1,6 +1,5 @@
 import {React, useState} from 'react';
-import { Link } from 'react-router-dom'; // Importă Link din React Router
-// import styles from '../StartingPage.module.scss';  
+import { Link } from 'react-router-dom';   
 import styles from './LeftSide.module.scss';
 import HomeIcon from '@mui/icons-material/Home';
 import Person2Icon from '@mui/icons-material/Person2';
