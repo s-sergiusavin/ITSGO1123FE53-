@@ -1,12 +1,27 @@
-import { useParams } from "react-router-dom";
+import React from 'react';
 
-const ProfilePage = () => {
+function MyProfile() {
 
-    const id = useParams().id;
-    console.log(id)
+    const user = {
+        name: 'ALIN DAN NICOLA',
+        email: 'nicolaalindan@yahoo.com',
+        tel: '0743345456',
+        adress: 'Rebæk Søpark 21,København',
+        
+    };
     return (
-        <div>Profile page {id}</div>
-    )
-}
+        <div>
+            <h1>My Profile</h1>
+            <h2>Web Developer</h2>
+            <p><strong>Name:</strong> {user.name}</p>
+            <p><strong>Email:</strong> {user.email}</p>
+            <p><strong>Tel:</strong> {user.tel}</p>
+            <p><strong>Adress:</strong> {user.adress}</p>
+        </div>
+    );
+    
+};
 
-export default ProfilePage;
+
+
+export default MyProfile;

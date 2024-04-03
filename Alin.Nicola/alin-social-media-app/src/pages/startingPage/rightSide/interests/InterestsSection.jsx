@@ -1,4 +1,3 @@
-import { useState } from 'react';
 
 import styles from './InterestsSection.module.scss'
 import { Link } from 'react-router-dom';

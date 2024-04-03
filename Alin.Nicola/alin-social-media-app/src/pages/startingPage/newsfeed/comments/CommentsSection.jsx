@@ -10,7 +10,7 @@ const USER_DATA = [
         "id": 1,
         "firstName": "Eolanda",
         "lastName": "Rapp",
-        "fullName": "Eolanda Rapp",
+        "fullName": "Eolanda Rapp", 
         "date": "3/3/2024",
         "profileImage": "http://dummyimage.com/190x100.png/dddddd/000000",
         "comment": "justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris"
