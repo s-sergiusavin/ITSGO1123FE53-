@@ -1,0 +1,98 @@
+
+    
+.rightSide {
+    position: fixed;
+    top: 0; 
+    right: 0;
+    width: 25%;
+    height: 100%;
+    background-color:  #f0f2f5;
+    border-left: 1px solid #ccc; 
+  
+      .card {
+        position: relative;
+        .cardTitle {
+          font-size: 20px;
+          margin-bottom: 10px;
+          position: absolute;
+          top: -40px;
+          right: 0;
+        }
+        .inputClass {
+          width: calc(100% - 20px);
+          padding: 10px;
+          margin-bottom: 20px; 
+          margin-top: 6rem;
+          border-radius: 10px;
+          border: 2px solid #ccc;
+          background-color: #f5f5f5;
+          color: #333;
+          font-size: 16px; 
+          outline: none; 
+          width: 100%;
+        }
+  
+        .inputClass:focus{
+          border-color: #27bcee;
+        }
+        .friendList { 
+          padding: 0 -20px;
+          margin: 17rem;
+          display: flex;
+          flex-direction: column; 
+          align-items: center;
+          margin-top: 4rem;
+          margin-right: 2rem;
+          cursor: pointer;
+  
+        
+          .liClass {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+            font-size: 20px;
+            color: #333;
+            flex-direction: column;
+            list-style: none;
+            margin-bottom: -19px; 
+          
+  
+            .friendContainer {
+              display: flex;
+              align-items: center;
+              margin-bottom: 10px;
+  
+              .profileImage {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 5px;
+                margin-left: -20rem;
+              }
+            }
+            .statusIcon {
+              font-size: 14px;
+              color: green;
+              margin-right: 5px;
+            }
+            .friendName {
+              margin-right: 10px;
+              font-size: 18px;
+            }
+            .joinTime { 
+                   font-size: 1rem;
+                   
+            }
+             .active {
+              color: green; 
+            }
+            
+            .inactive {
+              color: rgb(111, 110, 110); 
+            }
+          }
+        }
+      }
+    }
+      

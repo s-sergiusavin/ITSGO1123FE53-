@@ -1,0 +1,88 @@
+// Stiluri pentru lista de elemente
+.listClass {
+    padding: 0;
+    margin: 0;
+    width: 10rem;
+    margin-top: 2rem;
+     
+    li {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      list-style-type: none;
+    
+     
+      
+      a {
+        color: #333;
+        text-decoration: none;
+        &:hover {
+          color: #1877f2;
+        }
+      }
+    }
+  }
+  
+  // Stiluri pentru LeftPage
+  .leftSidePage {
+    .sidebar {
+      width: 280px;
+      background-color: #f0f2f5;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 5rem;
+      font-size: 1.2rem;
+  
+      .sidebar__header {
+        .myApp {
+          cursor: pointer;
+          margin-bottom: 1rem;
+          font-size: 24px;
+          color: #333;
+          text-decoration: none;
+          margin-top: -1rem;
+          &:hover {
+            color: #1877f2;
+          }
+        }
+      }
+  
+      &__menu {
+        .menu__item {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          
+          a {
+            color: #333;
+            text-decoration: none;
+            margin-left: 10px;
+            &:hover {
+              color: #1877f2;
+            }
+          }
+  
+          svg {
+            margin-right: 10px;
+          }
+        }
+  
+        .more {
+          margin-left: 10px;
+          cursor: pointer;
+          &:hover {
+            color: #1877f2;
+          }
+        }
+      }
+  
+      &__footer {
+        margin-top: 13rem;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  
