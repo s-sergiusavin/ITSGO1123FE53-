@@ -1,0 +1,20 @@
+.mainContainer {
+    display: flex;
+    justify-content: flex-end; /* Așează elementele pe partea dreaptă a containerului flexibil */
+    align-items: center; /* Aliniază elementele pe axa verticală în centrul containerului */
+    height: 100vh; /* Asigură ca containerul să ocupă întreaga înălțime a ecranului */
+    padding-right: 20px; /* Adaugă un spațiu între marginea dreaptă a containerului și imagine */
+}
+
+.imageContainer {
+    width: 300px; /* Lățimea imaginii */
+    height: 300px; /* Înălțimea imaginii */
+    border-radius: 50%; /* Face imaginea rotundă */
+    overflow: hidden; /* Asigură că imaginea rotundă nu iese în afara containerului */
+}
+
+.myImg {
+    width: 100%; /* Asigură că imaginea ocupă întreaga lățime a containerului */
+    height: auto; /* Înălțimea se va ajusta automat pentru a menține proporțiile */
+    display: block; /* Asigură afișarea corectă a imaginii ca bloc */
+}
