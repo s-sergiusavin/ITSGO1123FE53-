@@ -1,26 +1,31 @@
-// src/App.js
 import React from 'react';
-import './App.css'
+// import './App.css'
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/NavBar/NavBar';
-import Footer from './components/Footer/Footer';
+
 import HomePage from './pages/Home/HomePage';
 import AboutMe from './components/NavBar/AboutMe';
 import Contact from './components/NavBar/Contact';
 import NotFound from './pages/notFound';
-
+import Home from './components/NavBar/Home'
+import Layout from './components/Layout';
+// import AnimatedElement from './pages/Home/AnimatedElement'
 
 function App() {
   return (
     <>
-        <Navbar />
-        <Routes>
-          <Route exact path="/" element={<HomePage></HomePage>} />
-          <Route path="/about" element={<AboutMe></AboutMe>} />
-          <Route path="/contact" element={<Contact></Contact>} />
-          <Route element={<NotFound></NotFound>} />
-        </Routes>
-        <Footer />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutMe />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/home" element={<Home />} />
+        {/* <Route path="/" element={<HomePage/>} */}
+        <Route element={<NotFound />} />
+        
+     
+      </Routes>
+  <Layout></Layout>
     </>
   );
 }

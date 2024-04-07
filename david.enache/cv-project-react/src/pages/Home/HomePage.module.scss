@@ -1,20 +1,48 @@
 .mainContainer {
     display: flex;
-    justify-content: flex-end; /* Așează elementele pe partea dreaptă a containerului flexibil */
-    align-items: center; /* Aliniază elementele pe axa verticală în centrul containerului */
-    height: 100vh; /* Asigură ca containerul să ocupă întreaga înălțime a ecranului */
-    padding-right: 20px; /* Adaugă un spațiu între marginea dreaptă a containerului și imagine */
-}
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    padding-right: 20px;
 
-.imageContainer {
-    width: 300px; /* Lățimea imaginii */
-    height: 300px; /* Înălțimea imaginii */
-    border-radius: 50%; /* Face imaginea rotundă */
-    overflow: hidden; /* Asigură că imaginea rotundă nu iese în afara containerului */
-}
+    .imageContainer {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid black;
+        margin-left: auto;
+        margin-top: 2rem;
+        order: 2; // Schimbă ordinea elementului la dreapta
 
-.myImg {
-    width: 100%; /* Asigură că imaginea ocupă întreaga lățime a containerului */
-    height: auto; /* Înălțimea se va ajusta automat pentru a menține proporțiile */
-    display: block; /* Asigură afișarea corectă a imaginii ca bloc */
+        .myImg {
+            width: 100%;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: 0.4s;
+            user-select: none;
+            filter: grayscale(4%);
+
+            &:hover {
+                filter: grayscale(0%);
+                transform: scale(1.05);
+                box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+
+    .textContainer {
+        display: flex;
+        flex-direction: column; // Așează textul într-o coloană
+        align-items: flex-start; // Aliniere la stânga
+
+        .Header {
+            margin-left: 1rem;
+            margin-top: 8rem;
+            margin-bottom: 15px; // Spațiu între titlu și subtitlu
+            font-size: 1.4rem; // Mărimea textului pentru titlu
+            font-weight: bold; // Grosimea textului pentru titlu
+            color: #333; // Culoarea textului pentru titlu
+        }
+    }
 }

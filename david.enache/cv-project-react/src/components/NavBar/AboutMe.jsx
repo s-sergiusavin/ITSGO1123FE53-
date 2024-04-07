@@ -1,17 +1,13 @@
-// AboutMe.js
 import React from 'react';
-import Layout from '../Layout'; // Importă Layout
-// import myImg from '../../pages/images/myImg'
-
+import Footer from '../Footer/Footer'; 
+import styles from './AboutMe.module.scss'
 const AboutMe = () => {
   return (
-    <Layout>
-      <div>
-        "cv"
-      </div>
-     </Layout>
-  
+    <div>
+      {/* Conținutul specific pentru această componentă */}
+      <Footer/>
+    </div>
   );
-  };
+};
 
 export default AboutMe;

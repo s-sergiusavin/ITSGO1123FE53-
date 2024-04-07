@@ -53,7 +53,7 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar component="nav" sx={{ backgroundColor:'#5b3c7b' }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -72,7 +72,7 @@ function DrawerAppBar(props) {
             Enache David
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            <Button component={Link} to="/" sx={{ color: '#fff' }}>
+            <Button component={Link} to="/home" sx={{ color: '#fff' }}>
               Home
             </Button>
             <Button component={Link} to="/about" sx={{ color: '#fff' }}>
