@@ -15,15 +15,15 @@ import imagineLaurentiu from '../images/imagineLaurentiu.jpg';
 
 const friendsWithImages = [
   { name: "David", imageUrl: imagineDavid, timeJoined: "Active" ,width: '30px', height: '30px', borderRadius: '50%'},
-  { name: "Postu", imageUrl: imaginePostu, timeJoined: "5 minutes ago...",width: '30px', height: '30px', borderRadius: '50%' },
+  { name: "Postu", imageUrl: imaginePostu, timeJoined: "2 minutes ago...",width: '30px', height: '30px', borderRadius: '50%' },
   { name: "Dinga", imageUrl: imagineDinga, timeJoined: "Active",width: '30px', height: '30px', borderRadius: '50%' },
-  { name: "Hantaru", imageUrl:  imagineHantaru, timeJoined: "10 minutes ago...",width: '30px', height: '30px', borderRadius: '50%'},
+  { name: "Hantaru", imageUrl:  imagineHantaru, timeJoined: "40 minutes ago...",width: '30px', height: '30px', borderRadius: '50%'},
   { name: "Flavius", imageUrl: imagineFlavius, timeJoined: "Active",width: '30px', height: '30px', borderRadius: '50%'},
-  { name: "Mariana", imageUrl: imagineMariana, timeJoined: "1 hour ago...",width: '30px', height: '30px', borderRadius: '50%'},
+  { name: "Mariana", imageUrl: imagineMariana, timeJoined: "4 hour ago...",width: '30px', height: '30px', borderRadius: '50%'},
   { name: "Cristian", imageUrl: imagineCristian, timeJoined: "Active",width: '30px', height: '30px', borderRadius: '50%'},
-  { name: "Cosmin", imageUrl:  imagineCosmin, timeJoined: "24 minutes ago...",width: '30px', height: '30px', borderRadius: '50%'},
+  { name: "Cosmin", imageUrl:  imagineCosmin, timeJoined: "14 minutes ago...",width: '30px', height: '30px', borderRadius: '50%'},
   { name: "Vlad", imageUrl: imagineVlad, timeJoined: "Active",width: '30px', height: '30px', borderRadius: '50%'},
-  { name: "Andreea", imageUrl:  imagineAndreea, timeJoined: "40 minutes ago...",width: '30px', height: '30px', borderRadius: '50%'},
+  { name: "Andreea", imageUrl:  imagineAndreea, timeJoined: "19 minutes ago...",width: '30px', height: '30px', borderRadius: '50%'},
   { name: "Laurentiu", imageUrl: imagineLaurentiu, timeJoined: "Active",width: '30px', height: '30px', borderRadius: '50%' }
 ];
 

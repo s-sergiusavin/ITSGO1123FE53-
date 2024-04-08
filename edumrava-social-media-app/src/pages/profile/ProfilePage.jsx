@@ -1,26 +1,22 @@
 import {React, useState} from "react";
 import { useParams, Link} from "react-router-dom";
-import './ProfilePage.scss';
+import './ProfilePage.module.scss';
 import imagineCoperta from '../../assets/images/imagineCoperta.jpg';
 import imagineProfil from '../../assets/images/imagineProfil.jpg';
 import { Button, Drawer} from '@mui/material';
-import imagineAndreeaCO from "./images/imagineAndreeaCO.jpg";
-import imagineCosminCO from "./images/imagineCosminCO.jpg";
-import imagineDavidCO from "./images/imagineDavidCO.jpg";
-import imagineGeorgeCO from "./images/imagineGeorgeCO.jpg";
-import imagineGeorgianaCO from "./images/imagineGeorgianaCO.jpg";
-import imagineIulianCO from "./images/imagineIulianCO.jpg";
-import imagineA from './images/imagineA.jpg'
-import imagineB from './images/imagineB.jpg'
-import imagineC from './images/imagineC.jpg'
-import imagineD from './images/imagineD.jpg'
-import imagineE from './images/imagineE.jpg'
-import imagineF from './images/imagineF.jpg'
-import { React, useState } from "react";
-  import { useParams, Link } from "react-router-dom";
-  import "./ProfilePage.scss";         
-  import imagineCoperta from "../../assets/images/imagineCoperta.jpg";
-  import imagineProfil from "../../assets/images/imagineProfil.jpg";
+import imagineAndreeaCO from "./images/imagineAndreeaCO.png";
+import imagineCosminCO from "./images/imagineCosminCO.png";
+import imagineDavidCO from "./images/imagineDavidCO.png";
+import imagineGeorgeCO from "./images/imagineGeorgeCO.png";
+import imagineGeorgianaCO from "./images/imagineGeorgianaCO.png";
+import imagineIulianCO from "./images/imagineIulianCO.png";
+import imagineA from './images/imagineA.png'
+import imagineB from './images/imagineB.png'
+import imagineC from './images/imagineC.png'
+import imagineD from './images/imagineD.png'
+import imagineE from './images/imagineE.png'
+import imagineF from './images/imagineF.png'
+
 
 
 const ContainerDetails = () => {
