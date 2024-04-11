@@ -9,7 +9,7 @@ const AnimatedElement = () => {
         // console.log(visible)
         const timeout = setTimeout(() => {
             setVisible(true);
-        }, 1000);
+        }, 300);
         
         return () => clearTimeout(timeout);
     }, [visible]);

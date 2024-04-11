@@ -1,120 +1,55 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
-import Drawer from '@mui/material/Drawer';
-import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import MenuIcon from '@mui/icons-material/Menu';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
+
 import Button from '@mui/material/Button';
-import { Link } from 'react-router-dom';
-// import Home from './Home'; // sau calea corectă către componenta Home
-// import AboutMe from './AboutMe'; // sau calea corectă către componenta AboutMe
-// import Contact from './Contact'; // sau calea corectă către componenta Contact
+ import { Link } from 'react-router-dom';
+import styles from './NavBar.module.scss'
+import React from 'react';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
-const drawerWidth = 240;
-const navItems = ['Home', 'About Me', 'Contact'];
+import EmailIcon from '@mui/icons-material/Email';
 
-function DrawerAppBar(props) {
-  const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
 
-  const handleDrawerToggle = () => {
-    setMobileOpen((prevState) => !prevState);
-  };
+const handleHomeClick = () => {
+  window.scrollTo(0, 0); // Du-te la începutul paginii
+}
 
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        Enache David
-      </Typography>
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
-
-  const container = window !== undefined ? () => window().document.body : undefined;
-
+const HomeButton = () => {
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar component="nav" sx={{ backgroundColor:'#5b3c7b' }}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            Enache David
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            <Button component={Link} to="/home" sx={{ color: '#fff' }}>
-              Home
-            </Button>
-            <Button component={Link} to="/about" sx={{ color: '#fff' }}>
-              About Me
-            </Button>
-            <Button component={Link} to="/contact" sx={{ color: '#fff' }}>
-              Contact
-            </Button>
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <nav>
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-          }}
-        >
-          {drawer}
-        </Drawer>
-      </nav>
-      <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-        <Typography></Typography>
-      </Box>
-    </Box>
+    <Button className={styles.buttonStyle} onClick={handleHomeClick} component={Link} to="/Home">
+      Home
+    </Button>
+  );  
+
+}
+
+const NavBar = () => {
+  return (
+    <nav className={styles.navbar}>
+      <div className={styles.left}>Enache David</div>
+
+      <div className={styles.socialIco}>
+      <a href="https://www.linkedin.com/in/david-enache-09409723b/" target="_blank" rel="noopener noreferrer">
+        <LinkedInIcon className={styles.icons}/>
+      </a>
+      <a href="https://github.com/Enache213" target="_blank" rel="noopener noreferrer">
+        <GitHubIcon className={styles.icons}/>
+      </a>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <EmailIcon className={styles.icons}/>
+      </a>
+    </div>
+
+      <div className={styles.right}>
+      <HomeButton></HomeButton>
+      <Button className={styles.buttonStyle} component={Link} to="/About Me">
+        About Me
+      </Button>
+      <Button className={styles.buttonStyle} component={Link} to="/Contact">
+        Contact
+      </Button>
+      </div>
+    </nav>
   );
 }
 
-DrawerAppBar.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window: PropTypes.func,
-};
-
-export default DrawerAppBar;
+export default NavBar;

@@ -1,48 +1,102 @@
 .mainContainer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+   
     height: 100%;
-    padding-right: 20px;
+
 
     .imageContainer {
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 2px solid black;
+        width: 19rem;
+        height: 19rem;
         margin-left: auto;
-        margin-top: 2rem;
-        order: 2; // Schimbă ordinea elementului la dreapta
+        margin-top: 10rem;
+       
+           margin-right: 5rem;
+         margin-top: 4rem;
+
+
+
 
         .myImg {
-            width: 100%;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+            
             cursor: pointer;
             transition: 0.4s;
             user-select: none;
             filter: grayscale(4%);
+            position: relative;
+            width: 18rem;
+            height: 18rem;
+            // margin-left: -10rem;
+         
+            margin-top: 1rem;
 
             &:hover {
                 filter: grayscale(0%);
                 transform: scale(1.05);
-                box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+                width: 20rem;
+                height: 20rem;
+                
             }
         }
     }
+    
 
-    .textContainer {
+    .aboutMeContainer {
         display: flex;
-        flex-direction: column; // Așează textul într-o coloană
-        align-items: flex-start; // Aliniere la stânga
-
-        .Header {
-            margin-left: 1rem;
-            margin-top: 8rem;
-            margin-bottom: 15px; // Spațiu între titlu și subtitlu
-            font-size: 1.4rem; // Mărimea textului pentru titlu
-            font-weight: bold; // Grosimea textului pentru titlu
-            color: #333; // Culoarea textului pentru titlu
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem; /* Aliniază elementele pe axa verticală în centru */
+      
+        .h2Title {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+         color:  rgb(0 0 0 / 64%);
+         font-size: 2rem;
+         
+       
         }
-    }
+      
+        .contentStyle {
+          color: rgb(51 39 28);
+          margin: 1rem 1rem;
+          font-size: 1.5rem;
+     
+        }
+      }
+      .skillsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4rem;
+        // color: white;
+      
+        .skillsHeader {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          color: rgba(0, 0, 0, 0.64);;
+        
+        }
+      
+        .skillsGrid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-gap: 0.7rem;
+          align-items: center;
+          margin-top: 2rem;
+
+          .skillsColumn {
+            margin-right: 3rem;
+      
+            .paragraphs {
+              font-size: 1.4rem;
+              margin-bottom: 0.5rem;
+              color: rgb(51 39 28);
+              
+            }
+          }
+          
+        }
+      }
+      
 }
